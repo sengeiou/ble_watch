@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         szp {
-            storeFile file('D:\\key\\test.keystore')
+            storeFile file('../keystore/szip.keystore')
             storePassword 'damibao123'
             keyAlias 'key'
             keyPassword 'damibao123'
