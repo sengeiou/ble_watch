@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "sun1"> nie </string>
+    <string name = "mon1"> pon </string>
+    <string name = "tues1"> wto </string>
+    <string name = "wed1"> śro </string>
+    <string name = "thus1"> czw </string>
+    <string name = "fri1"> pią </string>
+    <string name = "sta1"> sob </string>
+</resources>

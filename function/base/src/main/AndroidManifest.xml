@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szip.blewatch.base">
+
+    <application>
+        <service
+            android:name=".Service.AlarmService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".Service.BleService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

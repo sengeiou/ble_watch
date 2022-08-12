@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">Estado</string>
+    <string name="sport">Esportes</string>
+    <string name="consult">consultar</string>
+    <string name="mine">minha</string>
+    <string name="tip">lembrar</string>
+    <string name="checkGPS">Foi detectado que a chave de localização do seu telefone não está ativada. Para garantir que o app funcione corretamente, ative a chave de localização.</string>
+    <string name="confirm">Claro</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="touchAgain">Pressione novamente para sair do programa</string>
+    <string name="privacy1">Contrato do usuário e política de privacidade</string>
+    <string name="privacyTip">Obrigado por confiar e usar o FitRing.
+\n\nFalamos de acordo com o "Acordo de Privacidade do Usuário" para ajudá-lo a entender nossa coleta, uso, armazenamento de suas informações pessoais e seus direitos relacionados.
+\n\nQuando você usa o aplicativo FitRing, coletamos informações do seu dispositivo, dados pessoais (avatar, apelido, altura, peso, dados de exercício) e outras informações, precisamos obter sua permissão da câmera, permissão do álbum para fazer upload do avatar do seu aplicativo:
+\n\nQuando você usa o aplicativo FitRing para corrida ao ar livre, carrega, compartilha e armazena informações esportivas, precisamos obter sua permissão de localização para gravar sua pista de corrida.
+\n\nVocê pode acessar, modificar, excluir suas informações pessoais ou gerenciar sua autorização nas páginas relevantes.
+\n\nUsamos tecnologia de segurança líder do setor para proteger suas informações pessoais.
+\n\nAo clicar em "OK", você concorda com os termos deste contrato.</string>
+</resources>

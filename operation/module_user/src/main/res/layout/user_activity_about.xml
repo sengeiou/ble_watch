@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AboutActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/deviceIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/my_aboutdevice_circle"/>
+
+        <com.szip.blewatch.base.View.CircularImageView
+            android:id="@+id/squareIv"
+            android:layout_width="107dp"
+            android:layout_height="127dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:is_allRadius="true"
+            app:radius="15dp"/>
+
+        <com.szip.blewatch.base.View.CircularImageView
+            android:id="@+id/circleIv"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:is_circular="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="@string/user_device_name"/>
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="@string/user_device_version"/>
+
+            <TextView
+                android:id="@+id/versionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="@string/user_device_mac"/>
+
+            <TextView
+                android:id="@+id/macTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/updateTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_centerVertical="true"
+            android:text="@string/user_check_update"
+            android:textColor="@android:color/white"
+            android:background="@drawable/user_bg_bottom"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

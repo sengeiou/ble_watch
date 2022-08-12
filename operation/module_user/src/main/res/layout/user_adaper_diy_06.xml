@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/dailRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingEnd="15dp">
+
+        <View
+            android:layout_width="102dp"
+            android:layout_height="124dp"
+            android:background="@drawable/user_bg_diy_square"/>
+
+        <com.szip.blewatch.base.View.CircularImageView
+            android:id="@+id/imageView"
+            android:layout_width="102dp"
+            android:layout_height="124dp"
+            app:is_allRadius="true"
+            app:radius="8dp"/>
+
+        <View
+            android:id="@+id/selectView"
+            android:layout_width="102dp"
+            android:layout_height="124dp"
+            android:background="@drawable/user_bg_dial_square"/>
+    </FrameLayout>
+
+</FrameLayout>

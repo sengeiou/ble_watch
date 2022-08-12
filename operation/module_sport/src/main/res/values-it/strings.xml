@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">esercizio recente</string>
+    <string name="sport_sport_time">tempo di esercizio</string>
+    <string name="sport_sport_calorie">consumo di esercizio</string>
+    <string name="sport_sport_distance">Distanza di movimento</string>
+    <string name="sport_steps">Conteggio passi</string>
+    <string name="sport_speed_hour">velocità media</string>
+    <string name="sport_stride">cadenza</string>
+    <string name="sport_heart">frequenza cardiaca media</string>
+    <string name="sport_height">salire di quota</string>
+    <string name="sport_sport_info">Dettagli sportivi</string>
+    <string name="sport_heart_level">Distribuzione della frequenza cardiaca</string>
+    <string name="sport_heart1">Limite (≥161)</string>
+    <string name="sport_heart2">Anaerobico(149~160)</string>
+    <string name="sport_heart3">Aerobico(131~138)</string>
+    <string name="sport_heart4">bruciare i grassi(112~130)</string>
+    <string name="sport_heart5">riscaldamento(90~111)</string>
+    <string name="sport_speed">ritmo</string>
+    <string name="sport_running">in movimento</string>
+    <string name="sport_run_pause">Il movimento si è fermato</string>
+    <string name="sport_gps_low">Segnale GPS debole e bassa precisione dei dati</string>
+    <string name="sport_gps_middle">Segnale GPS potente e alta precisione dei dati</string>
+    <string name="sport_gps_high">Segnale GPS potente e alta precisione dei dati</string>
+    <string name="sport_no_sport">Nessun record di allenamento ancora, inizia ad allenarti ora</string>
+    <string name="sport_destroy">Fai di nuovo clic per uscire da questa campagna</string>
+    <string name="sport_time_short">La durata e la distanza dell\'esercizio sono troppo brevi per generare un rapporto di allenamento valido</string>
+    <string name="sport_finish_sport">Sei sicuro di voler terminare l\'esercizio?</string>
+    <string name="sport_start_sport">Per favore, inizia prima l\'esercizio</string>
+
+</resources>

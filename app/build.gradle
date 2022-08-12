@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        szp {
+            storeFile file('D:\\key\\test.keystore')
+            storePassword 'damibao123'
+            keyAlias 'key'
+            keyPassword 'damibao123'
+        }
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.szip.blewatch"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.szp
+        }
+        debug {
+            signingConfig signingConfigs.szp
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':function:base')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    if (!useModule.toBoolean()) {
+        implementation project(':operation:module_user')
+        implementation project(':operation:module_healthy')
+        implementation project(':operation:module_consult')
+        implementation project(':operation:module_sport')
+        implementation project(':operation:module_login')
+    }
+    annotationProcessor rootProject.ext.otherDeps["arouter-compiler"]
+}

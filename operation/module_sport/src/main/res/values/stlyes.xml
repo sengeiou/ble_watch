@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="sport_MapAnim">
+        <item name="android:windowEnterAnimation">@anim/sport_anim_map_open</item>
+        <item name="android:windowExitAnimation">@anim/sport_anim_map_close</item>
+    </style>
+
+</resources>

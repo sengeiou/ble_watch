@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">ВС</string>
+    <string name="mon1">ПН</string>
+    <string name="tues1">ВТ</string>
+    <string name="wed1">СР</string>
+    <string name="thus1">ЧТ</string>
+    <string name="fri1">ПТ</string>
+    <string name="sta1">СБ</string>
+
+</resources>

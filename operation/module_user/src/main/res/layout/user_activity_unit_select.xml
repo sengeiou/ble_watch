@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/user_gray_text"
+        android:layout_marginStart="15dp"
+        android:text="@string/user_tempUnit"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/cRl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="°C"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/cIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/unit_radio_pre"/>
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:id="@+id/fRl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="°F"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/fIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/unit_radio_pre"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/user_gray_text"
+        android:layout_marginStart="15dp"
+        android:text="@string/user_measureUnit"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/metricRl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_metric"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"/>
+
+
+            <ImageView
+                android:id="@+id/metricIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/unit_radio_pre"/>
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:id="@+id/britishRl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_british"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"/>
+
+
+            <ImageView
+                android:id="@+id/britishIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/unit_radio_pre"/>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/user_save"
+        android:textColor="@android:color/white"
+        android:background="@drawable/user_bg_bottom"/>
+
+
+</LinearLayout>

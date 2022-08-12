@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">Último esporte</string>
+    <string name="sport_sport_time">Hora do esporte</string>
+    <string name="sport_sport_calorie">Consumo esportivo</string>
+    <string name="sport_sport_distance">Distância do esporte</string>
+    <string name="sport_steps">etapas</string>
+    <string name="sport_speed_hour">Velocidade média</string>
+    <string name="sport_stride">Passo</string>
+    <string name="sport_heart">Frequência cardíaca média</string>
+    <string name="sport_height">Altura da subida</string>
+    <string name="sport_sport_info">Detalhes do esporte</string>
+    <string name="sport_heart_level">distribuição da frequência cardíaca</string>
+    <string name="sport_heart1">Limite (≥161)</string>
+    <string name="sport_heart2">Anaeróbico (149~160)</string>
+    <string name="sport_heart3">Aeróbica (131~138)</string>
+    <string name="sport_heart4">Queima de gordura (112~130)</string>
+    <string name="sport_heart5">Aquecimento (90~111)</string>
+    <string name="sport_speed">ritmo</string>
+    <string name="sport_running">Esportivo</string>
+    <string name="sport_run_pause">Esporte pausado</string>
+    <string name="sport_gps_low">O sinal de GPS é fraco e a precisão dos dados é baixa</string>
+    <string name="sport_gps_middle">O sinal GPS é mais forte e a precisão dos dados é maior</string>
+    <string name="sport_gps_high">O sinal de GPS é forte e a precisão dos dados é alta</string>
+    <string name="sport_no_sport">Nenhum recorde esportivo ainda, vamos começar a praticar esportes</string>
+    <string name="sport_destroy">Clique novamente para sair deste esporte</string>
+    <string name="sport_time_short">A duração e a distância do exercício são muito curtas para gerar um relatório de exercício válido</string>
+    <string name="sport_finish_sport">Tem certeza de que deseja terminar o esporte? </string>
+    <string name="sport_start_sport">Por favor, comece o esporte primeiro</string>
+
+</resources>

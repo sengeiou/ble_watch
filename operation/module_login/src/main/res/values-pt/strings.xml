@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="login_name">módulo de login</string>
+    <string name="login_location">região</string>
+    <string name="login_chose_location">Selecione uma região</string>
+    <string name="login_login_account">Login na conta</string>
+    <string name="login_login">Login</string>
+    <string name="login_account">Conta</string>
+    <string name="login_input_account">Insira sua conta</string>
+    <string name="login_right_email">Digite um endereço de e-mail correto</string>
+    <string name="login_psw">senha</string>
+    <string name="login_input_psw">Digite sua senha</string>
+    <string name="login_forget_psw">Esqueceu a senha?</string>
+    <string name="login_register">Não tem uma conta? para registrar</string>
+    <string name="login_privacy">Concorde com o <u>Contrato do Usuário e Política de Privacidade</u></string>
+    <string name="login_checkPrivacy">Não concorde com o Contrato do Usuário e a Política de Privacidade</string>
+
+
+    <string name="login_register_account">registrar conta</string>
+    <string name="login_register_account_tip">Depois de ter uma conta pessoal, seus dados de condicionamento físico e preferências do dispositivo podem ser salvos de forma segura e permanente</string>
+    <string name="login_next">Próximo</string>
+    <string name="login_verification">Código de verificação</string>
+    <string name="login_input_verification">Digite seu código de verificação</string>
+    <string name="login_send">Enviar</string>
+
+    <string name="login_set_password">definir senha</string>
+    <string name="login_inconsistent">Senhas inconsistentes inseridas duas vezes</string>
+    <string name="login_confirm_password">Confirmar senha</string>
+    <string name="login_finish">concluir</string>
+    <string name="login_find_password">encontrar senha</string>
+    <string name="login_reset_Success">Senha redefinida com sucesso</string>
+
+    <string name="login_change_password">alterar senha</string>
+    <string name="login_old_password">senha antiga</string>
+    <string name="login_new_password">nova senha</string>
+    <string name="login_confirm_new_password">Confirmar nova senha</string>
+    <string name="login_change_success">Modificado com sucesso</string>
+</resources>

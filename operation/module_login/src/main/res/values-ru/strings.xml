@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">область</string>
+    <string name="login_chose_location">Пожалуйста, выберите регион</string>
+    <string name="login_login_account">вход в учетную запись</string>
+    <string name="login_login">Авторизоваться</string>
+    <string name="login_account">учетная запись</string>
+    <string name="login_input_account">Войдите в свою учетную запись</string>
+    <string name="login_right_email">Пожалуйста, введите правильный адрес электронной почты</string>
+    <string name="login_psw">пароль</string>
+    <string name="login_input_psw">введите свой пароль</string>
+    <string name="login_forget_psw">забыл пароль?</string>
+    <string name="login_register">Нет аккаунта? зарегистрироваться</string>
+    <string name="login_privacy">Примите <u>Пользовательское соглашение и Политику конфиденциальности</u>.</string>
+    <string name="login_checkPrivacy">Не согласен с Пользовательским соглашением и Политикой конфиденциальности</string>
+
+
+    <string name="login_register_account">Регистрация Аккаунта</string>
+    <string name="login_register_account_tip">С помощью личной учетной записи ваши данные о фитнесе, настройки устройства могут быть надежно сохранены на постоянной основе.</string>
+    <string name="login_next">Следующий шаг</string>
+    <string name="login_verification">код верификации</string>
+    <string name="login_input_verification">Введите Ваш код верификации</string>
+    <string name="login_send">Отправить</string>
+
+    <string name="login_set_password">Установка пароля</string>
+    <string name="login_inconsistent">Дважды введен неверный пароль</string>
+    <string name="login_confirm_password">Подтвердить Пароль</string>
+    <string name="login_finish">Заканчивать</string>
+    <string name="login_find_password">получить пароль</string>
+    <string name="login_reset_Success">Сброс пароля выполнен успешно</string>
+
+    <string name="login_change_password">изменить пароль</string>
+    <string name="login_old_password">Старый пароль</string>
+    <string name="login_new_password">Новый пароль</string>
+    <string name="login_confirm_new_password">Подтвердите новый пароль</string>
+    <string name="login_change_success">Успешно изменено</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name = "sun1">Do.</string>
+    <string name = "mon1">Lu.</string>
+    <string name = "tues1">Ma.</string>
+    <string name = "wed1">Me.</string>
+    <string name = "thus1">Gi.</string>
+    <string name = "fri1">Ve.</string>
+    <string name = "sta1">Sa.</string>
+
+</resources>

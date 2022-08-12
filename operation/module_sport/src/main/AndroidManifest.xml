@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szip.sport">
+
+    <application>
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".Activity.gpsSport.GpsActivity"></activity>
+        <activity android:name=".Activity.sportResult.SportResultActivity"></activity>
+    </application>
+
+</manifest>

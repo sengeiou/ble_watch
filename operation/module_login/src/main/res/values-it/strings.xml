@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="login_name">modulo di accesso</string>
+    <string name="login_location">regione</string>
+    <string name="login_chose_location">Seleziona una regione</string>
+    <string name="login_login_account">Account di accesso</string>
+    <string name="login_login">Accedi</string>
+    <string name="login_account">Account</string>
+    <string name="login_input_account">Inserisci il tuo account</string>
+    <string name="login_right_email">Inserisci un indirizzo email corretto</string>
+    <string name="login_psw">password</string>
+    <string name="login_input_psw">Inserisci la tua password</string>
+    <string name="login_forget_psw">Password dimenticata?</string>
+    <string name="login_register">Non hai un account? per registrarsi</string>
+    <string name="login_privacy">Accetta il <u>Accordo per l\'utente e l\'Informativa sulla privacy</u></string>
+    <string name="login_checkPrivacy">Non acconsento all\'Accordo per l\'utente e all\'Informativa sulla privacy</string>
+
+
+    <string name="login_register_account">registra l\'account</string>
+    <string name="login_register_account_tip">Una volta che hai un account personale, i tuoi dati di fitness e le preferenze del dispositivo possono essere salvati in modo sicuro e permanente</string>
+    <string name="login_next">Avanti</string>
+    <string name="login_verification">Codice di verifica</string>
+    <string name="login_input_verification">Inserisci il tuo codice di verifica</string>
+    <string name="login_send">Invia</string>
+
+    <string name="login_set_password">imposta password</string>
+    <string name="login_inconsistent">Password incoerenti inserite due volte</string>
+    <string name="login_confirm_password">Conferma password</string>
+    <string name="login_finish">fine</string>
+    <string name="login_find_password">trova password</string>
+    <string name="login_reset_Success">Reimpostazione password riuscita</string>
+
+    <string name="login_change_password">cambia password</string>
+    <string name="login_old_password">vecchia password</string>
+    <string name="login_new_password">nuova password</string>
+    <string name="login_confirm_new_password">Conferma nuova password</string>
+    <string name="login_change_success">Modificato con successo</string>
+</resources>

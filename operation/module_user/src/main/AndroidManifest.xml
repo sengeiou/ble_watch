@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szip.user">
+
+    <application>
+        <activity android:name=".Activity.AutoMeasureActivity"></activity>
+        <activity android:name=".Activity.schedule.ScheduleEditActivity" />
+        <activity android:name=".Activity.schedule.ScheduleActivity" />
+        <activity android:name=".Activity.camera.CameraActivity" />
+        <activity android:name=".Activity.help.ServicePrivacyActivity" />
+        <activity android:name=".Activity.help.FaqContentActivity" />
+        <activity android:name=".Activity.camera.CameraSetActivity" />
+        <activity android:name=".Activity.TargetActivity" />
+        <activity android:name=".Activity.AboutActivity" />
+        <activity android:name=".Activity.diy.DIYActivity" />
+        <activity android:name=".Activity.dial.DialSelectActivity" />
+        <activity android:name=".Activity.help.FaqActivity" />
+        <activity android:name=".Activity.help.HelpActivity" />
+        <activity android:name=".Activity.SecurityActivity" />
+        <activity android:name=".Activity.userInfo.UserInfoActivity" />
+        <activity android:name=".Activity.search.DeviceActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.UserSetActivity" />
+        <activity android:name=".Activity.NotificationActivity" />
+        <activity android:name=".Activity.UnitSelectActivity" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

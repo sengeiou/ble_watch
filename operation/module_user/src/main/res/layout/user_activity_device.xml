@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.search.DeviceActivity"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deviceList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:dividerHeight="5dp"
+            android:divider="@android:color/transparent"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">недавнее упражнение</string>
+    <string name="sport_sport_time">продолжительность упражнения</string>
+    <string name="sport_sport_calorie">потребление упражнений</string>
+    <string name="sport_sport_distance">Расстояние движения</string>
+    <string name="sport_steps">Количество шагов</string>
+    <string name="sport_speed_hour">Средняя скорость</string>
+    <string name="sport_stride">ритм</string>
+    <string name="sport_heart">средняя частота сердечных сокращений</string>
+    <string name="sport_height">высота набора высоты</string>
+    <string name="sport_sport_info">Спортивные подробности</string>
+    <string name="sport_heart_level">Распределение частоты сердечных сокращений</string>
+    <string name="sport_heart1">ограничение(≥161)</string>
+    <string name="sport_heart2">Анаэробный(149~160)</string>
+    <string name="sport_heart3">Аэробика(131~138)</string>
+    <string name="sport_heart4">сжигание жира(112~130)</string>
+    <string name="sport_heart5">разогревать(90~111)</string>
+    <string name="sport_speed">шаг</string>
+    <string name="sport_running">в движении</string>
+    <string name="sport_run_pause">Движение приостановлено</string>
+    <string name="sport_gps_low">GPSСлабый сигнал и низкая точность данных</string>
+    <string name="sport_gps_middle">Сильный сигнал GPS и высокая точность данных</string>
+    <string name="sport_gps_high">Сильный сигнал GPS и высокая точность данных</string>
+    <string name="sport_no_sport">Пока нет записи упражнений, начните тренироваться прямо сейчас</string>
+    <string name="sport_destroy">Нажмите еще раз, чтобы выйти из этой кампании</string>
+    <string name="sport_time_short">Продолжительность тренировки и расстояние слишком малы для создания действительного отчета о тренировке.</string>
+    <string name="sport_finish_sport">Вы уверены, что хотите закончить упражнение?</string>
+    <string name="sport_start_sport">Сначала начните тренироваться</string>
+
+</resources>

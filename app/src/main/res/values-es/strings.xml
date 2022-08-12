@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">estado</string>
+    <string name="sport">Deportes</string>
+    <string name="consult">consultar</string>
+    <string name="mine">mía</string>
+    <string name="tip">recordar</string>
+    <string name="checkGPS">Se detectó que el interruptor de ubicación de su teléfono no está activado，Para asegurarse de que la aplicación funciona correctamente，Por favor, encienda el interruptor de posición。</string>
+    <string name="confirm">Por supuesto</string>
+    <string name="cancel">Cancelar</string>
+
+    <string name="touchAgain">Pulse de nuevo para salir del programa</string>
+    <string name="privacy1">Acuerdo de usuario y política de privacidad</string>
+    <string name="privacyTip">Gracias por confiar y usarFitRing。
+\n\nHablamos de acuerdo con el "Acuerdo de privacidad del usuario" para ayudarlo a comprender que estamos recopilando、usar、Cómo se almacena su información personal y sus derechos。
+\n\ncuando usasFitRingsolicitud，Recopilaremos la información de su dispositivo, datos personales (avatar, apodo, altura, peso, datos de ejercicio) y otra información. Necesitamos obtener su permiso de cámara y permiso de álbum para cargar el avatar de su aplicación:
+\n\ncuando usasFitRingCuando la aplicación realiza carreras al aire libre, carga, comparte y almacena información deportiva, necesitamos obtener su permiso de ubicación para registrar su pista de carrera.
+\n\nPuede acceder, modificar, eliminar su información personal o gestionar su autorización en las páginas correspondientes.
+\n\nUtilizamos tecnología de seguridad líder en la industria para proteger su información personal.
+\n\nAl hacer clic en "Aceptar", acepta los términos de este acuerdo。</string>
+</resources>

@@ -1,0 +1,47 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            versionCode      : 21,
+            versionName      : "1.21",
+            dbflow_version : "4.2.4"
+    ]
+
+    dependVersion = [
+            androidSupportSdkVersion: "1.0.0"
+    ]
+
+    supportDeps = [
+            "androidx"      : "androidx.appcompat:appcompat:${dependVersion.androidSupportSdkVersion}",
+            "material"       : "com.google.android.material:material:${dependVersion.androidSupportSdkVersion}",
+            "constraint-layout": "androidx.constraintlayout:constraintlayout:1.1.2"
+    ]
+
+    commonDeps = [
+            "multidex"     : 'androidx.multidex:multidex:2.0.1',
+            "glide"        : 'com.github.bumptech.glide:glide:4.11.0',
+            "eventbus"     : 'org.greenrobot:eventbus:3.0.0',
+            "arouter"      : 'com.alibaba:arouter-api:1.5.0',
+            "dbflow-core": 'com.github.Raizlabs.DBFlow:dbflow-core:4.2.4',
+            "dbflow": 'com.github.Raizlabs.DBFlow:dbflow:4.2.4',
+            //高德地图SDK
+            "3dmap" :'com.amap.api:3dmap:latest.integration',
+            //google地图SDK
+            "gms" :'com.google.android.gms:play-services-maps:12.0.1',
+            "google-map" :'com.google.maps.android:android-maps-utils:0.5+',
+            "progress" :'com.kaopiz:kprogresshud:1.0.1',
+            //图片裁剪
+            "commons" :'org.apache.commons:commons-lang3:3.7',
+            "uCrop" :'com.github.Creky:uCrop:2.2.3'
+    ]
+
+    otherDeps = [
+            "arouter-compiler": 'com.alibaba:arouter-compiler:1.2.2',
+            "dbflow-processor":'com.github.Raizlabs.DBFlow:dbflow-processor:4.2.4',
+    ]
+
+    supportLibs = supportDeps.values()
+    commonLibs = commonDeps.values()
+}

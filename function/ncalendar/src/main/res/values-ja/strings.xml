@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sun1">日</string>
+    <string name="mon1">月</string>
+    <string name="tues1">火</string>
+    <string name="wed1">水</string>
+    <string name="thus1">木</string>
+    <string name="fri1">金</string>
+    <string name="sta1">土</string>
+
+</resources>

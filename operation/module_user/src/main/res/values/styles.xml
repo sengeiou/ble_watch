@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="user_my_switch" parent="Theme.AppCompat.Light">
+        <!-- Active thumb color & Active track color(30% transparency) switch 打开时的拇指按钮的颜色 轨迹颜色默认为30%这个颜色 -->
+        <item name="colorControlActivated">@color/user_green</item>
+
+        <!-- Inactive thumb color switch关闭时的拇指按钮的颜色 -->
+        <item name="colorSwitchThumbNormal">@color/gray</item>
+
+        <!-- Inactive track color(30% transparency) switch关闭时的轨迹的颜色 30%这个颜色 -->
+        <item name="android:colorForeground">@color/gray</item>
+
+        <!--使用方法： 在布局文件中给需要自定义控件中增加app:theme="@style/MySwitch"-->
+    </style>
+
+
+    <style name="user_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_bottom_in</item> <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/anim_dialog_bottom_out</item> <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="user_transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/user_bg_photo_choose</item>
+    </style>
+</resources>

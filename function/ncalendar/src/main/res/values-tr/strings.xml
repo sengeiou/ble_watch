@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">Pz</string>
+    <string name="mon1">Pt</string>
+    <string name="tues1">Sa</string>
+    <string name="wed1">Ça</string>
+    <string name="thus1">Pe</string>
+    <string name="fri1">Cu</string>
+    <string name="sta1">Ct</string>
+
+</resources>

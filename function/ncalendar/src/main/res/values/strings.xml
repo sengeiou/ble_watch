@@ -1,0 +1,9 @@
+<resources>
+    <string name="sun1">Sun</string>
+    <string name="mon1">Mon</string>
+    <string name="tues1">Tue</string>
+    <string name="wed1">Wed</string>
+    <string name="thus1">Thu</string>
+    <string name="fri1">Fri</string>
+    <string name="sta1">Sat</string>
+</resources>

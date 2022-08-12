@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/title"/>
+
+        <TextView
+            android:id="@+id/titleBigTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/login_gray_text"
+            android:text="@string/login_register_account_tip"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/titleTv"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_location"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/countryRl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg_edit">
+
+            <TextView
+                android:id="@+id/countryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_chose_location"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/login_gray_text"
+                android:layout_marginStart="15dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/login_account"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg_edit">
+
+            <EditText
+                android:id="@+id/userEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_input_account"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColorHint="@color/login_gray_text"
+                android:layout_marginStart="15dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/login_verification"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_bg_edit">
+
+            <EditText
+                android:id="@+id/verifyCodeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_input_verification"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColorHint="@color/login_gray_text"
+                android:inputType="number"
+                android:layout_toStartOf="@id/sendTv"
+                android:layout_marginStart="15dp"/>
+
+
+            <TextView
+                android:id="@+id/sendTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_send"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/privacyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_privacy"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/rayblue"
+                android:textColorLink="@color/blue"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/nextTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/login_next"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:background="@drawable/login_bg_bottom"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

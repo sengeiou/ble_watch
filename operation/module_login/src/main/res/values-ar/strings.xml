@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">منطقة</string>
+    <string name="login_chose_location">الرجاء تحديد المنطقة</string>
+    <string name="login_login_account">تسجيل الدخول</string>
+    <string name="login_login">تسجيل الدخول</string>
+    <string name="login_account">الحساب</string>
+    <string name="login_input_account">أدخل حسابك</string>
+    <string name="login_right_email">الرجاء إدخال عنوان البريد الإلكتروني الصحيح</string>
+    <string name="login_psw">كلمه السر</string>
+    <string name="login_input_psw">ادخل رقمك السري</string>
+    <string name="login_forget_psw">هل نسيت كلمة السر؟</string>
+    <string name="login_register">لا حساب؟ للتسجيل</string>
+    <string name="login_privacy">يوافق على<u>اتفاقية المستخدم وسياسة الخصوصية</u></string>
+    <string name="login_checkPrivacy">لم توافق على اتفاقية المستخدم وسياسة الخصوصية</string>
+
+
+    <string name="login_register_account">تسجيل حساب</string>
+    <string name="login_register_account_tip">باستخدام حساب شخصي وبيانات لياقتك وتفضيلات الجهاز ، يمكن تخزينها بشكل آمن بشكل دائم</string>
+    <string name="login_next">الخطوة التالية</string>
+    <string name="login_verification">رمز التحقق</string>
+    <string name="login_input_verification">أدخل رمز التحقق الخاص بك</string>
+    <string name="login_send">إرسال</string>
+
+    <string name="login_set_password">ضبط كلمة السر</string>
+    <string name="login_inconsistent">تم إدخال كلمة مرور غير متسقة مرتين</string>
+    <string name="login_confirm_password">تأكيد كلمة المرور</string>
+    <string name="login_finish">إنهاء</string>
+    <string name="login_find_password">استرجاع كلمة السر</string>
+    <string name="login_reset_Success">تمت إعادة تعيين كلمة المرور بنجاح</string>
+
+    <string name="login_change_password">غير كلمة السر</string>
+    <string name="login_old_password">كلمة المرور القديمة</string>
+    <string name="login_new_password">كلمة السر الجديدة</string>
+    <string name="login_confirm_new_password">قم بتأكيد كلمة المرور الجديدة</string>
+    <string name="login_change_success">تم التعديل بنجاح</string>
+</resources>

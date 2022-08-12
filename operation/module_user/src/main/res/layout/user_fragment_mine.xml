@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/bgColor">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="47dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.szip.blewatch.base.View.CircularImageView
+                android:id="@+id/iconIv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="15dp"
+                android:src="@mipmap/my_head_58"
+                app:is_circular="true"/>
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/user_name"
+                android:layout_toRightOf="@id/iconIv"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+
+
+            <ImageView
+                android:id="@+id/setIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/my_setting"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addDeviceRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/bg_white_corner">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/my_help_addpic"
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/user_gray_text"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/user_add_device"
+                    android:layout_marginBottom="50dp"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/deviceLl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_plan"/>
+
+                <TextView
+                    android:id="@+id/editPlanTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/user_edit_plan"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_white_corner_gray"
+                        android:layout_marginStart="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/my_target_steps"
+                            android:layout_marginTop="30dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/user_step"/>
+
+                        <TextView
+                            android:id="@+id/stepTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <com.szip.user.View.RoundProgressBar
+                            android:id="@+id/stepSb"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/stepDataTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"/>
+
+                            <TextView
+                                android:id="@+id/stepRateTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="10sp"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_white_corner_gray"
+                        android:layout_marginStart="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/my_target_sleep"
+                            android:layout_marginTop="30dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/user_sleep"/>
+
+                        <TextView
+                            android:id="@+id/sleepTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <com.szip.user.View.RoundProgressBar
+                            android:id="@+id/sleepSb"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/sleepDataTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"/>
+
+                            <TextView
+                                android:id="@+id/sleepRateTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="10sp"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="170dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_white_corner_gray"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/my_target_kcal"
+                            android:layout_marginTop="30dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/user_calorie"/>
+
+                        <TextView
+                            android:id="@+id/calorieTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <com.szip.user.View.RoundProgressBar
+                            android:id="@+id/calorieSb"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <TextView
+                                android:id="@+id/calorieDataTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"/>
+
+                            <TextView
+                                android:id="@+id/calorieRateTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textSize="10sp"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_corner"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <ImageView
+                        android:id="@+id/watchIv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/my_device"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/watchIv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/watchTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/stateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/user_disconnect"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/unbindIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_device_del"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/updateIv"
+                        android:layout_marginEnd="15dp"/>
+
+                    <ImageView
+                        android:id="@+id/updateIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/my_device_refresh"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center">
+
+
+                    <LinearLayout
+                        android:id="@+id/dialLl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/user_dial_mine"
+                            android:textColor="@android:color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+
+                        <View
+                            android:layout_width="130dp"
+                            android:layout_height="0.5dp"
+                            android:background="@android:color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="5dp"
+                            android:textSize="12sp"
+                            android:text="@string/user_dial_tip"/>
+
+                    </LinearLayout>
+
+
+                    <com.szip.blewatch.base.View.CircularImageView
+                        android:id="@+id/dialIv"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="30dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_corner"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/user_device_config"
+                    android:textColor="@android:color/black"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/menuList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

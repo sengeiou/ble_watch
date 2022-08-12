@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">son egzersiz</string>
+    <string name="sport_sport_time">egzersiz zamanı</string>
+    <string name="sport_sport_calorie">egzersiz tüketimi</string>
+    <string name="sport_sport_distance">Hareket mesafesi</string>
+    <string name="sport_steps">Adım sayısı</string>
+    <string name="sport_speed_hour">ortalama sürat</string>
+    <string name="sport_stride">kadans</string>
+    <string name="sport_heart">ortalama kalp atış hızı</string>
+    <string name="sport_height">irtifa tırmanmak</string>
+    <string name="sport_sport_info">Spor detayları</string>
+    <string name="sport_heart_level">Kalp atış hızı dağılımı</string>
+    <string name="sport_heart1">sınır(≥161)</string>
+    <string name="sport_heart2">anaerobik(149~160)</string>
+    <string name="sport_heart3">aerobik(131~138)</string>
+    <string name="sport_heart4">yağ yakıcı(112~130)</string>
+    <string name="sport_heart5">ısınmak(90~111)</string>
+    <string name="sport_speed">adımlamak</string>
+    <string name="sport_running">hareket halinde</string>
+    <string name="sport_run_pause">Hareket duraklatıldı</string>
+    <string name="sport_gps_low">Zayıf GPS sinyali ve düşük veri doğruluğu</string>
+    <string name="sport_gps_middle">Güçlü GPS sinyali ve yüksek veri doğruluğu</string>
+    <string name="sport_gps_high">Güçlü GPS sinyali ve yüksek veri doğruluğu</string>
+    <string name="sport_no_sport">Henüz egzersiz kaydı yok, şimdi egzersize başlayın</string>
+    <string name="sport_destroy">Bu kampanyadan çıkmak için tekrar tıklayın</string>
+    <string name="sport_time_short">Egzersiz süresi ve mesafesi geçerli bir egzersiz raporu oluşturmak için çok kısa</string>
+    <string name="sport_finish_sport">Egzersizi bitirmek istediğinizden emin misiniz?</string>
+    <string name="sport_start_sport">Lütfen önce egzersize başlayın</string>
+
+</resources>

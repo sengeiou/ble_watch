@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">日</string>
+    <string name="mon1">一</string>
+    <string name="tues1">二</string>
+    <string name="wed1">三</string>
+    <string name="thus1">四</string>
+    <string name="fri1">五</string>
+    <string name="sta1">六</string>
+</resources>

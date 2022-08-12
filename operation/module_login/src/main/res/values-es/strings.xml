@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">área</string>
+    <string name="login_chose_location">por favor seleccione la región</string>
+    <string name="login_login_account">cuenta de inicio de sesión</string>
+    <string name="login_login">Iniciar sesión</string>
+    <string name="login_account">cuenta</string>
+    <string name="login_input_account">Ingresa tu cuenta</string>
+    <string name="login_right_email">Por favor ingrese la dirección de correo electrónico correcta</string>
+    <string name="login_psw">clave</string>
+    <string name="login_input_psw">Ingresa tu contraseña</string>
+    <string name="login_forget_psw">¿Se te olvidó tu contraseña?</string>
+    <string name="login_register">¿Sin cuenta? registrarse</string>
+    <string name="login_privacy">Acepto el <u>Acuerdo de usuario y la Política de privacidad</u>》</string>
+    <string name="login_checkPrivacy">No acepté el Acuerdo de usuario y la Política de privacidad</string>
+
+
+    <string name="login_register_account">Registrar Cuenta</string>
+    <string name="login_register_account_tip">Con una cuenta personal, sus datos de estado físico, las preferencias del dispositivo se pueden almacenar de forma segura y permanente</string>
+    <string name="login_next">Próximo paso</string>
+    <string name="login_verification">código de verificación</string>
+    <string name="login_input_verification">Ingrese su código de verificación</string>
+    <string name="login_send">enviar</string>
+
+    <string name="login_set_password">configurar la clave</string>
+    <string name="login_inconsistent">Contraseña inconsistente ingresada dos veces</string>
+    <string name="login_confirm_password">Confirmar contraseña</string>
+    <string name="login_finish">Finalizar</string>
+    <string name="login_find_password">Recuperar Contraseña</string>
+    <string name="login_reset_Success">Restablecimiento de contraseña exitoso</string>
+
+    <string name="login_change_password">cambiar la contraseña</string>
+    <string name="login_old_password">Contraseña anterior</string>
+    <string name="login_new_password">Nueva contraseña</string>
+    <string name="login_confirm_new_password">Confirmar la nueva contraseña</string>
+    <string name="login_change_success">Modificado con éxito</string>
+</resources>

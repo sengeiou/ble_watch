@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.step.StepReportActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/healthy_gray_text"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:text="2022/01/17  >"/>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/reportTl"
+            android:layout_width="180dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_gray_corner"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:tabBackground="@null"
+            app:tabRippleColor="@null"></com.google.android.material.tabs.TabLayout>
+
+
+    </RelativeLayout>
+
+    <com.szip.healthy.View.NoScrollViewPager
+        android:id="@+id/reportVp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scorll_able="false"/>
+
+
+</LinearLayout>

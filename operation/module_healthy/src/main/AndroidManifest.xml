@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.szip.healthy">
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:maxSdkVersion="22" />
+
+    <application>
+        <activity android:name=".Activity.reportInfo.ReportInfoActivity"></activity>
+        <activity android:name=".Activity.temp.TempReportActivity" />
+        <activity android:name=".Activity.spo.BloodOxygenReportActivity" />
+        <activity android:name=".Activity.sleep.SleepReportActivity" />
+        <activity android:name=".Activity.heart.HeartReportActivity" />
+        <activity android:name=".Activity.bp.BpReportActivity" />
+        <activity android:name=".Activity.step.StepReportActivity" />
+        <activity android:name=".Activity.card.CardEditActivity" />
+        <activity android:name=".Activity.sport.SportListActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

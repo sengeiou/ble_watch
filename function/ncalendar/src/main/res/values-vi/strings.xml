@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">nhật</string>
+    <string name="mon1">Hai</string>
+    <string name="tues1">Ba</string>
+    <string name="wed1">Tư</string>
+    <string name="thus1">Năm</string>
+    <string name="fri1">Sáu</string>
+    <string name="sta1">Bảy</string>
+
+</resources>

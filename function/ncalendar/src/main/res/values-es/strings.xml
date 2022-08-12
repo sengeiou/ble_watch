@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">Sol</string>
+    <string name="mon1">Lun</string>
+    <string name="tues1">Mar</string>
+    <string name="wed1">Mié</string>
+    <string name="thus1">Jue</string>
+    <string name="fri1">Vie</string>
+    <string name="sta1">Sab</string>
+</resources>

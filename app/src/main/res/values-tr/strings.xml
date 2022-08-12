@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">Durum</string>
+    <string name="sport">Hareket</string>
+    <string name="consult">Danışmanlık</string>
+    <string name="mine">Benim</string>
+    <string name="tip">Anımsatıcı</string>
+    <string name="checkGPS">telefonunuzun konum anahtarının açık olmadığını tespit etti. Uygulamanın düzgün çalıştığından emin olmak için konum anahtarını açın.</string>
+    <string name="confirm">Tamam</string>
+    <string name="cancel">İptal</string>
+
+    <string name="touchAgain">Programdan çıkmak için bir kez daha basın</string>
+    <string name="privacy1">Kullanıcı sözleşmesi ve gizlilik koşulları</string>
+    <string name="privacyTip">FitRing\'e güvendiğiniz ve kullandığınız için teşekkür ederiz.
+\n\nnKişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve sakladığımızı ve ilgili haklarınızı anlamanıza yardımcı olmak için Kullanıcı Gizlilik Sözleşmesi\'ni kullanmaktan bahsediyoruz
+\n\nnFitRing uygulamasını kullanırken, cihaz bilgilerinizi, profilinizi (avatar, takma ad, boy, kilo, hareket verileri) vb. Toplayacağız. Uygulama avatarınızı yüklemek için kamera izinlerinizi, albüm izinlerinizi almamız gerekiyor:
+\n\nnAçık havada koşmak, spor bilgilerini yüklemek, paylaşmak ve saklamak için FitRing uygulamasını kullandığınızda, koşu parkurunuzu kaydetmek için konum izinlerinizi vb. Almamız gerekir.
+\n\nnKişisel bilgilerinize erişebilir, değiştirebilir, silebilir veya yetkilendirmenizi ilgili sayfalardan yönetebilirsiniz.
+\n\nKişisel bilgilerinizi korumak için endüstri lideri güvenlik teknolojisini kullanacağız.
+\n\n"Tamam" ı tıkladığınızda, sözleşmenin şartlarını kabul etmiş olursunuz. </string>
+</resources>

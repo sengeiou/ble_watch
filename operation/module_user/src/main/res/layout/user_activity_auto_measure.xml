@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AutoMeasureActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <include layout="@layout/title"/>
+
+    <com.szip.blewatch.base.View.MyScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleBigTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/user_gray_text"
+                android:textSize="13sp"
+                android:layout_margin="15dp"
+                android:text="@string/user_auto_measure_tip"/>
+
+
+            <LinearLayout
+                android:id="@+id/heartLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/user_bg_item"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/state_hr"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:text="@string/user_heart"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_auto"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <Switch
+                        android:id="@+id/heartSw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/heartFrequencyLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_measure_frequency"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/heartFrequencyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:text="30min"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_valid_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/heartStartLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/heartStartTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_start_time"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="60dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/heartEndLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/heartEndTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_end_time"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bpLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/user_bg_item"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/state_bp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:text="@string/user_blood_pressure"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_auto"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <Switch
+                        android:id="@+id/bpSw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/bpFrequencyLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_measure_frequency"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/bpFrequencyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:text="30min"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_valid_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/bpStartLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/bpStartTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_start_time"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="60dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/bpEndLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/bpEndTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_end_time"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spoLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/user_bg_item"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/state_spo2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:text="@string/user_blood_oxygen"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_auto"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <Switch
+                        android:id="@+id/spoSw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/spoFrequencyLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_measure_frequency"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/spoFrequencyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:text="30min"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_valid_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/spoStartLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/spoStartTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_start_time"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="60dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/spoEndLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/spoEndTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_end_time"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tempLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/user_bg_item"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/state_temperature"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:text="@string/user_temperature"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_auto"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <Switch
+                        android:id="@+id/tempSw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <RelativeLayout
+                    android:id="@+id/tempFrequencyLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_measure_frequency"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tempFrequencyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:text="30min"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_valid_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/tempStartLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tempStartTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_start_time"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="60dp"
+                        android:background="@color/gray"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/tempEndLl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tempEndTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginBottom="6dp"
+                            android:text="00:00"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/user_gray_text"
+                            android:text="@string/user_end_time"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/saveTv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/user_save"
+                android:textColor="@android:color/white"
+                android:background="@drawable/user_bg_bottom"/>
+
+        </LinearLayout>
+    </com.szip.blewatch.base.View.MyScrollView>
+
+
+
+</LinearLayout>

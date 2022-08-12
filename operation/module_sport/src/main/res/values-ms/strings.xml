@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<string name="sport_sport_last">Sukan terakhir</string>
+    <string name="sport_sport_time">Masa sukan</string>
+    <string name="sport_sport_calorie">Penggunaan sukan</string>
+    <string name="sport_sport_distance">Jarak sukan</string>
+    <string name="sport_steps">langkah</string>
+    <string name="sport_speed_hour">Purata kelajuan</string>
+    <string name="sport_stride">Stride</string>
+    <string name="sport_heart">Purata kadar denyutan jantung</string>
+    <string name="sport_height">Ketinggian panjat</string>
+    <string name="sport_sport_info">Butiran Sukan</string>
+    <string name="sport_heart_level">taburan kadar denyutan jantung</string>
+    <string name="sport_heart1">Had (≥161)</string>
+    <string name="sport_heart2">Anaerobik (149~160)</string>
+    <string name="sport_heart3">Aerobik (131~138)</string>
+    <string name="sport_heart4">Membakar lemak (112~130)</string>
+    <string name="sport_heart5">Memanaskan badan (90~111)</string>
+    <string name="sport_speed">pace</string>
+    <string name="sport_running">Bersukan</string>
+    <string name="sport_run_pause">Sukan dijeda</string>
+    <string name="sport_gps_low">Isyarat GPS lemah dan ketepatan data rendah</string>
+    <string name="sport_gps_middle">Isyarat GPS lebih kuat dan ketepatan data lebih tinggi</string>
+    <string name="sport_gps_high">Isyarat GPS adalah kuat dan ketepatan data adalah tinggi</string>
+    <string name="sport_no_sport">Belum ada rekod sukan, mari mulakan sukan</string>
+    <string name="sport_destroy">Klik sekali lagi untuk keluar dari sukan ini</string>
+    <string name="sport_time_short">Tempoh dan jarak senaman terlalu pendek untuk menjana laporan senaman yang sah</string>
+    <string name="sport_finish_sport">Adakah anda pasti mahu menamatkan sukan ini? </string>
+    <string name="sport_start_sport">Sila mulakan sukan dahulu</string>
+
+</resources>

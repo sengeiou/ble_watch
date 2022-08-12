@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sun1">Sol</string>
+    <string name="mon1"> Seg</string>
+    <string name="tues1">Ter</string>
+    <string name="wed1">Qua</string>
+    <string name="thus1">Qui</string>
+    <string name="fri1"> Sex</string>
+    <string name="sta1">Sáb</string>
+
+</resources>

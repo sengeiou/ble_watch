@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">状态</string>
+    <string name="sport">运动</string>
+    <string name="consult">咨询</string>
+    <string name="mine">我的</string>
+    <string name="tip">提醒</string>
+    <string name="checkGPS">检测到您手机的位置开关未打开，为确保应用正常运行，请打开位置开关。</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="message">短信</string>
+    <string name="wechat">微信</string>
+
+    <string name="touchAgain">再按一次退出程序</string>
+    <string name="privacy1">用户协议与隐私条款</string>
+    <string name="privacyTip">感谢您信任并使用FitRing。
+\n\n我们讲依据《用户隐私协议》来帮助您了解我们在收集、使用、存储您个人信息的情况以及您享有的相关权利。
+\n\n在您使用FitRing应用程序时，我们将收集您的设备信息、个人资料(头像、昵称、身高、体重、运动数据)等信息，我们需要获取您的相机权限、相册权限用于上传您的应用头像:
+\n\n在您使用FitRing应用进行户外跑步、上传、分享并存储运动信息时，我们需要获取您的位置权限等用于记录您的跑步轨迹。
+\n\n您可以在相关页面访问、修改、删除您的个人信息或者管理您的授权。
+\n\n我们会采用行业领先的安全技术来保护您的个人信息。
+\n\n当您点击"确定"即表示你已经同意该协议的条款。</string>
+</resources>

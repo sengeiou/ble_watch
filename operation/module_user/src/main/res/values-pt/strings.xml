@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">meu gol</string>
+    <string name="user_edit_plan">Editar destino</string>
+    <string name="user_step">alvo de passo</string>
+    <string name="user_sleep">metas de sono</string>
+    <string name="user_calorie">meta de consumo</string>
+
+    <string name="user_connect">conectado</string>
+    <string name="user_disconnect">não conectado</string>
+    <string name="user_connect_fail">Tentando reconectar agora</string>
+    <string name="user_connecting">conectando...</string>
+
+    <string name="user_dial">meu relógio</string>
+    <string name="user_dial_tip">Mais mostradores, mude à vontade></string>
+    <string name="user_device_config">Gerenciamento de dispositivo</string>
+    <string name="user_find_watch">Encontre um relógio</string>
+    <string name="user_ble_call">Chamada Bluetooth</string>
+    <string name="user_ble_camera">Câmera Bluetooth</string>
+    <string name="user_unit">sistema de unidades</string>
+    <string name="user_notification">notificação</string>
+    <string name="user_about">Sobre o dispositivo</string>
+    <string name="user_schedule">meu horário</string>
+    <string name="user_auto">Monitoramento automático</string>
+    <string name="user_add_device">Adicionar Dispositivo</string>
+
+    <string name="user_measureUnit">Unidade de medida</string>
+    <string name="user_tempUnit">unidade de temperatura</string>
+    <string name="user_metric">Métrica</string>
+    <string name="user_british">Imperial</string>
+    <string name="user_save">Salvar</string>
+    <string name="user_saved">Salvo com sucesso</string>
+
+    <string name="user_notify">notificação</string>
+    <string name="user_notify_tip">Para receber mensagens de notificação do aplicativo no dispositivo, você precisa ativar o interruptor de mensagens</string>
+    <string name="user_notify_title">Ativar notificações</string>
+    <string name="user_notify_msg">Este aplicativo precisa encaminhar notificações de aplicativos para dispositivos inteligentes remotos. Pressione \"OK\" para entrar na página de notificação para ativar.</string>
+    <string name="user_cancel">Cancelar</string>
+    <string name="user_confirm">Claro</string>
+
+    <string name="user_account_safe">Conta e segurança</string>
+    <string name="user_version">Versão atual do aplicativo</string>
+    <string name="user_help">Ajuda e comentários</string>
+    <string name="user_privacy">Contrato do usuário e política de privacidade</string>
+    <string name="user_logout">sair</string>
+    <string name="user_unbind_tip">desvincular</string>
+    <string name="user_unbind_message">Tem certeza de desvincular o dispositivo atual?</string>
+
+    <string name="user_info">Informação pessoal</string>
+    <string name="user_set">Informação da conta</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">Apelido</string>
+    <string name="user_sex">Gênero sexual</string>
+    <string name="user_birthday">data de nascimento</string>
+    <string name="user_height">altura</string>
+    <string name="user_weight">peso</string>
+    <string name="user_male">macho</string>
+    <string name="user_female">Fêmea</string>
+    <string name="user_camera">Fotografia</string>
+    <string name="user_album">álbum de foto</string>
+    <string name="user_enter_name">Por favor, digite seu apelido</string>
+    <string name="user_name_long">O apelido não pode exceder 12 caracteres</string>
+    <string name="user_permission_error_camera">A permissão não é passada, a função da câmera não pode ser ativada</string>
+    <string name="user_crop_pic_failed">Falha ao capturar a imagem, selecione a imagem no formato jpg!</string>
+    <string name="user_account">Conta de login</string>
+    <string name="user_change">alterar a senha</string>
+    <string name="user_delete_account">Sair</string>
+    <string name="user_logout_tip">Tem certeza que deseja sair?</string>
+    <string name="user_upload_data">Carregando dados...</string>
+    <string name="user_upload_data_success">Carregamento de dados com sucesso!</string>
+    <string name="user_faq">problema comum</string>
+    <string name="user_feedback_hint">seus comentários/dúvidas</string>
+    <string name="user_send_feedback">Enviar comentários</string>
+    <string name="user_feedback_long">O texto que você digitou é muito longo</string>
+    <string name="user_feedback_empty">Os comentários não podem ficar vazios</string>
+    <string name="user_feedback_success">sucesso do feedback</string>
+    <string name="user_guide">guia de conexão</string>
+    <string name="user_service">mantê-lo funcionando em segundo plano</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">um mais</string>
+    <string name="user_samsun">Samsung</string>
+    <string name="user_mi">Painço</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Para melhorar a estabilidade da conexão do relógio, é recomendável fazer as seguintes configurações:</string>
+    <string name="user_saverBattery">Não ligue (modo de economia de energia):</string>
+    <string name="user_batteryContent">Se o modo de economia de energia estiver ativado, poderá causar problemas como conexão Bluetooth instável, trajetória de movimento anormal e distância de alimentação reduzida. Recomenda-se desligar o modo de economia de energia durante o uso.</string>
+    <string name="user_protect">Configurações de proteção em segundo plano dos principais fabricantes:</string>
+
+
+    <string name="user_search">dispositivo de pesquisa</string>
+    <string name="user_searching">Procurando dispositivos...</string>
+    <string name="user_bind">Vinculativo...</string>
+    <string name="user_no_device">Dispositivo não encontrado</string>
+    <string name="user_pair_success">emparelhado com sucesso</string>
+    <string name="user_pair_tip">Suas informações de dados de saúde esportiva serão sincronizadas entre o relógio e o celular por meio do APP.</string>
+    <string name="user_finish">Terminar</string>
+    <string name="user_understand">Eu vejo</string>
+    <string name="user_wear_tip">dicas de uso</string>
+    <string name="user_wear_tip_content">Para medir os dados com precisão e não afetar o uso normal do APP, tente usar o relógio a uma distância de 1 cm do osso do pulso</string>
+    <string name="user_search_tip">Remova o dispositivo, carregue-o para ativar e mantenha-o próximo ao telefone</string>
+    <string name="user_search_much">Por favor, selecione seu relógio de acordo com o endereço mac</string>
+    <string name="user_search_again">procure denovo</string>
+    <string name="user_again_tip">Você pode tentar as seguintes maneiras e tentar novamente após a configuração:</string>
+    <string name="user_again_advice">·Ligue o bluetooth do telefone novamente\n ·Certifique-se de que o relógio esteja ligado e próximo ao telefone\n ·Clique em \"restaurar para as configurações de fábrica\" no dispositivo</string>
+    <string name="user_stop_bind">Mais tarde, não ligue por enquanto</string>
+    <string name="user_bind_help"><u>Não consegue encontrar o dispositivo para adicionar? Ver ajuda</u></string>
+
+    <string name="user_dial_market">mercado de discagem</string>
+    <string name="user_dial_now">Visualização do mostrador do relógio</string>
+    <string name="user_dial_mine">meu relógio</string>
+    <string name="user_dial_diy">mostrador de relógio personalizado</string>
+    <string name="user_background">enviar plano de fundo</string>
+    <string name="user_crop_fail">Falha ao capturar a imagem, selecione a imagem no formato jpg!</string>
+    <string name="user_crop_small">Falha ao capturar a imagem, a imagem capturada é muito pequena e não corresponde ao tamanho do mostrador!</string>
+    <string name="user_send_background">Enviando plano de fundo...</string>
+    <string name="user_send_dial">Enviando mostrador do relógio...</string>
+    <string name="user_send_success">Enviado com sucesso!</string>
+    <string name="user_send_fail">Falha no envio. Tente novamente.</string>
+    <string name="user_no_background">Faça o upload do plano de fundo primeiro</string>
+    <string name="user_no_clock">Selecione um mostrador de relógio primeiro</string>
+
+    <string name="user_device_name">Modelo de software</string>
+    <string name="user_device_mac">endereço MAC</string>
+    <string name="user_device_version">Versão do software</string>
+    <string name="user_check_update">Verifique se há atualizações</string>
+
+    <string name="user_camera_tip">Depois de ativar a função de câmera Bluetooth, o relógio pode controlar o aplicativo da câmera do celular para tirar fotos</string>
+    <string name="user_camera_permission_tip">Durante o uso, este aplicativo requer acesso à câmera e permissões de leitura e gravação de arquivos para tirar fotos remotamente e armazenar fotos\n\nSe você não concordar em chamar as permissões acima, isso fará com que a câmera Bluetooth não seja usada normalmente, o que não afetará o uso das funções básicas deste aplicativo. Você pode retirar seu consentimento a qualquer momento acessando "Configurações" > "Gerenciamento de permissões" e optando por desativar as chamadas de permissão acima</string>
+    <string name="user_camera_permission_error">A permissão não é passada, a abertura falha</string>
+
+    <string name="user_deleteTip">Seja para confirmar o cancelamento da sua conta, a conta será cancelada com sucesso no prazo de três dias após a confirmação, e os dados da conta serão completamente apagados após o cancelamento bem sucedido, irrecuperável! Por favor, prossiga com cautela.</string>
+    <string name="user_deleteSuccess">A conta do aplicativo foi cancelada com sucesso.</string>
+    <string name="user_deleteNow">A conta atual está aguardando o estágio de logout.</string>
+
+    <string name="user_schedule_empty">O relógio atual não tem programação. Adicione uma nova programação</string>
+    <string name="user_delete_schedule">excluir agenda</string>
+    <string name="user_save_schedule">salvar agenda</string>
+    <string name="user_schedule_info">Detalhes da programação</string>
+    <string name="user_schedule_fall">A programação que pode ser adicionada ao relógio atingiu o limite superior, limpe-a antes de adicionar</string>
+    <string name="user_schedule_add_fail">Falha ao adicionar agendamento</string>
+    <string name="user_schedule_edit_fail">Falha ao modificar a programação</string>
+    <string name="user_schedule_delete_fail">Falha ao excluir agendamento</string>
+    <string name="user_schedule_past">Não é possível definir o ponto de tempo passado como ponto de tempo programado</string>
+    <string name="user_schedule_same">O ponto de tempo atualmente selecionado já tem uma agenda e não pode ser definido repetidamente</string>
+    <string name="user_schedule_msg">Por favor, preencha os detalhes do agendamento</string>
+    <string name="user_today">hoje</string>
+    <string name="user_time">Tempo</string>
+
+
+    <string name="user_auto_measure_tip">Depois que a função de monitoramento automático for ativada, o relógio medirá todas as frequências e horas dentro do período efetivo.</string>
+    <string name="user_measure_frequency">Frequência de monitoramento</string>
+    <string name="user_valid_time">Período de vigência</string>
+    <string name="user_start_time">Hora de início</string>
+    <string name="user_end_time">Fim do tempo</string>
+    <string name="user_heart">frequência cardíaca</string>
+    <string name="user_blood_pressure">pressão arterial</string>
+    <string name="user_blood_oxygen">oxigênio no sangue</string>
+    <string name="user_temperature">temperatura corporal</string>
+</resources>

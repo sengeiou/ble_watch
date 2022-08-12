@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <ImageView
+            android:id="@+id/cardIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/cardTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cardIv"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/drag_list_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/card_icon_control" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_corner"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <com.szip.healthy.View.ReportTableView
+                android:id="@+id/tableView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_white_corner">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_overview"/>
+
+                <TextView
+                    android:id="@+id/reportTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/healthy_survey"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:id="@+id/stepTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/healthy_all_step"/>
+
+                <TextView
+                    android:id="@+id/stepTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:id="@+id/calorieTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/healthy_all_calorie"/>
+
+                <TextView
+                    android:id="@+id/caloriesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:id="@+id/distanceTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/healthy_all_distance"/>
+
+                <TextView
+                    android:id="@+id/distanceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_white_corner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_overview"/>
+
+                <TextView
+                    android:id="@+id/goalTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/healthy_plan"
+                    android:layout_marginStart="15dp"/>
+
+                <TextView
+                    android:id="@+id/goalTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center|end"
+                    android:layout_marginEnd="15dp"/>
+
+            </LinearLayout>
+
+            <com.szip.healthy.View.RectProgressBar
+                android:id="@+id/rectProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

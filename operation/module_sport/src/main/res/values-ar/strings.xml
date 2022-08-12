@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">تمرين حديث</string>
+    <string name="sport_sport_time">وقت التمرين</string>
+    <string name="sport_sport_calorie">ممارسة الاستهلاك</string>
+    <string name="sport_sport_distance">مسافة الحركة</string>
+    <string name="sport_steps">عدد الخطوات</string>
+    <string name="sport_speed_hour">متوسط ​​السرعة</string>
+    <string name="sport_stride">إيقاع</string>
+    <string name="sport_heart">متوسط ​​معدل ضربات القلب</string>
+    <string name="sport_height">تسلق الارتفاع</string>
+    <string name="sport_sport_info">التفاصيل الرياضية</string>
+    <string name="sport_heart_level">توزيع معدل ضربات القلب</string>
+    <string name="sport_heart1">حد(≥161)</string>
+    <string name="sport_heart2">اللاهوائية(149~160)</string>
+    <string name="sport_heart3">الهوائية(131~138)</string>
+    <string name="sport_heart4">حرق الدهون(112~130)</string>
+    <string name="sport_heart5">تسخين(90~111)</string>
+    <string name="sport_speed">سرعة</string>
+    <string name="sport_running">في الحركة</string>
+    <string name="sport_run_pause">توقفت الحركة</string>
+    <string name="sport_gps_low">إشارة GPS ضعيفة ودقة بيانات منخفضة</string>
+    <string name="sport_gps_middle">إشارة GPS قوية ودقة بيانات عالية</string>
+    <string name="sport_gps_high">إشارة GPS قوية ودقة بيانات عالية</string>
+    <string name="sport_no_sport">لا يوجد سجل تمرين حتى الآن ، ابدأ التمرين الآن</string>
+    <string name="sport_destroy">انقر مرة أخرى للخروج من هذه الحملة</string>
+    <string name="sport_time_short">مدة التمرين والمسافة قصيرة جدًا لتكوين تقرير تمرين صالح</string>
+    <string name="sport_finish_sport">هل أنت متأكد أنك تريد إنهاء التمرين؟</string>
+    <string name="sport_start_sport">يرجى بدء التمرين أولا</string>
+
+</resources>

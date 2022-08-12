@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="cp_search_hint_text">Búsqueda</string>
+    <string name="cp_no_result">Imposible de buscar</string>
+    <string name="country">País / Región</string>
+
+</resources>

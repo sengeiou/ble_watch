@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">地區</string>
+    <string name="login_chose_location">請選擇地區</string>
+    <string name="login_login_account">登錄賬戶</string>
+    <string name="login_login">登錄</string>
+    <string name="login_account">賬戶</string>
+    <string name="login_input_account">輸入您的賬戶</string>
+    <string name="login_right_email">請輸入正確的郵箱地址</string>
+    <string name="login_psw">密碼</string>
+    <string name="login_input_psw">輸入您的密碼</string>
+    <string name="login_forget_psw">忘記密碼?</string>
+    <string name="login_register">沒有賬號？去註冊</string>
+    <string name="login_privacy">同意《<u>用戶協議與隱私條款</u>》</string>
+    <string name="login_checkPrivacy">未同意《用戶協議與隱私條款》</string>
+
+
+    <string name="login_register_account">註冊賬戶</string>
+    <string name="login_register_account_tip">擁有個人賬戶後，你的運動健康數據、設備的設置偏好可以安全地永久保存</string>
+    <string name="login_next">下一步</string>
+    <string name="login_verification">驗證碼</string>
+    <string name="login_input_verification">輸入您的驗證碼</string>
+    <string name="login_send">發送</string>
+
+    <string name="login_set_password">設置密碼</string>
+    <string name="login_inconsistent">兩次密碼輸入不一致</string>
+    <string name="login_confirm_password">確認密碼</string>
+    <string name="login_finish">完成</string>
+    <string name="login_find_password">找回密碼</string>
+    <string name="login_reset_Success">密碼重置成功</string>
+
+    <string name="login_change_password">修改密碼</string>
+    <string name="login_old_password">舊密碼</string>
+    <string name="login_new_password">新密碼</string>
+    <string name="login_confirm_new_password">確認新密碼</string>
+    <string name="login_change_success">修改成功</string>
+</resources>

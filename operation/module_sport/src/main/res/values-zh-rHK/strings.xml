@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">最近運動</string>
+    <string name="sport_sport_time">運動時長</string>
+    <string name="sport_sport_calorie">運動消耗</string>
+    <string name="sport_sport_distance">運動距離</string>
+    <string name="sport_steps">步數</string>
+    <string name="sport_speed_hour">平均時速</string>
+    <string name="sport_stride">步頻</string>
+    <string name="sport_heart">平均心率</string>
+    <string name="sport_height">爬升高度</string>
+    <string name="sport_sport_info">運動詳情</string>
+    <string name="sport_heart_level">心率分佈</string>
+    <string name="sport_heart1">極限(≥161)</string>
+    <string name="sport_heart2">無氧(149~160)</string>
+    <string name="sport_heart3">有氧(131~138)</string>
+    <string name="sport_heart4">燃脂(112~130)</string>
+    <string name="sport_heart5">熱身(90~111)</string>
+    <string name="sport_speed">配速</string>
+    <string name="sport_running">運動中</string>
+    <string name="sport_run_pause">運動已暫停</string>
+    <string name="sport_gps_low">GPS信號弱，數據準確度低</string>
+    <string name="sport_gps_middle">GPS信號較強，數據準確度較高</string>
+    <string name="sport_gps_high">GPS信號強，數據準確度高</string>
+    <string name="sport_no_sport">還沒有運動記錄，快開始運動吧</string>
+    <string name="sport_destroy">再次點擊退出本次運動</string>
+    <string name="sport_time_short">運動時長跟距離太短，無法生成有效的運動報告</string>
+    <string name="sport_finish_sport">確定要結束運動嗎？</string>
+    <string name="sport_start_sport">請先開啟運動</string>
+
+</resources>

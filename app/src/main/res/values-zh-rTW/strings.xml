@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">狀態</string>
+    <string name="sport">運動</string>
+    <string name="consult">諮詢</string>
+    <string name="mine">我的</string>
+    <string name="tip">提醒</string>
+    <string name="checkGPS">檢測到您手機的位置開關未打開，為確保應用正常運行，請打開位置開關。</string>
+    <string name="confirm">確定</string>
+    <string name="cancel">取消</string>
+
+    <string name="touchAgain">再按一次退出程序</string>
+    <string name="privacy1">用戶協議與隱私條款</string>
+    <string name="privacyTip">感謝您信任並使用FitRing。
+\n\n我們講依據《用戶隱私協議》來幫助您了解我們在收集、使用、存儲您個人信息的情況以及您享有的相關權利。
+\n\n在您使用FitRing應用程序時，我們將收集您的設備信息、個人資料(頭像、暱稱、身高、體重、運動數據)等信息，我們需要獲取您的相機權限、相冊權限用於上傳您的應用頭像:
+\n\n在您使用FitRing應用進行戶外跑步、上傳、分享並存儲運動信息時，我們需要獲取您的位置權限等用於記錄您的跑步軌跡。
+\n\n您可以在相關頁面訪問、修改、刪除您的個人信息或者管理您的授權。
+\n\n我們會採用行業領先的安全技術來保護您的個人信息。
+\n\n當您點擊"確定"即表示你已經同意該協議的條款。</string>
+</resources>

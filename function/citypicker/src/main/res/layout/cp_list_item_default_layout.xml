@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/cp_list_fl"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/cpListItemHeight"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingStart="16dp"
+    >
+
+
+    <TextView
+        android:id="@+id/cp_list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/cpListItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:textColor="?attr/cpListItemTextColor"
+        android:textSize="?attr/cpListItemTextSize"
+        tools:ignore="RtlSymmetry"/>
+
+    <TextView
+        android:id="@+id/cp_list_item_code"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/cpListItemHeight"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="?attr/cpListItemTextColor"
+        android:layout_marginEnd="25dp"
+        android:layout_gravity="end"/>
+
+</FrameLayout>
+
+
+

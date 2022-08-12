@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_corner"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <com.szip.healthy.View.ReportTableView
+                android:id="@+id/tableView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_white_corner">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_overview"/>
+
+                <TextView
+                    android:id="@+id/reportTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/healthy_week_survey" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/healthy_sbp_average"/>
+
+                <TextView
+                    android:id="@+id/sbpTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/healthy_dbp_average"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/dbpTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/gray"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/healthy_bp_abnormal"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_bp_high" />
+                    <TextView
+                        android:id="@+id/sbpAbnormalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="5dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_bp_low"
+                        android:layout_marginStart="10dp"/>
+                    <TextView
+                        android:id="@+id/dbpAbnormalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginStart="5dp"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/listLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_corner"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_overview" />
+
+                <TextView
+                    android:id="@+id/measureTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/healthy_spo_measure_list"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/infoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

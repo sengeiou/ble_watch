@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">هدفي</string>
+    <string name="user_edit_plan">تحرير الهدف</string>
+    <string name="user_step">الهدف الخطوة</string>
+    <string name="user_sleep">أهداف النوم</string>
+    <string name="user_calorie">هدف الاستهلاك</string>
+
+    <string name="user_connect">متصل</string>
+    <string name="user_disconnect">غير متصل</string>
+    <string name="user_connect_fail">فشل الاتصال، أحاول إعادة الاتصال</string>
+    <string name="user_connecting">توصيل...</string>
+
+    <string name="user_dial">وجه ساعتي</string>
+    <string name="user_dial_tip">المزيد من الأوجه ، التغيير في الإرادة></string>
+    <string name="user_device_config">إدارة الجهاز</string>
+    <string name="user_find_watch">ابحث عن ساعة</string>
+    <string name="user_ble_call">اتصال بلوتوث</string>
+    <string name="user_ble_camera">كاميرا بلوتوث</string>
+    <string name="user_unit">وحدة نظام</string>
+    <string name="user_notification">تنبيه</string>
+    <string name="user_about">عن الجهاز</string>
+    <string name="user_schedule">جدولي</string>
+    <string name="user_auto">المراقبة التلقائية</string>
+    <string name="user_add_device">اضف جهاز</string>
+
+    <string name="user_measureUnit">وحدة القياس</string>
+    <string name="user_tempUnit">درجة الحرارة وحدة</string>
+    <string name="user_metric">قياس</string>
+    <string name="user_british">إمبراطوري</string>
+    <string name="user_save">حفظ</string>
+    <string name="user_saved">تم الحفظ بنجاح</string>
+
+    <string name="user_notify">تنبيه</string>
+    <string name="user_notify_tip">لتلقي رسائل إعلام من التطبيق الموجود على الجهاز ، تحتاج إلى تشغيل مفتاح الرسائل</string>
+    <string name="user_notify_title">تمكين الإخطارات</string>
+    <string name="user_notify_msg">يحتاج هذا التطبيق إلى إعادة توجيه إشعارات التطبيق إلى الأجهزة الذكية البعيدة. اضغط على \ "موافق \" للدخول إلى صفحة الإعلام للتفعيل。</string>
+    <string name="user_cancel">يلغي</string>
+    <string name="user_confirm">بالتأكيد</string>
+
+    <string name="user_account_safe">الحساب والأمان</string>
+    <string name="user_version">إصدار التطبيق الحالي</string>
+    <string name="user_help">مساعدة وردود الفعل</string>
+    <string name="user_privacy">اتفاقية المستخدم وسياسة الخصوصية</string>
+    <string name="user_logout">خروج</string>
+    <string name="user_unbind_tip">فك الارتباط</string>
+    <string name="user_unbind_message">هل أنت متأكد من إلغاء ربط الجهاز الحالي؟</string>
+
+    <string name="user_info">معلومات شخصية</string>
+    <string name="user_set">معلومات الحساب</string>
+    <string name="user_head">الصورة الرمزية</string>
+    <string name="user_name">كنية</string>
+    <string name="user_sex">جنس</string>
+    <string name="user_birthday">تاريخ الولادة</string>
+    <string name="user_height">ارتفاع</string>
+    <string name="user_weight">وزن</string>
+    <string name="user_male">الذكر</string>
+    <string name="user_female">أنثى</string>
+    <string name="user_camera">تصوير</string>
+    <string name="user_album">إلبوم الصور</string>
+    <string name="user_enter_name">الرجاء إدخال اسم الشهرة الخاص بك</string>
+    <string name="user_name_long">لا يمكن أن يتجاوز الاسم المستعار 12 حرفًا</string>
+    <string name="user_permission_error_camera">لم يتم تمرير الإذن ، لا يمكن تشغيل وظيفة الكاميرا</string>
+    <string name="user_crop_pic_failed">فشل في التقاط الصورة ، يرجى تحديد صورة بتنسيق jpg!</string>
+    <string name="user_account">تسجيل الدخول</string>
+    <string name="user_change">غير كلمة السر</string>
+    <string name="user_delete_account">تسجيل خروج</string>
+    <string name="user_logout_tip">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="user_upload_data">رفع البيانات...</string>
+    <string name="user_upload_data_success">تم تحميل البيانات بنجاح!</string>
+    <string name="user_faq">مشكلة شائعة</string>
+    <string name="user_feedback_hint">ملاحظاتك / أسئلتك</string>
+    <string name="user_send_feedback">إرسال ملاحظات</string>
+    <string name="user_feedback_long">النص الذي أدخلته طويل جدًا</string>
+    <string name="user_feedback_empty">لا يمكن ترك التعليقات فارغة</string>
+    <string name="user_feedback_success">نجاح ردود الفعل</string>
+    <string name="user_guide">دليل الاتصال</string>
+    <string name="user_service">اجعلها تعمل في الخلفية</string>
+    <string name="user_huawei">هواوي</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">لينوفو</string>
+    <string name="user_oneplus">واحد زائد</string>
+    <string name="user_samsun">سامسونج</string>
+    <string name="user_mi">الدخن</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">لتحسين استقرار اتصال الساعة ، يوصى بإجراء الإعدادات التالية：</string>
+    <string name="user_saverBattery">لا تقم بتشغيل (وضع توفير الطاقة):</string>
+    <string name="user_batteryContent">إذا تم تشغيل وضع توفير الطاقة ، فقد يتسبب ذلك في حدوث مشكلات مثل اتصال Bluetooth غير المستقر ، ومسار الحركة غير الطبيعي ، وانخفاض مسافة الطاقة. يوصى بإيقاف تشغيل وضع توفير الطاقة أثناء الاستخدام.</string>
+    <string name="user_protect">إعدادات حماية الخلفية لكبرى الشركات المصنعة:</string>
+
+
+    <string name="user_search">جهاز البحث</string>
+    <string name="user_searching">جاري البحث عن أجهزة ...</string>
+    <string name="user_bind">ربط...</string>
+    <string name="user_no_device">لم يتم العثور علي الجهاز</string>
+    <string name="user_pair_success">يقترن بنجاح</string>
+    <string name="user_pair_tip">ستتم مزامنة معلومات بيانات الصحة الرياضية الخاصة بك بين الساعة والهاتف المحمول من خلال التطبيق.</string>
+    <string name="user_finish">إنهاء</string>
+    <string name="user_understand">أرى</string>
+    <string name="user_wear_tip">نصائح ارتداء</string>
+    <string name="user_wear_tip_content">من أجل قياس البيانات بدقة وعدم التأثير على الاستخدام العادي للتطبيق ، يرجى محاولة ارتداء الساعة على مسافة 1 سم من عظم الرسغ</string>
+    <string name="user_search_tip">قم بإزالة الجهاز ، وشحنه للتنشيط ، واحتفظ به بالقرب من الهاتف</string>
+    <string name="user_search_much">يرجى تحديد ساعتك وفقًا لعنوان mac</string>
+    <string name="user_search_again">ابحث ثانيا</string>
+    <string name="user_again_tip">يمكنك تجربة الطرق التالية والمحاولة مرة أخرى بعد الإعداد：</string>
+    <string name="user_again_advice">·أعد فتح بلوتوث الهاتف \ n · تأكد من تشغيل الساعة وقربها من الهاتف \ n · انقر على الجهاز \ "استعادة إعدادات المصنع \""</string>
+    <string name="user_stop_bind">في وقت لاحق ، لا تلتزم في الوقت الحالي</string>
+    <string name="user_bind_help"><u>لا يمكنك العثور على الجهاز لإضافته؟ عرض مساعده</u></string>
+
+    <string name="user_dial_market">سوق الاتصال الهاتفي</string>
+    <string name="user_dial_now">مشاهدة معاينة الوجه</string>
+    <string name="user_dial_mine">وجه ساعتي</string>
+    <string name="user_dial_diy">وجه ساعة مخصص</string>
+    <string name="user_background">تحميل الخلفية</string>
+    <string name="user_crop_fail">فشل في التقاط الصورة ، يرجى تحديد صورة بتنسيق jpg!</string>
+    <string name="user_crop_small">فشل في التقاط الصورة ، الصورة الملتقطة صغيرة جدًا ولا تتطابق مع حجم الاتصال الهاتفي!</string>
+    <string name="user_send_background">جارٍ إرسال الخلفية ...</string>
+    <string name="user_send_dial">جارٍ إرسال خلفية الساعة ...</string>
+    <string name="user_send_success">تم الارسال بنجاح!</string>
+    <string name="user_send_fail">فشل الإرسال ، يرجى المحاولة مرة أخرى。</string>
+    <string name="user_no_background">يرجى تحميل الخلفية أولا</string>
+    <string name="user_no_clock">الرجاء تحديد وجه الساعة أولاً</string>
+
+    <string name="user_device_name">نموذج البرنامج</string>
+    <string name="user_device_mac">Macتبوك</string>
+    <string name="user_device_version">إصدار البرنامج</string>
+    <string name="user_check_update">تحقق من وجود تحديثات</string>
+
+    <string name="user_camera_tip">بعد تشغيل وظيفة كاميرا Bluetooth ، يمكن للساعة التحكم في تطبيق كاميرا الهاتف المحمول لالتقاط الصور</string>
+    <string name="user_camera_permission_tip">أثناء الاستخدام ، يتطلب هذا التطبيق الوصول إلى الكاميرا وأذونات قراءة الملف والكتابة لالتقاط الصور عن بُعد وتخزين الصور \ n \ n إذا كنت لا توافق على استدعاء الأذونات المذكورة أعلاه ، فسيؤدي ذلك إلى فشل كاميرا Bluetooth في العمل بشكل طبيعي ، وهو ما لن يؤثر على استخدامك للوظائف الأساسية لهذا التطبيق. يمكنك سحب موافقتك في أي وقت من خلال الانتقال إلى "الإعدادات"> "إدارة الأذونات" واختيار إيقاف تشغيل مكالمات الأذونات أعلاه</string>
+    <string name="user_camera_permission_error">لم يتم تمرير الإذن ، فشل الافتتاح</string>
+
+    <string name="user_deleteTip">سواء لتأكيد إلغاء حسابك ، سيتم إلغاء الحساب بنجاح في غضون ثلاثة أيام بعد التأكيد ، وسيتم حذف بيانات الحساب تمامًا بعد الإلغاء الناجح ، ولا يمكن استردادها! الرجاء المضي قدما بحذر.</string>
+    <string name="user_deleteSuccess">تم إلغاء حساب التطبيق بنجاح.</string>
+    <string name="user_deleteNow">الحساب الجاري في انتظار مرحلة الخروج。</string>
+
+    <string name="user_schedule_empty">الساعة الحالية ليس لها جدول زمني ، يرجى إضافة جدول جديد</string>
+    <string name="user_delete_schedule">حذف الجدول</string>
+    <string name="user_save_schedule">احفظ الجدول</string>
+    <string name="user_schedule_info">تفاصيل الجدول</string>
+    <string name="user_schedule_fall">وصل الجدول الزمني الذي يمكن إضافته إلى الساعة إلى الحد الأقصى ، يرجى مسحه قبل الإضافة</string>
+    <string name="user_schedule_add_fail">فشل إضافة الجدول</string>
+    <string name="user_schedule_edit_fail">فشل تعديل الجدول</string>
+    <string name="user_schedule_delete_fail">فشل حذف الجدول</string>
+    <string name="user_schedule_past">تعذر تعيين النقطة الزمنية الماضية كنقطة زمنية للجدول الزمني</string>
+    <string name="user_schedule_same">النقطة الزمنية المحددة حاليًا لها جدول أعمال بالفعل ولا يمكن تعيينها بشكل متكرر</string>
+    <string name="user_schedule_msg">يرجى ملء تفاصيل الجدول الزمني</string>
+    <string name="user_today">اليوم</string>
+    <string name="user_time">زمن</string>
+
+
+    <string name="user_auto_measure_tip">بعد تشغيل وظيفة المراقبة التلقائية ، ستقيس الساعة كل تردد ووقت خلال الفترة الفعلية.</string>
+    <string name="user_measure_frequency">تردد المراقبة</string>
+    <string name="user_valid_time">فترة فعالة</string>
+    <string name="user_start_time">وقت البدء</string>
+    <string name="user_end_time">وقت النهاية</string>
+    <string name="user_heart">معدل ضربات القلب</string>
+    <string name="user_blood_pressure">ضغط الدم</string>
+    <string name="user_blood_oxygen">الأكسجين في الدم</string>
+    <string name="user_temperature">درجة حرارة الجسم</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CircularImageView">
+        <attr name="is_circular" format="boolean"/>
+        <attr name="is_allRadius" format="boolean"/>
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="step_color" format="color"/>
+        <attr name="step_color_background" format="color"/>
+        <attr name="distance_color" format="color"/>
+        <attr name="distance_color_background" format="color"/>
+        <attr name="calorie_color" format="color"/>
+        <attr name="calorie_color_background" format="color"/>
+        <attr name="bg_arc_width" format="dimension"/>
+        <attr name="front_width" format="dimension"/>
+        <attr name="sweep_angle" format="integer"/>
+        <attr name="current_value" format="float"/>
+        <attr name="max_value" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="NoScrollViewPager">
+        <attr name="scorll_able" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="androidWheelView">
+        <attr name="awv_textsize" format="integer" />
+        <attr name="awv_lineSpace" format="float" />
+        <attr name="awv_centerTextColor" format="integer" />
+        <attr name="awv_outerTextColor" format="integer" />
+        <attr name="awv_dividerTextColor" format="integer" />
+        <attr name="awv_itemsVisibleCount" format="integer" />
+        <attr name="awv_isLoop" format="boolean" />
+        <attr name="awv_initialPosition" format="integer" />
+        <attr name="awv_scaleX" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="showWeek" format="boolean" />
+        <attr name="maxMonth" format="integer" />
+    </declare-styleable>
+</resources>

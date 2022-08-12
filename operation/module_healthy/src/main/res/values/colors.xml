@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="healthy_green">#50e034</color>
+    <color name="healthy_green_background">#6650e034</color>
+    <color name="healthy_blue">#43a3f9</color>
+    <color name="healthy_blue_background">#6643a3f9</color>
+    <color name="healthy_red">#ee553b</color>
+    <color name="healthy_red_background">#66ee553b</color>
+    <color name="healthy_gray_text">#9fa4ab</color>
+    <color name="healthy_ray">#534aff</color>
+    <color name="healthy_ray_background">#66534aff</color>
+    <color name="healthy_yellow">#ffd527</color>
+    <color name="healthy_yellow_background">#66ffd527</color>
+    <color name="healthy_orange">#ff780d</color>
+    <color name="healthy_orange_background">#66ff780d</color>
+</resources>

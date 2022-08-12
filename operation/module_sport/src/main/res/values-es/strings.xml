@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">ejercicio reciente</string>
+    <string name="sport_sport_time">duración del ejercicio</string>
+    <string name="sport_sport_calorie">consumo de ejercicio</string>
+    <string name="sport_sport_distance">Distancia de movimiento</string>
+    <string name="sport_steps">Conteo de pasos</string>
+    <string name="sport_speed_hour">velocidad media</string>
+    <string name="sport_stride">cadencia</string>
+    <string name="sport_heart">frecuencia cardiaca promedio</string>
+    <string name="sport_height">subir altitud</string>
+    <string name="sport_sport_info">Detalles deportivos</string>
+    <string name="sport_heart_level">Distribución de la frecuencia cardíaca</string>
+    <string name="sport_heart1">límite(≥161)</string>
+    <string name="sport_heart2">anaeróbico(149~160)</string>
+    <string name="sport_heart3">Aerobio(131~138)</string>
+    <string name="sport_heart4">la quema de grasa(112~130)</string>
+    <string name="sport_heart5">calentamiento(90~111)</string>
+    <string name="sport_speed">ritmo</string>
+    <string name="sport_running">en movimiento</string>
+    <string name="sport_run_pause">Movimiento en pausa</string>
+    <string name="sport_gps_low">Señal de GPS débil y baja precisión de datos</string>
+    <string name="sport_gps_middle">Fuerte señal de GPS y alta precisión de datos</string>
+    <string name="sport_gps_high">Fuerte señal de GPS y alta precisión de datos</string>
+    <string name="sport_no_sport">Aún no hay registro de ejercicio, comience a hacer ejercicio ahora</string>
+    <string name="sport_destroy">Haga clic de nuevo para salir de esta campaña.</string>
+    <string name="sport_time_short">La duración y la distancia del ejercicio son demasiado cortas para generar un informe de ejercicio válido</string>
+    <string name="sport_finish_sport">¿Estás seguro de que quieres terminar el ejercicio?</string>
+    <string name="sport_start_sport">Por favor, empiece a hacer ejercicio primero.</string>
+
+</resources>

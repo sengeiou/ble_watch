@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">giriş modülü</string>
+    <string name="login_location">bölge</string>
+    <string name="login_chose_location">Lütfen bir bölge seçin</string>
+    <string name="login_login_account">Giriş hesabı</string>
+    <string name="login_login">Giriş</string>
+    <string name="login_account">Hesap</string>
+    <string name="login_input_account">Hesabınızı girin</string>
+    <string name="login_right_email">Lütfen doğru bir e-posta adresi girin</string>
+    <string name="login_psw">şifre</string>
+    <string name="login_input_psw">Şifrenizi girin</string>
+    <string name="login_forget_psw">Şifrenizi mi unuttunuz?</string>
+    <string name="login_register">Hesabınız yok mu? kayıt olmak için</string>
+    <string name="login_privacy"><u>Kullanıcı Sözleşmesini ve Gizlilik Politikasını</u></string> Kabul Edin
+    <string name="login_checkPrivacy">Kullanıcı Sözleşmesini ve Gizlilik Politikasını kabul etmeyin</string>
+
+
+    <string name="login_register_account">hesabı kaydedin</string>
+    <string name="login_register_account_tip">Kişisel bir hesabınız olduğunda, fitness verileriniz ve cihaz tercihleriniz güvenli ve kalıcı olarak kaydedilebilir</string>
+    <string name="login_next">Sonraki</string>
+    <string name="login_verification">Doğrulama kodu</string>
+    <string name="login_input_verification">Doğrulama kodunuzu girin</string>
+    <string name="login_send">Gönder</string>
+
+    <string name="login_set_password">şifre ayarla</string>
+    <string name="login_inconsistent">İki kez girilen tutarsız parolalar</string>
+    <string name="login_confirm_password">Şifreyi Onayla</string>
+    <string name="login_finish">bitir</string>
+    <string name="login_find_password">şifre bul</string>
+    <string name="login_reset_Success">Parola başarıyla sıfırlandı</string>
+
+    <string name="login_change_password">şifreyi değiştir</string>
+    <string name="login_old_password">eski şifre</string>
+    <string name="login_new_password">yeni şifre</string>
+    <string name="login_confirm_new_password">Yeni şifreyi onayla</string>
+    <string name="login_change_success">Başarıyla değiştirildi</string>
+</resources>

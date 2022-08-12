@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/j_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/windowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:layout_centerHorizontal="true"
+            android:text="标题"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/j_btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D3D3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <com.szip.blewatch.base.View.character.CharacterPickerView
+            android:id="@+id/j_optionspicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/j_optionspicker"-->
+            <!--android:layout_alignTop="@id/j_optionspicker"-->
+            <!--android:background="@drawable/j_bg_above_timepicker" />-->
+    </RelativeLayout>
+
+</LinearLayout>

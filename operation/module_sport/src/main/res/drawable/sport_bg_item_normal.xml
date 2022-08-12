@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 第一层阴影：左偏移2dp，上偏移4dp -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#06c5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#0cc5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#12c5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#18c5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#1ec5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#24c5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#2ac5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0.8dp"
+                android:left="0.8dp"
+                android:right="0.8dp"
+                android:top="0.6dp" />
+            <solid android:color="#30c5c6d0" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+
+    <!--第二层前景：：底偏移4dp，右偏移2dp-->
+    <item>
+        <shape>
+
+            <solid android:color="@android:color/white"/>
+            <!--圆角-->
+
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+
+</layer-list>

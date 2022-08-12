@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">我的目標</string>
+    <string name="user_edit_plan">編輯目標</string>
+    <string name="user_step">步數目標</string>
+    <string name="user_sleep">睡眠目標</string>
+    <string name="user_calorie">消耗目標</string>
+
+    <string name="user_connect">已連接</string>
+    <string name="user_disconnect">未連接</string>
+    <string name="user_connect_fail">連接失敗，正在嘗試重連</string>
+    <string name="user_connecting">正在連接...</string>
+
+    <string name="user_dial">我的錶盤</string>
+    <string name="user_dial_tip">更多錶盤，隨心換></string>
+    <string name="user_device_config">設備管理</string>
+    <string name="user_find_watch">尋找手錶</string>
+    <string name="user_ble_call">藍牙通話</string>
+    <string name="user_ble_camera">藍牙拍照</string>
+    <string name="user_unit">單位制式</string>
+    <string name="user_notification">消息通知</string>
+    <string name="user_about">關於設備</string>
+    <string name="user_schedule">我的日程</string>
+    <string name="user_auto">自動監測</string>
+    <string name="user_add_device">添加設備</string>
+
+    <string name="user_measureUnit">度量單位</string>
+    <string name="user_tempUnit">溫度單位</string>
+    <string name="user_metric">公制</string>
+    <string name="user_british">英制</string>
+    <string name="user_save">保存</string>
+    <string name="user_saved">保存成功</string>
+
+    <string name="user_notify">消息通知</string>
+    <string name="user_notify_tip">如需在設備端接收應用的通知消息，需打開消息開關</string>
+    <string name="user_notify_title">啟用通知</string>
+    <string name="user_notify_msg">本應用需要轉發應用通知到遠程智能設備。按\"確定\"鍵進入通知頁面啟動。</string>
+    <string name="user_cancel">取消</string>
+    <string name="user_confirm">確定</string>
+
+    <string name="user_account_safe">帳號與安全</string>
+    <string name="user_version">當前APP版本</string>
+    <string name="user_help">幫助與回饋</string>
+    <string name="user_privacy">用戶協議與隱私條款</string>
+    <string name="user_logout">退出登錄</string>
+    <string name="user_unbind_tip">解除綁定</string>
+    <string name="user_unbind_message">確定解除當前設備的綁定嗎？</string>
+
+    <string name="user_info">個人資訊</string>
+    <string name="user_set">帳號資訊</string>
+    <string name="user_head">頭像</string>
+    <string name="user_name">昵稱</string>
+    <string name="user_sex">性別</string>
+    <string name="user_birthday">出生年月</string>
+    <string name="user_height">身高</string>
+    <string name="user_weight">體重</string>
+    <string name="user_male">男</string>
+    <string name="user_female">女</string>
+    <string name="user_camera">拍照</string>
+    <string name="user_album">相冊</string>
+    <string name="user_enter_name">請輸入您的昵稱</string>
+    <string name="user_name_long">昵稱不能超過12個字元</string>
+    <string name="user_permission_error_camera">許可權沒通過，無法打開拍照功能</string>
+    <string name="user_crop_pic_failed">截取圖像失敗，請選擇jpg格式圖片！</string>
+    <string name="user_account">登錄帳號</string>
+    <string name="user_change">修改密碼</string>
+    <string name="user_delete_account">註銷帳號</string>
+    <string name="user_logout_tip">確定要退出登錄嗎？</string>
+    <string name="user_upload_data">正在上傳數據...</string>
+    <string name="user_upload_data_success">數據上傳成功!</string>
+    <string name="user_faq">常見問題</string>
+    <string name="user_feedback_hint">您的回饋/問題</string>
+    <string name="user_send_feedback">提交回饋</string>
+    <string name="user_feedback_long">您輸入的文本太長了</string>
+    <string name="user_feedback_empty">意見不能為空</string>
+    <string name="user_feedback_success">回饋成功</string>
+    <string name="user_guide">連接指引</string>
+    <string name="user_service">保持後臺運行</string>
+    <string name="user_huawei">華為</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">聯想</string>
+    <string name="user_oneplus">一加</string>
+    <string name="user_samsun">三星</string>
+    <string name="user_mi">小米</string>
+    <string name="user_meizu">魅族</string>
+    <string name="user_serviceTip">為了提升手錶連接的穩定性，建議您進行如下設置：</string>
+    <string name="user_saverBattery">請勿開啟（省電模式）：</string>
+    <string name="user_batteryContent">如果開啟了省電模式，將可能導致藍牙連接不穩定、運動軌跡異常、運功距離減少等問題。建議在使用中關閉省電模式。</string>
+    <string name="user_protect">各大廠商後臺保護設置方法：</string>
+
+
+    <string name="user_search">搜索設備</string>
+    <string name="user_searching">正在搜索設備...</string>
+    <string name="user_bind">正在綁定...</string>
+    <string name="user_no_device">未發現設備</string>
+    <string name="user_pair_success">配對成功</string>
+    <string name="user_pair_tip">您的運動健康數據資訊將通過APP在手錶和手機之間同步。</string>
+    <string name="user_finish">完成</string>
+    <string name="user_understand">我知道了</string>
+    <string name="user_wear_tip">佩戴提示</string>
+    <string name="user_wear_tip_content">為了準確的測量數據，和不影響APP正常使用，請您儘量在離腕骨1cm距離的位置佩戴手錶</string>
+    <string name="user_search_tip">取出設備，充電啟動，並且靠近手機</string>
+    <string name="user_search_much">請根據mac地址選擇您的手錶</string>
+    <string name="user_search_again">重新搜索</string>
+    <string name="user_again_tip">您可以嘗試以下方式，設置後重試：</string>
+    <string name="user_again_advice">·重新打開手機藍牙\n·確定手錶開機並靠近手機\n·在設備上點擊\"恢復出廠設置\"</string>
+    <string name="user_stop_bind">稍後，暫不綁定</string>
+    <string name="user_bind_help"><u>找不到要添加的設備？查看幫助</u></string>
+
+    <string name="user_dial_market">錶盤市場</string>
+    <string name="user_dial_now">錶盤預覽</string>
+    <string name="user_dial_mine">我的錶盤</string>
+    <string name="user_dial_diy">自定義錶盤</string>
+    <string name="user_background">上傳背景</string>
+    <string name="user_crop_fail">截取圖像失敗，請選擇jpg格式圖片！</string>
+    <string name="user_crop_small">截取圖像失敗，所截取圖片太小與錶盤大小不符合！</string>
+    <string name="user_send_background">正在發送背景...</string>
+    <string name="user_send_dial">正在發送錶盤...</string>
+    <string name="user_send_success">發送成功！</string>
+    <string name="user_send_fail">發送失敗，請重試。</string>
+    <string name="user_no_background">請先上傳背景</string>
+    <string name="user_no_clock">請先選擇錶盤</string>
+
+    <string name="user_device_name">軟體型號</string>
+    <string name="user_device_mac">Mac地址</string>
+    <string name="user_device_version">軟體版本</string>
+    <string name="user_check_update">檢查更新</string>
+
+    <string name="user_camera_tip">開啟藍牙拍照功能後，手錶可控制手機相機應用，進行拍照</string>
+    <string name="user_camera_permission_tip">在使用過程中，本應用需要訪問相機以及檔讀寫許可權，用於遠程拍照以及存儲照片\n\n如果您不同意調用以上許可權，將導致藍牙拍照無法正常使用，擔不影響您使用本應用的基本功能。您可隨時前往“設置”>“許可權管理”，選擇關閉以上許可權調用以撤回您的同意</string>
+    <string name="user_camera_permission_error">許可權沒有通過，打開失敗</string>
+
+    <string name="user_deleteTip">是否確認註銷您的帳號，確認後賬號將會在三天內註銷成功，註銷成功後賬號數據將被完全刪除，不可恢復！請謹慎操作。</string>
+    <string name="user_deleteSuccess">申請帳號註銷成功。</string>
+    <string name="user_deleteNow">當前帳號正在等待註銷階段。</string>
+
+    <string name="user_schedule_empty">當前手錶無日程，請添加新的日程吧</string>
+    <string name="user_delete_schedule">刪除日程</string>
+    <string name="user_save_schedule">保存日程</string>
+    <string name="user_schedule_info">日程詳情</string>
+    <string name="user_schedule_fall">手錶可添加的日程已經達到上限，請清理後再添加</string>
+    <string name="user_schedule_add_fail">添加日程失敗</string>
+    <string name="user_schedule_edit_fail">修改日程失敗</string>
+    <string name="user_schedule_delete_fail">刪除日程失敗</string>
+    <string name="user_schedule_past">無法設置已經過去的時間點作為日程時間點</string>
+    <string name="user_schedule_same">當前選中的時間點已經存在日程，無法重複設置</string>
+    <string name="user_schedule_msg">請填寫日程詳情</string>
+    <string name="user_today">今天</string>
+    <string name="user_time">時間</string>
+
+
+    <string name="user_auto_measure_tip">開啟自動監測功能後手表會在生效時段內每隔頻率時間測量一次</string>
+    <string name="user_measure_frequency">監測頻率</string>
+    <string name="user_valid_time">生效時段</string>
+    <string name="user_start_time">開始時間</string>
+    <string name="user_end_time">結束時間</string>
+    <string name="user_heart">心率</string>
+    <string name="user_blood_pressure">血壓</string>
+    <string name="user_blood_oxygen">血氧</string>
+    <string name="user_temperature">體溫</string>
+</resources>

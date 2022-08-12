@@ -1,0 +1,5 @@
+<resources>
+    <string name="cp_search_hint_text">Search</string>
+    <string name="cp_no_result">not find</string>
+    <string name="country">Country/Region</string>
+</resources>

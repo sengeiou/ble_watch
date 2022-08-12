@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+    <include layout="@layout/title_main"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.szip.blewatch.base.View.MyScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleBigTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="35sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_white_corner"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="20dp">
+
+                    <com.szip.healthy.View.ColorArcProgressBar
+                        android:id="@+id/healthyStateView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginEnd="34dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:step_color="@color/healthy_green"
+                        app:step_color_background="@color/healthy_green_background"
+                        app:distance_color="@color/healthy_blue"
+                        app:distance_color_background="@color/healthy_blue_background"
+                        app:calorie_color="@color/healthy_red"
+                        app:calorie_color_background="@color/healthy_red_background"
+                        app:bg_arc_width="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/state_steps"/>
+
+                            <TextView
+                                android:id="@+id/stepTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/healthy_green"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:text="00"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="24dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/state_kcal"/>
+
+                            <TextView
+                                android:id="@+id/caloriesTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/healthy_red"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:text="00"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="24dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/state_mileage"/>
+
+                            <TextView
+                                android:id="@+id/distanceTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/healthy_blue"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="12dp"
+                                android:text="00"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lastSportLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_white_corner"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/state_sport"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="5dp"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:text="@string/healthy_sport"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sportDataTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:text="@string/healthy_no_sport"/>
+
+                    <TextView
+                        android:id="@+id/sportTypeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/healthy_gray_text"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/healthy_gray_text"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/moreTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/healthy_all_sport"
+                        android:textColor="@android:color/black"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cardRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7.5dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/editTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/healthy_edit_card"
+                    android:background="@drawable/bg_white_corner"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+            </LinearLayout>
+
+        </com.szip.blewatch.base.View.MyScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    api 'joda-time:joda-time:2.10.1'
+}
+

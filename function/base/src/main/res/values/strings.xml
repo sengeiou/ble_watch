@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FitRing</string>
+    <string name="loading">Loading...</string>
+    <string name="permission_tip">Permission Tip</string>
+    <string name="sport_permission">During use, the application requires access to location permissions to record and calibrate motion tracks and distances</string>
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+    <string name="tip">Tip</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_tip">You need to log in to proceed with the next operation. Do you want to log in now?</string>
+    <string name="outrun">Run</string>
+    <string name="walk">Walk</string>
+    <string name="treadmill">Run Indoor</string>
+    <string name="mountain">Mountain</string>
+    <string name="marathon">Marathon</string>
+    <string name="badminton">Badminton</string>
+    <string name="basketball">Basketball</string>
+    <string name="bicycle">Cycling</string>
+    <string name="skiing">Skiing</string>
+    <string name="ping">Ping Pong</string>
+    <string name="football">Football</string>
+    <string name="climb">Climb</string>
+    <string name="watch_ring">The watch is ringing. Pay attention, please.</string>
+    <string name="stop_find">Stop Find</string>
+
+    <string name="save_success">Save Success</string>
+    <string name="waiting">Waiting...</string>
+    <string name="http_error">Request Timeout</string>
+    <string name="user_upload_data">Data Uploading...</string>
+    <string name="ble_error">Bluetooth is not connected. Please connect and try again.</string>
+    <string name="updating">Data is being updated...</string>
+
+    <string name="connected">Connected</string>
+    <string name="disConnect">Disconnect</string>
+
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tues">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thus">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sta">Sat</string>
+</resources>

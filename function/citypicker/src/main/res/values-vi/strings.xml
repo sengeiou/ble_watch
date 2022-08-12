@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cp_search_hint_text">Tìm kiếm</string>
+    <string name="cp_no_result">Không tìm thấy</string>
+    <string name="country">quốc gia / vùng</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sun1">Dim.</string>
+    <string name="mon1">Lun.</string>
+    <string name="tues1">Mar.</string>
+    <string name="wed1">Mer.</string>
+    <string name="thus1">Jeu.</string>
+    <string name="fri1">Ven.</string>
+    <string name="sta1">Sam.</string>
+
+
+
+
+</resources>

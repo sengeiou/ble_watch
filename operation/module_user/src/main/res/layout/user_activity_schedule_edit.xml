@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.schedule.ScheduleEditActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <com.szip.blewatch.base.View.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/msgEt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/user_bg_item"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="15dp"
+                android:hint="@string/user_schedule_msg"/>
+
+            <TextView
+                android:id="@+id/lengthTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="end" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/user_bg_item"
+                android:layout_margin="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:id="@+id/lastMonthIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_schedule_arrow_left"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:padding="15dp"/>
+
+                    <TextView
+                        android:id="@+id/dateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/rayblue"
+                        android:textSize="20sp"
+                        android:layout_centerHorizontal="true"
+                        android:text="10-30"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/nextMonthIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="15dp"/>
+
+                </RelativeLayout>
+
+                <com.necer.view.WeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp"/>
+
+                <com.necer.calendar.MonthCalendar
+                    android:id="@+id/monthCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    app:isShowLunar="false"
+                    app:isShowHoliday="false"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="10dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/timeRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_schedule_time"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="@string/user_time"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="45dp"/>
+
+                    <TextView
+                        android:id="@+id/timeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="35dp"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/arrow_right"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+              >
+
+                <TextView
+                    android:id="@+id/deleteTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/user_delete_schedule"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/user_bg_white"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/saveTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/user_save_schedule"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/user_bg_black"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.szip.blewatch.base.View.MyScrollView>
+
+
+</LinearLayout>

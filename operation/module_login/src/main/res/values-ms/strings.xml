@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">modul log masuk</string>
+    <string name="login_location">region</string>
+    <string name="login_chose_location">Sila pilih rantau</string>
+    <string name="login_login_account">Log masuk akaun</string>
+    <string name="login_login">Log masuk</string>
+    <string name="login_account">Akaun</string>
+    <string name="login_input_account">Masukkan akaun anda</string>
+    <string name="login_right_email">Sila masukkan alamat e-mel yang betul</string>
+    <string name="login_psw">kata laluan</string>
+    <string name="login_input_psw">Masukkan kata laluan anda</string>
+    <string name="login_forget_psw">Terlupa kata laluan?</string>
+    <string name="login_register">Tiada akaun? untuk mendaftar</string>
+    <string name="login_privacy">Bersetuju dengan <u>Perjanjian Pengguna dan Dasar Privasi</u></string>
+    <string name="login_checkPrivacy">Jangan bersetuju menerima Perjanjian Pengguna dan Dasar Privasi</string>
+
+
+    <string name="login_register_account">daftar akaun</string>
+    <string name="login_register_account_tip">Setelah anda mempunyai akaun peribadi, data kecergasan dan pilihan peranti anda boleh disimpan dengan selamat dan kekal</string>
+    <string name="login_next">Seterusnya</string>
+    <string name="login_verification">Kod pengesahan</string>
+    <string name="login_input_verification">Masukkan kod pengesahan anda</string>
+    <string name="login_send">Hantar</string>
+
+    <string name="login_set_password">tetapkan kata laluan</string>
+    <string name="login_inconsistent">Kata laluan tidak konsisten dimasukkan dua kali</string>
+    <string name="login_confirm_password">Sahkan Kata Laluan</string>
+    <string name="login_finish">selesai</string>
+    <string name="login_find_password">cari kata laluan</string>
+    <string name="login_reset_Success">Berjaya menetapkan semula kata laluan</string>
+
+    <string name="login_change_password">tukar kata laluan</string>
+    <string name="login_old_password">kata laluan lama</string>
+    <string name="login_new_password">kata laluan baharu</string>
+    <string name="login_confirm_new_password">Sahkan kata laluan baharu</string>
+    <string name="login_change_success">Berjaya diubah suai</string>
+</resources>

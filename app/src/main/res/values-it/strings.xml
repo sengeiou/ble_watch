@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">stato</string>
+    <string name="sport">gli sport</string>
+    <string name="consult">consultare</string>
+    <string name="mine">il mio</string>
+    <string name="tip">ricordare</string>
+    <string name="checkGPS">È stato rilevato che l\'interruttore di posizione del telefono non è attivato. Per garantire che l\'app funzioni correttamente, attiva l\'interruttore di posizione.</string>
+    <string name="confirm">Sicuro</string>
+    <string name="cancel">Annulla</string>
+
+    <string name="touchAgain">Premere di nuovo per uscire dal programma</string>
+    <string name="privacy1">Accordo per l\'utente e Informativa sulla privacy</string>
+    <string name="privacyTip">Grazie per la fiducia e l\'utilizzo di FitRing.
+\n\nParliamo secondo l\'"Accordo sulla privacy dell\'utente" per aiutarti a comprendere la nostra raccolta, uso, archiviazione delle tue informazioni personali e i tuoi diritti correlati.
+\n\nQuando utilizzi l\'app FitRing, raccogliamo le informazioni sul tuo dispositivo, i dati personali (avatar, nickname, altezza, peso, dati sull\'esercizio) e altre informazioni, dobbiamo ottenere l\'autorizzazione della tua fotocamera, il permesso dell\'album per caricare l\'avatar dell\'app:
+\n\nQuando utilizzi l\'app FitRing per la corsa all\'aperto, carichi, condividi e memorizzi informazioni sportive, dobbiamo ottenere l\'autorizzazione alla tua posizione per registrare il tuo percorso di corsa.
+\n\nPuoi accedere, modificare, cancellare le tue informazioni personali o gestire la tua autorizzazione nelle pagine pertinenti.
+\n\nUtilizziamo la tecnologia di sicurezza leader del settore per proteggere le tue informazioni personali.
+\n\nQuando fai clic su "OK", accetti i termini di questo accordo.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sun1">일요일</string>
+    <string name="mon1">월요일</string>
+    <string name="tues1">화요일</string>
+    <string name="wed1">수요일</string>
+    <string name="thus1">목요일</string>
+    <string name="fri1">금요일</string>
+    <string name="sta1">토요일</string>
+
+</resources>

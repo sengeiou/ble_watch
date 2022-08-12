@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">negeri</string>
+    <string name="sport">sukan</string>
+    <string name="consult">berunding</string>
+    <string name="mine">saya</string>
+    <string name="tip">ingatkan</string>
+    <string name="checkGPS">Telah dikesan bahawa suis lokasi telefon anda tidak dihidupkan. Untuk memastikan apl berfungsi dengan betul, sila hidupkan suis lokasi.</string>
+    <string name="confirm">pasti</string>
+    <string name="cancel">Batal</string>
+
+    <string name="touchAgain">Tekan sekali lagi untuk keluar dari program</string>
+    <string name="privacy1">Perjanjian Pengguna dan Dasar Privasi</string>
+    <string name="privacyTip">Terima kasih kerana mempercayai dan menggunakan FitRing.
+\n\nKami bercakap mengikut "Perjanjian Privasi Pengguna" untuk membantu anda memahami pengumpulan, penggunaan, penyimpanan maklumat peribadi anda dan hak berkaitan anda.
+\n\nApabila anda menggunakan apl FitRing, kami akan mengumpul maklumat peranti anda, data peribadi (avatar, nama panggilan, tinggi, berat, data senaman) dan maklumat lain, kami perlu mendapatkan kebenaran kamera anda, kebenaran album untuk memuat naik avatar apl anda :
+\n\nApabila anda menggunakan apl FitRing untuk larian luar, memuat naik, berkongsi dan menyimpan maklumat sukan, kami perlu mendapatkan kebenaran lokasi anda untuk merakam trek larian anda.
+\n\nAnda boleh mengakses, mengubah suai, memadam maklumat peribadi anda atau mengurus kebenaran anda pada halaman yang berkaitan.
+\n\nKami menggunakan teknologi keselamatan yang terkemuka dalam industri untuk melindungi maklumat peribadi anda.
+\n\nApabila anda mengklik "OK", anda bersetuju menerima syarat perjanjian ini.</string>
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_corner">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.2">
+
+                <com.szip.healthy.View.SleepArcProgressBar
+                    android:id="@+id/sleepPb"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/allSleepTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/healthy_gray_text"
+                            android:textSize="14sp"
+                            android:text="@string/healthy_sleep_bed"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_fallsleep"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:id="@+id/bedTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="--:--"
+                                android:layout_marginStart="5dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/healthy_gray_text"
+                            android:textSize="14sp"
+                            android:text="@string/healthy_sleep_wake"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_wakeup"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:id="@+id/wakeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="--:--"
+                                android:layout_marginStart="5dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_corner">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_sleep"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:text="@string/healthy_sleep_info"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+            <com.szip.healthy.View.ReportTableView
+                android:id="@+id/tableView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_deepsleep"
+                            android:layout_gravity="center" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/healthy_gray_text"
+                                android:textSize="14sp"
+                                android:text="@string/healthy_sleep_deep"/>
+                            <TextView
+                                android:id="@+id/deepTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="--h--min"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_lightsleep"
+                            android:layout_gravity="center" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/healthy_gray_text"
+                                android:textSize="14sp"
+                                android:text="@string/healthy_sleep_light"/>
+                            <TextView
+                                android:id="@+id/lightTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp"
+                                android:text="--h--min"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

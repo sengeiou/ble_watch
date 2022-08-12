@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">matlamat saya</string>
+    <string name="user_edit_plan">Edit sasaran</string>
+    <string name="user_step">sasaran langkah</string>
+    <string name="user_sleep">matlamat tidur</string>
+    <string name="user_calorie">sasaran penggunaan</string>
+
+    <string name="user_connect">bersambung</string>
+    <string name="user_disconnect">tidak bersambung</string>
+    <string name="user_connect_fail">Cuba menyambung semula</string>
+    <string name="user_connecting">menyambung...</string>
+
+    <string name="user_dial">muka jam saya</string>
+    <string name="user_dial_tip">Lebih banyak dail, tukar sesuka hati></string>
+    <string name="user_device_config">Pengurusan peranti</string>
+    <string name="user_find_watch">Cari jam tangan</string>
+    <string name="user_ble_call">Panggilan Bluetooth</string>
+    <string name="user_ble_camera">kamera Bluetooth</string>
+    <string name="user_unit">sistem unit</string>
+    <string name="user_notification">pemberitahuan</string>
+    <string name="user_about">Mengenai peranti</string>
+    <string name="user_schedule">jadual saya</string>
+    <string name="user_auto">Pemantauan automatik</string>
+    <string name="user_add_device">Tambah peranti</string>
+
+    <string name="user_measureUnit">Unit ukuran</string>
+    <string name="user_tempUnit">unit suhu</string>
+    <string name="user_metric">Metrik</string>
+    <string name="user_british">Imperial</string>
+    <string name="user_save">jimat</string>
+    <string name="user_saved">Berjaya disimpan</string>
+
+    <string name="user_notify">pemberitahuan</string>
+    <string name="user_notify_tip">Untuk menerima mesej pemberitahuan daripada apl pada peranti, anda perlu menghidupkan suis mesej</string>
+    <string name="user_notify_title">Dayakan pemberitahuan</string>
+    <string name="user_notify_msg">Aplikasi ini perlu memajukan pemberitahuan aplikasi ke peranti pintar jauh. Tekan \"OK\" untuk memasuki halaman pemberitahuan untuk diaktifkan.</string>
+    <string name="user_cancel">Batal</string>
+    <string name="user_confirm">pasti</string>
+
+    <string name="user_account_safe">Akaun dan Keselamatan</string>
+    <string name="user_version">Versi APP semasa</string>
+    <string name="user_help">Bantuan dan Maklum Balas</string>
+    <string name="user_privacy">Perjanjian Pengguna dan Dasar Privasi</string>
+    <string name="user_logout">log keluar</string>
+    <string name="user_unbind_tip">buka ikatan</string>
+    <string name="user_unbind_message">Adakah anda pasti untuk melepaskan peranti semasa?</string>
+
+    <string name="user_info">Maklumat peribadi</string>
+    <string name="user_set">Maklumat Akaun</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">nama panggilan</string>
+    <string name="user_sex">jantina</string>
+    <string name="user_birthday">tarikh lahir</string>
+    <string name="user_height">ketinggian</string>
+    <string name="user_weight">berat badan</string>
+    <string name="user_male">lelaki</string>
+    <string name="user_female">perempuan</string>
+    <string name="user_camera">bergambar</string>
+    <string name="user_album">album gambar</string>
+    <string name="user_enter_name">Sila masukkan nama panggilan anda</string>
+    <string name="user_name_long">Nama panggilan tidak boleh melebihi 12 aksara</string>
+    <string name="user_permission_error_camera">Kebenaran tidak diluluskan, fungsi kamera tidak boleh dihidupkan</string>
+    <string name="user_crop_pic_failed">Gagal menangkap imej, sila pilih imej format jpg!</string>
+    <string name="user_account">Log masuk akaun</string>
+    <string name="user_change">tukar kata laluan</string>
+    <string name="user_delete_account">Log keluar</string>
+    <string name="user_logout_tip">Adakah anda pasti mahu log keluar?</string>
+    <string name="user_upload_data">Memuat naik data...</string>
+    <string name="user_upload_data_success">Muat naik data berjaya!</string>
+    <string name="user_faq">masalah biasa</string>
+    <string name="user_feedback_hint">maklum balas/soalan anda</string>
+    <string name="user_send_feedback">Hantar maklum balas</string>
+    <string name="user_feedback_long">Teks yang anda masukkan terlalu panjang</string>
+    <string name="user_feedback_empty">Komen tidak boleh kosong</string>
+    <string name="user_feedback_success">kejayaan maklum balas</string>
+    <string name="user_guide">panduan sambungan</string>
+    <string name="user_service">teruskan ia berjalan di latar belakang</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">satu tambah</string>
+    <string name="user_samsun">Samsung</string>
+    <string name="user_mi">Millet</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Untuk meningkatkan kestabilan sambungan jam tangan, adalah disyorkan agar anda membuat tetapan berikut:</string>
+    <string name="user_saverBattery">Jangan hidupkan (mod penjimatan kuasa):</string>
+    <string name="user_batteryContent">Jika mod penjimatan kuasa dihidupkan, ia boleh menyebabkan masalah seperti sambungan Bluetooth yang tidak stabil, trajektori gerakan tidak normal dan jarak kuasa yang berkurangan. Adalah disyorkan untuk mematikan mod penjimatan kuasa semasa digunakan.</string>
+    <string name="user_protect">Tetapan perlindungan latar belakang pengeluar utama:</string>
+
+
+    <string name="user_search">peranti carian</string>
+    <string name="user_searching">Mencari peranti...</string>
+    <string name="user_bind">Mengikat...</string>
+    <string name="user_no_device">Peranti tidak dijumpai</string>
+    <string name="user_pair_success">berpasangan dengan jayanya</string>
+    <string name="user_pair_tip">Maklumat data kesihatan sukan anda akan disegerakkan antara jam tangan dan telefon mudah alih melalui APP.</string>
+    <string name="user_finish">Selesai</string>
+    <string name="user_understand">saya faham</string>
+    <string name="user_wear_tip">memakai petua</string>
+    <string name="user_wear_tip_content">Untuk mengukur data dengan tepat dan tidak menjejaskan penggunaan biasa APP, sila cuba pakai jam tangan pada jarak 1cm dari tulang pergelangan tangan</string>
+    <string name="user_search_tip">Keluarkan peranti, caskannya untuk mengaktifkan dan simpannya dekat dengan telefon</string>
+    <string name="user_search_much">Sila pilih jam tangan anda mengikut alamat mac</string>
+    <string name="user_search_again">cari lagi</string>
+    <string name="user_again_tip">Anda boleh mencuba cara berikut dan cuba lagi selepas menetapkan:</string>
+    <string name="user_again_advice">·Hidupkan Bluetooth telefon sekali lagi\n·Pastikan jam tangan dihidupkan dan dekat dengan telefon\n·Klik pada peranti \"pulihkan kepada tetapan kilang\"</string>
+    <string name="user_stop_bind">Nanti jangan ikat buat sementara waktu</string>
+    <string name="user_bind_help"><u>Tidak menemui peranti untuk ditambahkan? Lihat bantuan</u></string>
+
+    <string name="user_dial_market">pasaran dail</string>
+    <string name="user_dial_now">Tonton pratonton muka</string>
+    <string name="user_dial_mine">muka jam saya</string>
+    <string name="user_dial_diy">muka jam tersuai</string>
+    <string name="user_background">muat naik latar belakang</string>
+    <string name="user_crop_fail">Gagal menangkap imej, sila pilih imej format jpg!</string>
+    <string name="user_crop_small">Gagal menangkap imej, imej yang ditangkap terlalu kecil dan tidak sepadan dengan saiz dail!</string>
+    <string name="user_send_background">Menghantar latar belakang...</string>
+    <string name="user_send_dial">Menghantar muka jam...</string>
+    <string name="user_send_success">Dihantar dengan jayanya!</string>
+    <string name="user_send_fail">Penghantaran gagal, sila cuba lagi.</string>
+    <string name="user_no_background">Sila muat naik latar belakang dahulu</string>
+    <string name="user_no_clock">Sila pilih muka jam dahulu</string>
+
+    <string name="user_device_name">Model perisian</string>
+    <string name="user_device_mac">alamat MAC</string>
+    <string name="user_device_version">Versi perisian</string>
+    <string name="user_check_update">Menyemak kemas kini</string>
+
+    <string name="user_camera_tip">Selepas menghidupkan fungsi kamera Bluetooth, jam tangan boleh mengawal aplikasi kamera telefon mudah alih untuk mengambil gambar</string>
+    <string name="user_camera_permission_tip">Semasa penggunaan, apl ini memerlukan akses kepada kamera dan kebenaran membaca dan menulis fail untuk mengambil foto dari jauh dan menyimpan foto\n\nJika anda tidak bersetuju untuk menghubungi kebenaran di atas, ia akan menyebabkan kamera Bluetooth tidak digunakan seperti biasa, yang tidak akan menjejaskan penggunaan fungsi asas aplikasi ini. Anda boleh menarik balik persetujuan anda pada bila-bila masa dengan pergi ke "Tetapan" > "Pengurusan Kebenaran" dan memilih untuk mematikan panggilan kebenaran di atas</string>
+    <string name="user_camera_permission_error">Kebenaran tidak diluluskan, pembukaan gagal</string>
+
+    <string name="user_deleteTip">Sama ada untuk mengesahkan pembatalan akaun anda, akaun tersebut akan berjaya dibatalkan dalam masa tiga hari selepas pengesahan, dan data akaun akan dipadamkan sepenuhnya selepas pembatalan yang berjaya, tidak boleh dipulihkan! Sila teruskan dengan berhati-hati.</string>
+    <string name="user_deleteSuccess">Akaun permohonan telah berjaya dibatalkan.</string>
+    <string name="user_deleteNow">Akaun semasa sedang menunggu peringkat log keluar.</string>
+
+    <string name="user_schedule_empty">Jam tangan semasa tiada jadual, sila tambah jadual baharu</string>
+    <string name="user_delete_schedule">padam jadual</string>
+    <string name="user_save_schedule">simpan jadual</string>
+    <string name="user_schedule_info">Butiran Jadual</string>
+    <string name="user_schedule_fall">Jadual yang boleh ditambahkan pada jam tangan telah mencapai had atas, sila kosongkan sebelum menambah</string>
+    <string name="user_schedule_add_fail">Gagal menambah jadual</string>
+    <string name="user_schedule_edit_fail">Gagal mengubah suai jadual</string>
+    <string name="user_schedule_delete_fail">Gagal memadamkan jadual</string>
+    <string name="user_schedule_past">Tidak dapat menetapkan titik masa lepas sebagai titik masa jadual</string>
+    <string name="user_schedule_same">Titik masa yang dipilih pada masa ini sudah mempunyai agenda dan tidak boleh ditetapkan berulang kali</string>
+    <string name="user_schedule_msg">Sila isi butiran jadual</string>
+    <string name="user_today">hari ini</string>
+    <string name="user_time">masa</string>
+
+
+    <string name="user_auto_measure_tip">Selepas fungsi pemantauan automatik dihidupkan, jam tangan akan mengukur setiap kekerapan dan masa dalam tempoh berkesan.</string>
+    <string name="user_measure_frequency">Kekerapan pemantauan</string>
+    <string name="user_valid_time">Tempoh berkesan</string>
+    <string name="user_start_time">Masa mula</string>
+    <string name="user_end_time">Masa tamat</string>
+    <string name="user_heart">kadar degupan jantung</string>
+    <string name="user_blood_pressure">tekanan darah</string>
+    <string name="user_blood_oxygen">oksigen darah</string>
+    <string name="user_temperature">suhu badan</string>
+</resources>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.userInfo.UserInfoActivity"
+    android:orientation="vertical"
+    android:background="@color/bgColor">
+
+
+    <include layout="@layout/title"/>
+
+    <TextView
+        android:id="@+id/titleBigTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/headRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_head"/>
+
+        <com.szip.blewatch.base.View.CircularImageView
+            android:id="@+id/headIv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/my_head_58"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            app:is_circular="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_arrow_r_black"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+
+    <RelativeLayout
+        android:id="@+id/nameRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_name"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/my_arrow_r_black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/genderRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_sex"/>
+
+        <TextView
+            android:id="@+id/genderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/my_arrow_r_black"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:id="@+id/birthdayRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_birthday"/>
+
+        <TextView
+            android:id="@+id/birthdayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/my_arrow_r_black"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+
+    <RelativeLayout
+        android:id="@+id/heightRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_height"/>
+
+        <TextView
+            android:id="@+id/heightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/my_arrow_r_black"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+
+    <RelativeLayout
+        android:id="@+id/weightRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:text="@string/user_weight"/>
+
+        <TextView
+            android:id="@+id/weightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/my_arrow_r_black"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/saveTv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/user_save"
+        android:textColor="@android:color/white"
+        android:background="@drawable/user_bg_bottom"/>
+
+</LinearLayout>

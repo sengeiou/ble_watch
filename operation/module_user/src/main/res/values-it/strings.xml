@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">il mio obiettivo</string>
+    <string name="user_edit_plan">Modifica destinazione</string>
+    <string name="user_step">obiettivo del passo</string>
+    <string name="user_sleep">obiettivi di sonno</string>
+    <string name="user_calorie">obiettivo di consumo</string>
+
+    <string name="user_connect">collegato</string>
+    <string name="user_disconnect">non collegata</string>
+    <string name="user_connect_fail">Si sta cercando di rimettersi in piedi</string>
+    <string name="user_connecting">collegamento...</string>
+
+    <string name="user_dial">il mio quadrante</string>
+    <string name="user_dial_tip">Più quadranti, cambio a piacimento></string>
+    <string name="user_device_config">Gestione dei dispositivi</string>
+    <string name="user_find_watch">Trova un orologio</string>
+    <string name="user_ble_call">Chiamate Bluetooth</string>
+    <string name="user_ble_camera">Fotocamera Bluetooth</string>
+    <string name="user_unit">sistema unitario</string>
+    <string name="user_notification">notifica</string>
+    <string name="user_about">Informazioni sul dispositivo</string>
+    <string name="user_schedule">il mio programma</string>
+    <string name="user_auto">Monitoraggio automatico</string>
+    <string name="user_add_device">Aggiungi dispositivo</string>
+
+    <string name="user_measureUnit">Unità di misura</string>
+    <string name="user_tempUnit">unità di temperatura</string>
+    <string name="user_metric">metrico</string>
+    <string name="user_british">Imperiale</string>
+    <string name="user_save">Salva</string>
+    <string name="user_saved">Salvato con successo</string>
+
+    <string name="user_notify">notifica</string>
+    <string name="user_notify_tip">Per ricevere i messaggi di notifica dall\'app sul dispositivo, devi attivare l\'interruttore dei messaggi</string>
+    <string name="user_notify_title">Attivare le notifiche</string>
+    <string name="user_notify_msg">Questa applicazione deve inoltrare le notifiche dell\'applicazione a dispositivi intelligenti remoti. Premere \"OK\" per accedere alla pagina di notifica da attivare.</string>
+    <string name="user_cancel">Annulla</string>
+    <string name="user_confirm">Sicuro</string>
+
+    <string name="user_account_safe">Conto e sicurezza</string>
+    <string name="user_version">Versione attuale dell\'APP</string>
+    <string name="user_help">Aiuto e feedback</string>
+    <string name="user_privacy">Accordo per l\'utente e Informativa sulla privacy</string>
+    <string name="user_logout">disconnessione</string>
+    <string name="user_unbind_tip">sciogliere</string>
+    <string name="user_unbind_message">Sei sicuro di annullare l\'associazione del dispositivo corrente?</string>
+
+    <string name="user_info">Informazione personale</string>
+    <string name="user_set">Informazioni account</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">Soprannome</string>
+    <string name="user_sex">Genere</string>
+    <string name="user_birthday">data di nascita</string>
+    <string name="user_height">altezza</string>
+    <string name="user_weight">il peso</string>
+    <string name="user_male">maschio</string>
+    <string name="user_female">Femmina</string>
+    <string name="user_camera">Fotografia</string>
+    <string name="user_album">album di foto</string>
+    <string name="user_enter_name">Per favore inserisci il tuo soprannome</string>
+    <string name="user_name_long">Il nickname non può superare i 12 caratteri</string>
+    <string name="user_permission_error_camera">L\'autorizzazione non è stata approvata, la funzione della fotocamera non può essere attivata</string>
+    <string name="user_crop_pic_failed">Impossibile acquisire l\'immagine, seleziona l\'immagine in formato jpg!</string>
+    <string name="user_account">Account di accesso</string>
+    <string name="user_change">cambiare la password</string>
+    <string name="user_delete_account">Disconnettersi</string>
+    <string name="user_logout_tip">Sei sicuro di voler uscire?</string>
+    <string name="user_upload_data">Caricamento dati in corso...</string>
+    <string name="user_upload_data_success">Caricamento dati riuscito!</string>
+    <string name="user_faq">problema comune</string>
+    <string name="user_feedback_hint">il tuo feedback/domande</string>
+    <string name="user_send_feedback">Invia feedback</string>
+    <string name="user_feedback_long">Il testo che hai inserito è troppo lungo</string>
+    <string name="user_feedback_empty">I commenti non possono essere vuoti</string>
+    <string name="user_feedback_success">successo del feedback</string>
+    <string name="user_guide">guida alla connessione</string>
+    <string name="user_service">mantienilo in esecuzione in background</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">uno in più</string>
+    <string name="user_samsun">SAMSUNG</string>
+    <string name="user_mi">Miglio</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Per migliorare la stabilità della connessione dell\'orologio, si consiglia di effettuare le seguenti impostazioni:</string>
+    <string name="user_saverBattery">Non si accende (modalità di risparmio energetico):</string>
+    <string name="user_batteryContent">Se la modalità di risparmio energetico è attivata, potrebbero verificarsi problemi quali connessione Bluetooth instabile, traiettoria di movimento anomala e distanza di alimentazione ridotta. Si consiglia di disattivare la modalità di risparmio energetico durante l\'uso.</string>
+    <string name="user_protect">Impostazioni di protezione in background dei principali produttori:</string>
+
+
+    <string name="user_search">dispositivo di ricerca</string>
+    <string name="user_searching">Ricerca di dispositivi...</string>
+    <string name="user_bind">Legame...</string>
+    <string name="user_no_device">Dispositivo non trovato</string>
+    <string name="user_pair_success">accoppiato con successo</string>
+    <string name="user_pair_tip">Le informazioni sui dati sulla salute dello sport verranno sincronizzate tra l\'orologio e il telefono cellulare tramite l\'APP.</string>
+    <string name="user_finish">Fine</string>
+    <string name="user_understand">Vedo</string>
+    <string name="user_wear_tip">indossare punte</string>
+    <string name="user_wear_tip_content">Per misurare accuratamente i dati e non pregiudicare il normale utilizzo dell\'APP, provare a indossare l\'orologio a una distanza di 1 cm dall\'osso del polso</string>
+    <string name="user_search_tip">Rimuovi il dispositivo, caricalo per attivarlo e tienilo vicino al telefono</string>
+    <string name="user_search_much">Seleziona il tuo orologio in base all\'indirizzo mac</string>
+    <string name="user_search_again">cerca ancora</string>
+    <string name="user_again_tip">Puoi provare i seguenti modi e riprovare dopo aver impostato:</string>
+    <string name="user_again_advice">·Riapri il Bluetooth del telefono\n·Assicurati che l\'orologio sia acceso e vicino al telefono\n·Fai clic sul dispositivo\"Ripristina le impostazioni di fabbrica\"</string>
+    <string name="user_stop_bind">Più tardi, non legare per il momento</string>
+    <string name="user_bind_help"><u>Non riesci a trovare il dispositivo da aggiungere? Visualizza la guida</u></string>
+
+    <string name="user_dial_market">mercato del quadrante</string>
+    <string name="user_dial_now">Guarda l\'anteprima del quadrante</string>
+    <string name="user_dial_mine">il mio quadrante</string>
+    <string name="user_dial_diy">quadrante personalizzato</string>
+    <string name="user_background">carica lo sfondo</string>
+    <string name="user_crop_fail">Impossibile acquisire l\'immagine, seleziona l\'immagine in formato jpg!</string>
+    <string name="user_crop_small">Impossibile acquisire l\'immagine, l\'immagine acquisita è troppo piccola e non corrisponde alle dimensioni del quadrante！</string>
+    <string name="user_send_background">Invio sfondo...</string>
+    <string name="user_send_dial">Invio quadrante...</string>
+    <string name="user_send_success">Inviato con successo!</string>
+    <string name="user_send_fail">Invio fallito, riprova.</string>
+    <string name="user_no_background">Si prega di caricare prima lo sfondo</string>
+    <string name="user_no_clock">Seleziona prima un quadrante</string>
+
+    <string name="user_device_name">Modello software</string>
+    <string name="user_device_mac">indirizzo MAC</string>
+    <string name="user_device_version">Versione software</string>
+    <string name="user_check_update">Controlla gli aggiornamenti</string>
+
+    <string name="user_camera_tip">Dopo aver attivato la funzione fotocamera Bluetooth, l\'orologio può controllare l\'applicazione fotocamera del telefono cellulare per scattare foto</string>
+    <string name="user_camera_permission_tip">Durante l\'uso, questa app richiede l\'accesso alla fotocamera e le autorizzazioni di lettura e scrittura dei file per la fotografia e l\'archiviazione in remoto.\n\nSe non accetti di invocare le autorizzazioni di cui sopra, la fotocamera Bluetooth non funzionerà correttamente
+
+, ma non pregiudica le funzioni di base dell\'utilizzo di questa applicazione. Puoi revocare il tuo consenso in qualsiasi momento andando su "Impostazioni" > "Gestione autorizzazioni" e scegliendo di disattivare le chiamate di autorizzazione di cui sopra</string>
+    <string name="user_camera_permission_error">Il permesso non è passato, l\'apertura non riesce</string>
+
+    <string name="user_deleteTip">Sia per confermare la cancellazione del tuo account, l\'account verrà cancellato con successo entro tre giorni dalla conferma e i dati dell\'account verranno completamente cancellati dopo l\'avvenuta cancellazione, irrecuperabili! Si prega di procedere con cautela.</string>
+    <string name="user_deleteSuccess">L\'account dell\'applicazione è stato cancellato con successo.</string>
+    <string name="user_deleteNow">Il conto corrente è in attesa della fase di logout.</string>
+
+    <string name="user_schedule_empty">L\'orologio corrente non ha una pianificazione, aggiungi una nuova pianificazione</string>
+    <string name="user_delete_schedule">elimina programma</string>
+    <string name="user_save_schedule">salva programma</string>
+    <string name="user_schedule_info">Dettagli programma</string>
+    <string name="user_schedule_fall">Il programma che può essere aggiunto all\'orologio ha raggiunto il limite superiore, cancellalo prima di aggiungerlo</string>
+    <string name="user_schedule_add_fail">Impossibile aggiungere la pianificazione</string>
+    <string name="user_schedule_edit_fail">Impossibile modificare la pianificazione</string>
+    <string name="user_schedule_delete_fail">Impossibile eliminare la pianificazione</string>
+    <string name="user_schedule_past">Impossibile impostare il punto temporale passato come orario programmato</string>
+    <string name="user_schedule_same">L\'orario attualmente selezionato ha già un\'agenda e non può essere impostato ripetutamente</string>
+    <string name="user_schedule_msg">Si prega di compilare i dettagli del programma</string>
+    <string name="user_today">oggi</string>
+    <string name="user_time">volta</string>
+
+
+    <string name="user_auto_measure_tip">Dopo l\'attivazione della funzione di monitoraggio automatico, l\'orologio misurerà ogni frequenza e ogni tempo entro il periodo effettivo.</string>
+    <string name="user_measure_frequency">Frequenza di monitoraggio</string>
+    <string name="user_valid_time">Periodo effettivo</string>
+    <string name="user_start_time">Tempo di partenza</string>
+    <string name="user_end_time">Tempo scaduto</string>
+    <string name="user_heart">frequenza del battito cardiaco</string>
+    <string name="user_blood_pressure">pressione sanguigna</string>
+    <string name="user_blood_oxygen">ossigeno nel sangue</string>
+    <string name="user_temperature">temperatura corporea</string>
+</resources>
