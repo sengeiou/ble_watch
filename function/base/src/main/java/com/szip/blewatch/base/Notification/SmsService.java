@@ -26,7 +26,6 @@ public class SmsService extends ContentObserver {
     // Debugging
     private static final String TAG = "DATA******";
 
-    private static String preID = null;
 
     // Received parameters
     private Context mContext = null;
@@ -62,30 +61,26 @@ public class SmsService extends ContentObserver {
         Cursor cursor = null;
         try {
 
-            cursor = mContext.getContentResolver().query(Uri.parse("content://sms/inbox"), null,
-                    null, null, "  desc");
+            String[] projection = new String[] { "_id", "address", "person",
+                    "body", "date", "type"};
+            cursor = mContext.getContentResolver().query(Uri.parse("content://sms/inbox"), projection,
+                    null, null, "date desc");
             if (cursor != null) {
-                while (cursor.moveToNext()) {
+                if (cursor.moveToFirst()) {
                     msgbody = cursor.getString(cursor.getColumnIndex("body"));
                     address = cursor.getString(cursor.getColumnIndex("address"));
-                    id = cursor.getString(cursor.getColumnIndex("_id"));
-                    Log.d(TAG, "发件人为：" + address + " " + "短信内容为：" + msgbody+" ;id = "+id);
-                    if (id.equals(preID)) {
-                        break;
-                    } else {
-                        preID = id;
-                        if ((msgbody != null) && (address != null)) {
-                            Log.i(TAG, "SmsReceiver(),sendSmsMessage, msgbody = " + msgbody
-                                    + ", address = " + address);
-                            Intent intent = new Intent(BroadcastConst.SEND_BLE_DATA);
-                            intent.putExtra("command","sendNotify");
-                            intent.putExtra("title",msgbody);
-                            intent.putExtra("label", address);
-                            intent.putExtra("id", 0);
-                            mContext.sendBroadcast(intent);
-                            break;
-                        }
+                    Log.d(TAG, "发件人为：" + address + " " + "短信内容为：" + msgbody);
+                    if ((msgbody != null) && (address != null)) {
+                        Log.i(TAG, "SmsReceiver(),sendSmsMessage, msgbody = " + msgbody
+                                + ", address = " + address);
+                        Intent intent = new Intent(BroadcastConst.SEND_BLE_DATA);
+                        intent.putExtra("command","sendNotify");
+                        intent.putExtra("title",msgbody);
+                        intent.putExtra("label", address);
+                        intent.putExtra("id", 0);
+                        mContext.sendBroadcast(intent);
                     }
+
 
                 }
             }
