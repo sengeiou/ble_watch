@@ -1,5 +1,7 @@
 package com.szip.blewatch.base.Broadcast;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -30,16 +32,12 @@ public class UtilBroadcat extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-//        if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)){
-//            int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
-//                    BluetoothAdapter.ERROR);
-//            switch (state) {
-//                case BluetoothAdapter.STATE_ON:
-//                    LogUtil.getInstance().logd("data******","蓝牙打开");
-//                    context.sendBroadcast(new Intent(BroadcastConst.START_CONNECT_DEVICE));
-//                    break;
-//            }
-//        }else if (intent.getAction().equals(BroadcastConst.ALARM_EVENT)){
+        if (intent.getAction().equals("android.intent.action.LOCALE_CHANGED")){
+           //切换语言之后关掉应用
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(0);
+        }
+//        else if (intent.getAction().equals(BroadcastConst.ALARM_EVENT)){
 //            Log.d("data******","收到定时广播");
 //        }
 //        if (intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION")) {
@@ -55,7 +53,7 @@ public class UtilBroadcat extends BroadcastReceiver {
 
     private IntentFilter getmIntentFilter() {
         mIntentFilter = new IntentFilter();
-//        mIntentFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        mIntentFilter.addAction("android.intent.action.LOCALE_CHANGED");
 //        mIntentFilter.addAction("android.media.VOLUME_CHANGED_ACTION");
 //        mIntentFilter.addAction(BroadcastConst.ALARM_EVENT);
         return mIntentFilter;
