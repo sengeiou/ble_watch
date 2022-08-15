@@ -46,6 +46,35 @@ android {
     lintOptions {
         abortOnError false
     }
+
+
+    //改写APK名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                def fileName
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    switch (variant.buildType.name) {
+                        case "release":
+                            fileName = "FitRing_v${defaultConfig.versionName}_release.apk"
+                            break
+                        case "debug":
+                            fileName = "FitRing_v${defaultConfig.versionName}_debug.apk"
+                            break
+                        default:
+                            fileName = "FitRing.apk"
+                            break
+                    }
+                    /*******************************************************************
+                     * qinchun add 20180404
+                     * gradle 3.0, outputFile is read only property
+                     *******************************************************************/
+                    outputFileName = fileName
+                }
+            }
+        }
+    }
 }
 
 dependencies {
