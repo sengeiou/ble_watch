@@ -32,11 +32,7 @@ public class UtilBroadcat extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (intent.getAction().equals("android.intent.action.LOCALE_CHANGED")){
-           //切换语言之后关掉应用
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(0);
-        }
+// y
 //        else if (intent.getAction().equals(BroadcastConst.ALARM_EVENT)){
 //            Log.d("data******","收到定时广播");
 //        }
@@ -53,7 +49,7 @@ public class UtilBroadcat extends BroadcastReceiver {
 
     private IntentFilter getmIntentFilter() {
         mIntentFilter = new IntentFilter();
-        mIntentFilter.addAction("android.intent.action.LOCALE_CHANGED");
+//        mIntentFilter.addAction("android.intent.action.LOCALE_CHANGED");
 //        mIntentFilter.addAction("android.media.VOLUME_CHANGED_ACTION");
 //        mIntentFilter.addAction(BroadcastConst.ALARM_EVENT);
         return mIntentFilter;

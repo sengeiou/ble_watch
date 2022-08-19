@@ -32,7 +32,6 @@
         android:label="@string/name"
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
-        android:debuggable="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.PrivacyActivity"></activity>
         <activity android:name=".Activity.welcome.WelcomeActivity">
