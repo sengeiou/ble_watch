@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">exercițiu recent</string>
+    <string name="sport_sport_time">durata exercițiului</string>
+    <string name="sport_sport_calorie">consumul de exerciții fizice</string>
+    <string name="sport_sport_distance">Distanța de mișcare</string>
+    <string name="sport_steps">Număr de pași</string>
+    <string name="sport_speed_hour">viteza medie</string>
+    <string name="sport_stride">Frecvența pasului</string>
+    <string name="sport_heart">ritmul cardiac mediu</string>
+    <string name="sport_height">urca altitudine</string>
+    <string name="sport_sport_info">Detalii sportive</string>
+    <string name="sport_heart_level">Distribuția ritmului cardiac</string>
+    <string name="sport_heart1">limită(≥161)</string>
+    <string name="sport_heart2">Anaerob(149~160)</string>
+    <string name="sport_heart3">Aerobic(131~138)</string>
+    <string name="sport_heart4">arderea grasimii(112~130)</string>
+    <string name="sport_heart5">încălzire(90~111)</string>
+    <string name="sport_speed">viteză</string>
+    <string name="sport_running">in miscare</string>
+    <string name="sport_run_pause">Mișcarea întreruptă</string>
+    <string name="sport_gps_low">Semnal GPS slab și acuratețe scăzută a datelor</string>
+    <string name="sport_gps_middle">Semnal GPS puternic și precizie ridicată a datelor</string>
+    <string name="sport_gps_high">Semnal GPS puternic și precizie ridicată a datelor</string>
+    <string name="sport_no_sport">Încă nu există nicio înregistrare de exerciții, începeți să faceți exerciții acum</string>
+    <string name="sport_destroy">Faceți clic din nou pentru a părăsi această campanie</string>
+    <string name="sport_time_short">Durata și distanța exercițiului sunt prea scurte pentru a genera un raport de exercițiu valid</string>
+    <string name="sport_finish_sport">Ești sigur că vrei să închei exercițiul?</string>
+    <string name="sport_start_sport">Vă rugăm să începeți mai întâi exercițiul</string>
+
+</resources>

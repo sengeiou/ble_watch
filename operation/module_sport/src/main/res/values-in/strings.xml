@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">latihan baru-baru ini</string>
+    <string name="sport_sport_time">waktu latihan</string>
+    <string name="sport_sport_calorie">konsumsi olahraga</string>
+    <string name="sport_sport_distance">Jarak gerakan</string>
+    <string name="sport_steps">Hitungan langkah</string>
+    <string name="sport_speed_hour">kecepatan rata-rata</string>
+    <string name="sport_stride">irama</string>
+    <string name="sport_heart">detak jantung rata-rata</string>
+    <string name="sport_height">mendaki ketinggian</string>
+    <string name="sport_sport_info">Detail olahraga</string>
+    <string name="sport_heart_level">Distribusi detak jantung</string>
+    <string name="sport_heart1">membatasi(≥161)</string>
+    <string name="sport_heart2">Anaerobik(149~160)</string>
+    <string name="sport_heart3">Aerobik(131~138)</string>
+    <string name="sport_heart4">membakar lemak(112~130)</string>
+    <string name="sport_heart5">pemanasan(90~111)</string>
+    <string name="sport_speed">kecepatan</string>
+    <string name="sport_running">bergerak</string>
+    <string name="sport_run_pause">Gerakan dijeda</string>
+    <string name="sport_gps_low">Sinyal GPS lemah dan akurasi data rendah</string>
+    <string name="sport_gps_middle">Sinyal GPS yang kuat dan akurasi data yang tinggi</string>
+    <string name="sport_gps_high">Sinyal GPS yang kuat dan akurasi data yang tinggi</string>
+    <string name="sport_no_sport">Belum ada catatan olahraga, mulailah berolahraga sekarang</string>
+    <string name="sport_destroy">Klik lagi untuk keluar dari kampanye ini</string>
+    <string name="sport_time_short">Durasi dan jarak latihan terlalu pendek untuk menghasilkan laporan latihan yang valid</string>
+    <string name="sport_finish_sport">Apakah Anda yakin ingin mengakhiri latihan?</string>
+    <string name="sport_start_sport">Silakan mulai berolahraga dulu</string>
+
+</resources>

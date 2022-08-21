@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">Państwo</string>
+    <string name="sport">Sporty</string>
+    <string name="consult">Konsultować</string>
+    <string name="mine">Moje</string>
+    <string name="tip">Przypominać</string>
+    <string name="checkGPS">Wykryto, że przełącznik lokalizacji w telefonie nie jest włączony. Aby aplikacja działała poprawnie, włącz przełącznik lokalizacji.</string>
+    <string name="confirm">Pewnie</string>
+    <string name="cancel">Anulować</string>
+
+    <string name="touchAgain">Naciśnij ponownie, aby wyjść z programu</string>
+    <string name="privacy1">Umowa użytkownika i Polityka prywatności</string>
+    <string name="privacyTip">Dziękujemy za zaufanie i korzystanie z Fit Ring。
+\n\nPomożemy Ci zrozumieć, w jaki sposób zbieramy, wykorzystujemy, przechowujemy Twoje dane osobowe i związane z nimi prawa zgodnie z „Umową o ochronie prywatności użytkownika”.
+\n\nKiedy korzystasz z aplikacji FitRing, zbieramy informacje o Twoim urządzeniu, dane osobowe (awatar, pseudonim, wzrost, waga, dane dotyczące ćwiczeń) i inne informacje, musimy uzyskać pozwolenie na aparat, pozwolenie na album, aby przesłać awatar aplikacji :
+\n\nGdy korzystasz z aplikacji FitTing do biegania na świeżym powietrzu, przesyłasz, udostępniasz i przechowujesz informacje o ćwiczeniach, musimy uzyskać Twoje pozwolenie na lokalizację, aby rejestrować Twoją bieżnię.
+\n\nMożesz uzyskać dostęp, modyfikować, usuwać swoje dane osobowe lub zarządzać swoją autoryzacją na odpowiednich stronach.
+\n\nUżywamy wiodącej w branży technologii bezpieczeństwa, aby chronić Twoje dane osobowe.
+\n\nKlikając „OK”, zgadzasz się na warunki tej umowy.</string>
+</resources>

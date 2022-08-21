@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">zonă</string>
+    <string name="login_chose_location">vă rugăm să selectați regiunea</string>
+    <string name="login_login_account">cont de autentificare</string>
+    <string name="login_login">Autentificare</string>
+    <string name="login_account">cont</string>
+    <string name="login_input_account">Introduceți contul dvs</string>
+    <string name="login_right_email">Vă rugăm să introduceți adresa de e-mail corectă</string>
+    <string name="login_psw">parola</string>
+    <string name="login_input_psw">introduceți parola</string>
+    <string name="login_forget_psw">Aţi uitat parola?</string>
+    <string name="login_register">Fără cont? a înregistra</string>
+    <string name="login_privacy">Sunteți de acord cu <u>Acordul de utilizare și Politica de confidențialitate</u></string>
+    <string name="login_checkPrivacy">nu a fost de acord《Acordul utilizatorului și Politica de confidențialitate》</string>
+
+
+    <string name="login_register_account">Înregistrare Cont</string>
+    <string name="login_register_account_tip">Cu un cont personal, datele tale de fitness, preferințele dispozitivului pot fi stocate permanent în siguranță</string>
+    <string name="login_next">Urmatorul pas</string>
+    <string name="login_verification">Cod de verificare</string>
+    <string name="login_input_verification">Introdu codul de verificare</string>
+    <string name="login_send">trimite</string>
+
+    <string name="login_set_password">Seteaza parola</string>
+    <string name="login_inconsistent">Parola neconsecventă a fost introdusă de două ori</string>
+    <string name="login_confirm_password">Confirmă parola</string>
+    <string name="login_finish">finalizarea</string>
+    <string name="login_find_password">Recuperează Parola</string>
+    <string name="login_reset_Success">Resetarea parolei cu succes</string>
+
+    <string name="login_change_password">schimbaţi parola</string>
+    <string name="login_old_password">Parola veche</string>
+    <string name="login_new_password">Parolă Nouă</string>
+    <string name="login_confirm_new_password">Confirmați noua parolă</string>
+    <string name="login_change_success">Modificat cu succes</string>
+</resources>

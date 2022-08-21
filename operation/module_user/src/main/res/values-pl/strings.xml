@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">mój cel</string>
+    <string name="user_edit_plan">Edytuj cel</string>
+    <string name="user_step">Cel kroku</string>
+    <string name="user_sleep">Cele snu</string>
+    <string name="user_calorie">Cel konsumpcji</string>
+
+    <string name="user_connect">Połączony</string>
+    <string name="user_disconnect">Nie połączony</string>
+    <string name="user_connecting">złączony...</string>
+
+    <string name="user_dial">Moja tarcza zegarka</string>
+    <string name="user_dial_tip">Więcej tarcz zegarka, zmieniaj do woli</string>
+    <string name="user_device_config">Zarządzanie urządzeniami</string>
+    <string name="user_find_watch">Znajdź zegarek</string>
+    <string name="user_ble_call">Połączenia Bluetooth</string>
+    <string name="user_ble_camera">Kamera Bluetooth</string>
+    <string name="user_unit">System jednostkowy</string>
+    <string name="user_notification">Powiadomienie</string>
+    <string name="user_about">O urządzeniu</string>
+    <string name="user_schedule">mój harmonogram</string>
+    <string name="user_auto">Automatyczne monitorowanie</string>
+    <string name="user_add_device">Dodaj urządzenie</string>
+
+    <string name="user_measureUnit">Jednostka miary</string>
+    <string name="user_tempUnit">Jednostka temperatury</string>
+    <string name="user_metric">Metryczny</string>
+    <string name="user_british">Cesarski</string>
+    <string name="user_save">Ratować</string>
+    <string name="user_saved">Zapisano pomyślnie</string>
+
+    <string name="user_notify">Powiadomienie</string>
+    <string name="user_notify_tip">Aby otrzymywać powiadomienia z aplikacji na urządzeniu, musisz włączyć przełącznik wiadomości</string>
+    <string name="user_notify_title">Włącz powiadomienia</string>
+    <string name="user_notify_msg">Ta aplikacja musi przekazywać powiadomienia aplikacji do zdalnych urządzeń inteligentnych. Naciśnij \"OK\", aby wejść na stronę powiadomień i aktywować.</string>
+    <string name="user_cancel">Anulować</string>
+    <string name="user_confirm">Pewnie</string>
+
+    <string name="user_account_safe">Konto i bezpieczeństwo</string>
+    <string name="user_version">Aktualna wersja aplikacji</string>
+    <string name="user_help">Pomoc i opinie</string>
+    <string name="user_privacy">Umowa użytkownika i Polityka prywatności</string>
+    <string name="user_logout">Wyloguj się</string>
+    <string name="user_unbind_tip">rozwiązać</string>
+    <string name="user_unbind_message">Czy na pewno chcesz odpiąć obecne urządzenie?</string>
+
+    <string name="user_info">Informacje osobiste</string>
+    <string name="user_set">Informacje o koncie</string>
+    <string name="user_head">Awatara</string>
+    <string name="user_name">Przezwisko</string>
+    <string name="user_sex">płeć</string>
+    <string name="user_birthday">Data urodzenia</string>
+    <string name="user_height">Wzrost</string>
+    <string name="user_weight">Waga</string>
+    <string name="user_male">Mężczyzna</string>
+    <string name="user_female">Kobieta</string>
+    <string name="user_camera">Fotografia</string>
+    <string name="user_album">Album zdjęć</string>
+    <string name="user_enter_name">Proszę wpisz swój nick</string>
+    <string name="user_name_long">Pseudonim nie może przekraczać 12 znaków</string>
+    <string name="user_permission_error_camera">Zezwolenie nie zostało przekazane, nie można włączyć funkcji aparatu</string>
+    <string name="user_crop_pic_failed">Nie udało się przechwycić obrazu, wybierz obraz w formacie jpg!</string>
+    <string name="user_account">Zaloguj się na konto</string>
+    <string name="user_change">Zmień hasło</string>
+    <string name="user_delete_account">Wyloguj</string>
+    <string name="user_logout_tip">Czy na pewno chcesz się wylogować?</string>
+    <string name="user_upload_data">Przesyłanie danych...</string>
+    <string name="user_upload_data_success">Przesyłanie danych pomyślnie!</string>
+    <string name="user_faq">Powszechny problem</string>
+    <string name="user_feedback_hint">Twoja opinia/pytania</string>
+    <string name="user_send_feedback">Prześlij opinię</string>
+    <string name="user_feedback_long">Wpisany tekst jest za długi</string>
+    <string name="user_feedback_empty">Komentarze nie mogą być puste</string>
+    <string name="user_feedback_success">Powodzenie opinii</string>
+    <string name="user_guide">Przewodnik połączeń</string>
+    <string name="user_service">Spraw, aby działał w tle</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">Oppo</string>
+    <string name="user_vivo">Vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">Oneplus</string>
+    <string name="user_samsun">SAMSUNG</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Aby poprawić stabilność połączenia zegarka, zaleca się dokonanie następujących ustawień
+：</string>
+    <string name="user_saverBattery">Nie włączaj (tryb oszczędzania energii)：</string>
+    <string name="user_batteryContent">Włączenie trybu oszczędzania energii może powodować problemy, takie jak niestabilne połączenie Bluetooth, nieprawidłowa trajektoria ruchu i zmniejszona odległość zasilania. Zaleca się zamknięcie podczas użytkowania Tryb oszczędzania energii.</string>
+    <string name="user_protect">Ustawienia ochrony tła głównych producentów：</string>
+
+
+    <string name="user_search">Urządzenie wyszukiwania</string>
+    <string name="user_searching">Wyszukiwanie urządzeń...</string>
+    <string name="user_bind">Wiążący...</string>
+    <string name="user_no_device">Urządzenie nie zostało znalezione</string>
+    <string name="user_pair_success">Sparowano pomyślnie</string>
+    <string name="user_pair_tip">Informacje dotyczące zdrowia sportowego zostaną zsynchronizowane między zegarkiem a telefonem komórkowym za pośrednictwem aplikacji.</string>
+    <string name="user_finish">Skończyć</string>
+    <string name="user_understand">rozumiem</string>
+    <string name="user_wear_tip">noszenie napiwków</string>
+    <string name="user_wear_tip_content">Aby dokładnie zmierzyć dane i nie wpływać na normalne korzystanie z aplikacji, spróbuj nosić zegarek w odległości 1 cm od kości nadgarstka
+</string>
+    <string name="user_search_tip">Usuń urządzenie, naładuj je, aby aktywować i trzymaj je blisko telefonu</string>
+    <string name="user_search_much">Wybierz swój zegarek zgodnie z adresem mac</string>
+    <string name="user_search_again">Poszukaj ponownie</string>
+    <string name="user_again_tip">Możesz wypróbować następujące sposoby i spróbować ponownie po ustawieniu：</string>
+    <string name="user_again_advice">·Ponownie uruchom Bluetooth telefonu\n·Upewnij się, że zegarek jest włączony i znajduje się blisko telefonu\n·Kliknij urządzenie \„Przywróć ustawienia fabryczne”</string>
+    <string name="user_stop_bind">Później nie wiąż się na razie</string>
+    <string name="user_bind_help"><u>Nie możesz znaleźć urządzenia do dodania? Pokaż pomoc</u></string>
+
+    <string name="user_dial_market">Rynek telefoniczny</string>
+    <string name="user_dial_now">Obejrzyj podgląd twarzy</string>
+    <string name="user_dial_mine">Moja tarcza zegarka</string>
+    <string name="user_dial_diy">Niestandardowa tarcza zegarka</string>
+    <string name="user_background">Prześlij tło</string>
+    <string name="user_crop_fail">Nie udało się przechwycić obrazu, wybierz obraz w formacie jpg！</string>
+    <string name="user_crop_small">Nie udało się przechwycić obrazu, przechwycony obraz jest zbyt mały i nie pasuje do rozmiaru tarczy！</string>
+    <string name="user_send_background">Wysyłanie tła...</string>
+    <string name="user_send_dial">Wysyłanie tarczy zegarka...</string>
+    <string name="user_send_success">Wysłano pomyślnie！</string>
+    <string name="user_send_fail">Wysyłanie nie powiodło się, spróbuj ponownie.</string>
+    <string name="user_no_background">Najpierw prześlij tło</string>
+    <string name="user_no_clock">Najpierw wybierz tarczę zegarka</string>
+
+    <string name="user_device_name">Model oprogramowania</string>
+    <string name="user_device_mac">Adres Mac</string>
+    <string name="user_device_version">Wersja oprogramowania</string>
+    <string name="user_check_update">Sprawdź aktualizacje</string>
+
+    <string name="user_camera_tip">Po włączeniu funkcji aparatu Bluetooth zegarek może sterować aplikacją aparatu telefonu komórkowego w celu robienia zdjęć</string>
+    <string name="user_camera_permission_tip">Podczas użytkowania ta aplikacja wymaga dostępu do aparatu oraz uprawnień do odczytu i zapisu plików w celu zdalnego robienia zdjęć i przechowywania zdjęć\n\nJeśli nie wyrazisz zgody na wywołanie powyższych uprawnień, spowoduje to, że aparat Bluetooth nie będzie normalnie używany, co nie wpłynie na korzystanie z podstawowych funkcji tej aplikacji. Możesz wycofać swoją zgodę w dowolnym momencie, przechodząc do „Ustawienia” > „Zarządzanie uprawnieniami” i wyłączając powyższe wezwania do uzyskania zgody</string>
+    <string name="user_camera_permission_error">Pozwolenie nie zostało przekazane, otwarcie się nie powiedzie</string>
+
+    <string name="user_deleteTip">Niezależnie od tego, czy potwierdzić anulowanie konta, konto zostanie pomyślnie anulowane w ciągu trzech dni od potwierdzenia, a dane konta zostaną całkowicie usunięte po pomyślnym anulowaniu, bez możliwości odzyskania! Proszę postępować ostrożnie.
+</string>
+    <string name="user_deleteSuccess">Konto aplikacji zostało pomyślnie anulowane.</string>
+    <string name="user_deleteNow">Konto bieżące czeka na etap wylogowania.</string>
+
+    <string name="user_schedule_empty">Bieżący zegarek nie ma harmonogramu, dodaj nowy harmonogram</string>
+    <string name="user_delete_schedule">usuń harmonogram</string>
+    <string name="user_save_schedule">zapisz harmonogram</string>
+    <string name="user_schedule_info">Szczegóły harmonogramu</string>
+    <string name="user_schedule_fall">Harmonogram, który można dodać do zegarka, osiągnął górny limit, wyczyść go przed dodaniem</string>
+    <string name="user_schedule_add_fail">Nie udało się dodać harmonogramu</string>
+    <string name="user_schedule_edit_fail">Nie udało się zmodyfikować harmonogramu</string>
+    <string name="user_schedule_delete_fail">Nie udało się usunąć harmonogramu</string>
+    <string name="user_schedule_past">Nie można ustawić przeszłego punktu czasowego jako punktu czasowego w harmonogramie</string>
+    <string name="user_schedule_same">Aktualnie wybrany punkt czasowy ma już agendę i nie może być ustawiany wielokrotnie</string>
+    <string name="user_schedule_msg">Proszę wypełnić szczegóły harmonogramu</string>
+    <string name="user_today">Dziś</string>
+    <string name="user_time">czas</string>
+
+
+    <string name="user_auto_measure_tip">Po włączeniu funkcji automatycznego wykrywania zegarek będzie mierzył każdą częstotliwość i czas w okresie obowiązywania.</string>
+    <string name="user_measure_frequency">Częstotliwość monitorowania</string>
+    <string name="user_valid_time">Okres obowiązywania</string>
+    <string name="user_start_time">Czas startu</string>
+    <string name="user_end_time">Koniec czasu</string>
+    <string name="user_heart">tętno</string>
+    <string name="user_blood_pressure">ciśnienie krwi</string>
+    <string name="user_blood_oxygen">tlen krwi</string>
+    <string name="user_temperature">temperatura ciała</string>
+</resources>

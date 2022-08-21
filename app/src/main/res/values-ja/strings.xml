@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">州</string>
+    <string name="sport">スポーツ</string>
+    <string name="consult">相談する</string>
+    <string name="mine">私の</string>
+    <string name="tip">思い出させる</string>
+    <string name="checkGPS">お使いの携帯電話の位置情報スイッチがオンになっていないことが検出されました。アプリが正しく動作することを確認するには、位置情報スイッチをオンにしてください。</string>
+    <string name="confirm">もちろん</string>
+    <string name="cancel">キャンセル</string>
+
+    <string name="touchAgain">もう一度押すと、プログラムを終了します</string>
+    <string name="privacy1">ユーザー同意書とプライバシーポリシー</string>
+    <string name="privacyTip">FitRingを信頼してご利用いただきありがとうございます。
+\n\n「ユーザープライバシー契約」に従って、お客様の個人情報および関連する権利をどのように収集、使用、保存するかを理解するのに役立ちます。。
+\n\nFitRing アプリを使用すると、デバイス情報、個人データ (アバター、ニックネーム、身長、体重、運動データ) およびその他の情報が収集されます。アプリのアバターをアップロードするには、カメラの許可、アルバムの許可を取得する必要があります。:
+\n\n屋外でのランニング、スポーツ情報のアップロード、共有、保存に FitRing アプリを使用する場合、ランニング トラックを記録するために位置情報の許可を取得する必要があります。。
+\n\n関連するページで、個人情報へのアクセス、変更、削除、または承認の管理を行うことができます。
+\n\n業界をリードするセキュリティ技術を使用して、お客様の個人情報を保護します。
+\n\n「OK」をクリックすると、本契約の条件に同意したことになります。</string>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">Mục tiêu của tôi</string>
+    <string name="user_edit_plan">Chỉnh sửa mục tiêu</string>
+    <string name="user_step">mục tiêu bước</string>
+    <string name="user_sleep">mục tiêu giấc ngủ</string>
+    <string name="user_calorie">mục tiêu tiêu dùng</string>
+
+    <string name="user_connect">kết nối</string>
+    <string name="user_disconnect">không kết nối</string>
+    <string name="user_connecting">Đang kết nối...</string>
+
+    <string name="user_dial">mặt đồng hồ của tôi</string>
+    <string name="user_dial_tip">Nhiều mặt số hơn, thay đổi theo ý muốn></string>
+    <string name="user_device_config">Quản lý thiết bị</string>
+    <string name="user_find_watch">Tìm một chiếc đồng hồ</string>
+    <string name="user_ble_call">Gọi qua Bluetooth</string>
+    <string name="user_ble_camera">Máy ảnh Bluetooth</string>
+    <string name="user_unit">hệ thống đơn vị</string>
+    <string name="user_notification">thông báo</string>
+    <string name="user_about">Về thiết bị</string>
+    <string name="user_schedule">thời gian biểu của tôi</string>
+    <string name="user_auto">Giám sát tự động</string>
+    <string name="user_add_device">Thêm thiết bị</string>
+
+    <string name="user_measureUnit">Đơn vị đo lường</string>
+    <string name="user_tempUnit">đơn vị nhiệt độ</string>
+    <string name="user_metric">Hệ mét</string>
+    <string name="user_british">thành nội</string>
+    <string name="user_save">tiết kiệm</string>
+    <string name="user_saved">Lưu thành công</string>
+
+    <string name="user_notify">thông báo</string>
+    <string name="user_notify_tip">Để nhận tin nhắn thông báo từ ứng dụng trên thiết bị, bạn cần bật khóa chuyển tin nhắn</string>
+    <string name="user_notify_title">Bật thông báo</string>
+    <string name="user_notify_msg">Ứng dụng này cần chuyển tiếp thông báo ứng dụng đến các thiết bị thông minh từ xa. Nhấn \ "OK \" để vào trang thông báo để kích hoạt.</string>
+    <string name="user_cancel">Hủy bỏ</string>
+    <string name="user_confirm">Chắc chắn rồi</string>
+
+    <string name="user_account_safe">Tài khoản và Bảo mật</string>
+    <string name="user_version">Phiên bản APP hiện tại</string>
+    <string name="user_help">Giúp đỡ và phản hồi</string>
+    <string name="user_privacy">Thỏa thuận người dùng và Chính sách quyền riêng tư</string>
+    <string name="user_logout">đăng xuất</string>
+    <string name="user_unbind_tip">cởi trói</string>
+    <string name="user_unbind_message">Bạn có chắc chắn hủy liên kết thiết bị hiện tại không?</string>
+
+    <string name="user_info">Thông tin cá nhân</string>
+    <string name="user_set">thông tin tài khoản</string>
+    <string name="user_head">hình đại diện</string>
+    <string name="user_name">tên nick</string>
+    <string name="user_sex">giới tính</string>
+    <string name="user_birthday">ngày sinh</string>
+    <string name="user_height">Chiều cao</string>
+    <string name="user_weight">trọng lượng</string>
+    <string name="user_male">Nam giới</string>
+    <string name="user_female">Giống cái</string>
+    <string name="user_camera">ảnh chụp</string>
+    <string name="user_album">album ảnh</string>
+    <string name="user_enter_name">vui lòng nhập nickname của bạn</string>
+    <string name="user_name_long">Biệt hiệu không được vượt quá 12 ký tự</string>
+    <string name="user_permission_error_camera">Quyền không được thông qua, không thể bật chức năng máy ảnh</string>
+    <string name="user_crop_pic_failed">Không chụp được ảnh, vui lòng chọn ảnh định dạng jpg!</string>
+    <string name="user_account">Đăng nhập tài khoản</string>
+    <string name="user_change">đổi mật khẩu</string>
+    <string name="user_delete_account">Đăng xuất</string>
+    <string name="user_logout_tip">Bạn có chắc chắn bạn muốn thoát?</string>
+    <string name="user_upload_data">tải lên dữ liệu...</string>
+    <string name="user_upload_data_success">Tải lên dữ liệu thành công!</string>
+    <string name="user_faq">vấn đề thường gặp</string>
+    <string name="user_feedback_hint">phản hồi / câu hỏi của bạn</string>
+    <string name="user_send_feedback">Gửi phản hồi</string>
+    <string name="user_feedback_long">Văn bản bạn đã nhập quá dài</string>
+    <string name="user_feedback_empty">Nhận xét không được để trống</string>
+    <string name="user_feedback_success">phản hồi thành công</string>
+    <string name="user_guide">hướng dẫn kết nối</string>
+    <string name="user_service">giữ cho nó chạy trong nền</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">Oneplus</string>
+    <string name="user_samsun">SAMSUNG</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Để cải thiện độ ổn định của kết nối đồng hồ, bạn nên thực hiện các cài đặt sau：</string>
+    <string name="user_saverBattery">Không bật (chế độ tiết kiệm điện)：</string>
+    <string name="user_batteryContent">Nếu chế độ tiết kiệm năng lượng được bật, nó có thể gây ra các vấn đề như kết nối Bluetooth không ổn định, quỹ đạo chuyển động bất thường và giảm khoảng cách nguồn. Nên tắt chế độ tiết kiệm điện trong quá trình sử dụng.</string>
+    <string name="user_protect">Cài đặt bảo vệ nền của các nhà sản xuất lớn：</string>
+
+
+    <string name="user_search">thiết bị tìm kiếm</string>
+    <string name="user_searching">Tìm kiếm thiết bị...</string>
+    <string name="user_bind">ràng buộc...</string>
+    <string name="user_no_device">Không tìm thấy thiết bị</string>
+    <string name="user_pair_success">ghép nối thành công</string>
+    <string name="user_pair_tip">Thông tin dữ liệu sức khỏe thể thao của bạn sẽ được đồng bộ hóa giữa đồng hồ và điện thoại di động thông qua APP.</string>
+    <string name="user_finish">Kết thúc</string>
+    <string name="user_understand">Tôi thấy</string>
+    <string name="user_wear_tip">tiền boa</string>
+    <string name="user_wear_tip_content">Để số liệu đo được chính xác và không ảnh hưởng đến việc sử dụng APP bình thường, vui lòng cố gắng đeo đồng hồ cách xương cổ tay 1cm</string>
+    <string name="user_search_tip">Tháo thiết bị, sạc để kích hoạt và để thiết bị gần điện thoại</string>
+    <string name="user_search_much">Vui lòng chọn đồng hồ của bạn theo địa chỉ mac</string>
+    <string name="user_search_again">tìm kiếm lại</string>
+    <string name="user_again_tip">Bạn có thể thử các cách sau và thử lại sau khi thiết lập：</string>
+    <string name="user_again_advice">·Mở lại bluetooth của điện thoại\n·Đảm bảo đồng hồ đang bật và gần điện thoại\n·Bấm vào thiết bị\"Bấm vào thiết bị\"</string>
+    <string name="user_stop_bind">Về sau đừng ràng buộc nhất thời</string>
+    <string name="user_bind_help"><u>Không thể tìm thấy thiết bị để thêm? Xem trợ giúp</u></string>
+
+    <string name="user_dial_market">thị trường quay số</string>
+    <string name="user_dial_now">Xem trước khuôn mặt</string>
+    <string name="user_dial_mine">mặt đồng hồ của tôi</string>
+    <string name="user_dial_diy">mặt đồng hồ tùy chỉnh</string>
+    <string name="user_background">tải lên nền</string>
+    <string name="user_crop_fail">Không chụp được ảnh, vui lòng chọn ảnh định dạng jpg!</string>
+    <string name="user_crop_small">Không chụp được ảnh, ảnh đã chụp quá nhỏ và không khớp với kích thước của mặt số!</string>
+    <string name="user_send_background">nền gửi...</string>
+    <string name="user_send_dial">Gửi mặt đồng hồ...</string>
+    <string name="user_send_success">Gửi thành công！</string>
+    <string name="user_send_fail">Gửi không thành công, vui lòng thử lại. </string>
+    <string name="user_no_background">Vui lòng tải lên nền trước</string>
+    <string name="user_no_clock">Vui lòng chọn một mặt đồng hồ trước tiên</string>
+
+    <string name="user_device_name">Mô hình phần mềm</string>
+    <string name="user_device_mac">Macđịa chỉ</string>
+    <string name="user_device_version">Phiên bản phần mềm</string>
+    <string name="user_check_update">Kiểm tra cập nhật</string>
+
+    <string name="user_camera_tip">Sau khi bật chức năng máy ảnh Bluetooth, đồng hồ có thể điều khiển ứng dụng máy ảnh trên điện thoại di động để chụp ảnh</string>
+    <string name="user_camera_permission_tip">Trong quá trình sử dụng, ứng dụng này yêu cầu quyền truy cập vào camera và quyền đọc ghi tệp. Để chụp ảnh từ xa và lưu trữ ảnh\n\nNếu bạn không đồng ý gọi các quyền trên, nó sẽ khiến camera Bluetooth không hoạt động bình thường và nó sẽ không ảnh hưởng đến việc bạn sử dụng các chức năng cơ bản của ứng dụng này. Bạn luôn có thể đi tới Cài đặt>"quyền quản lý". Chọn tắt lệnh gọi quyền ở trên để rút lại sự đồng ý của bạn</string>
+    <string name="user_camera_permission_error">Quyền không được thông qua, việc mở không thành công</string>
+
+    <string name="user_deleteTip">Cho dù xác nhận việc hủy tài khoản của bạn hay không, tài khoản sẽ được hủy thành công trong vòng ba ngày sau khi xác nhận, Sau khi đăng xuất thành công, dữ liệu tài khoản sẽ bị xóa hoàn toàn và không thể khôi phục lại được! Vui lòng tiến hành một cách thận trọng.</string>
+    <string name="user_deleteSuccess">Tài khoản ứng dụng đã được hủy thành công.</string>
+    <string name="user_deleteNow">Tài khoản hiện tại đang chờ giai đoạn đăng xuất.</string>
+
+    <string name="user_schedule_empty">Đồng hồ hiện tại không có lịch, vui lòng thêm lịch mới</string>
+    <string name="user_delete_schedule">xóa lịch trình</string>
+    <string name="user_save_schedule">lưu lịch trình</string>
+    <string name="user_schedule_info">Chi tiết lịch trình</string>
+    <string name="user_schedule_fall">Lịch trình có thể được thêm vào đồng hồ đã đạt đến giới hạn trên, vui lòng xóa lịch trình đó trước khi thêm</string>
+    <string name="user_schedule_add_fail">Không thêm được lịch biểu</string>
+    <string name="user_schedule_edit_fail">Không sửa đổi được lịch biểu</string>
+    <string name="user_schedule_delete_fail">Không xóa được lịch biểu</string>
+    <string name="user_schedule_past">Không thể đặt mốc thời gian trong quá khứ làm mốc thời gian trên lịch biểu</string>
+    <string name="user_schedule_same">Mốc thời gian hiện được chọn đã có chương trình làm việc và không thể đặt lặp lại</string>
+    <string name="user_schedule_msg">Vui lòng điền vào chi tiết lịch trình</string>
+    <string name="user_today">hôm nay</string>
+    <string name="user_time">thời gian</string>
+
+
+    <string name="user_auto_measure_tip">Sau khi chức năng giám sát tự động được bật, đồng hồ sẽ đo mọi tần số và thời gian trong khoảng thời gian hiệu quả.</string>
+    <string name="user_measure_frequency">Tần suất giám sát</string>
+    <string name="user_valid_time">Thời kỳ hữu hiệu</string>
+    <string name="user_start_time">Thời gian bắt đầu</string>
+    <string name="user_end_time">结束时间</string>
+    <string name="user_heart">nhịp tim</string>
+    <string name="user_blood_pressure">huyết áp</string>
+    <string name="user_blood_oxygen">oxy trong máu</string>
+    <string name="user_temperature">thân nhiệt</string>
+</resources>

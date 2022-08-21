@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="healthy_my_state">ငါ့အခြေနေ</string>
+    <string name="healthy_sport">အားကစား</string>
+    <string name="healthy_all_sport">နောက်ထပ် အားကစားမှတ်တမ်းများ</string>
+    <string name="healthy_step">အဆင့်ရေတွက်ပါ။</string>
+    <string name="healthy_sleep">အိပ်ပါ။</string>
+    <string name="healthy_heart">နှလုံးခုန်နှုန်း</string>
+    <string name="healthy_blood_pressure">သွေးပေါင်ချိန်</string>
+    <string name="healthy_blood_oxygen">သွေးအောက်ဆီဂျင်</string>
+    <string name="healthy_temp">ခန္ဓာကိုယ်အပူချိန်</string>
+    <string name="healthy_edit_card">ကတ်ကို တည်းဖြတ်ပါ။</string>
+    <string name="healthy_last_sport">လတ်တလောလေ့ကျင့်ခန်း</string>
+    <string name="healthy_sport_list">အားကစားစာရင်း</string>
+    <string name="healthy_sport_last">ပြီးသွားပြီ~</string>
+    <string name="healthy_no_sport">လေ့ကျင့်ခန်းမှတ်တမ်းမရှိသေးပါ၊ ယခုစတင်လေ့ကျင့်ပါ။</string>
+    <string name="healthy_card_visiable">ပြသထားသည့်အရာများ (ညာဘက်ခြမ်းကို ဖိထားပြီး အမှာစာချိန်ညှိရန် အပေါ်နှင့်အောက် ဆွဲယူပါ)</string>
+    <string name="healthy_card_gone">ဝှက်ထားသောပစ္စည်း</string>
+    <string name="healthy_card_need_gone">ဤနေရာတွင် သင်မပြလိုသော အရာများကို ဆွဲယူပါ။</string>
+    <string name="healthy_day">နေ့</string>
+    <string name="healthy_week">တစ်ပတ်</string>
+    <string name="healthy_month">လ</string>
+    <string name="healthy_sun">တနင်္ဂနွေ</string>
+    <string name="healthy_sta">စနေနေ့</string>
+    <string name="healthy_survey">ယနေ့ ခြုံငုံသုံးသပ်ချက်</string>
+    <string name="healthy_week_survey">အပတ်စဉ်သုံးသပ်ချက်</string>
+    <string name="healthy_month_survey">လစဉ်သုံးသပ်ချက်</string>
+    <string name="healthy_all_step">စုစုပေါင်းခြေလှမ်းများ</string>
+    <string name="healthy_all_calorie">စုစုပေါင်းစားသုံးမှု</string>
+    <string name="healthy_all_distance">စုစုပေါင်းအကွာအဝေး</string>
+    <string name="healthy_plan">ဒီနေ့ပန်းတိုင်</string>
+    <string name="healthy_day_step">ပျမ်းမျှနေ့စဉ်ခြေလှမ်းအရေအတွက်</string>
+    <string name="healthy_day_calorie">ပျမ်းမျှနေ့စဉ်စားသုံးမှု</string>
+    <string name="healthy_day_distance">ပျမ်းမျှနေ့စဉ်အကွာအဝေး</string>
+    <string name="healthy_radio">ပန်းတိုင်အောင်မြင်မှုနှုန်း</string>
+    <string name="healthy_sleep_info">အိပ်စက်ခြင်းဖြန့်ဖြူးခြင်း။</string>
+    <string name="healthy_sleep_deep">အိပ်ချိန်</string>
+    <string name="healthy_sleep_light">အလင်းအိပ်ချိန်</string>
+    <string name="healthy_sleep_average_sleep">ပျမ်းမျှအိပ်ချိန်</string>
+    <string name="healthy_sleep_average_deep">ပျမ်းမျှ နှစ်နှစ်ခြိုက်ခြိုက် အိပ်စက်ချိန်</string>
+    <string name="healthy_sleep_average_light">ပျမ်းမျှအလင်းရောင် အိပ်စက်ချိန်</string>
+    <string name="healthy_sleep_bed">အိပ်ပျော်ဖို့အချိန်</string>
+    <string name="healthy_sleep_wake">နိုးချိန်</string>
+    <string name="healthy_heart_average">ပျမ်းမျှနှလုံးခုန်နှုန်</string>
+    <string name="healthy_heart_max">အများဆုံးနှလုံးခုန်နှုန်း</string>
+    <string name="healthy_heart_min">အနည်းဆုံးနှလုံးခုန်နှုန်း</string>
+    <string name="healthy_heart_level">နှလုံးခုန်နှုန်း ဖြန့်ဝေခြင်း။</string>
+    <string name="healthy_heart1">ကန့်သတ်(≥161)</string>
+    <string name="healthy_heart2">Anaerobic(149~160)</string>
+    <string name="healthy_heart3">အေရိုးဗစ်(131~138)</string>
+    <string name="healthy_heart4">အဆီလောင်ကျွမ်းခြင်း။(112~130)</string>
+    <string name="healthy_heart5">သွေးပူလေ့ကျင့်ခန်း(90~111)</string>
+    <string name="healthy_heart6">သက်တောင့်သက်သာနေပါ(≤89)</string>
+    <string name="healthy_spo_average">သွေးအောက်ဆီဂျင်ကို ဆိုလိုသည်။</string>
+    <string name="healthy_spo_max">အများဆုံးသွေးအောက်ဆီဂျင်အဆင့်</string>
+    <string name="healthy_spo_min">အနည်းဆုံးသွေးအောက်ဆီဂျင်အဆင့်</string>
+    <string name="healthy_spo_measure_list">တိုင်းတာမှုမှတ်တမ်း</string>
+    <string name="healthy_spo_measure_info">တိုင်းတာမှုမှတ်တမ်းအသေးစိတ်</string>
+    <string name="healthy_spo_abnormal">hypoxia ဖြစ်ပွားမှု</string>
+    <string name="healthy_temp_abnormal">အဖျားဖြစ်ပေါ်ခြင်း။</string>
+    <string name="healthy_temp_average">ပျမ်းမျှခန္ဓာကိုယ်အပူချိန်</string>
+    <string name="healthy_temp_max">အများဆုံးခန္ဓာကိုယ်အပူချိန်</string>
+    <string name="healthy_temp_min">အနည်းဆုံးကိုယ်အပူချိန်</string>
+    <string name="healthy_sbp_average">systolic သွေးဖိအားကိုဆိုလိုသည်။</string>
+    <string name="healthy_dbp_average">diastolic သွေးဖိအားကိုဆိုလိုသည်။</string>
+    <string name="healthy_bp_abnormal">ပုံမှန်မဟုတ်သောသွေးပေါင်ချိန်</string>
+    <string name="healthy_unit">%dဒုတိယနှုန်း</string>
+
+    <string name="healthy_tomorrow">အနာဂတ်ရက်စွဲကို ရွေး၍မရပါ။</string>
+    <string name="healthy_not_data">ရွေးချယ်ထားသည့်ရက်စွဲတွင် ဒေတာမရှိပါ။
+rwayhkyaal htarr sany raathcwaltwin  day tar mashipar .</string>
+</resources>

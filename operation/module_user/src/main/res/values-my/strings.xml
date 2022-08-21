@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">ငါပန်းတိုင်</string>
+    <string name="user_edit_plan">ပစ်မှတ်ကို တည်းဖြတ်ပါ။</string>
+    <string name="user_step">ခြေလှမ်းပစ်မှတ်</string>
+    <string name="user_sleep">အိပ်စက်ခြင်းပန်းတိုင်များ</string>
+    <string name="user_calorie">စားသုံးမှုပစ်မှတ်</string>
+
+    <string name="user_connect">ချိတ်ဆက်ထားသည်။</string>
+    <string name="user_disconnect">မချိတ်ဆက်ပါ။</string>
+    <string name="user_connecting">ချိတ်ဆက်ခြင်း။...</string>
+
+    <string name="user_dial">ငါ့နာရီမျက်နှာ</string>
+    <string name="user_dial_tip">နောက်ထပ် ဒိုင်ခွက်များ၊ အလိုအလျောက် ပြောင်းလဲပါ။></string>
+    <string name="user_device_config">စက်ပစ္စည်းစီမံခန့်ခွဲမှု</string>
+    <string name="user_find_watch">နာရီတစ်လုံးရှာပါ။</string>
+    <string name="user_ble_call">ဘလူးတုသ်ခေါ်ဆိုခြင်း။</string>
+    <string name="user_ble_camera">ဘလူးတုသ်ကင်မရာ</string>
+    <string name="user_unit">ယူနစ်စနစ်</string>
+    <string name="user_notification">အသိပေးချက်</string>
+    <string name="user_about">စက်ပစ္စည်းအကြောင်း</string>
+    <string name="user_schedule">ငါ့အချိန်ဇယား</string>
+    <string name="user_auto">အလိုအလျောက်စောင့်ကြည့်</string>
+    <string name="user_add_device">စက်ထည့်ပါ။</string>
+
+    <string name="user_measureUnit">အတိုင်းအတာယူနစ်</string>
+    <string name="user_tempUnit">အပူချိန်ယူနစ်</string>
+    <string name="user_metric">မက်ထရစ်</string>
+    <string name="user_british">အင်ပါယာ</string>
+    <string name="user_save">ကယ်တင်ပါ။</string>
+    <string name="user_saved">အောင်မြင်စွာ သိမ်းဆည်းခဲ့သည်။</string>
+
+    <string name="user_notify">အသိပေးချက်</string>
+    <string name="user_notify_tip">စက်ပေါ်ရှိ အက်ပ်မှ အကြောင်းကြားစာ မက်ဆေ့ချ်များကို လက်ခံရရှိရန် မက်ဆေ့ဂျ်ခလုတ်ကို သင်ဖွင့်ထားရန် လိုအပ်သည်။</string>
+    <string name="user_notify_title">အကြောင်းကြားချက်များကို ဖွင့်ပါ။</string>
+    <string name="user_notify_msg">ဤအပလီကေးရှင်းသည် အပလီကေးရှင်းအသိပေးချက်များကို အဝေးထိန်းစမတ်ကိရိယာများသို့ ထပ်ဆင့်ပေးပို့ရန် လိုအပ်သည်။ အသက်သွင်းရန် အကြောင်းကြားချက် စာမျက်နှာကို ဝင်ရောက်ရန် \"OK\" ကို နှိပ်ပါ။.</string>
+    <string name="user_cancel">မလုပ်တော့</string>
+    <string name="user_confirm">သေချာတယ်။</string>
+
+    <string name="user_account_safe">အကောင့်နှင့် လုံခြုံရေ</string>
+    <string name="user_version">လက်ရှိ APP ဗားရှင်း</string>
+    <string name="user_help">အကူအညီနှင့် အကြံပြုချက်</string>
+    <string name="user_privacy">အသုံးပြုသူသဘောတူညီချက်နှင့် ကိုယ်ရေးကိုယ်တာမူဝါဒ</string>
+    <string name="user_logout">ဆိုင်းအောက်</string>
+    <string name="user_unbind_tip">unbind</string>
+    <string name="user_unbind_message">လက်ရှိစက်ပစ္စည်းကို တွဲဖြုတ်ရန် သေချာပါသလား။？</string>
+
+    <string name="user_info">ကိုယ်ပိုင်သတင်းအချက်အလက်များ</string>
+    <string name="user_set">အကောင့်အချက်အလက်</string>
+    <string name="user_head">ကိုယ်ပွား</string>
+    <string name="user_name">အမည်ပြောင်</string>
+    <string name="user_sex">ကျား၊</string>
+    <string name="user_birthday">မွေးရက်</string>
+    <string name="user_height">အမြင့်</string>
+    <string name="user_weight">ကိုယ်အလေးချိန်</string>
+    <string name="user_male">အထီး</string>
+    <string name="user_female">အပျို</string>
+    <string name="user_camera">ဓာတ်ပုံရိုက်/string>
+    <string name="user_album">ဓါတ်ပုံအယ်လ်ဘမ်</string>
+    <string name="user_enter_name">သင့်အမည်ပြောင်ကို ထည့်သွင်းပါ။</string>
+    <string name="user_name_long">အမည်ပြောင်သည် အက္ခရာ 12 လုံးထက် မပိုရပါ။</string>
+    <string name="user_permission_error_camera">ခွင့်ပြုချက်မအောင်မြင်ပါ၊ ကင်မရာလုပ်ဆောင်ချက်ကို ဖွင့်၍မရပါ။</string>
+    <string name="user_crop_pic_failed">ပုံကို ရိုက်ယူရန် မအောင်မြင်ပါ၊ ကျေးဇူးပြု၍ jpg ဖော်မတ်ဖြင့် ပုံကို ရွေးပါ။！</string>
+    <string name="user_account">အကောင့်ဝင်ပါ။</string>
+    <string name="user_change">စကားဝှက်ကိုပြောင်းရန်</string>
+    <string name="user_delete_account">ထွက်လိုက်ပါ။</string>
+    <string name="user_logout_tip">ထွက်လိုသည်မှာ သေချာပါသလား။？</string>
+    <string name="user_upload_data">ဒေတာတင်ခြင်း။...</string>
+    <string name="user_upload_data_success">data upload အောင်မြင်စွာ!</string>
+    <string name="user_faq">ဘုံပြဿနာ</string>
+    <string name="user_feedback_hint">သင်၏တုံ့ပြန်ချက်/မေးခွန်းများ</string>
+    <string name="user_send_feedback">အကြံပြုချက် တင်ပြပါ။</string>
+    <string name="user_feedback_long">သင်ထည့်လိုက်သောစာသားသည် ရှည်လွန်းသည်။</string>
+    <string name="user_feedback_empty">မှတ်ချက်များသည် ဗလာမဖြစ်ရပါ။</string>
+    <string name="user_feedback_success">တုံ့ပြန်ချက်အောင်မြင်မှု</string>
+    <string name="user_guide">ချိတ်ဆက်မှုလမ်းညွှန်</string>
+    <string name="user_service">နောက်ခံတွင် လည်ပတ်နေပါစေ။</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">Oppo</string>
+    <string name="user_vivo">Vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">Oneplus</string>
+    <string name="user_samsun">Samsun</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">နာရီချိတ်ဆက်မှု၏တည်ငြိမ်မှုကို မြှင့်တင်ရန်အတွက် အောက်ပါဆက်တင်များကို ပြုလုပ်ရန် အကြံပြုထားသည်။：</string>
+    <string name="user_saverBattery">မဖွင့်ပါနှင့် (ပါဝါချွေတာရေးမုဒ်)：</string>
+    <string name="user_batteryContent">ပါဝါချွေတာရေးမုဒ်ကို ဖွင့်ထားပါက၊ ဘလူးတုသ်ချိတ်ဆက်မှုသည် မတည်မငြိမ်ဖြစ်နေသည်၊ ၎င်းသည် ရွေ့လျားမှုကို ဖြစ်စေနိုင်သည်။
+လမ်းကြောင်းလွဲမှားမှုများနှင့် ပါဝါအကွာအဝေးကို လျှော့ချခြင်းကဲ့သို့သော ပြဿနာများ။ အသုံးပြုနေစဉ်အတွင်း ပါဝါချွေတာရေးမုဒ်ကို ပိတ်ရန် အကြံပြုထားသည်။.</string>
+    <string name="user_protect">အဓိကထုတ်လုပ်သူများ၏နောက်ခံကာကွယ်မှုဆက်တင်များ：</string>
+
+
+    <string name="user_search">ရှာဖွေရေးကိရိယာ</string>
+    <string name="user_searching">စက်ပစ္စည်းများကို ရှာဖွေနေပါသည်။...</string>
+    <string name="user_bind">ချည်နှောင်ခြင်း။...</string>
+    <string name="user_no_device">စက်ပစ္စည်းကို ရှာမတွေ့ပါ။</string>
+    <string name="user_pair_success">အောင်မြင်စွာ တွဲထားသည်။</string>
+    <string name="user_pair_tip">သင့်အားကစားကျန်းမာရေးဒေတာအချက်အလက်ကို APP မှတစ်ဆင့် နာရီနှင့် မိုဘိုင်းလ်ဖုန်းကြားတွင် ထပ်တူပြုပါမည်။.</string>
+    <string name="user_finish">ပြီးအောင်</string>
+    <string name="user_understand">ဟုတ်လား</string>
+    <string name="user_wear_tip">အကြံပေးချက်များဝတ်ဆင်</string>
+    <string name="user_wear_tip_content">ဒေတာကို တိကျစွာတိုင်းတာရန်နှင့် APP ၏ပုံမှန်အသုံးပြုမှုကို မထိခိုက်စေရန်အတွက် လက်ပတ်ရိုးမှ 1cm အကွာအဝေးတွင် နာရီကို ဝတ်ဆင်ကြည့်ပါ။.</string>
+    <string name="user_search_tip">စက်ပစ္စည်းကို ဖယ်ရှားပြီး စတင်အသုံးပြုနိုင်ရန် အားသွင်းပြီး ဖုန်းနှင့်နီးကပ်စွာထားပါ။.</string>
+    <string name="user_search_much">Mac လိပ်စာအတိုင်း သင့်နာရီကို ရွေးချယ်ပါ။</string>
+    <string name="user_search_again">ထပ်ရှာပါ။</string>
+    <string name="user_again_tip">အောက်ပါနည်းလမ်းများကို စမ်းသုံးနိုင်ပြီး ဆက်တင်ပြီးနောက် ထပ်လုပ်ကြည့်ပါ။：</string>
+    <string name="user_again_advice">·ဖုန်း၏ဘလူးတုသ်ကို ပြန်ဖွင့်ပါ\n·နာရီကို ဖွင့်ထားပြီး ဖုန်းနှင့်နီးကပ်ကြောင်း သေချာစေပါ\n·စက်ပစ္စည်းပေါ်တွင် ကလစ်နှိပ်ပါ \"စက်ရုံထုတ်ဆက်တင်များသို့ ပြန်ယူပါ\""</string>
+    <string name="user_stop_bind">အခုနောက်ပိုင်းမှာ စည်းမစောင့်ပါနဲ့။</string>
+    <string name="user_bind_help"><u>ထည့်ရန် စက်ပစ္စည်းကို ရှာမတွေ့ပါ။ အကူအညီကိုကြည့်ပါ။</u></string>
+
+    <string name="user_dial_market">dial စျေးကွက်</string>
+    <string name="user_dial_now">မျက်နှာကို အစမ်းကြည့်ရှုပါ။</string>
+    <string name="user_dial_mine">ငါ့နာရီမျက်နှာ</string>
+    <string name="user_dial_diy">စိတ်ကြိုက်နာရီမျက်နှာ</string>
+    <string name="user_background">နောက်ခံကို အပ်လုဒ်လုပ်ပါ။</string>
+    <string name="user_crop_fail">ပုံကို ရိုက်ယူရန် မအောင်မြင်ပါ၊ ကျေးဇူးပြု၍ jpg ဖော်မတ်ဖြင့် ပုံကို ရွေးပါ။！</string>
+    <string name="user_crop_small">ပုံကိုဖမ်းယူ၍မရပါ၊ ဖမ်းယူထားသောပုံသည် သေးငယ်လွန်းပြီး ဒိုင်ခွက်အရွယ်အစားနှင့် မကိုက်ညီပါ။！</string>
+    <string name="user_send_background">နောက်ခံပေးပို့ခြင်း။...</string>
+    <string name="user_send_dial">နာရီမျက်နှာကို ပို့နေသည်။...</string>
+    <string name="user_send_success">အောင်မြင်စွာ ပေးပို့ခဲ့သည်။！</string>
+    <string name="user_send_fail">ပို့၍မရပါ၊ ထပ်စမ်းကြည့်ပါ။。</string>
+    <string name="user_no_background">ကျေးဇူးပြု၍ နောက်ခံကို ဦးစွာ အပ်လုဒ်လုပ်ပါ။</string>
+    <string name="user_no_clock">ကျေးဇူးပြု၍ နာရီမျက်နှာကို ဦးစွာရွေးချယ်ပါ။</string>
+
+    <string name="user_device_name">ဆော့ဖ်ဝဲမော်ဒယ်</string>
+    <string name="user_device_mac">Mac လိပ်စာ</string>
+    <string name="user_device_version">ဆော့ဖ်ဝဲဗားရှင်း</string>
+    <string name="user_check_update">အပ်ဒိတ်များအတွက် စစ်ဆေးပါ။</string>
+
+    <string name="user_camera_tip">Bluetooth ကင်မရာလုပ်ဆောင်ချက်ကို ဖွင့်ပြီးနောက်၊ နာရီသည် ဓာတ်ပုံရိုက်ရန်အတွက် မိုဘိုင်းဖုန်းကင်မရာအက်ပ်ကို ထိန်းချုပ်နိုင်သည်။</string>
+    <string name="user_camera_permission_tip">အသုံးပြုနေစဉ်တွင်၊ ဤအက်ပ်သည် အဝေးမှ ဓာတ်ပုံများရိုက်ခြင်းနှင့် ဓာတ်ပုံများသိမ်းဆည်းခြင်းအတွက် ကင်မရာနှင့် ဖိုင်ကိုဖတ်ရှုခြင်းနှင့် ရေးခြင်းဆိုင်ရာခွင့်ပြုချက်များ လိုအပ်သည်\n\nအထက်ပါခွင့်ပြုချက်များကိုခေါ်ဆိုရန် သင်သဘောမတူပါက၊ ၎င်းသည် ဘလူးတုသ်ကင်မရာကို ပုံမှန်အသုံးမပြုနိုင်စေတော့ပါ။ ဤအက်ပ်၏ အခြေခံလုပ်ဆောင်ချက်များကို သင်၏အသုံးပြုမှုကို ထိခိုက်စေမည်မဟုတ်ပါ။ "ဆက်တင်များ" > "ခွင့်ပြုချက်စီမံခန့်ခွဲမှု" သို့သွားကာ အထက်ခွင့်ပြုချက်ခေါ်ဆိုမှုများကို ပိတ်ရန် ရွေးချယ်ခြင်းဖြင့် သင်၏ခွင့်ပြုချက်ကို အချိန်မရွေး ရုပ်သိမ်းနိုင်သည်။.</string>
+    <string name="user_camera_permission_error">ခွင့်ပြုချက်မအောင်မြင်၊ ဖွင့်လှစ်မှုပျက်ကွက်</string>
+
+    <string name="user_deleteTip">သင့်အကောင့်ကို ပယ်ဖျက်ခြင်းအား အတည်ပြုခြင်းရှိမရှိ အတည်ပြုပြီးနောက် သုံးရက်အတွင်း အကောင့်ကို အောင်မြင်စွာ ပယ်ဖျက်မည်ဖြစ်ပြီး အောင်မြင်စွာ ပယ်ဖျက်ပြီးနောက် အကောင့်ဒေတာကို လုံးဝဖျက်သွားမည်ဖြစ်ပြီး ပြန်လည်ရယူ၍မရနိုင်ပါ။！သတိနဲ့ ဆက်လုပ်ပါ။.</string>
+    <string name="user_deleteSuccess">အကောင့်ဖျက်သိမ်းခြင်းကို အောင်မြင်စွာ လျှောက်ထားပါ။.</string>
+    <string name="user_deleteNow">လက်ရှိအကောင့်သည် အကောင့်ထွက်သည့်အဆင့်ကို စောင့်နေသည်။.</string>
+
+    <string name="user_schedule_empty">လက်ရှိနာရီတွင် အချိန်ဇယားမရှိပါ၊ အချိန်ဇယားအသစ်တစ်ခုကို ထည့်ပါ။</string>
+    <string name="user_delete_schedule">အချိန်ဇယားကိုဖျက်ပါ။</string>
+    <string name="user_save_schedule">အချိန်ဇယားကိုသိမ်းဆည်းပါ။</string>
+    <string name="user_schedule_info">အစီအစဉ်အသေးစိတ်</string>
+    <string name="user_schedule_fall">နာရီသို့ ထည့်နိုင်သော အချိန်ဇယားသည် အထက်ကန့်သတ်ချက်သို့ ရောက်ရှိသွားသည်၊ မထည့်မီ ၎င်းကို ရှင်းလင်းပါ။</string>
+    <string name="user_schedule_add_fail">အချိန်ဇယားကို ထည့်၍မရပါ။</string>
+    <string name="user_schedule_edit_fail">အချိန်ဇယားကို ပြင်ဆင်၍မရပါ။</string>
+    <string name="user_schedule_delete_fail">အချိန်ဇယားကို ဖျက်၍မရပါ။</string>
+    <string name="user_schedule_past">ယခင်အချိန်အမှတ်ကို အချိန်ဇယားအချိန်မှတ်အဖြစ် သတ်မှတ်၍မရပါ။</string>
+    <string name="user_schedule_same">လက်ရှိရွေးချယ်ထားသော အချိန်မှတ်သည် အစီအစဉ်တစ်ခုရှိပြီးဖြစ်ပြီး ထပ်ခါတလဲလဲ သတ်မှတ်၍မရပါ။</string>
+    <string name="user_schedule_msg">အချိန်ဇယားအသေးစိတ်ကို ဖြည့်ပါ။</string>
+    <string name="user_today">ဒီနေ့</string>
+    <string name="user_time">အချိန်</string>
+
+
+    <string name="user_auto_measure_tip">အလိုအလျောက် ထောက်လှမ်းခြင်းလုပ်ဆောင်ချက်ကို ဖွင့်ပြီးနောက်၊ နာရီသည် ထိရောက်သောကာလအတွင်း ကြိမ်နှုန်းတိုင်းကို တိုင်းတာမည်ဖြစ်သည်။</string>
+    <string name="user_measure_frequency">စောင့်ကြည့်နေတာကိုး။</string>
+    <string name="user_valid_time">ထိရောက်သောကာလ</string>
+    <string name="user_start_time">စတင်ချိန်</string>
+    <string name="user_end_time">ကုန်ဆုံးချိန်</string>
+    <string name="user_heart">နှလုံးခုန်နှုန်း</string>
+    <string name="user_blood_pressure">သွေးပေါင်ချိန်</string>
+    <string name="user_blood_oxygen">သွေးအောက်ဆီဂျင်</string>
+    <string name="user_temperature">ခန္ဓာကိုယ်အပူချိန်</string>
+</resources>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">Kamakailang ehersisyo</string>
+    <string name="sport_sport_time">Tagal ng ehersisyo</string>
+    <string name="sport_sport_calorie">Pagkonsumo ng ehersisyo</string>
+    <string name="sport_sport_distance">Distansya ng paggalaw</string>
+    <string name="sport_steps">Bilang ng hakbang</string>
+    <string name="sport_speed_hour">Average na bilis</string>
+    <string name="sport_stride">Indayog</string>
+    <string name="sport_heart">Average na rate ng puso</string>
+    <string name="sport_height">Umakyat sa altitude</string>
+    <string name="sport_sport_info">Mga detalye ng sports</string>
+    <string name="sport_heart_level">Pamamahagi ng rate ng puso</string>
+    <string name="sport_heart1">Limitasyon(≥161)</string>
+    <string name="sport_heart2">Anaerobic(149~160)</string>
+    <string name="sport_heart3">Aerobic(131~138)</string>
+    <string name="sport_heart4">Pagsunog ng taba(112~130)</string>
+    <string name="sport_heart5">Magpainit(90~111)</string>
+    <string name="sport_speed">Bilis</string>
+    <string name="sport_running">Kasalukuyang kumikilos</string>
+    <string name="sport_run_pause">Natigil ang paggalaw</string>
+    <string name="sport_gps_low">Mahina ang signal ng GPS at mababang katumpakan ng data</string>
+    <string name="sport_gps_middle">Malakas na signal ng GPS at mataas na katumpakan ng data</string>
+    <string name="sport_gps_high">Malakas na signal ng GPS at mataas na katumpakan ng data</string>
+    <string name="sport_no_sport">Wala pang tala ng ehersisyo, simulan ang pag-eehersisyo ngayon</string>
+    <string name="sport_destroy">Mag-click muli upang lumabas sa kampanyang ito</string>
+    <string name="sport_time_short">Ang tagal at distansya ng ehersisyo ay masyadong maikli upang makabuo ng isang wastong ulat ng ehersisyo</string>
+    <string name="sport_finish_sport">Sigurado ka bang gusto mong tapusin ang ehersisyo?</string>
+    <string name="sport_start_sport">Mangyaring simulan muna ang ehersisyo</string>
+
+</resources>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">daerah</string>
+    <string name="login_chose_location">silahkan pilih wilayahnya</string>
+    <string name="login_login_account">akun masuk</string>
+    <string name="login_login">Gabung</string>
+    <string name="login_account">Akun</string>
+    <string name="login_input_account">Masukkan akun Anda</string>
+    <string name="login_right_email">Silakan masukkan alamat email yang benar</string>
+    <string name="login_psw">kata sandi</string>
+    <string name="login_input_psw">masukkan kata sandi Anda</string>
+    <string name="login_forget_psw">Tidak ingat kata sandi?</string>
+    <string name="login_register">Tidak ada akun? mendaftar</string>
+    <string name="login_privacy">Setujui <u>Perjanjian Pengguna dan Kebijakan Privasi</u></string>
+    <string name="login_checkPrivacy">Tidak menyetujui Perjanjian Pengguna dan Kebijakan Privasi</string>
+
+
+    <string name="login_register_account">daftar akun</string>
+    <string name="login_register_account_tip">Dengan akun pribadi, data kebugaran Anda, preferensi perangkat dapat disimpan dengan aman secara permanen</string>
+    <string name="login_next">Langkah berikutnya</string>
+    <string name="login_verification">Kode verifikasi</string>
+    <string name="login_input_verification">Masukkan kode verifikasi Anda</string>
+    <string name="login_send">Kirim</string>
+
+    <string name="login_set_password">atur kata sandi</string>
+    <string name="login_inconsistent">Kata sandi yang tidak konsisten dimasukkan dua kali</string>
+    <string name="login_confirm_password">konfirmasi sandi</string>
+    <string name="login_finish">Menyelesaikan</string>
+    <string name="login_find_password">ambil kata sandi</string>
+    <string name="login_reset_Success">Reset kata sandi berhasil</string>
+
+    <string name="login_change_password">ganti kata sandi</string>
+    <string name="login_old_password">password lama</string>
+    <string name="login_new_password">kata sandi baru</string>
+    <string name="login_confirm_new_password">Konfirmasi kata sandi baru</string>
+    <string name="login_change_success">Berhasil dimodifikasi</string>
+</resources>

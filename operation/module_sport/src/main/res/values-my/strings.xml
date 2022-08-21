@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">လတ်တလောလေ့ကျင့်ခန်း</string>
+    <string name="sport_sport_time">လေ့ကျင့်ခန်းအချိန်</string>
+    <string name="sport_sport_calorie">လေ့ကျင့်ခန်းစားသုံးမှု</string>
+    <string name="sport_sport_distance">ရွေ့လျားမှုအကွာအဝေး</string>
+    <string name="sport_steps">အဆင့်ရေတွက်ပါ။</string>
+    <string name="sport_speed_hour">ပျမ်းမျှအမြန်နှုန်း</string>
+    <string name="sport_stride">cadence</string>
+    <string name="sport_heart">ပျမ်းမျှနှလုံးခုန်နှုန်း</string>
+    <string name="sport_height">အမြင့်ကိုတက်ပါ။</string>
+    <string name="sport_sport_info">အားကစားအသေးစိတ်</string>
+    <string name="sport_heart_level">နှလုံးခုန်နှုန်း ဖြန့်ဝေခြင်း။</string>
+    <string name="sport_heart1">ကန့်သတ်(≥161)</string>
+    <string name="sport_heart2">Anaerobic(149~160)</string>
+    <string name="sport_heart3">အေရိုးဗစ်(131~138)</string>
+    <string name="sport_heart4">အဆီလောင်ကျွမ်းခြင်း။(112~130)</string>
+    <string name="sport_heart5">သွေးပူလေ့ကျင့်ခန်း(90~111)</string>
+    <string name="sport_speed">အရှိန်အဟုန်</string>
+    <string name="sport_running">လှုပ်ရှားမှု</string>
+    <string name="sport_run_pause">လှုပ်ရှားမှု ခေတ္တရပ်ထားသည်။</string>
+    <string name="sport_gps_low">GPS အချက်ပြမှု အားနည်းပြီး ဒေတာတိကျမှု နည်းပါးသည်။</string>
+    <string name="sport_gps_middle">ခိုင်မာသော GPS အချက်ပြမှုနှင့် ဒေတာတိကျမှု မြင့်မားသည်။</string>
+    <string name="sport_gps_high">ခိုင်မာသော GPS အချက်ပြမှုနှင့် ဒေတာတိကျမှု မြင့်မားသည်။</string>
+    <string name="sport_no_sport">လေ့ကျင့်ခန်းမှတ်တမ်းမရှိသေးပါ၊ ယခုစတင်လေ့ကျင့်ပါ။</string>
+    <string name="sport_destroy">ဤကမ်ပိန်းမှထွက်ရန် ထပ်မံနှိပ်ပါ။</string>
+    <string name="sport_time_short">မှန်ကန်သောလေ့ကျင့်ခန်းအစီရင်ခံစာကိုထုတ်လုပ်ရန် လေ့ကျင့်ခန်းကြာချိန်နှင့် အကွာအဝေးသည် တိုလွန်းပါသည်။</string>
+    <string name="sport_finish_sport">လေ့ကျင့်ခန်းကို အဆုံးသတ်ချင်တာ သေချာလား။？</string>
+    <string name="sport_start_sport">ကျေးဇူးပြု၍ လေ့ကျင့်ခန်းကို ဦးစွာစတင်ပါ။</string>
+
+</resources>

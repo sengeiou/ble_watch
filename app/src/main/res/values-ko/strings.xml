@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">상태</string>
+    <string name="sport">스포츠</string>
+    <string name="consult">찾다</string>
+    <string name="mine">나의 것</string>
+    <string name="tip">상기시키다</string>
+    <string name="checkGPS">휴대전화의 위치 스위치가 켜져 있지 않은 것을 감지했습니다. 앱이 제대로 작동하는지 확인하려면 위치 스위치를 켜십시오.。</string>
+    <string name="confirm">확신하는</string>
+    <string name="cancel">취소</string>
+
+    <string name="touchAgain">프로그램을 종료하려면 다시 누르십시오.</string>
+    <string name="privacy1">사용자 계약 및 개인 정보 보호 정책</string>
+    <string name="privacyTip">핏링을 믿고 이용해주셔서 감사합니다。
+\n\n"사용자 개인 정보 보호 계약"에 따라 귀하의 개인 정보 및 관련 권리를 수집, 사용, 저장하는 방법을 이해하는 데 도움을 드릴 것입니다.。
+\n\nFitRing 앱을 사용할 때 장치 정보, 개인 데이터(아바타, 닉네임, 키, 체중, 운동 데이터) 및 기타 정보를 수집합니다. 앱 아바타를 업로드하려면 카메라 권한, 앨범 권한을 받아야 합니다.:
+\n\n야외 달리기, 업로드, 공유 및 스포츠 정보 저장을 위해 Fit Ring 앱을 사용할 때 달리기 트랙을 기록하기 위해 위치 권한을 받아야 합니다.。
+\n\n귀하는 관련 페이지에서 귀하의 개인 정보에 대한 액세스, 수정, 삭제 또는 권한 관리를 할 수 있습니다.。
+\n\n우리는 귀하의 개인 정보를 보호하기 위해 업계 최고의 보안 기술을 사용합니다。
+\n\n"확인"을 클릭하면 이 계약 조건에 동의하는 것입니다.。</string>
+</resources>

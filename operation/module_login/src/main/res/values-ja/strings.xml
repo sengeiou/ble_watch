@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">範囲</string>
+    <string name="login_chose_location">地域を選択してください</string>
+    <string name="login_login_account">ログインアカウント</string>
+    <string name="login_login">ログイン</string>
+    <string name="login_account">アカウント</string>
+    <string name="login_input_account">アカウントを入力してください</string>
+    <string name="login_right_email">正しいメールアドレスを入力してください</string>
+    <string name="login_psw">パスワード</string>
+    <string name="login_input_psw">パスワードを入力してください</string>
+    <string name="login_forget_psw">パスワードをお忘れですか?</string>
+    <string name="login_register">アカウントを持っていませんか? サインアップ</string>
+    <string name="login_privacy">同意《<u>ユーザー同意書とプライバシーポリシー</u>》</string>
+    <string name="login_checkPrivacy">ユーザー同意書とプライバシーポリシーに同意しなかった</string>
+
+
+    <string name="login_register_account">アカウント登録</string>
+    <string name="login_register_account_tip">個人アカウントを使用すると、フィットネス データやデバイスの設定を安全に永久に保存できます</string>
+    <string name="login_next">次のステップ</string>
+    <string name="login_verification">検証コード</string>
+    <string name="login_input_verification">確認コードを入力してください</string>
+    <string name="login_send">送信</string>
+
+    <string name="login_set_password">パスワードを設定してください</string>
+    <string name="login_inconsistent">矛盾したパスワードが 2 回入力されました</string>
+    <string name="login_confirm_password">パスワードを認証する</string>
+    <string name="login_finish">終了</string>
+    <string name="login_find_password">パスワードを取得する</string>
+    <string name="login_reset_Success">パスワードのリセットが成功しました</string>
+
+    <string name="login_change_password">パスワードを変更する</string>
+    <string name="login_old_password">以前のパスワード</string>
+    <string name="login_new_password">新しいパスワード</string>
+    <string name="login_confirm_new_password">新しいパスワードを確認する</string>
+    <string name="login_change_success">正常に変更されました</string>
+</resources>

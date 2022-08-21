@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">exercice récent</string>
+    <string name="sport_sport_time">durée de l'exercice</string>
+    <string name="sport_sport_calorie">consommation d'exercice</string>
+    <string name="sport_sport_distance">Distance de déplacement</string>
+    <string name="sport_steps">Nombre de pas</string>
+    <string name="sport_speed_hour">vitesse moyenne</string>
+    <string name="sport_stride">Fréquence de pas</string>
+    <string name="sport_heart">fréquence cardiaque moyenne</string>
+    <string name="sport_height">monter en altitude</string>
+    <string name="sport_sport_info">Détails sportifs</string>
+    <string name="sport_heart_level">Répartition de la fréquence cardiaque</string>
+    <string name="sport_heart1">limite(≥161)</string>
+    <string name="sport_heart2">Anaérobie(149~160)</string>
+    <string name="sport_heart3">Aérobique(131~138)</string>
+    <string name="sport_heart4">la combustion des graisses(112~130)</string>
+    <string name="sport_heart5">réchauffer(90~111)</string>
+    <string name="sport_speed">rythme</string>
+    <string name="sport_running">en mouvement</string>
+    <string name="sport_run_pause">Mouvement en pause</string>
+    <string name="sport_gps_low">Signal GPS faible et faible précision des données</string>
+    <string name="sport_gps_middle">Signal GPS puissant et haute précision des données</string>
+    <string name="sport_gps_high">Signal GPS puissant et haute précision des données</string>
+    <string name="sport_no_sport">Signal GPS puissant et haute précision des données</string>
+    <string name="sport_destroy">Cliquez à nouveau pour quitter cette campagne</string>
+    <string name="sport_time_short">La durée et la distance de l'exercice sont trop courtes pour générer un rapport d'exercice valide</string>
+    <string name="sport_finish_sport">Êtes-vous sûr de vouloir terminer l'exercice ?</string>
+    <string name="sport_start_sport">Veuillez commencer l'exercice en premier</string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">diện tích</string>
+    <string name="login_chose_location">vui lòng chọn khu vực</string>
+    <string name="login_login_account">đăng nhập tài khoản</string>
+    <string name="login_login">Đăng nhập</string>
+    <string name="login_account">tài khoản</string>
+    <string name="login_input_account">Nhập tài khoản của bạn</string>
+    <string name="login_right_email">Vui lòng nhập địa chỉ email chính xác</string>
+    <string name="login_psw">mật khẩu mở khóa</string>
+    <string name="login_input_psw">nhập mật khẩu của bạn</string>
+    <string name="login_forget_psw">Quên mật khẩu?</string>
+    <string name="login_register">Không tài khoản? đăng ký</string>
+    <string name="login_privacy">đồng ý《<u>Thỏa thuận người dùng và Chính sách quyền riêng tư</u>》</string>
+    <string name="login_checkPrivacy">đã không đồng ý《Thỏa thuận người dùng và Chính sách quyền riêng tư》</string>
+
+
+    <string name="login_register_account">đăng ký tài khoản</string>
+    <string name="login_register_account_tip">Với tài khoản cá nhân, dữ liệu thể dục của bạn, tùy chọn thiết bị có thể được lưu trữ vĩnh viễn một cách an toàn</string>
+    <string name="login_next">Bước tiếp theo</string>
+    <string name="login_verification">mã xác nhận</string>
+    <string name="login_input_verification">Nhập mã xác minh của bạn</string>
+    <string name="login_send">gửi</string>
+
+    <string name="login_set_password">đặt mật khẩu</string>
+    <string name="login_inconsistent">Mật khẩu không nhất quán đã nhập hai lần</string>
+    <string name="login_confirm_password">Xác nhận mật khẩu</string>
+    <string name="login_finish">Kết thúc</string>
+    <string name="login_find_password">lấy lại mật khẩu</string>
+    <string name="login_reset_Success">Đặt lại mật khẩu thành công</string>
+
+    <string name="login_change_password">đổi mật khẩu</string>
+    <string name="login_old_password">Mật khẩu cũ</string>
+    <string name="login_new_password">mật khẩu mới</string>
+    <string name="login_confirm_new_password">Xác nhận mật khẩu mới</string>
+    <string name="login_change_success">Đã sửa đổi thành công</string>
+</resources>

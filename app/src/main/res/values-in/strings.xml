@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">negara</string>
+    <string name="sport">olahraga</string>
+    <string name="consult">berkonsultasi</string>
+    <string name="mine">Milikku</string>
+    <string name="tip">mengingatkan</string>
+    <string name="checkGPS">Terdeteksi bahwa sakelar lokasi ponsel Anda tidak dihidupkan. Untuk memastikan aplikasi berfungsi dengan baik, nyalakan sakelar lokasi.</string>
+    <string name="confirm">Tentu</string>
+    <string name="cancel">Membatalkan</string>
+
+    <string name="touchAgain">Tekan lagi untuk keluar dari program</string>
+    <string name="privacy1">Perjanjian Pengguna dan Kebijakan Privasi</string>
+    <string name="privacyTip">Terima kasih telah mempercayai dan menggunakan FitRing.
+\n\nKami didasarkan pada "Perjanjian Privasi Pengguna" untuk membantu Anda memahami cara kami mengumpulkan, menggunakan, menyimpan informasi pribadi Anda, dan hak-hak Anda yang terkait.
+\n\nSaat Anda menggunakan aplikasi FitRing, kami akan mengumpulkan informasi perangkat Anda, data pribadi (avatar, nama panggilan, tinggi badan, berat badan, data olahraga) dan informasi lainnya, kami perlu mendapatkan izin kamera Anda, izin album untuk mengunggah avatar aplikasi Anda :
+\n\nSaat Anda menggunakan aplikasi FitRing untuk berlari di luar ruangan, mengunggah, berbagi, dan menyimpan informasi olahraga, kami perlu mendapatkan izin lokasi Anda untuk merekam lintasan lari Anda.
+\n\nAnda dapat mengakses, mengubah, menghapus informasi pribadi Anda atau mengelola otorisasi Anda pada halaman yang relevan.
+\n\nKami menggunakan teknologi keamanan terdepan di industri untuk melindungi informasi pribadi Anda.
+\n\nSaat Anda mengeklik "OK", Anda menyetujui persyaratan perjanjian ini.</string>
+</resources>

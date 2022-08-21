@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">Région</string>
+    <string name="login_chose_location">veuillez sélectionner la région</string>
+    <string name="login_login_account">compte de connexion</string>
+    <string name="login_login">Connexion</string>
+    <string name="login_account">Compte</string>
+    <string name="login_input_account">Entrez votre compte</string>
+    <string name="login_right_email">Veuillez saisir la bonne adresse e-mail</string>
+    <string name="login_psw">le mot de passe</string>
+    <string name="login_input_psw">tapez votre mot de passe</string>
+    <string name="login_forget_psw">mot de passe oublié?</string>
+    <string name="login_register">Pas de compte? enregistrer</string>
+    <string name="login_privacy">Je suis d'accord《<u>Contrat d'utilisation et politique de confidentialité</u>》</string>
+    <string name="login_checkPrivacy">être en désaccord《Contrat d'utilisation et politique de confidentialité》</string>
+
+
+    <string name="login_register_account">Créer un compte</string>
+    <string name="login_register_account_tip">Avec un compte personnel, vos données de fitness, les préférences de l'appareil peuvent être stockées en toute sécurité en permanence</string>
+    <string name="login_next">L'étape suivante</string>
+    <string name="login_verification">le code de vérification</string>
+    <string name="login_input_verification">Entrez votre code de vérification</string>
+    <string name="login_send">envoyer</string>
+
+    <string name="login_set_password">définir le mot de passe</string>
+    <string name="login_inconsistent">Mot de passe incohérent entré deux fois</string>
+    <string name="login_confirm_password">Confirmez le mot de passe</string>
+    <string name="login_finish">Finir</string>
+    <string name="login_find_password">Récupérer mot de passe</string>
+    <string name="login_reset_Success">Réinitialisation du mot de passe réussie</string>
+
+    <string name="login_change_password">changer le mot de passe</string>
+    <string name="login_old_password">ancien mot de passe</string>
+    <string name="login_new_password">nouveau mot de passe</string>
+    <string name="login_confirm_new_password">Confirmez le nouveau mot de passe</string>
+    <string name="login_change_success">Modifié avec succès</string>
+</resources>

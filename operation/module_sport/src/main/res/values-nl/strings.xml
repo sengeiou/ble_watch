@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">recente oefening</string>
+    <string name="sport_sport_time">oefen tijd</string>
+    <string name="sport_sport_calorie">oefen tijd</string>
+    <string name="sport_sport_distance">Bewegingsafstand:</string>
+    <string name="sport_steps">Stap tellen</string>
+    <string name="sport_speed_hour">gemiddelde snelheid</string>
+    <string name="sport_stride">cadans</string>
+    <string name="sport_heart">gemiddelde hartslag</string>
+    <string name="sport_height">hoogte beklimmen</string>
+    <string name="sport_sport_info">Sportdetails</string>
+    <string name="sport_heart_level">Hartslagverdeling</string>
+    <string name="sport_heart1">begrenzing(≥161)</string>
+    <string name="sport_heart2">anaëroob(149~160)</string>
+    <string name="sport_heart3">aëroob(131~138)</string>
+    <string name="sport_heart4">vet verbranden(112~130)</string>
+    <string name="sport_heart5">opwarmen(90~111)</string>
+    <string name="sport_speed">tempo</string>
+    <string name="sport_running">in beweging</string>
+    <string name="sport_run_pause">Beweging onderbroken</string>
+    <string name="sport_gps_low">Zwak GPS-signaal en lage gegevensnauwkeurigheid</string>
+    <string name="sport_gps_middle">Sterk GPS-signaal en hoge gegevensnauwkeurigheid</string>
+    <string name="sport_gps_high">Sterk GPS-signaal en hoge gegevensnauwkeurigheid</string>
+    <string name="sport_no_sport">Nog geen trainingsrecord, begin nu met trainen</string>
+    <string name="sport_destroy">Klik nogmaals om deze oefening af te sluiten</string>
+    <string name="sport_time_short">De duur en afstand van de training zijn te kort om een ​​geldig trainingsrapport te genereren</string>
+    <string name="sport_finish_sport">Weet je zeker dat je de oefening wilt beëindigen?</string>
+    <string name="sport_start_sport">Begin eerst met sporten</string>
+
+</resources>

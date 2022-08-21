@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">yaqinda mashq</string>
+    <string name="sport_sport_time">mashq vaqti</string>
+    <string name="sport_sport_calorie">jismoniy mashqlar iste'moli</string>
+    <string name="sport_sport_distance">Harakat masofasi</string>
+    <string name="sport_steps">Qadamo'rtacha tezlik</string>
+    <string name="sport_stride">kadans</string>
+    <string name="sport_heart">o'rtacha yurak urishi</string>
+    <string name="sport_height">balandlikka ko'tarilish</string>
+    <string name="sport_sport_info">Sport tafsilotlari</string>
+    <string name="sport_heart_level">Yurak tezligini taqsimlash</string>
+    <string name="sport_heart1">chegara(≥161)</string>
+    <string name="sport_heart2">Anaerob(149~160)</string>
+    <string name="sport_heart3">Aerobik(131~138)</string>
+    <string name="sport_heart4">yog 'yoqish(112~130)</string>
+    <string name="sport_heart5">qizdirish; isitish(90~111)</string>
+    <string name="sport_speed">sur'at</string>
+    <string name="sport_running">harakatda</string>
+    <string name="sport_run_pause">Harakat pauza qilindi</string>
+    <string name="sport_gps_low">Zaif GPS signali va past ma'lumotlar aniqligi</string>
+    <string name="sport_gps_middle">Kuchli GPS signali va yuqori ma'lumotlar aniqligi</string>
+    <string name="sport_gps_high">Kuchli GPS signali va yuqori ma'lumotlar aniqligi</string>
+    <string name="sport_no_sport">Hali mashq rekordi yo'q, hozir mashq qilishni boshlang</string>
+    <string name="sport_destroy">Ushbu mashqdan chiqish uchun yana bosing</string>
+    <string name="sport_time_short">Jismoniy mashqlarning davomiyligi va masofasi toʻgʻri mashq hisobotini yaratish uchun juda qisqa</string>
+    <string name="sport_finish_sport">Haqiqatan ham mashqni tugatmoqchimisiz?</string>
+    <string name="sport_start_sport">Iltimos, avval mashqni boshlang</string>
+
+</resources>

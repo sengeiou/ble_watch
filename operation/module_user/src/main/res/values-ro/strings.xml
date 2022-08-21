@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">scopul meu</string>
+    <string name="user_edit_plan">Editați ținta</string>
+    <string name="user_step">ținta pasului</string>
+    <string name="user_sleep">obiectivele somnului</string>
+    <string name="user_calorie">ținta de consum</string>
+
+    <string name="user_connect">conectat</string>
+    <string name="user_disconnect">nu este conectat</string>
+    <string name="user_connecting">conectarea...</string>
+
+    <string name="user_dial">cadranul meu de ceas</string>
+    <string name="user_dial_tip">Mai multe cadrane, schimbați după bunul plac></string>
+    <string name="user_device_config">Gestionarea dispozitivelor</string>
+    <string name="user_find_watch">Găsiți un ceas</string>
+    <string name="user_ble_call">Apel Bluetooth</string>
+    <string name="user_ble_camera">Cameră Bluetooth</string>
+    <string name="user_unit">sistem unitar</string>
+    <string name="user_notification">notificare</string>
+    <string name="user_about">Despre dispozitiv</string>
+    <string name="user_schedule">programul meu</string>
+    <string name="user_auto">Monitorizare automată</string>
+    <string name="user_add_device">Adăugați dispozitivul</string>
+
+    <string name="user_measureUnit">Unitate de măsură</string>
+    <string name="user_tempUnit">unitate de temperatură</string>
+    <string name="user_metric">Metric</string>
+    <string name="user_british">Imperial</string>
+    <string name="user_save">Salvați</string>
+    <string name="user_saved">Salvat cu succes</string>
+
+    <string name="user_notify">notificare</string>
+    <string name="user_notify_tip">Pentru a primi mesaje de notificare de la aplicație pe dispozitiv, trebuie să activați comutatorul de mesaje</string>
+    <string name="user_notify_title">Activați notificările</string>
+    <string name="user_notify_msg">Această aplicație trebuie să redirecționeze notificările aplicației către dispozitivele inteligente de la distanță. Apăsați „OK” pentru a intra în pagina de notificare pentru activare.</string>
+    <string name="user_cancel">Anulare</string>
+    <string name="user_confirm">Sigur</string>
+
+    <string name="user_account_safe">Cont și securitate</string>
+    <string name="user_version">Versiunea actuală a aplicației</string>
+    <string name="user_help">Ajutor și feedback</string>
+    <string name="user_privacy">Acordul utilizatorului și Politica de confidențialitate</string>
+    <string name="user_logout">sign out</string>
+    <string name="user_unbind_tip">desface</string>
+    <string name="user_unbind_message">Sigur deconectați dispozitivul actual?</string>
+
+    <string name="user_info">Informatii personale</string>
+    <string name="user_set">informatii despre cont</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">Poreclă</string>
+    <string name="user_sex">gen</string>
+    <string name="user_birthday">Data de nastere</string>
+    <string name="user_height">înălţime</string>
+    <string name="user_weight">greutate</string>
+    <string name="user_male">masculin</string>
+    <string name="user_female">Femeie</string>
+    <string name="user_camera">Fotografie</string>
+    <string name="user_album">album foto</string>
+    <string name="user_enter_name">Vă rugăm să introduceți porecla</string>
+    <string name="user_name_long">Porecla nu poate depăși 12 caractere</string>
+    <string name="user_permission_error_camera">Permisiunea nu este transmisă, funcția camerei nu poate fi activată</string>
+    <string name="user_crop_pic_failed">Nu s-a putut capta imaginea, vă rugăm să selectați imaginea în format jpg!</string>
+    <string name="user_account">Autentificare cont</string>
+    <string name="user_change">schimbaţi parola</string>
+    <string name="user_delete_account">Deconectare</string>
+    <string name="user_logout_tip">Sunteți sigur că doriți să vă deconectați?</string>
+    <string name="user_upload_data">încărcarea datelor...</string>
+    <string name="user_upload_data_success">Încărcarea datelor cu succes!</string>
+    <string name="user_faq">常见问题</string>
+    <string name="user_feedback_hint">feedback-ul/întrebările dvs</string>
+    <string name="user_send_feedback">Trimite parerea ta</string>
+    <string name="user_feedback_long">Textul introdus este prea lung</string>
+    <string name="user_feedback_empty">Comentariile nu pot fi goale</string>
+    <string name="user_feedback_success">succesul feedback-ului</string>
+    <string name="user_guide">ghid de conectare</string>
+    <string name="user_service">ține-l să ruleze în fundal</string>
+    <string name="user_huawei">huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">lenovo</string>
+    <string name="user_oneplus">oneplus</string>
+    <string name="user_samsun">samsung</string>
+    <string name="user_mi">mi</string>
+    <string name="user_meizu">meizu</string>
+    <string name="user_serviceTip">Pentru a îmbunătăți stabilitatea conexiunii ceasului, se recomandă să efectuați următoarele setări:</string>
+    <string name="user_saverBattery">Nu porniți (modul de economisire a energiei):</string>
+    <string name="user_batteryContent">Dacă modul de economisire a energiei este activat, poate cauza probleme precum conexiune Bluetooth instabilă, traiectorie anormală a mișcării și distanță redusă de putere. Se recomandă oprirea modului de economisire a energiei în timpul utilizării.</string>
+    <string name="user_protect">Setări de protecție de fundal ale producătorilor majori:</string>
+
+
+    <string name="user_search">dispozitiv de căutare</string>
+    <string name="user_searching">Căutarea dispozitivelor...</string>
+    <string name="user_bind">legare...</string>
+    <string name="user_no_device">Dispozitivul nu a fost găsit</string>
+    <string name="user_pair_success">împerecheat cu succes</string>
+    <string name="user_pair_tip">Informațiile dvs. de sănătate din sport vor fi sincronizate între ceas și telefonul mobil prin APP.</string>
+    <string name="user_finish">finalizarea</string>
+    <string name="user_understand">Înțeleg</string>
+    <string name="user_wear_tip">purtand sfaturi</string>
+    <string name="user_wear_tip_content">Pentru a măsura datele cu precizie și pentru a nu afecta utilizarea normală a aplicației, vă rugăm să încercați să purtați ceasul la o distanță de 1 cm de osul încheieturii mâinii.</string>
+    <string name="user_search_tip">Scoateți dispozitivul, încărcați-l pentru activare și țineți-l aproape de telefon</string>
+    <string name="user_search_much">Vă rugăm să vă selectați ceasul în funcție de adresa mac</string>
+    <string name="user_search_again">caută din nou</string>
+    <string name="user_again_tip">Puteți încerca următoarele moduri și puteți încerca din nou după setare:</string>
+    <string name="user_again_advice">·Porniți din nou Bluetooth-ul telefonului\n·Asigurați-vă că ceasul este pornit și aproape de telefon\n·Dați clic pe dispozitiv \"restabiliți la setările din fabrică\""</string>
+    <string name="user_stop_bind">Mai târziu, nu legați deocamdată</string>
+    <string name="user_bind_help"><u>Nu găsiți dispozitivul de adăugat? Vizualizați ajutor</u></string>
+
+    <string name="user_dial_market">piata de dial</string>
+    <string name="user_dial_now">Previzualizarea feței de vizionare</string>
+    <string name="user_dial_mine">cadranul meu de ceas</string>
+    <string name="user_dial_diy">cadran personalizat de ceas</string>
+    <string name="user_background">încărcați fundal</string>
+    <string name="user_crop_fail">Nu s-a putut capta imaginea, vă rugăm să selectați imaginea în format jpg!</string>
+    <string name="user_crop_small">Nu s-a putut capta imaginea, imaginea capturată este prea mică și nu se potrivește cu dimensiunea cadranului!</string>
+    <string name="user_send_background">trimiterea fundalului...</string>
+    <string name="user_send_dial">Se trimite cadranul ceasului...</string>
+    <string name="user_send_success">Trimis cu succes!</string>
+    <string name="user_send_fail">Trimiterea a eșuat, vă rugăm să încercați din nou.</string>
+    <string name="user_no_background">Vă rugăm să încărcați mai întâi fundalul</string>
+    <string name="user_no_clock">Vă rugăm să selectați mai întâi un cadran de ceas</string>
+
+    <string name="user_device_name">Model software</string>
+    <string name="user_device_mac">Mac abordare</string>
+    <string name="user_device_version">Versiune software</string>
+    <string name="user_check_update">Verifică pentru actualizări</string>
+
+    <string name="user_camera_tip">După activarea funcției de cameră Bluetooth, ceasul poate controla aplicația de cameră a telefonului mobil pentru a face fotografii</string>
+    <string name="user_camera_permission_tip">În timpul utilizării, această aplicație necesită acces la cameră și permisiuni de citire și scriere a fișierelor pentru a face fotografii de la distanță și a stoca fotografii\n\nDacă nu sunteți de acord să invocați permisiunile de mai sus, va avea ca rezultat
+Camera Bluetooth nu poate fi utilizată în mod normal și nu afectează funcțiile de bază ale utilizării acestei aplicații. Vă puteți retrage oricând consimțământul accesând „Setări” > „Gestionarea permisiunilor” și alegând să dezactivați apelurile de permisiune de mai sus</string>
+    <string name="user_camera_permission_error">Permisiunea nu este dată, deschiderea eșuează</string>
+
+    <string name="user_deleteTip">Fie că trebuie să confirmați anularea contului dvs., contul va fi anulat cu succes în termen de trei zile de la confirmare, iar datele contului vor fi șterse complet după anularea cu succes, irecuperabile! Vă rugăm să continuați cu prudență.</string>
+    <string name="user_deleteSuccess">Contul aplicației a fost anulat cu succes.</string>
+    <string name="user_deleteNow">Contul curent așteaptă etapa de deconectare.</string>
+
+    <string name="user_schedule_empty">Ceasul actual nu are program, vă rugăm să adăugați un nou program</string>
+    <string name="user_delete_schedule">șterge programul</string>
+    <string name="user_save_schedule">salvează programul</string>
+    <string name="user_schedule_info">Detalii program</string>
+    <string name="user_schedule_fall">Programul care poate fi adăugat la ceas a atins limita superioară, vă rugăm să o ștergeți înainte de a o adăuga</string>
+    <string name="user_schedule_add_fail">Nu s-a putut adăuga programul</string>
+    <string name="user_schedule_edit_fail">Nu s-a putut modifica programul</string>
+    <string name="user_schedule_delete_fail">Nu s-a șters programul</string>
+    <string name="user_schedule_past">Imposibil de setat punctul de timp trecut ca punct de timp programat</string>
+    <string name="user_schedule_same">Punctul de timp selectat în prezent are deja o agendă și nu poate fi setat în mod repetat</string>
+    <string name="user_schedule_msg">Vă rugăm să completați detaliile programului</string>
+    <string name="user_today">astăzi</string>
+    <string name="user_time">timp</string>
+
+
+    <string name="user_auto_measure_tip">După ce funcția de monitorizare automată este activată, ceasul va măsura fiecare frecvență și timp în perioada efectivă.</string>
+    <string name="user_measure_frequency">Frecvența monitorizării</string>
+    <string name="user_valid_time">Perioada efectivă</string>
+    <string name="user_start_time">Timpul de începere</string>
+    <string name="user_end_time">Sfârșitul timpului</string>
+    <string name="user_heart">ritm cardiac</string>
+    <string name="user_blood_pressure">tensiune arteriala</string>
+    <string name="user_blood_oxygen">oxigen din sânge</string>
+    <string name="user_temperature">temperatura corpului</string>
+</resources>

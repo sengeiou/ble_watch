@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">אֵזוֹר</string>
+    <string name="login_chose_location">אנא בחר את האזור</string>
+    <string name="login_login_account">חשבון כניסה</string>
+    <string name="login_login">התחברות</string>
+    <string name="login_account">חֶשְׁבּוֹן</string>
+    <string name="login_input_account">הכנס לחשבון שלך</string>
+    <string name="login_right_email">נא להזין את כתובת הדוא"ל הנכונה</string>
+    <string name="login_psw">סיסמה</string>
+    <string name="login_input_psw">הכנס את הסיסמה שלך</string>
+    <string name="login_forget_psw">שכחת את הסיסמא?</string>
+    <string name="login_register">אין חשבון? להירשם</string>
+    <string name="login_privacy">לְהַסכִּים《<u>הסכם משתמש ומדיניות פרטיות</u>》</string>
+    <string name="login_checkPrivacy">לא הסכימה《הסכם משתמש ומדיניות פרטיות》</string>
+
+
+    <string name="login_register_account">לרשום חשבון</string>
+    <string name="login_register_account_tip">עם חשבון אישי, ניתן לאחסן את נתוני הכושר שלך והעדפות המכשיר באופן מאובטח לצמיתות</string>
+    <string name="login_next">השלב הבא</string>
+    <string name="login_verification">קוד אימות</string>
+    <string name="login_input_verification">הזן את קוד האימות שלך</string>
+    <string name="login_send">לִשְׁלוֹחַ</string>
+
+    <string name="login_set_password">הגדר סיסמא</string>
+    <string name="login_inconsistent">סיסמה לא עקבית הוזנה פעמיים</string>
+    <string name="login_confirm_password">אשר סיסמה</string>
+    <string name="login_finish">סיים</string>
+    <string name="login_find_password">לאחזר סיסמה</string>
+    <string name="login_reset_Success">איפוס הסיסמה הצליח</string>
+
+    <string name="login_change_password">שנה סיסמא</string>
+    <string name="login_old_password">סיסמה ישנה</string>
+    <string name="login_new_password">סיסמה חדשה</string>
+    <string name="login_confirm_new_password">אשר את הסיסמה החדשה</string>
+    <string name="login_change_success">שונה בהצלחה</string>
+</resources>

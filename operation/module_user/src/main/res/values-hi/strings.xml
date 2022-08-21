@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">मेरा लक्ष्य</string>
+    <string name="user_edit_plan">लक्ष्य संपादित करें</string>
+    <string name="user_step">चरण लक्ष्य</string>
+    <string name="user_sleep">नींद के लक्ष्य</string>
+    <string name="user_calorie">उपभोग लक्ष्य</string>
+
+    <string name="user_connect">जुड़े हुए</string>
+    <string name="user_disconnect">जुड़े नहीं हैं</string>
+    <string name="user_connecting">कनेक्ट हो रहा है...</string>
+
+    <string name="user_dial">मेरी घड़ी का चेहरा</string>
+    <string name="user_dial_tip">अधिक डायल, इच्छानुसार परिवर्तन></string>
+    <string name="user_device_config">डिवाइस प्रबंधन</string>
+    <string name="user_find_watch">एक घड़ी खोजें</string>
+    <string name="user_ble_call">ब्लूटूथ कॉलिंग</string>
+    <string name="user_ble_camera">ब्लूटूथ कैमरा</string>
+    <string name="user_unit">इकाई प्रणाली</string>
+    <string name="user_notification">अधिसूचना</string>
+    <string name="user_about">डिवाइस के बारे में</string>
+    <string name="user_schedule">मेरे अनुसूची</string>
+    <string name="user_auto">स्वचालित निगरानी</string>
+    <string name="user_add_device">डिवाइस जोडे</string>
+
+    <string name="user_measureUnit">माप की इकाई</string>
+    <string name="user_tempUnit">तापमान इकाई</string>
+    <string name="user_metric">मीट्रिक</string>
+    <string name="user_british">शाही</string>
+    <string name="user_save">सहेजें</string>
+    <string name="user_saved">सफलतापूर्वक संचित कर लिया गया है</string>
+
+    <string name="user_notify">अधिसूचना</string>
+    <string name="user_notify_tip">डिवाइस पर ऐप से सूचना संदेश प्राप्त करने के लिए, आपको संदेश स्विच चालू करना होगा</string>
+    <string name="user_notify_title">सूचनाएं सक्षम करें</string>
+    <string name="user_notify_msg">इस एप्लिकेशन को दूरस्थ स्मार्ट उपकरणों के लिए एप्लिकेशन सूचनाएं अग्रेषित करने की आवश्यकता है। सक्रिय करने के लिए अधिसूचना पृष्ठ में प्रवेश करने के लिए \"ठीक\" दबाएं।</string>
+    <string name="user_cancel">रद्द करना</string>
+    <string name="user_confirm">ज़रूर</string>
+
+    <string name="user_account_safe">खाता और सुरक्षा</string>
+    <string name="user_version">वर्तमान एपीपी संस्करण</string>
+    <string name="user_help">वर्तमान एपीपी संस्करण</string>
+    <string name="user_privacy">उपयोगकर्ता अनुबंध और गोपनीयता नीति</string>
+    <string name="user_logout">साइन आउट</string>
+    <string name="user_unbind_tip">अनबाइंड</string>
+    <string name="user_unbind_message">क्या आप वाकई मौजूदा डिवाइस को अनबाइंड करना चाहते हैं?</string>
+
+    <string name="user_info">व्यक्तिगत जानकारी</string>
+    <string name="user_set">खाता संबंधी जानकारी</string>
+    <string name="user_head">अवतार</string>
+    <string name="user_name">निक नेम</string>
+    <string name="user_sex">लिंग</string>
+    <string name="user_birthday">जन्म की तारीख</string>
+    <string name="user_height">कद</string>
+    <string name="user_weight">वजन</string>
+    <string name="user_male">नर</string>
+    <string name="user_female">मादा</string>
+    <string name="user_camera">फोटो</string>
+    <string name="user_album">फोटो एलबम</string>
+    <string name="user_enter_name">कृपया अपना उपनाम दर्ज करें</string>
+    <string name="user_name_long">उपनाम 12 वर्णों से अधिक नहीं हो सकता</string>
+    <string name="user_permission_error_camera">अनुमति नहीं दी गई है, कैमरा फ़ंक्शन चालू नहीं किया जा सकता है</string>
+    <string name="user_crop_pic_failed">छवि कैप्चर करने में विफल, कृपया jpg प्रारूप छवि चुनें!</string>
+    <string name="user_account">लॉगिन खाता</string>
+    <string name="user_change">पासवर्ड बदलें</string>
+    <string name="user_delete_account">लॉग आउट</string>
+    <string name="user_logout_tip">क्या आप लॉग आउट करना चाहते हैं?</string>
+    <string name="user_upload_data">डेटा अपलोड हो रहा है...</string>
+    <string name="user_upload_data_success">डेटा अपलोड सफलतापूर्वक!</string>
+    <string name="user_faq">आम समस्या</string>
+    <string name="user_feedback_hint">आपकी प्रतिक्रिया/प्रश्न</string>
+    <string name="user_send_feedback">प्रतिपुष्टि दें</string>
+    <string name="user_feedback_long">आपके द्वारा दर्ज किया गया पाठ बहुत लंबा है</string>
+    <string name="user_feedback_empty">टिप्पणियाँ खाली नहीं हो सकतीं</string>
+    <string name="user_feedback_success">प्रतिक्रिया सफलता</string>
+    <string name="user_guide">कनेक्शन गाइड</string>
+    <string name="user_service">इसे बैकग्राउंड में चालू रखें</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">Oneplus</string>
+    <string name="user_samsun">Samsung</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">वॉच कनेक्शन की स्थिरता में सुधार करने के लिए, यह अनुशंसा की जाती है कि आप निम्नलिखित सेटिंग्स करें:</string>
+    <string name="user_saverBattery">चालू न करें (पावर सेविंग मोड):</string>
+    <string name="user_batteryContent">यदि पावर सेविंग मोड चालू है, तो यह अस्थिर ब्लूटूथ कनेक्शन, असामान्य गति प्रक्षेपवक्र, और कम बिजली दूरी जैसी समस्याएं पैदा कर सकता है। उपयोग के दौरान पावर सेविंग मोड को बंद करने की सिफारिश की जाती है।</string>
+    <string name="user_protect">प्रमुख निर्माताओं की पृष्ठभूमि सुरक्षा सेटिंग्स:</string>
+
+
+    <string name="user_search">खोज उपकरण</string>
+    <string name="user_searching">डिवाइस खोजे जा रहे हैं...</string>
+    <string name="user_bind">बंधन...</string>
+    <string name="user_no_device">डिवाइस नहीं मिला</string>
+    <string name="user_pair_success">सफलतापूर्वक जोड़ा गया</string>
+    <string name="user_pair_tip">आपकी खेल स्वास्थ्य डेटा जानकारी एपीपी के माध्यम से घड़ी और मोबाइल फोन के बीच सिंक्रनाइज़ की जाएगी।</string>
+    <string name="user_finish">खत्म करना</string>
+    <string name="user_understand">समझा</string>
+    <string name="user_wear_tip">युक्तियाँ पहनना</string>
+    <string name="user_wear_tip_content">डेटा को सटीक रूप से मापने के लिए और एपीपी के सामान्य उपयोग को प्रभावित नहीं करने के लिए, कृपया कलाई की हड्डी से 1 सेमी की दूरी पर घड़ी पहनने का प्रयास करें।</string>
+    <string name="user_search_tip">डिवाइस निकालें, इसे सक्रिय करने के लिए चार्ज करें, और इसे फ़ोन के पास रखें</string>
+    <string name="user_search_much">कृपया मैक पते के अनुसार अपनी घड़ी का चयन करें</string>
+    <string name="user_search_again">फिर से खोजो</string>
+    <string name="user_again_tip">आप निम्न तरीकों को आजमा सकते हैं और सेटिंग के बाद पुनः प्रयास कर सकते हैं:</string>
+    <string name="user_again_advice">·फ़ोन का ब्लूटूथ फिर से खोलें\n·सुनिश्चित करें कि घड़ी चालू है और फ़ोन के करीब है\n·डिवाइस पर क्लिक करें \"फ़ैक्टरी सेटिंग पर पुनर्स्थापित करें\""</string>
+    <string name="user_stop_bind">बाद में कुछ समय के लिए न बांधें</string>
+    <string name="user_bind_help"><u>जोड़ने के लिए डिवाइस नहीं मिल रहा है? मदद देखें</u></string>
+
+    <string name="user_dial_market">डायल बाजार</string>
+    <string name="user_dial_now">चेहरे का पूर्वावलोकन देखें</string>
+    <string name="user_dial_mine">मेरी घड़ी का चेहरा</string>
+    <string name="user_dial_diy">कस्टम घड़ी चेहरा</string>
+    <string name="user_background">पृष्ठभूमि अपलोड करें</string>
+    <string name="user_crop_fail">छवि कैप्चर करने में विफल, कृपया jpg प्रारूप छवि चुनें!</string>
+    <string name="user_crop_small">छवि कैप्चर करने में विफल, कैप्चर की गई छवि बहुत छोटी है और डायल के आकार से मेल नहीं खाती!</string>
+    <string name="user_send_background">पृष्ठभूमि भेजी जा रही है...</string>
+    <string name="user_send_dial">घड़ी का चेहरा भेजा जा रहा है...</string>
+    <string name="user_send_success">सफलतापूर्वक भेज दिया!</string>
+    <string name="user_send_fail">भेजना विफल, कृपया पुन: प्रयास करें।</string>
+    <string name="user_no_background">कृपया पहले बैकग्राउंड अपलोड करें</string>
+    <string name="user_no_clock">कृपया पहले एक घड़ी का चेहरा चुनें</string>
+
+    <string name="user_device_name">सॉफ्टवेयर मॉडल</string>
+    <string name="user_device_mac">मैक पते</string>
+    <string name="user_device_version">सॉफ्टवेयर संस्करण</string>
+    <string name="user_check_update">अद्यतन के लिए जाँच</string>
+
+    <string name="user_camera_tip">ब्लूटूथ कैमरा फ़ंक्शन चालू करने के बाद, घड़ी तस्वीरें लेने के लिए मोबाइल फोन कैमरा एप्लिकेशन को नियंत्रित कर सकती है</string>
+    <string name="user_camera_permission_tip">उपयोग के दौरान, इस ऐप को कैमरे तक पहुंच की आवश्यकता होती है और दूरस्थ रूप से फ़ोटो लेने और फ़ोटो संग्रहीत करने के लिए फ़ाइल पढ़ने और लिखने की अनुमति की आवश्यकता होती है\n\nयदि आप उपरोक्त अनुमतियों को कॉल करने के लिए सहमत नहीं हैं, तो यह ब्लूटूथ कैमरा को सामान्य रूप से उपयोग नहीं करने का कारण होगा, जो इस ऐप के बुनियादी कार्यों के आपके उपयोग को प्रभावित नहीं करेगा। आप किसी भी समय "सेटिंग"> "अनुमति प्रबंधन" पर जाकर और उपरोक्त अनुमति कॉल को बंद करने का विकल्प चुनकर अपनी सहमति वापस ले सकते हैं।</string>
+    <string name="user_camera_permission_error">अनुमति नहीं दी गई है, उद्घाटन विफल हो गया है</string>
+
+    <string name="user_deleteTip">क्या आपके खाते के रद्द होने की पुष्टि करना है, पुष्टि के तीन दिनों के भीतर खाता सफलतापूर्वक रद्द कर दिया जाएगा, और खाता डेटा सफलतापूर्वक रद्द करने के बाद पूरी तरह से हटा दिया जाएगा, अपरिवर्तनीय! कृपया सावधानी से आगे बढ़ें।</string>
+    <string name="user_deleteSuccess">आवेदन खाता सफलतापूर्वक रद्द कर दिया गया है।</string>
+    <string name="user_deleteNow">चालू खाता लॉगआउट चरण की प्रतीक्षा कर रहा है।</string>
+
+    <string name="user_schedule_empty">वर्तमान घड़ी का कोई शेड्यूल नहीं है, कृपया एक नया शेड्यूल जोड़ें</string>
+    <string name="user_delete_schedule">शेड्यूल हटाएं</string>
+    <string name="user_save_schedule">शेड्यूल सेव करें</string>
+    <string name="user_schedule_info">अनुसूची विवरण</string>
+    <string name="user_schedule_fall">घड़ी में जोड़ा जा सकने वाला शेड्यूल ऊपरी सीमा तक पहुंच गया है, कृपया जोड़ने से पहले इसे साफ़ करें</string>
+    <string name="user_schedule_add_fail">शेड्यूल जोड़ने में विफल</string>
+    <string name="user_schedule_edit_fail">शेड्यूल संशोधित करने में विफल</string>
+    <string name="user_schedule_delete_fail">शेड्यूल हटाने में विफल</string>
+    <string name="user_schedule_past">पिछले समय बिंदु को शेड्यूल समय बिंदु के रूप में सेट करने में असमर्थ</string>
+    <string name="user_schedule_same">वर्तमान में चयनित समय बिंदु में पहले से ही एक एजेंडा है और इसे बार-बार सेट नहीं किया जा सकता है</string>
+    <string name="user_schedule_msg">कृपया अनुसूची विवरण भरें</string>
+    <string name="user_today">आज</string>
+    <string name="user_time">समय</string>
+
+
+    <string name="user_auto_measure_tip">स्वचालित पहचान फ़ंक्शन चालू होने के बाद, घड़ी प्रभावी अवधि के भीतर हर अंतराल में आवृत्ति समय को मापेगी।</string>
+    <string name="user_measure_frequency">निगरानी आवृत्ति</string>
+    <string name="user_valid_time">प्रभावी अवधि</string>
+    <string name="user_start_time">प्रारम्भ का समय</string>
+    <string name="user_end_time">अंत समय</string>
+    <string name="user_heart">हृदय दर</string>
+    <string name="user_blood_pressure">रक्त चाप</string>
+    <string name="user_blood_oxygen">रक्त ऑक्सीजन</string>
+    <string name="user_temperature">शरीर का तापमान</string>
+</resources>

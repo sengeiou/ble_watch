@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_plan">המטרה שלי</string>
+    <string name="user_edit_plan">ערוך יעד</string>
+    <string name="user_step">יעד צעד</string>
+    <string name="user_sleep">מטרות שינה</string>
+    <string name="user_calorie">יעד צריכה</string>
+
+    <string name="user_connect">מְחוּבָּר</string>
+    <string name="user_disconnect">לא מחובר</string>
+    <string name="user_connecting">מְקַשֵׁר...</string>
+
+    <string name="user_dial">פני השעון שלי</string>
+    <string name="user_dial_tip">עוד חוגות, שנה כרצונך></string>
+    <string name="user_device_config">ניהול מכשירים</string>
+    <string name="user_find_watch">מצא שעון</string>
+    <string name="user_ble_call">שיחות בלוטות'</string>
+    <string name="user_ble_camera">מצלמת בלוטות'</string>
+    <string name="user_unit">מערכת יחידה</string>
+    <string name="user_notification">הוֹדָעָה</string>
+    <string name="user_about">לגבי המכשיר</string>
+    <string name="user_schedule">לוח הזמנים שלי</string>
+    <string name="user_auto">ניטור אוטומטי</string>
+    <string name="user_add_device">הוסף מכשיר</string>
+
+    <string name="user_measureUnit">יחידת מידה</string>
+    <string name="user_tempUnit">יחידת טמפרטורה</string>
+    <string name="user_metric">מֶטרִי</string>
+    <string name="user_british">קֵיסָרִי</string>
+    <string name="user_save">לשמור</string>
+    <string name="user_saved">נשמר בהצלחה</string>
+
+    <string name="user_notify">הוֹדָעָה</string>
+    <string name="user_notify_tip">כדי לקבל הודעות התראה מהאפליקציה במכשיר, עליך להפעיל את מתג ההודעות</string>
+    <string name="user_notify_title">אפשר התראות</string>
+    <string name="user_notify_msg">אפליקציה זו צריכה להעביר הודעות אפליקציה למכשירים חכמים מרוחקים. לחץ על \"אישור\" כדי להיכנס לדף ההודעות להפעלה.</string>
+    <string name="user_cancel">לְבַטֵל</string>
+    <string name="user_confirm">בטוח</string>
+
+    <string name="user_account_safe">חשבון ואבטחה</string>
+    <string name="user_version">גרסת APP נוכחית</string>
+    <string name="user_help">עזרה ומשוב</string>
+    <string name="user_privacy">הסכם משתמש ומדיניות פרטיות</string>
+    <string name="user_logout">התנתק</string>
+    <string name="user_unbind_tip">לְהַתִיר</string>
+    <string name="user_unbind_message">האם אתה בטוח שתבטל את הכריכה של המכשיר הנוכחי?</string>
+
+    <string name="user_info">מידע אישי</string>
+    <string name="user_set">פרטי חשבון</string>
+    <string name="user_head">גִלגוּל</string>
+    <string name="user_name">כינוי</string>
+    <string name="user_sex">מִין</string>
+    <string name="user_birthday">תאריך לידה</string>
+    <string name="user_height">גוֹבַה</string>
+    <string name="user_weight">מִשׁקָל</string>
+    <string name="user_male">זָכָר</string>
+    <string name="user_female">נְקֵבָה</string>
+    <string name="user_camera">תַצלוּם</string>
+    <string name="user_album">אלבום תמונות</string>
+    <string name="user_enter_name">נא להזין את הכינוי שלך</string>
+    <string name="user_name_long">הכינוי לא יכול לעלות על 12 תווים</string>
+    <string name="user_permission_error_camera">ההרשאה לא עברה, לא ניתן להפעיל את פונקציית המצלמה</string>
+    <string name="user_crop_pic_failed">צילום התמונה נכשל, אנא בחר תמונה בפורמט jpg!</string>
+    <string name="user_account">חשבון כניסה</string>
+    <string name="user_change">שנה סיסמא</string>
+    <string name="user_delete_account">להתנתק</string>
+    <string name="user_logout_tip">האם אתה בטוח שאתה רוצה להתנתק?</string>
+    <string name="user_upload_data">מעלה נתונים...</string>
+    <string name="user_upload_data_success">העלאת נתונים בהצלחה!</string>
+    <string name="user_faq">בעיה נפוצה</string>
+    <string name="user_feedback_hint">המשוב/שאלות שלך</string>
+    <string name="user_send_feedback">שלח משוב</string>
+    <string name="user_feedback_long">הטקסט שהזנת ארוך מדי</string>
+    <string name="user_feedback_empty">תגובות לא יכולות להיות ריקות</string>
+    <string name="user_feedback_success">משוב הצלחה</string>
+    <string name="user_guide">מדריך חיבור</string>
+    <string name="user_service">תמשיך לרוץ ברקע</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">Oppo</string>
+    <string name="user_vivo">Vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">OnePlus</string>
+    <string name="user_samsun">Samsung</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">על מנת לשפר את יציבות חיבור השעון, מומלץ לבצע את ההגדרות הבאות:</string>
+    <string name="user_saverBattery">אל תפעיל (מצב חיסכון בחשמל):</string>
+    <string name="user_batteryContent">אם מצב החיסכון בחשמל מופעל, זה עלול לגרום לבעיות כגון חיבור Bluetooth לא יציב, מסלול תנועה חריג ומרחק חשמל מופחת. מומלץ לכבות את מצב החיסכון בחשמל במהלך השימוש.</string>
+    <string name="user_protect">הגדרות הגנת רקע של יצרנים גדולים:</string>
+
+
+    <string name="user_search">מכשיר חיפוש</string>
+    <string name="user_searching">מחפש מכשירים...</string>
+    <string name="user_bind">כריכה...</string>
+    <string name="user_no_device">מכשיר לא נמצא</string>
+    <string name="user_pair_success">הצמד בהצלחה</string>
+    <string name="user_pair_tip">מידע על בריאות הספורט שלך יסונכרן בין השעון לטלפון הנייד באמצעות האפליקציה.</string>
+    <string name="user_finish">סיים</string>
+    <string name="user_understand">אני רואה</string>
+    <string name="user_wear_tip">לובש עצות</string>
+    <string name="user_wear_tip_content">על מנת למדוד את הנתונים במדויק ולא להשפיע על השימוש הרגיל ב-APP, אנא נסה לענוד את השעון במרחק של 1 ס"מ מעצם היד.</string>
+    <string name="user_search_tip">הסר את המכשיר, טען אותו כדי להפעילו ושמור אותו קרוב לטלפון</string>
+    <string name="user_search_much">אנא בחר את השעון שלך לפי כתובת ה-mac</string>
+    <string name="user_search_again">חפש שוב</string>
+    <string name="user_again_tip">אתה יכול לנסות את הדרכים הבאות ולנסות שוב לאחר ההגדרה:</string>
+    <string name="user_again_advice">·הפעל שוב את ה-Bluetooth של הטלפון\n·וודא שהשעון מופעל וקרוב לטלפון\n·לחץ על המכשיר \"שחזר להגדרות היצרן\"</string>
+    <string name="user_stop_bind">מאוחר יותר, אין להתחייב לעת עתה</string>
+    <string name="user_bind_help"><u>לא מוצא את המכשיר להוספה? צפה בעזרה</u></string>
+
+    <string name="user_dial_market">שוק חיוג</string>
+    <string name="user_dial_now">תצוגה מקדימה של פרצוף צפייה</string>
+    <string name="user_dial_mine">פני השעון שלי</string>
+    <string name="user_dial_diy">לוח שעון מותאם אישית</string>
+    <string name="user_background">להעלות רקע</string>
+    <string name="user_crop_fail">צילום התמונה נכשל, אנא בחר תמונה בפורמט jpg!</string>
+    <string name="user_crop_small">צילום התמונה נכשל, התמונה שצולמה קטנה מדי ואינה תואמת לגודל החוגה!</string>
+    <string name="user_send_background">שולח רקע...</string>
+    <string name="user_send_dial">שולח לוח שעון...</string>
+    <string name="user_send_success">נשלח בהצלחה!</string>
+    <string name="user_send_fail">השליחה נכשלה, אנא נסה שוב.</string>
+    <string name="user_no_background">נא להעלות את הרקע תחילה</string>
+    <string name="user_no_clock">אנא בחר תחילה לוח שעון</string>
+
+    <string name="user_device_name">דגם תוכנה</string>
+    <string name="user_device_mac">כתובת מק</string>
+    <string name="user_device_version">גרסת תוכנה</string>
+    <string name="user_check_update">בדוק עדכונים</string>
+
+    <string name="user_camera_tip">לאחר הפעלת פונקציית מצלמת Bluetooth, השעון יכול לשלוט באפליקציית מצלמת הטלפון הנייד כדי לצלם תמונות</string>
+    <string name="user_camera_permission_tip">במהלך השימוש, אפליקציה זו דורשת גישה למצלמה והרשאות קריאה וכתיבה לקובץ לצילום תמונות מרחוק ואחסון תמונות\n\nאם לא תסכימו להתקשר להרשאות לעיל, הדבר יגרום לאי שימוש רגיל במצלמת ה-Bluetooth, מה לא ישפיע על השימוש שלך באפליקציה זו בפונקציות הבסיסיות. אתה יכול לבטל את הסכמתך בכל עת על ידי מעבר אל "הגדרות" > "ניהול הרשאות" ובחירה לבטל את שיחות ההרשאה לעיל</string>
+    <string name="user_camera_permission_error">ההרשאה לא עוברת, הפתיחה נכשלת</string>
+
+    <string name="user_deleteTip">בין אם לאשר את ביטול חשבונך, החשבון יבוטל בהצלחה תוך שלושה ימים לאחר האישור, ונתוני החשבון יימחקו לחלוטין לאחר הביטול המוצלח, בלתי ניתן לשחזור! נא להמשיך בזהירות.</string>
+    <string name="user_deleteSuccess">חשבון האפליקציה בוטל בהצלחה.</string>
+    <string name="user_deleteNow">החשבון הנוכחי ממתין לשלב ההתנתקות.</string>
+
+    <string name="user_schedule_empty">לשעון הנוכחי אין לוח זמנים, אנא הוסף לוח זמנים חדש</string>
+    <string name="user_delete_schedule">למחוק לוח זמנים</string>
+    <string name="user_save_schedule">לשמור לוח זמנים</string>
+    <string name="user_schedule_info">פרטי לוח זמנים</string>
+    <string name="user_schedule_fall">לוח הזמנים שניתן להוסיף לשעון הגיע לגבול העליון, נא לנקות אותו לפני ההוספה</string>
+    <string name="user_schedule_add_fail">הוספת לוח הזמנים נכשלה</string>
+    <string name="user_schedule_edit_fail">שינוי לוח הזמנים נכשל</string>
+    <string name="user_schedule_delete_fail">מחיקת לוח הזמנים נכשלה</string>
+    <string name="user_schedule_past">לא ניתן להגדיר נקודת זמן עברה כנקודת זמן לוח זמנים</string>
+    <string name="user_schedule_same">לנקודת הזמן הנבחרת כבר יש סדר יום ולא ניתן להגדיר אותה שוב ושוב</string>
+    <string name="user_schedule_msg">נא למלא את פרטי לוח הזמנים</string>
+    <string name="user_today">היום</string>
+    <string name="user_time">זְמַן</string>
+
+
+    <string name="user_auto_measure_tip">לאחר הפעלת פונקציית הזיהוי האוטומטי, השעון ימדוד את זמן התדר בכל מרווח בתקופה האפקטיבית.</string>
+    <string name="user_measure_frequency">תדירות ניטור</string>
+    <string name="user_valid_time">תקופה יעילה</string>
+    <string name="user_start_time">זמן התחלה</string>
+    <string name="user_end_time">שעת סיום</string>
+    <string name="user_heart">קצב לב</string>
+    <string name="user_blood_pressure">לחץ דם</string>
+    <string name="user_blood_oxygen">חמצן בדם</string>
+    <string name="user_temperature">טמפרטורת הגוף</string>
+</resources>

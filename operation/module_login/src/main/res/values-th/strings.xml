@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_name">login module</string>
+    <string name="login_location">พื้นที่</string>
+    <string name="login_chose_location">กรุณาเลือกภูมิภาค</string>
+    <string name="login_login_account">เข้าสู่ระบบบัญชี</string>
+    <string name="login_login">เข้าสู่ระบบ</string>
+    <string name="login_account">บัญชีผู้ใช้</string>
+    <string name="login_input_account">ใส่บัญชีของคุณ</string>
+    <string name="login_right_email">กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง</string>
+    <string name="login_psw">รหัสผ่าน</string>
+    <string name="login_input_psw">ใส่รหัสผ่านของคุณ</string>
+    <string name="login_forget_psw">ลืมรหัสผ่าน?</string>
+    <string name="login_register">ไม่มีบัญชี? ลงทะเบียน</string>
+    <string name="login_privacy">เห็นด้วย《<u>ข้อตกลงผู้ใช้และนโยบายความเป็นส่วนตัว</u>》</string>
+    <string name="login_checkPrivacy">ไม่เห็นด้วย《ข้อตกลงผู้ใช้และนโยบายความเป็นส่วนตัว》</string>
+
+
+    <string name="login_register_account">ลงทะเบียนบัญชี</string>
+    <string name="login_register_account_tip">ด้วยบัญชีส่วนตัว ข้อมูลการออกกำลังกาย ค่ากำหนดอุปกรณ์ของคุณจะถูกเก็บไว้อย่างปลอดภัยอย่างถาวร</string>
+    <string name="login_next">ขั้นตอนต่อไป</string>
+    <string name="login_verification">รหัสยืนยัน</string>
+    <string name="login_input_verification">ป้อนรหัสยืนยันของคุณ</string>
+    <string name="login_send">ส่ง</string>
+
+    <string name="login_set_password">ตั้งรหัสผ่าน</string>
+    <string name="login_inconsistent">ใส่รหัสผ่านไม่ตรงกันสองครั้ง</string>
+    <string name="login_confirm_password">ยืนยันรหัสผ่าน</string>
+    <string name="login_finish">เสร็จ</string>
+    <string name="login_find_password">เรียกรหัสผ่าน</string>
+    <string name="login_reset_Success">รีเซ็ตรหัสผ่านสำเร็จ</string>
+
+    <string name="login_change_password">เปลี่ยนรหัสผ่าน</string>
+    <string name="login_old_password">รหัสผ่านเก่า</string>
+    <string name="login_new_password">รหัสผ่านใหม่</string>
+    <string name="login_confirm_new_password">ยืนยันรหัสผ่านใหม่</string>
+    <string name="login_change_success">แก้ไขเรียบร้อยแล้ว</string>
+</resources>

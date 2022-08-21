@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">Estado</string>
+    <string name="sport">Laro</string>
+    <string name="consult">Sumangguni</string>
+    <string name="mine">Akin</string>
+    <string name="tip">Paalalahanan</string>
+    <string name="checkGPS">Natukoy na hindi naka-on ang switch ng lokasyon ng iyong telepono. Upang matiyak na gumagana nang maayos ang app, mangyaring i-on ang switch ng lokasyon.</string>
+    <string name="confirm">Oo naman</string>
+    <string name="cancel">Kanselahin</string>
+
+    <string name="touchAgain">Pindutin muli upang lumabas sa programa</string>
+    <string name="privacy1">Kasunduan ng User at Patakaran sa Privacy</string>
+    <string name="privacyTip">Salamat sa pagtitiwala at paggamit FitRing。
+\n\nTutulungan ka naming maunawaan kung paano namin kinokolekta, ginagamit at iniimbak ang iyong personal na impormasyon at ang iyong mga kaugnay na karapatan alinsunod sa Kasunduan sa Privacy ng User.
+\n\nKapag ginamit mo ang FitRing app, kukunin namin ang impormasyon ng iyong device, personal na data (avatar, palayaw, taas, timbang, data ng ehersisyo) at iba pang impormasyon, kailangan naming makuha ang iyong pahintulot sa camera, pahintulot sa album para i-upload ang iyong avatar ng app :
+\n\nKapag ginamit mo ang FitRing app para sa panlabas na pagtakbo, pag-upload, pagbabahagi at pag-iimbak ng impormasyon sa sports, kailangan naming makuha ang iyong pahintulot sa lokasyon upang maitala ang iyong running track.
+\n\nMaaari mong i-access, baguhin, tanggalin ang iyong personal na impormasyon o pamahalaan ang iyong awtorisasyon sa mga nauugnay na pahina.
+\n\nGumagamit kami ng teknolohiyang panseguridad na nangunguna sa industriya upang protektahan ang iyong personal na impormasyon.
+\n\nKapag na-click mo ang "OK", sumasang-ayon ka sa mga tuntunin ng kasunduang ito.</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="sport_sport_last">bài tập gần đây</string>
+    <string name="sport_sport_time">thời gian tập thể dục</string>
+    <string name="sport_sport_calorie">tiêu thụ tập thể dục</string>
+    <string name="sport_sport_distance">Khoảng cách di chuyển</string>
+    <string name="sport_steps">Số bước</string>
+    <string name="sport_speed_hour">tốc độ trung bình</string>
+    <string name="sport_stride">Tần số bước</string>
+    <string name="sport_heart">nhịp tim trung bình</string>
+    <string name="sport_height">leo độ cao</string>
+    <string name="sport_sport_info">Chi tiết thể thao</string>
+    <string name="sport_heart_level">Phân phối nhịp tim</string>
+    <string name="sport_heart1">giới hạn(≥161)</string>
+    <string name="sport_heart2">Kỵ khí(149~160)</string>
+    <string name="sport_heart3">Thể dục nhịp điệu(131~138)</string>
+    <string name="sport_heart4">đốt cháy chất béo(112~130)</string>
+    <string name="sport_heart5">ấm lên(90~111)</string>
+    <string name="sport_speed">tốc độ</string>
+    <string name="sport_running">trong chuyển động</string>
+    <string name="sport_run_pause">Phong trào bị tạm dừng</string>
+    <string name="sport_gps_low">Tín hiệu GPS yếu và độ chính xác của dữ liệu thấp</string>
+    <string name="sport_gps_middle">Tín hiệu GPS mạnh và độ chính xác dữ liệu cao</string>
+    <string name="sport_gps_high">Tín hiệu GPS mạnh và độ chính xác dữ liệu cao</string>
+    <string name="sport_no_sport">Chưa có hồ sơ tập thể dục nào, hãy bắt đầu tập thể dục ngay bây giờ</string>
+    <string name="sport_destroy">Nhấp lại để thoát khỏi chiến dịch này</string>
+    <string name="sport_time_short">Thời lượng và khoảng cách bài tập quá ngắn để tạo báo cáo bài tập hợp lệ</string>
+    <string name="sport_finish_sport">Bạn có chắc chắn muốn kết thúc bài tập không?</string>
+    <string name="sport_start_sport">Hãy bắt đầu tập thể dục trước</string>
+
+</resources>

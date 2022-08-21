@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">staat</string>
+    <string name="sport">sport-</string>
+    <string name="consult">raadplegen</string>
+    <string name="mine">de mijne</string>
+    <string name="tip">herinneren</string>
+    <string name="checkGPS">Gedetecteerd dat de locatieschakelaar van uw telefoon niet is ingeschakeld. Zet de locatieschakelaar aan om ervoor te zorgen dat de app correct werkt。</string>
+    <string name="confirm">Zeker</string>
+    <string name="cancel">Annuleren</string>
+
+    <string name="touchAgain">Druk nogmaals om het programma te verlaten</string>
+    <string name="privacy1">Gebruikersovereenkomst en privacybeleid</string>
+    <string name="privacyTip">Bedankt voor het vertrouwen en het gebruik FitRing。
+\n\nWe zullen u helpen begrijpen hoe we uw persoonlijke informatie en uw gerelateerde rechten verzamelen, gebruiken en opslaan in overeenstemming met de "Gebruikersprivacyovereenkomst"。
+\n\nWanneer u de FitRing-app gebruikt, verzamelen we uw apparaatinformatie, persoonlijke gegevens (avatar, bijnaam, lengte, gewicht, trainingsgegevens) en andere informatie. We hebben uw cameratoestemming, albumtoestemming nodig om uw app-avatar te uploaden:
+\n\nWanneer je de FitRing-app gebruikt om buiten te hardlopen, sportinformatie te uploaden, delen en opslaan, hebben we je locatietoestemming nodig om je hardloopbaan vast te leggen。
+\n\nU kunt uw persoonlijke gegevens inzien, wijzigen, verwijderen of uw autorisatie beheren op de relevante pagina's。
+\n\nWe gebruiken toonaangevende beveiligingstechnologie om uw persoonlijke gegevens te beschermen。
+\n\nWanneer u op "OK" klikt, gaat u akkoord met de voorwaarden van deze overeenkomst。</string>
+</resources>
