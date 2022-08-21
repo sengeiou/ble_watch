@@ -211,7 +211,6 @@ public class PairFragment extends DialogFragment implements MyHandle {
                 }
             }
         });
-        HttpMessageUtil.newInstance().getForDownloadReportData(Calendar.getInstance().getTimeInMillis()/1000+"","30");
     }
 
     private IUpdateSearch iUpdateSearch = new IUpdateSearch() {

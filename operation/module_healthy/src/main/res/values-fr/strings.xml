@@ -14,8 +14,8 @@
     <string name="healthy_last_sport">exercice récent</string>
     <string name="healthy_sport_list">liste des sports</string>
     <string name="healthy_sport_last">a pris fin~</string>
-    <string name="healthy_no_sport">Aucun enregistrement d'exercice pour le moment, commencez à vous entraîner maintenant</string>
-    <string name="healthy_card_visiable">Éléments affichés (appuyez et maintenez le côté droit et faites glisser vers le haut et vers le bas pour ajuster l'ordre)</string>
+    <string name="healthy_no_sport">Aucun enregistrement d\'exercice pour le moment, commencez à vous entraîner maintenant</string>
+    <string name="healthy_card_visiable">Éléments affichés (appuyez et maintenez le côté droit et faites glisser vers le haut et vers le bas pour ajuster l\'ordre)</string>
     <string name="healthy_card_gone">élément caché</string>
     <string name="healthy_card_need_gone">Faites glisser les éléments que vous ne souhaitez pas afficher ici</string>
     <string name="healthy_day">journée</string>
@@ -23,13 +23,13 @@
     <string name="healthy_month">lune</string>
     <string name="healthy_sun">Dimanche</string>
     <string name="healthy_sta">Samedi</string>
-    <string name="healthy_survey">Aperçu d'aujourd'hui</string>
+    <string name="healthy_survey">Aperçu d\'aujourd\'hui</string>
     <string name="healthy_week_survey">aperçu hebdomadaire</string>
     <string name="healthy_month_survey">aperçu mensuel</string>
-    <string name="healthy_all_step">nombre total d'étapes</string>
+    <string name="healthy_all_step">nombre total d\'étapes</string>
     <string name="healthy_all_calorie">consommation totale</string>
     <string name="healthy_all_distance">distance totale</string>
-    <string name="healthy_plan">l'objectif d'aujourd'hui</string>
+    <string name="healthy_plan">l\'objectif d\'aujourd\'hui</string>
     <string name="healthy_day_step">Nombre moyen de pas quotidiens</string>
     <string name="healthy_day_calorie">Consommation journalière moyenne</string>
     <string name="healthy_day_distance">Distance journalière moyenne</string>
@@ -40,7 +40,7 @@
     <string name="healthy_sleep_average_sleep">durée moyenne du sommeil</string>
     <string name="healthy_sleep_average_deep">Durée moyenne du sommeil profond</string>
     <string name="healthy_sleep_average_light">Durée moyenne du sommeil léger</string>
-    <string name="healthy_sleep_bed">le temps de s'endormir</string>
+    <string name="healthy_sleep_bed">le temps de s\'endormir</string>
     <string name="healthy_sleep_wake">heure de réveil</string>
     <string name="healthy_heart_average">fréquence cardiaque moyenne</string>
     <string name="healthy_heart_max">fréquence cardiaque maximale</string>
@@ -53,11 +53,11 @@
     <string name="healthy_heart5">réchauffer(90~111)</string>
     <string name="healthy_heart6">Relaxer(≤89)</string>
     <string name="healthy_spo_average">oxygène sanguin moyen</string>
-    <string name="healthy_spo_max">niveau maximal d'oxygène dans le sang</string>
-    <string name="healthy_spo_min">niveau minimal d'oxygène dans le sang</string>
+    <string name="healthy_spo_max">niveau maximal d\'oxygène dans le sang</string>
+    <string name="healthy_spo_min">niveau minimal d\'oxygène dans le sang</string>
     <string name="healthy_spo_measure_list">Enregistrement des mesures</string>
-    <string name="healthy_spo_measure_info">Détails de l'enregistrement de mesure</string>
-    <string name="healthy_spo_abnormal">Apparition d'hypoxie</string>
+    <string name="healthy_spo_measure_info">Détails de l\'enregistrement de mesure</string>
+    <string name="healthy_spo_abnormal">Apparition d\'hypoxie</string>
     <string name="healthy_temp_abnormal">La fièvre survient</string>
     <string name="healthy_temp_average">température corporelle moyenne</string>
     <string name="healthy_temp_max">température corporelle maximale</string>
@@ -68,5 +68,5 @@
     <string name="healthy_unit">%d Secondaire</string>
 
     <string name="healthy_tomorrow">Impossible de sélectionner une date future</string>
-    <string name="healthy_not_data">La date sélectionnée n'a pas de données</string>
+    <string name="healthy_not_data">La date sélectionnée n\'a pas de données</string>
 </resources>

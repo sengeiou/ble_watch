@@ -36,7 +36,7 @@ public class HttpClientUtils {
             MathUtil.newInstance().saveStringData(mContext,"token",null);
             MathUtil.newInstance().saveIntData(mContext,"userId",-1);
             MathUtil.newInstance().saveIntData(mContext,"weatherTime",0);
-            SaveDataUtil.newInstance().clearDB();
+//            SaveDataUtil.newInstance().clearDB();
             SQLite.delete()
                     .from(HealthyCardData.class)
                     .execute();

@@ -114,21 +114,4 @@ public class WelcomePresenterImpl implements IWelcomePresenter{
         iWelcomeView = null;
     }
 
-    @Override
-    public void uploadData(Context context) {
-        if (MathUtil.newInstance().getToken(context)!=null){
-            String datas = MathUtil.newInstance().getStringWithJson(context.getSharedPreferences(FILE,MODE_PRIVATE));
-            HttpMessageUtil.newInstance().postForUploadReportData(datas, new GenericsCallback<BaseApi>(new JsonGenericsSerializator()) {
-                @Override
-                public void onError(Call call, Exception e, int id) {
-                }
-                @Override
-                public void onResponse(BaseApi response, int id) {
-                    if(response.getCode()==200){
-                        MathUtil.newInstance().saveLastTime(context.getSharedPreferences(FILE,MODE_PRIVATE));
-                    }
-                }
-            });
-        }
-    }
 }

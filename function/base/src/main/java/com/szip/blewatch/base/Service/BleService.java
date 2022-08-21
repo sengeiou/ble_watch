@@ -454,17 +454,20 @@ public class BleService extends Service implements MyHandle {
     public void onReceive(Intent intent) {
         switch (intent.getAction()){
             case BroadcastConst.SEND_BLE_DATA:{
+                String command = intent.getStringExtra("command");
                 if (bluetoothState != 3){
-                    ProgressHudModel.newInstance().diss();
-                    new Handler(getMainLooper()).post(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(BleService.this,getString(R.string.ble_error),Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    if (command!=null&&!command.equals("setWeather")){
+                        ProgressHudModel.newInstance().diss();
+                        new Handler(getMainLooper()).post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(BleService.this,getString(R.string.ble_error),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
                     return;
                 }
-                String command = intent.getStringExtra("command");
                 switch (command){
                     case "setUnit":
                         iBluetoothUtil.writeForSetUnit();

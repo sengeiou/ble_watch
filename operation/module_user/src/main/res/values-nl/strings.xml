@@ -127,8 +127,8 @@
     <string name="user_device_version">Software versie</string>
     <string name="user_check_update">Controleren op updates</string>
 
-    <string name="user_camera_tip">Nadat de Bluetooth-camerafunctie is ingeschakeld, kan het horloge de camera-applicatie van de mobiele telefoon bedienen om foto's te maken</string>
-    <string name="user_camera_permission_tip">Tijdens gebruik vereist deze app toegang tot de camera en lees- en schrijfrechten voor bestanden om op afstand foto's te maken en foto's op te slaan\n\nAls je niet akkoord gaat met het aanroepen van de bovenstaande rechten, zal de Bluetooth-camera niet normaal worden gebruikt, wat heeft geen invloed op uw gebruik van de basisfuncties van deze app. U kunt uw toestemming op elk moment intrekken door naar "Instellingen" > "Toestemmingsbeheer" te gaan en ervoor te kiezen de bovenstaande toestemmingsoproepen uit te schakelen</string>
+    <string name="user_camera_tip">Nadat de Bluetooth-camerafunctie is ingeschakeld, kan het horloge de camera-applicatie van de mobiele telefoon bedienen om foto\'s te maken</string>
+    <string name="user_camera_permission_tip">Tijdens gebruik vereist deze app toegang tot de camera en lees- en schrijfrechten voor bestanden om op afstand foto\'s te maken en foto\'s op te slaan\n\nAls je niet akkoord gaat met het aanroepen van de bovenstaande rechten, zal de Bluetooth-camera niet normaal worden gebruikt, wat heeft geen invloed op uw gebruik van de basisfuncties van deze app. U kunt uw toestemming op elk moment intrekken door naar "Instellingen" > "Toestemmingsbeheer" te gaan en ervoor te kiezen de bovenstaande toestemmingsoproepen uit te schakelen</string>
     <string name="user_camera_permission_error">De toestemming is niet doorgegeven, de opening mislukt</string>
 
     <string name="user_deleteTip">Of u nu de annulering van uw account wilt bevestigen, het account wordt binnen drie dagen na bevestiging succesvol geannuleerd en de accountgegevens worden volledig verwijderd na de succesvolle annulering, onherstelbaar! Ga voorzichtig te werk。</string>

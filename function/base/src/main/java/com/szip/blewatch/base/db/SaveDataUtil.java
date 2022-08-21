@@ -3,6 +3,7 @@ package com.szip.blewatch.base.db;
 import android.content.Context;
 import android.content.Intent;
 
+import com.google.gson.Gson;
 import com.raizlabs.android.dbflow.config.FlowManager;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 import com.raizlabs.android.dbflow.structure.database.DatabaseWrapper;
@@ -10,7 +11,11 @@ import com.raizlabs.android.dbflow.structure.database.transaction.ProcessModelTr
 import com.raizlabs.android.dbflow.structure.database.transaction.Transaction;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.HealthyConst;
+import com.szip.blewatch.base.Model.DownloadDataBean;
 import com.szip.blewatch.base.Util.LogUtil;
+import com.szip.blewatch.base.Util.MathUtil;
+import com.szip.blewatch.base.Util.http.HttpClientUtils;
+import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.db.dbModel.AnimalHeatData;
 import com.szip.blewatch.base.db.dbModel.AnimalHeatData_Table;
 import com.szip.blewatch.base.db.dbModel.BloodOxygenData;
@@ -39,12 +44,26 @@ import com.szip.blewatch.base.db.dbModel.UserModel;
 import com.szip.blewatch.base.db.dbModel.UserModel_Table;
 import com.szip.blewatch.base.db.dbModel.Weather;
 import com.szip.blewatch.base.db.dbModel.Weather_Table;
+import com.zhy.http.okhttp.BaseApi;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.builder.PostJsonListBuider;
+import com.zhy.http.okhttp.callback.Callback;
+import com.zhy.http.okhttp.callback.GenericsCallback;
+import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+
+import okhttp3.Call;
+import okhttp3.Response;
+
+import static android.content.Context.MODE_PRIVATE;
+import static com.szip.blewatch.base.Util.MathUtil.FILE;
 
 public class SaveDataUtil {
 
@@ -241,6 +260,7 @@ public class SaveDataUtil {
                                     sqlData.steps = stepData.steps;
                                     sqlData.update();
                                 }
+
                             }
                         }).addAll(stepDataList).build())  // add elements (can also handle multiple)
                 .error(new Transaction.Error() {
@@ -252,52 +272,22 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","计步数据保存成功");
+                if (stepDataList.size()==0)
+                    return;
                 context.sendBroadcast(new Intent(BroadcastConst.UPDATE_STEP_VIEW));
+                long start = stepDataList.get(0).getTime();
+                long end = stepDataList.get(stepDataList.size()-1).getTime();
+                List<StepData> sqlData = SQLite.select()
+                        .from(StepData.class)
+                        .where(StepData_Table.time.greaterThanOrEq(start),
+                                StepData_Table.time.lessThanOrEq(end))
+                        .queryList();
+                uploadData(sqlData,"stepDataList");
+
             }
         }).build().execute();
     }
 
-
-    /**
-     * 批量保存计步数据（线上数据）
-     * */
-    public void saveStepDataListDataFromWeb(final List<StepData> stepDataList){
-        FlowManager.getDatabase(AppDatabase.class)
-                .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
-                        new ProcessModelTransaction.ProcessModel<StepData>() {
-                            @Override
-                            public void processModel(StepData stepData, DatabaseWrapper wrapper) {
-                                StepData sqlData = SQLite.select()
-                                        .from(StepData.class)
-                                        .where(StepData_Table.time.is(stepData.time))
-                                        .querySingle();
-                                if (sqlData == null){//为null则代表数据库没有保存
-                                    stepData.save();
-                                }
-                                else {//不为null则代表数据库存在，进行更新
-                                    sqlData.calorie = stepData.calorie;
-                                    sqlData.distance = stepData.distance;
-                                    sqlData.steps = stepData.steps;
-                                    if (sqlData.dataForHour == null)
-                                        sqlData.dataForHour = stepData.dataForHour;
-                                    sqlData.update();
-                                }
-                            }
-                        }).addAll(stepDataList).build())  // add elements (can also handle multiple)
-                .error(new Transaction.Error() {
-                    @Override
-                    public void onError(Transaction transaction, Throwable error) {
-
-                    }
-                }).success(new Transaction.Success() {
-            @Override
-            public void onSuccess(Transaction transaction) {
-                LogUtil.getInstance().logd("DATA******","计步数据保存成功");
-                if (stepDataList.size()==1)
-                    context.sendBroadcast(new Intent(BroadcastConst.UPDATE_STEP_VIEW));
-            }
-        }).build().execute();
-    }
 
     /**
      * 批量保存详情计步
@@ -416,7 +406,7 @@ public class SaveDataUtil {
     /**
      * 批量保存睡眠
      * */
-    public void saveSleepDataListData(List<SleepData> sleepDataList){
+    public void saveSleepDataListData(final List<SleepData> sleepDataList){
         FlowManager.getDatabase(AppDatabase.class)
                 .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
                         new ProcessModelTransaction.ProcessModel<SleepData>() {
@@ -447,6 +437,7 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","睡眠数据保存成功");
+                uploadData(sleepDataList,"sleepDataList");
             }
         }).build().execute();
     }
@@ -513,6 +504,7 @@ public class SaveDataUtil {
                 }).success(new Transaction.Success() {
             @Override
             public void onSuccess(Transaction transaction) {
+                uploadData(heartDataList,"heartDataList");
                 LogUtil.getInstance().logd("DATA******","心率数据保存成功");
                     context.sendBroadcast(new Intent(BroadcastConst.UPDATE_HEALTHY_VIEW));
             }
@@ -547,7 +539,8 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","血压数据保存成功");
-                    context.sendBroadcast(new Intent(BroadcastConst.UPDATE_HEALTHY_VIEW));
+                uploadData(bloodPressureDataList,"bloodPressureDataList");
+                context.sendBroadcast(new Intent(BroadcastConst.UPDATE_HEALTHY_VIEW));
             }
         }).build().execute();
     }
@@ -579,6 +572,7 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","血氧数据保存成功");
+                uploadData(bloodOxygenDataList,"bloodOxygenDataList");
                     context.sendBroadcast(new Intent(BroadcastConst.UPDATE_HEALTHY_VIEW));
             }
         }).build().execute();
@@ -611,6 +605,7 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","体温数据保存成功");
+                uploadData(animalHeatDataList,"tempDataList");
                     context.sendBroadcast(new Intent(BroadcastConst.UPDATE_HEALTHY_VIEW));
             }
         }).build().execute();
@@ -643,6 +638,7 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","ECG数据保存成功");
+                uploadData(ecgDataList,"ecgDataList");
                 if (ecgDataList.size()==1)
                     context.sendBroadcast(new Intent(BroadcastConst.UPDATE_UI_VIEW));
             }
@@ -676,6 +672,7 @@ public class SaveDataUtil {
             @Override
             public void onSuccess(Transaction transaction) {
                 LogUtil.getInstance().logd("DATA******","多运动数据保存成功");
+                uploadData(sportDataList,"sportDataList");
                 if (sportDataList.size()==1)
                     context.sendBroadcast(new Intent(BroadcastConst.UPDATE_SPORT_VIEW));
             }
@@ -759,6 +756,275 @@ public class SaveDataUtil {
                 context.sendBroadcast(new Intent(BroadcastConst.UPDATE_UI_VIEW));
             }
         }).build().execute();
+    }
+
+
+    private void uploadData(Object datas,String type){
+        Map<String,Object> json = new HashMap<>();
+        json.put(type,datas);
+        Gson gson = new Gson();
+        PostJsonListBuider jsonBuilder =   OkHttpUtils
+                .listpost()
+                .addInterceptor(new TokenInterceptor())
+                .addParams("data",gson.toJson(json));
+        HttpClientUtils.newInstance().buildRequest(jsonBuilder, "data/upload", new Callback() {
+            @Override
+            public Object parseNetworkResponse(Response response, int id) throws Exception {
+                return null;
+            }
+
+            @Override
+            public void onError(Call call, Exception e, int id) {
+
+            }
+
+            @Override
+            public void onResponse(Object response, int id) {
+
+            }
+        });
+    }
+
+    //保存云端下载的数据
+    public void saveWebData(DownloadDataBean response){
+        if (response.getData().getBloodOxygenData().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<BloodOxygenData>() {
+                                @Override
+                                public void processModel(BloodOxygenData bloodOxygenData, DatabaseWrapper wrapper) {
+                                    BloodOxygenData sqlData = SQLite.select()
+                                            .from(BloodOxygenData.class)
+                                            .where(BloodOxygenData_Table.time.is(bloodOxygenData.time))
+                                            .querySingle();
+                                    if (sqlData == null&&bloodOxygenData.bloodOxygenData!=0){//为null则代表数据库没有保存
+                                        bloodOxygenData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getBloodOxygenData()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
+
+        if (response.getData().getBloodPressureDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<BloodPressureData>() {
+                                @Override
+                                public void processModel(BloodPressureData bloodPressureData, DatabaseWrapper wrapper) {
+                                    BloodPressureData sqlData = SQLite.select()
+                                            .from(BloodPressureData.class)
+                                            .where(BloodPressureData_Table.time.is(bloodPressureData.time))
+                                            .querySingle();
+                                    if (sqlData == null&&bloodPressureData.dbpDate!=0){//为null则代表数据库没有保存
+                                        bloodPressureData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getBloodPressureDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
+
+        if (response.getData().getHeartDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<HeartData>() {
+                                @Override
+                                public void processModel(HeartData heartData, DatabaseWrapper wrapper) {
+                                    HeartData sqlData = SQLite.select()
+                                            .from(HeartData.class)
+                                            .where(HeartData_Table.time.is(heartData.time))
+                                            .querySingle();
+                                    if (sqlData == null&&heartData.averageHeart!=0){//为null则代表数据库没有保存
+                                        heartData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getHeartDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
+
+        if (response.getData().getSleepDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<SleepData>() {
+                                @Override
+                                public void processModel(SleepData sleepData, DatabaseWrapper wrapper) {
+                                    if (sleepData.lightTime+sleepData.deepTime==0)
+                                        return;
+                                    SleepData sqlData = SQLite.select()
+                                            .from(SleepData.class)
+                                            .where(SleepData_Table.time.is(sleepData.time))
+                                            .querySingle();
+                                    if (sqlData == null){//为null则代表数据库没有保存
+                                        sleepData.save();
+                                    } else {//不为null则代表数据库存在，进行更新
+                                        sqlData.deepTime = sleepData.deepTime;
+                                        sqlData.lightTime = sleepData.lightTime;
+                                        sqlData.dataForHour = sleepData.dataForHour;
+                                        sqlData.update();
+                                    }
+                                }
+                            }).addAll(response.getData().getSleepDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+                }
+            }).build().execute();
+        }
+
+        if (response.getData().getStepDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<StepData>() {
+                                @Override
+                                public void processModel(StepData stepData, DatabaseWrapper wrapper) {
+                                    StepData sqlData = SQLite.select()
+                                            .from(StepData.class)
+                                            .where(StepData_Table.time.is(stepData.time))
+                                            .querySingle();
+                                    if (sqlData == null){//为null则代表数据库没有保存
+                                        stepData.save();
+                                    }
+                                    else {//不为null则代表数据库存在，进行更新
+                                        sqlData.calorie = stepData.calorie;
+                                        sqlData.distance = stepData.distance;
+                                        sqlData.steps = stepData.steps;
+                                        if (sqlData.dataForHour == null)
+                                            sqlData.dataForHour = stepData.dataForHour;
+                                        sqlData.update();
+                                    }
+                                }
+                            }).addAll(response.getData().getStepDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+                }
+            }).build().execute();
+        }
+
+
+        if (response.getData().getEcgDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<EcgData>() {
+                                @Override
+                                public void processModel(EcgData ecgData, DatabaseWrapper wrapper) {
+                                    EcgData sqlData = SQLite.select()
+                                            .from(EcgData.class)
+                                            .where(EcgData_Table.time.is(ecgData.time))
+                                            .querySingle();
+                                    if (sqlData == null){//为null则代表数据库没有保存
+                                        ecgData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getEcgDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
+
+
+        if (response.getData().getAnimalHeatDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<AnimalHeatData>() {
+                                @Override
+                                public void processModel(AnimalHeatData animalHeatData, DatabaseWrapper wrapper) {
+                                    AnimalHeatData sqlData = SQLite.select()
+                                            .from(AnimalHeatData.class)
+                                            .where(AnimalHeatData_Table.time.is(animalHeatData.time))
+                                            .querySingle();
+                                    if (sqlData == null&&animalHeatData.tempData!=0){//为null则代表数据库没有保存
+                                        animalHeatData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getAnimalHeatDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
+
+        if (response.getData().getSportDataList().size()!=0){
+            FlowManager.getDatabase(AppDatabase.class)
+                    .beginTransactionAsync(new ProcessModelTransaction.Builder<>(
+                            new ProcessModelTransaction.ProcessModel<SportData>() {
+                                @Override
+                                public void processModel(SportData sportData, DatabaseWrapper wrapper) {
+                                    SportData sqlData = SQLite.select()
+                                            .from(SportData.class)
+                                            .where(SportData_Table.time.is(sportData.time))
+                                            .querySingle();
+                                    if (sqlData == null){//为null则代表数据库没有保存
+                                        sportData.save();
+                                    }
+                                }
+                            }).addAll(response.getData().getSportDataList()).build())  // add elements (can also handle multiple)
+                    .error(new Transaction.Error() {
+                        @Override
+                        public void onError(Transaction transaction, Throwable error) {
+
+                        }
+                    }).success(new Transaction.Success() {
+                @Override
+                public void onSuccess(Transaction transaction) {
+
+                }
+            }).build().execute();
+        }
     }
 
     /**

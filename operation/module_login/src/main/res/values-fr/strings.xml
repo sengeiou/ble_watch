@@ -12,13 +12,13 @@
     <string name="login_input_psw">tapez votre mot de passe</string>
     <string name="login_forget_psw">mot de passe oublié?</string>
     <string name="login_register">Pas de compte? enregistrer</string>
-    <string name="login_privacy">Je suis d'accord《<u>Contrat d'utilisation et politique de confidentialité</u>》</string>
-    <string name="login_checkPrivacy">être en désaccord《Contrat d'utilisation et politique de confidentialité》</string>
+    <string name="login_privacy">Je suis d\'accord《<u>Contrat d\'utilisation et politique de confidentialité</u>》</string>
+    <string name="login_checkPrivacy">être en désaccord《Contrat d\'utilisation et politique de confidentialité》</string>
 
 
     <string name="login_register_account">Créer un compte</string>
-    <string name="login_register_account_tip">Avec un compte personnel, vos données de fitness, les préférences de l'appareil peuvent être stockées en toute sécurité en permanence</string>
-    <string name="login_next">L'étape suivante</string>
+    <string name="login_register_account_tip">Avec un compte personnel, vos données de fitness, les préférences de l\'appareil peuvent être stockées en toute sécurité en permanence</string>
+    <string name="login_next">L\'étape suivante</string>
     <string name="login_verification">le code de vérification</string>
     <string name="login_input_verification">Entrez votre code de vérification</string>
     <string name="login_send">envoyer</string>

@@ -12,8 +12,8 @@
     <string name="login_input_psw">သင်၏စကားဝှက်ကိုထည့်ပါ။</string>
     <string name="login_forget_psw">စကားဝှက်ကိုမေ့နေပါသလား?</string>
     <string name="login_register">အကောင့်မရှိပါ။？မှတ်ပုံတင်ရန်</string>
-    <string name="login_privacy">သဘောတူသည်။<<u>အသုံးပြုသူသဘောတူညီချက်နှင့် ကိုယ်ရေးကိုယ်တာမူဝါဒ</u>></string>
-    <string name="login_checkPrivacy">သဘောမတူဘူး။,<အသုံးပြုသူသဘောတူညီချက်နှင့် ကိုယ်ရေးကိုယ်တာမူဝါဒ></string>
+    <string name="login_privacy">သဘောတူသည်။<u>အသုံးပြုသူသဘောတူညီချက်နှင့် ကိုယ်ရေးကိုယ်တာမူဝါဒ</u>></string>
+    <string name="login_checkPrivacy">သဘောမတူဘူး။,ုံးပြုသူသဘောတူညီချက်နှင့် ကိုယ်ရေးကိုယ်တာမူဝါဒ></string>
 
 
     <string name="login_register_account">အကောင့်မှတ်ပုံတင်ပါ။</string>

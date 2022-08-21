@@ -7,32 +7,32 @@
     <string name="login_login">Kirish</string>
     <string name="login_account">hisob</string>
     <string name="login_input_account">Hisobingizni kiriting</string>
-    <string name="login_right_email">Iltimos, to'g'ri elektron pochta manzilini kiriting</string>
+    <string name="login_right_email">Iltimos, to\'g\'ri elektron pochta manzilini kiriting</string>
     <string name="login_psw">parol</string>
     <string name="login_input_psw">parolingizni kiriting</string>
     <string name="login_forget_psw">Parolni unutdingizmi?</string>
-    <string name="login_register">Hisob yo'qmi? ro'yxatdan o'tish</string>
+    <string name="login_register">Hisob yo\'qmi? ro\'yxatdan o\'tish</string>
     <string name="login_privacy"><u>Foydalanuvchi shartnomasi va Maxfiylik siyosatiga rozilik bildiring</u>》</string>
     <string name="login_checkPrivacy">Foydalanuvchi shartnomasi va Maxfiylik siyosatiga rozilik bermadim</string>
 
 
-    <string name="login_register_account">hisob qaydnomasini ro'yxatdan o'tkazish</string>
+    <string name="login_register_account">hisob qaydnomasini ro\'yxatdan o\'tkazish</string>
     <string name="login_register_account_tip">Shaxsiy hisob qaydnomangiz bilan fitnes maʼlumotlaringiz, qurilma afzalliklaringiz doimiy ravishda xavfsiz saqlanishi mumkin</string>
     <string name="login_next">下一步</string>
     <string name="login_verification">tasdiq kodi</string>
     <string name="login_input_verification">Tasdiqlash kodingizni kiriting</string>
     <string name="login_send">yuborish</string>
 
-    <string name="login_set_password">parol o'rnating</string>
+    <string name="login_set_password">parol o\'rnating</string>
     <string name="login_inconsistent">Mos kelmaydigan parol ikki marta kiritildi</string>
     <string name="login_confirm_password">Parolni tasdiqlang</string>
     <string name="login_finish">Tugatish</string>
     <string name="login_find_password">parolni olish</string>
     <string name="login_reset_Success">Parolni tiklash muvaffaqiyatli</string>
 
-    <string name="login_change_password">Parolni o'zgartirish</string>
+    <string name="login_change_password">Parolni o\'zgartirish</string>
     <string name="login_old_password">Eski parol</string>
     <string name="login_new_password">Yangi Parol</string>
     <string name="login_confirm_new_password">Yangi parolni tasdiqlang</string>
-    <string name="login_change_success">Muvaffaqiyatli o'zgartirildi</string>
+    <string name="login_change_success">Muvaffaqiyatli o\'zgartirildi</string>
 </resources>

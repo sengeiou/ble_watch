@@ -41,12 +41,4 @@ public class HttpMessageUtil {
         HttpClientUtils.newInstance().buildRequest(getBuilder,"v2/user/getUserInfo",callback);
     }
 
-    public void postForUploadReportData(String data,GenericsCallback<BaseApi> callback){
-        PostJsonListBuider jsonBuilder =   OkHttpUtils
-                .listpost()
-                .addInterceptor(new TokenInterceptor())
-                .addParams("data",data);
-        HttpClientUtils.newInstance().buildRequest(jsonBuilder,"data/upload",callback);
-    }
-
 }

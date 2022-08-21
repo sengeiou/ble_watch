@@ -215,7 +215,7 @@ public class AutoMeasureActivity extends BaseActivity {
             String str = heartFrequencyTv.getText().toString();
             str = str.substring(0,str.length()-3);
             int current = Integer.valueOf(str)/30-1;
-            initWindow(R.string.user_start_time,frequencyList,null,null,current,0,0,heartFrequency);
+            initWindow(R.string.user_measure_frequency,frequencyList,null,null,current,0,0,heartFrequency);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.heartStartLl){
             final List<String> hourList = MathUtil.newInstance().getNumberList(24);
@@ -231,14 +231,14 @@ public class AutoMeasureActivity extends BaseActivity {
             String str[] = heartEndTv.getText().toString().split(":");
             int hour = Integer.valueOf(str[0]);
             int min = Integer.valueOf(str[1]);
-            initWindow(R.string.user_start_time,hourList,minList,null,hour,min,0,heartEnd);
+            initWindow(R.string.user_end_time,hourList,minList,null,hour,min,0,heartEnd);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.bpFrequencyLl){
             final List<String> frequencyList = MathUtil.newInstance().getFrequencyList(6);
             String str = bpFrequencyTv.getText().toString();
             str = str.substring(0,str.length()-3);
             int current = Integer.valueOf(str)/30-1;
-            initWindow(R.string.user_start_time,frequencyList,null,null,current,0,0,bpFrequency);
+            initWindow(R.string.user_measure_frequency,frequencyList,null,null,current,0,0,bpFrequency);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.bpStartLl){
             final List<String> hourList = MathUtil.newInstance().getNumberList(24);
@@ -254,14 +254,14 @@ public class AutoMeasureActivity extends BaseActivity {
             String str[] = bpEndTv.getText().toString().split(":");
             int hour = Integer.valueOf(str[0]);
             int min = Integer.valueOf(str[1]);
-            initWindow(R.string.user_start_time,hourList,minList,null,hour,min,0,bpEnd);
+            initWindow(R.string.user_end_time,hourList,minList,null,hour,min,0,bpEnd);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.spoFrequencyLl){
             final List<String> frequencyList = MathUtil.newInstance().getFrequencyList(6);
             String str = spoFrequencyTv.getText().toString();
             str = str.substring(0,str.length()-3);
             int current = Integer.valueOf(str)/30-1;
-            initWindow(R.string.user_start_time,frequencyList,null,null,current,0,0,spoFrequency);
+            initWindow(R.string.user_measure_frequency,frequencyList,null,null,current,0,0,spoFrequency);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.spoStartLl){
             final List<String> hourList = MathUtil.newInstance().getNumberList(24);
@@ -277,14 +277,14 @@ public class AutoMeasureActivity extends BaseActivity {
             String str[] = spoEndTv.getText().toString().split(":");
             int hour = Integer.valueOf(str[0]);
             int min = Integer.valueOf(str[1]);
-            initWindow(R.string.user_start_time,hourList,minList,null,hour,min,0,spoEnd);
+            initWindow(R.string.user_end_time,hourList,minList,null,hour,min,0,spoEnd);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.tempFrequencyLl){
             final List<String> frequencyList = MathUtil.newInstance().getFrequencyList(6);
             String str = tempFrequencyTv.getText().toString();
             str = str.substring(0,str.length()-3);
             int current = Integer.valueOf(str)/30-1;
-            initWindow(R.string.user_start_time,frequencyList,null,null,current,0,0,tempFrequency);
+            initWindow(R.string.user_measure_frequency,frequencyList,null,null,current,0,0,tempFrequency);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.tempStartLl){
             final List<String> hourList = MathUtil.newInstance().getNumberList(24);
@@ -300,7 +300,7 @@ public class AutoMeasureActivity extends BaseActivity {
             String str[] = tempEndTv.getText().toString().split(":");
             int hour = Integer.valueOf(str[0]);
             int min = Integer.valueOf(str[1]);
-            initWindow(R.string.user_start_time,hourList,minList,null,hour,min,0,tempEnd);
+            initWindow(R.string.user_end_time,hourList,minList,null,hour,min,0,tempEnd);
             window.showAtLocation(v, Gravity.BOTTOM, 0, 0);
         }else if (id == R.id.heartSw){
             autoMeasureData.heartState=heartSw.isChecked()?1:0;

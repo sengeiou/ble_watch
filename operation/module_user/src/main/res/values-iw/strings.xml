@@ -15,8 +15,8 @@
     <string name="user_dial_tip">עוד חוגות, שנה כרצונך></string>
     <string name="user_device_config">ניהול מכשירים</string>
     <string name="user_find_watch">מצא שעון</string>
-    <string name="user_ble_call">שיחות בלוטות'</string>
-    <string name="user_ble_camera">מצלמת בלוטות'</string>
+    <string name="user_ble_call">שיחות בלוטות\'</string>
+    <string name="user_ble_camera">מצלמת בלוטות\'</string>
     <string name="user_unit">מערכת יחידה</string>
     <string name="user_notification">הוֹדָעָה</string>
     <string name="user_about">לגבי המכשיר</string>

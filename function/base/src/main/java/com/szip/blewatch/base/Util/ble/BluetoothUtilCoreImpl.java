@@ -110,6 +110,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
     private Handler mAnalysisHandler;
     private static final int ANALYSIS_HANDLER_FLAG = 0x100;
     private static final int ANALYSIS_HANDLER_SEND_DATA = 0x101;
+    private static final int ANALYSIS_HANDLER_READ_DATA = 0x102;
     private boolean isSendData;//数据队列正在发送中
     private MediaPlayer mediaPlayer;
     private int volume = 0;
@@ -118,6 +119,8 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
     TelephonyManager tm;
     MyPhoneCallListener myPhoneCallListener;
+
+    private boolean isRead = false;//正在读数据
 
     private Queue<byte[]> sendDataQueue = new LinkedBlockingQueue<>();
 
@@ -157,25 +160,30 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                             return;
                         }
 
-                        ble.writeByUuid(bleDevice, datas, serviceUUID,UUID.fromString(Config.char1), new BleWriteCallback<BleDevice>() {
+                        boolean sendSuccess = ble.writeByUuid(bleDevice, datas, serviceUUID,UUID.fromString(Config.char1),
+                                new BleWriteCallback<BleDevice>() {
                             @Override
                             public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
-                                Log.d("data******","蓝牙发送成功");
-                                //数据发送成功，把队列顶部的数据弹出
-                                sendDataQueue.poll();
-                                //处理队列中新的数据
-                                mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
-                            }
 
-                            @Override
-                            public void onWriteFailed(BleDevice device, int failedCode) {
-                                super.onWriteFailed(device, failedCode);
-                                Log.d("data******","蓝牙发送失败");
-                                //数据发送失败，重新发送队列顶部的数据
-                                mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
                             }
                         });
+                        if (sendSuccess){
+                            Log.d("data******","蓝牙发送成功");
+                            //数据发送成功，把队列顶部的数据弹出,处理新的数据，如果发送没成功，则重新发送该队列
+                            sendDataQueue.poll();
+                        }
+                        mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
                     }
+                }else if (msg.what==ANALYSIS_HANDLER_READ_DATA){
+                    BleDevice bleDevice = (BleDevice) msg.obj;
+                    boolean readSuccess = ble.readByUuid(bleDevice,serviceUUID,UUID.fromString(Config.char3),bleReadResponse);
+                    if (!readSuccess){//读取失败重新读，读到成功为止
+                        Message message = new Message();
+                        message.what = ANALYSIS_HANDLER_READ_DATA;
+                        message.obj = bleDevice;
+                        mAnalysisHandler.sendMessage(message);
+                    }
+
                 }
             }
         };
@@ -304,12 +312,10 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
             LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
             if (value.length == 8) {
                 if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
-                    mAnalysisHandler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            ble.readByUuid(device,serviceUUID,UUID.fromString(Config.char3),bleReadResponse);
-                        }
-                    },100);
+                    Message message = new Message();
+                    message.what = ANALYSIS_HANDLER_READ_DATA;
+                    message.obj = device;
+                    mAnalysisHandler.sendMessage(message);
                 }
             }else {
                 DataParser.newInstance().parseNotifyData(value);

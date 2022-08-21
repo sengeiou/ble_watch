@@ -123,21 +123,21 @@ public class MyApplication extends BaseApplication {
         });
     }
 
-    private void initAlarm() {
-        Intent intent = new Intent(this,AlarmService.class);
-        PendingIntent pendingIntent = PendingIntent.getService(this,0,intent,0);
-        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        alarmManager.cancel(pendingIntent);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT){
-            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    SystemClock.elapsedRealtime()+60*1000, 60*1000, pendingIntent);
-        }else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
-            alarmManager.setExact(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() +60*1000,pendingIntent);
-        }else {
-            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis()+60*1000,pendingIntent);
-        }
-
-    }
+//    private void initAlarm() {
+//        Intent intent = new Intent(this,AlarmService.class);
+//        PendingIntent pendingIntent = PendingIntent.getService(this,0,intent,0);
+//        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+//        alarmManager.cancel(pendingIntent);
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT){
+//            alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+//                    SystemClock.elapsedRealtime()+60*1000, 60*1000, pendingIntent);
+//        }else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
+//            alarmManager.setExact(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() +60*1000,pendingIntent);
+//        }else {
+//            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis()+60*1000,pendingIntent);
+//        }
+//
+//    }
 
     private void initNotifyList() {
         List<NotificationData> list = new ArrayList<>();

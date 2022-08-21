@@ -24,30 +24,7 @@ public class DownloadDataUtil extends GenericsCallback<DownloadDataBean> {
     @Override
     public void onResponse(DownloadDataBean response, int id) {
         if (response.getCode() == 200){
-            SaveDataUtil saveDataUtil = SaveDataUtil.newInstance();
-            if (response.getData().getBloodOxygenData().size()!=0)
-                saveDataUtil.saveBloodOxygenDataListData(response.getData().getBloodOxygenData());
-
-            if (response.getData().getBloodPressureDataList().size()!=0)
-                saveDataUtil.saveBloodPressureDataListData(response.getData().getBloodPressureDataList());
-
-            if (response.getData().getHeartDataList().size()!=0)
-                saveDataUtil.saveHeartDataListData(response.getData().getHeartDataList());
-
-            if (response.getData().getSleepDataList().size()!=0)
-                saveDataUtil.saveSleepDataListData(response.getData().getSleepDataList());
-
-            if (response.getData().getStepDataList().size()!=0)
-                saveDataUtil.saveStepDataListDataFromWeb(response.getData().getStepDataList());
-
-            if (response.getData().getEcgDataList().size()!=0)
-                saveDataUtil.saveEcgDataListData(response.getData().getEcgDataList());
-
-            if (response.getData().getAnimalHeatDataList().size()!=0)
-                saveDataUtil.saveAnimalHeatDataListData(response.getData().getAnimalHeatDataList());
-
-            if (response.getData().getSportDataList().size()!=0)
-                saveDataUtil.saveSportDataListData(response.getData().getSportDataList());
+            SaveDataUtil.newInstance().saveWebData(response);
         }
     }
 }
