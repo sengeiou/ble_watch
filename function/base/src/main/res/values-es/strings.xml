@@ -1,163 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <string name="name">FitRing</string>
-    <string name="home">状态</string>
-    <string name="sport">运动</string>
-    <string name="consult">咨询</string>
-    <string name="mine">我的</string>
-    <string name="tip">提醒</string>
-    <string name="checkGPS">检测到您手机的位置开关未打开，为确保应用正常运行，请打开位置开关。</string>
-    <string name="confirm">确定</string>
-    <string name="cancel">取消</string>
+    <string name="home">estado</string>
+    <string name="sport">Deportes</string>
+    <string name="consult">consultar</string>
+    <string name="mine">mía</string>
+    <string name="tip">recordar</string>
+    <string name="checkGPS">Se detectó que el interruptor de ubicación de su teléfono no está activado，Para asegurarse de que la aplicación funciona correctamente，Por favor, encienda el interruptor de posición。</string>
+    <string name="confirm">Por supuesto</string>
+    <string name="cancel">Cancelar</string>
 
-    <string name="message">短信</string>
-    <string name="wechat">微信</string>
+    <string name="touchAgain">Pulse de nuevo para salir del programa</string>
+    <string name="privacy1">Acuerdo de usuario y política de privacidad</string>
+    <string name="privacyTip">Gracias por confiar y usarFitRing。
+\n\nHablamos de acuerdo con el "Acuerdo de privacidad del usuario" para ayudarlo a comprender que estamos recopilando、usar、Cómo se almacena su información personal y sus derechos。
+\n\ncuando usasFitRingsolicitud，Recopilaremos la información de su dispositivo, datos personales (avatar, apodo, altura, peso, datos de ejercicio) y otra información. Necesitamos obtener su permiso de cámara y permiso de álbum para cargar el avatar de su aplicación:
+\n\ncuando usasFitRingCuando la aplicación realiza carreras al aire libre, carga, comparte y almacena información deportiva, necesitamos obtener su permiso de ubicación para registrar su pista de carrera.
+\n\nPuede acceder, modificar, eliminar su información personal o gestionar su autorización en las páginas correspondientes.
+\n\nUtilizamos tecnología de seguridad líder en la industria para proteger su información personal.
+\n\nAl hacer clic en "Aceptar", acepta los términos de este acuerdo。</string>
 
-    <string name="touchAgain">再按一次退出程序</string>
-    <string name="privacy1">用户协议与隐私条款</string>
-    <string name="privacyTip">感谢您信任并使用FitRing。
-\n\n我们讲依据《用户隐私协议》来帮助您了解我们在收集、使用、存储您个人信息的情况以及您享有的相关权利。
-\n\n在您使用FitRing应用程序时，我们将收集您的设备信息、个人资料(头像、昵称、身高、体重、运动数据)等信息，我们需要获取您的相机权限、相册权限用于上传您的应用头像:
-\n\n在您使用FitRing应用进行户外跑步、上传、分享并存储运动信息时，我们需要获取您的位置权限等用于记录您的跑步轨迹。
-\n\n您可以在相关页面访问、修改、删除您的个人信息或者管理您的授权。
-\n\n我们会采用行业领先的安全技术来保护您的个人信息。
-\n\n当您点击"确定"即表示你已经同意该协议的条款。</string>
+    <string name="healthy_my_state">Mi estado</string>
+    <string name="healthy_sport">Deportes</string>
+    <string name="healthy_all_sport">Más récords deportivos</string>
+    <string name="healthy_step">Conteo de pasos</string>
+    <string name="healthy_sleep">dormir</string>
+    <string name="healthy_heart">ritmo cardiaco</string>
+    <string name="healthy_blood_pressure">presión arterial</string>
+    <string name="healthy_blood_oxygen">oxigeno en la sangre</string>
+    <string name="healthy_temp">temperatura corporal</string>
+    <string name="healthy_edit_card">editar tarjeta</string>
+    <string name="healthy_last_sport">ejercicio reciente</string>
+    <string name="healthy_sport_list">lista de deportes</string>
+    <string name="healthy_sport_last">Se acabó~</string>
+    <string name="healthy_no_sport">Aún no hay registro de ejercicio, comience a hacer ejercicio ahora</string>
+    <string name="healthy_card_visiable">Elementos mostrados (presione y mantenga presionado el lado derecho y arrastre hacia arriba y hacia abajo para ajustar el orden)</string>
+    <string name="healthy_card_gone">elemento oculto</string>
+    <string name="healthy_card_need_gone">Arrastra los elementos que no quieras mostrar aquí</string>
+    <string name="healthy_day">día</string>
+    <string name="healthy_week">semana</string>
+    <string name="healthy_month">luna</string>
+    <string name="healthy_sun">Domingo</string>
+    <string name="healthy_sta">sábado</string>
+    <string name="healthy_survey">Resumen de hoy</string>
+    <string name="healthy_week_survey">resumen semanal</string>
+    <string name="healthy_month_survey">resumen mensual</string>
+    <string name="healthy_all_step">pasos totales</string>
+    <string name="healthy_all_calorie">Consumo total</string>
+    <string name="healthy_all_distance">distancia total</string>
+    <string name="healthy_plan">el objetivo de hoy</string>
+    <string name="healthy_day_step">Conteo promedio de pasos diarios</string>
+    <string name="healthy_day_calorie">Consumo medio diario</string>
+    <string name="healthy_day_distance">Distancia media diaria</string>
+    <string name="healthy_radio">tasa de consecución de objetivos</string>
+    <string name="healthy_sleep_info">distribución del sueño</string>
+    <string name="healthy_sleep_deep">tiempo de sueño profundo</string>
+    <string name="healthy_sleep_light">duración del sueño ligero</string>
+    <string name="healthy_sleep_average_sleep">duración media del sueño</string>
+    <string name="healthy_sleep_average_deep">Duración media del sueño profundo</string>
+    <string name="healthy_sleep_average_light">Duración media del sueño ligero</string>
+    <string name="healthy_sleep_bed">hora de dormirse</string>
+    <string name="healthy_sleep_wake">Hora de despertar</string>
+    <string name="healthy_heart_average">frecuencia cardiaca promedio</string>
+    <string name="healthy_heart_max">frecuencia cardíaca máxima</string>
+    <string name="healthy_heart_min">frecuencia cardíaca mínima</string>
+    <string name="healthy_heart_level">Distribución de la frecuencia cardíaca</string>
+    <string name="healthy_heart1">límite(≥161)</string>
+    <string name="healthy_heart2">anaeróbico(149~160)</string>
+    <string name="healthy_heart3">Aerobio(131~138)</string>
+    <string name="healthy_heart4">la quema de grasa(112~130)</string>
+    <string name="healthy_heart5">calentamiento(90~111)</string>
+    <string name="healthy_heart6">Relax(≤89)</string>
+    <string name="healthy_spo_average">oxígeno en sangre medio</string>
+    <string name="healthy_spo_max">nivel máximo de oxígeno en sangre</string>
+    <string name="healthy_spo_min">nivel mínimo de oxígeno en sangre</string>
+    <string name="healthy_spo_measure_list">Registro de medición</string>
+    <string name="healthy_spo_measure_info">Detalles del registro de medición</string>
+    <string name="healthy_spo_abnormal">Ocurrencia de hipoxia</string>
+    <string name="healthy_temp_abnormal">Ocurre fiebre</string>
+    <string name="healthy_temp_average">temperatura corporal promedio</string>
+    <string name="healthy_temp_max">temperatura corporal máxima</string>
+    <string name="healthy_temp_min">temperatura corporal mínima</string>
+    <string name="healthy_sbp_average">presión arterial sistólica media</string>
+    <string name="healthy_dbp_average">presión arterial diastólica media</string>
+    <string name="healthy_bp_abnormal">presión arterial anormal</string>
+    <string name="healthy_unit">%dde segunda categoría</string>
 
-    <string name="healthy_my_state">我的状态</string>
-    <string name="healthy_sport">运动</string>
-    <string name="healthy_all_sport">更多运动记录</string>
-    <string name="healthy_step">计步</string>
-    <string name="healthy_sleep">睡眠</string>
-    <string name="healthy_heart">心率</string>
-    <string name="healthy_blood_pressure">血压</string>
-    <string name="healthy_blood_oxygen">血氧</string>
-    <string name="healthy_temp">体温</string>
-    <string name="healthy_edit_card">编辑卡片</string>
-    <string name="healthy_last_sport">最近运动</string>
-    <string name="healthy_sport_list">运动列表</string>
-    <string name="healthy_sport_last">已经到底啦~</string>
-    <string name="healthy_no_sport">还没有运动记录，快开始运动吧</string>
-    <string name="healthy_card_visiable">显示的项目(按住右侧上下拖动，可调节顺序)</string>
-    <string name="healthy_card_gone">隐藏的项目</string>
-    <string name="healthy_card_need_gone">将不需要显示的项目拖到这里来</string>
-    <string name="healthy_day">日</string>
-    <string name="healthy_week">周</string>
-    <string name="healthy_month">月</string>
-    <string name="healthy_sun">周日</string>
-    <string name="healthy_sta">周六</string>
-    <string name="healthy_survey">今日概况</string>
-    <string name="healthy_week_survey">每周概况</string>
-    <string name="healthy_month_survey">每月概况</string>
-    <string name="healthy_all_step">总计步</string>
-    <string name="healthy_all_calorie">总消耗</string>
-    <string name="healthy_all_distance">总距离</string>
-    <string name="healthy_plan">今日目标</string>
-    <string name="healthy_day_step">日均计步</string>
-    <string name="healthy_day_calorie">日均消耗</string>
-    <string name="healthy_day_distance">日均距离</string>
-    <string name="healthy_radio">目标达成率</string>
-    <string name="healthy_sleep_info">睡眠分布</string>
-    <string name="healthy_sleep_deep">深睡时长</string>
-    <string name="healthy_sleep_light">浅睡时长</string>
-    <string name="healthy_sleep_average_sleep">平均睡眠时长</string>
-    <string name="healthy_sleep_average_deep">平均深睡时长</string>
-    <string name="healthy_sleep_average_light">平均浅睡时长</string>
-    <string name="healthy_sleep_bed">入睡时间</string>
-    <string name="healthy_sleep_wake">起床时间</string>
-    <string name="healthy_heart_average">平均心率</string>
-    <string name="healthy_heart_max">最高心率</string>
-    <string name="healthy_heart_min">最低心率</string>
-    <string name="healthy_heart_level">心率分布</string>
-    <string name="healthy_heart1">极限(≥161)</string>
-    <string name="healthy_heart2">无氧(149~160)</string>
-    <string name="healthy_heart3">有氧(131~138)</string>
-    <string name="healthy_heart4">燃脂(112~130)</string>
-    <string name="healthy_heart5">热身(90~111)</string>
-    <string name="healthy_heart6">放松(≤89)</string>
-    <string name="healthy_spo_average">平均血氧值</string>
-    <string name="healthy_spo_max">最高血氧值</string>
-    <string name="healthy_spo_min">最低血氧值</string>
-    <string name="healthy_spo_measure_list">测量记录</string>
-    <string name="healthy_spo_measure_info">测量记录详情</string>
-    <string name="healthy_spo_abnormal">出现缺氧次数</string>
-    <string name="healthy_temp_abnormal">出现发热次数</string>
-    <string name="healthy_temp_average">平均体温</string>
-    <string name="healthy_temp_max">最高体温</string>
-    <string name="healthy_temp_min">最低体温</string>
-    <string name="healthy_sbp_average">平均收缩压</string>
-    <string name="healthy_dbp_average">平均舒张压</string>
-    <string name="healthy_bp_abnormal">血压异常次数</string>
-    <string name="healthy_unit">%d次</string>
-
-    <string name="healthy_tomorrow">不能选择未来的日期</string>
-    <string name="healthy_not_data">选择的日期没有数据</string>
-
+    <string name="healthy_tomorrow">No se puede seleccionar una fecha futura</string>
+    <string name="healthy_not_data">La fecha seleccionada no tiene datos</string>
 
     <string name="login_name">login module</string>
-    <string name="login_location">地区</string>
-    <string name="login_chose_location">请选择地区</string>
-    <string name="login_login_account">登录账户</string>
-    <string name="login_login">登录</string>
-    <string name="login_account">账户</string>
-    <string name="login_input_account">输入您的账户</string>
-    <string name="login_right_email">请输入正确的邮箱地址</string>
-    <string name="login_psw">密码</string>
-    <string name="login_input_psw">输入您的密码</string>
-    <string name="login_forget_psw">忘记密码?</string>
-    <string name="login_register">没有账号？去注册</string>
-    <string name="login_privacy">同意《<u>用户协议与隐私条款</u>》</string>
-    <string name="login_checkPrivacy">未同意《用户协议与隐私条款》</string>
+    <string name="login_location">área</string>
+    <string name="login_chose_location">por favor seleccione la región</string>
+    <string name="login_login_account">cuenta de inicio de sesión</string>
+    <string name="login_login">Iniciar sesión</string>
+    <string name="login_account">cuenta</string>
+    <string name="login_input_account">Ingresa tu cuenta</string>
+    <string name="login_right_email">Por favor ingrese la dirección de correo electrónico correcta</string>
+    <string name="login_psw">clave</string>
+    <string name="login_input_psw">Ingresa tu contraseña</string>
+    <string name="login_forget_psw">¿Se te olvidó tu contraseña?</string>
+    <string name="login_register">¿Sin cuenta? registrarse</string>
+    <string name="login_privacy">Acepto el <u>Acuerdo de usuario y la Política de privacidad</u>》</string>
+    <string name="login_checkPrivacy">No acepté el Acuerdo de usuario y la Política de privacidad</string>
 
 
-    <string name="login_register_account">注册账户</string>
-    <string name="login_register_account_tip">拥有个人账户后，你的运动健康数据、设备的设置偏好可以安全地永久保存</string>
-    <string name="login_next">下一步</string>
-    <string name="login_verification">验证码</string>
-    <string name="login_input_verification">输入您的验证码</string>
-    <string name="login_send">发送</string>
+    <string name="login_register_account">Registrar Cuenta</string>
+    <string name="login_register_account_tip">Con una cuenta personal, sus datos de estado físico, las preferencias del dispositivo se pueden almacenar de forma segura y permanente</string>
+    <string name="login_next">Próximo paso</string>
+    <string name="login_verification">código de verificación</string>
+    <string name="login_input_verification">Ingrese su código de verificación</string>
+    <string name="login_send">enviar</string>
 
-    <string name="login_set_password">设置密码</string>
-    <string name="login_inconsistent">两次密码输入不一致</string>
-    <string name="login_confirm_password">确认密码</string>
-    <string name="login_finish">完成</string>
-    <string name="login_find_password">找回密码</string>
-    <string name="login_reset_Success">密码重置成功</string>
+    <string name="login_set_password">configurar la clave</string>
+    <string name="login_inconsistent">Contraseña inconsistente ingresada dos veces</string>
+    <string name="login_confirm_password">Confirmar contraseña</string>
+    <string name="login_finish">Finalizar</string>
+    <string name="login_find_password">Recuperar Contraseña</string>
+    <string name="login_reset_Success">Restablecimiento de contraseña exitoso</string>
 
-    <string name="login_change_password">修改密码</string>
-    <string name="login_old_password">旧密码</string>
-    <string name="login_new_password">新密码</string>
-    <string name="login_confirm_new_password">确认新密码</string>
-    <string name="login_change_success">修改成功</string>
+    <string name="login_change_password">cambiar la contraseña</string>
+    <string name="login_old_password">Contraseña anterior</string>
+    <string name="login_new_password">Nueva contraseña</string>
+    <string name="login_confirm_new_password">Confirmar la nueva contraseña</string>
+    <string name="login_change_success">Modificado con éxito</string>
 
-    <string name="sport_sport_last">最近运动</string>
-    <string name="sport_sport_time">运动时长</string>
-    <string name="sport_sport_calorie">运动消耗</string>
-    <string name="sport_sport_distance">运动距离</string>
-    <string name="sport_steps">步数</string>
-    <string name="sport_speed_hour">平均时速</string>
-    <string name="sport_stride">步频</string>
-    <string name="sport_heart">平均心率</string>
-    <string name="sport_height">爬升高度</string>
-    <string name="sport_sport_info">运动详情</string>
-    <string name="sport_heart_level">心率分布</string>
-    <string name="sport_heart1">极限(≥161)</string>
-    <string name="sport_heart2">无氧(149~160)</string>
-    <string name="sport_heart3">有氧(131~138)</string>
-    <string name="sport_heart4">燃脂(112~130)</string>
-    <string name="sport_heart5">热身(90~111)</string>
-    <string name="sport_speed">配速</string>
-    <string name="sport_running">运动中</string>
-    <string name="sport_run_pause">运动已暂停</string>
-    <string name="sport_gps_low">GPS信号弱，数据准确度低</string>
-    <string name="sport_gps_middle">GPS信号较强，数据准确度较高</string>
-    <string name="sport_gps_high">GPS信号强，数据准确度高</string>
-    <string name="sport_no_sport">还没有运动记录，快开始运动吧</string>
-    <string name="sport_destroy">再次点击退出本次运动</string>
-    <string name="sport_time_short">运动时长跟距离太短，无法生成有效的运动报告</string>
-    <string name="sport_finish_sport">确定要结束运动吗？</string>
-    <string name="sport_start_sport">请先开启运动</string>
+    <string name="sport_sport_last">ejercicio reciente</string>
+    <string name="sport_sport_time">duración del ejercicio</string>
+    <string name="sport_sport_calorie">consumo de ejercicio</string>
+    <string name="sport_sport_distance">Distancia de movimiento</string>
+    <string name="sport_steps">Conteo de pasos</string>
+    <string name="sport_speed_hour">velocidad media</string>
+    <string name="sport_stride">cadencia</string>
+    <string name="sport_heart">frecuencia cardiaca promedio</string>
+    <string name="sport_height">subir altitud</string>
+    <string name="sport_sport_info">Detalles deportivos</string>
+    <string name="sport_heart_level">Distribución de la frecuencia cardíaca</string>
+    <string name="sport_heart1">límite(≥161)</string>
+    <string name="sport_heart2">anaeróbico(149~160)</string>
+    <string name="sport_heart3">Aerobio(131~138)</string>
+    <string name="sport_heart4">la quema de grasa(112~130)</string>
+    <string name="sport_heart5">calentamiento(90~111)</string>
+    <string name="sport_speed">ritmo</string>
+    <string name="sport_running">en movimiento</string>
+    <string name="sport_run_pause">Movimiento en pausa</string>
+    <string name="sport_gps_low">Señal de GPS débil y baja precisión de datos</string>
+    <string name="sport_gps_middle">Fuerte señal de GPS y alta precisión de datos</string>
+    <string name="sport_gps_high">Fuerte señal de GPS y alta precisión de datos</string>
+    <string name="sport_no_sport">Aún no hay registro de ejercicio, comience a hacer ejercicio ahora</string>
+    <string name="sport_destroy">Haga clic de nuevo para salir de esta campaña.</string>
+    <string name="sport_time_short">La duración y la distancia del ejercicio son demasiado cortas para generar un informe de ejercicio válido</string>
+    <string name="sport_finish_sport">¿Estás seguro de que quieres terminar el ejercicio?</string>
+    <string name="sport_start_sport">Por favor, empiece a hacer ejercicio primero.</string>
 
     <string name="user_plan">我的目标</string>
     <string name="user_edit_plan">编辑目标</string>
@@ -167,7 +162,7 @@
 
     <string name="user_connect">已连接</string>
     <string name="user_disconnect">未连接</string>
-    <string name="user_connect_fail">连接失败，正在尝试重连</string>
+    <string name="user_connect_fail">tratando de reconectar</string>
     <string name="user_connecting">正在连接...</string>
 
     <string name="user_dial">我的表盘</string>
@@ -220,7 +215,6 @@
     <string name="user_enter_name">请输入您的昵称</string>
     <string name="user_name_long">昵称不能超过12个字符</string>
     <string name="user_permission_error_camera">权限没通过，无法打开拍照功能</string>
-    <string name="user_permission_error_sms">权限没通过，无法打开短信提醒功能</string>
     <string name="user_crop_pic_failed">截取图像失败，请选择jpg格式图片！</string>
     <string name="user_account">登录账号</string>
     <string name="user_change">修改密码</string>
@@ -357,5 +351,4 @@
     <string name="thus">四</string>
     <string name="fri">五</string>
     <string name="sta">六</string>
-
 </resources>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">tiểu bang</string>
+    <string name="sport">các môn thể thao</string>
+    <string name="consult">tham khảo ý kiến</string>
+    <string name="mine">của tôi</string>
+    <string name="tip">nhắc lại</string>
+    <string name="checkGPS">Phát hiện rằng công tắc vị trí trên điện thoại của bạn chưa được bật, Để đảm bảo ứng dụng hoạt động bình thường, hãy bật nút chuyển vị trí.</string>
+    <string name="confirm">Chắc chắn rồi</string>
+    <string name="cancel">Hủy bỏ</string>
+
+    <string name="touchAgain">Nhấn lại để thoát khỏi chương trình</string>
+    <string name="privacy1">Thỏa thuận người dùng và Chính sách quyền riêng tư</string>
+    <string name="privacyTip">Cảm ơn bạn đã tin tưởng và sử dụng FitRing。
+\n\nChúng tôi sẽ giúp bạn hiểu cách chúng tôi thu thập, sử dụng, lưu trữ thông tin cá nhân và các quyền liên quan của bạn theo "Thỏa thuận quyền riêng tư của người dùng".
+\n\nKhi bạn sử dụng ứng dụng FitRing, chúng tôi sẽ thu thập thông tin thiết bị, dữ liệu cá nhân của bạn (ảnh đại diện, biệt hiệu, chiều cao, cân nặng, dữ liệu tập thể dục) và các thông tin khác, chúng tôi cần xin phép máy ảnh của bạn, quyền album để tải ảnh đại diện ứng dụng của bạn lên:
+\n\nKhi bạn sử dụng ứng dụng FitRing để chạy ngoài trời, tải lên, chia sẻ và lưu trữ thông tin thể thao, chúng tôi cần xin phép vị trí của bạn để ghi lại đường chạy của bạn.
+\n\nBạn có thể truy cập, sửa đổi, xóa thông tin cá nhân của mình hoặc quản lý ủy quyền của mình trên các trang có liên quan
+\n\nChúng tôi sử dụng công nghệ bảo mật hàng đầu trong ngành để bảo vệ thông tin cá nhân của bạn.
+\n\nKhi bạn nhấp vào "OK", bạn đồng ý với các điều khoản của thỏa thuận này.</string>
+
+    <string name="healthy_my_state">Trạng thái của tôi</string>
+    <string name="healthy_sport">các môn thể thao</string>
+    <string name="healthy_all_sport">Các kỷ lục thể thao khác</string>
+    <string name="healthy_step">Số bước</string>
+    <string name="healthy_sleep">ngủ</string>
+    <string name="healthy_heart">nhịp tim</string>
+    <string name="healthy_blood_pressure">huyết áp</string>
+    <string name="healthy_blood_oxygen">oxy trong máu</string>
+    <string name="healthy_temp">thân nhiệt</string>
+    <string name="healthy_edit_card">Chỉnh sửa thẻ</string>
+    <string name="healthy_last_sport">bài tập gần đây</string>
+    <string name="healthy_sport_list">danh sách thể thao</string>
+    <string name="healthy_sport_last">đã hết~</string>
+    <string name="healthy_no_sport">Chưa có hồ sơ tập thể dục nào, hãy bắt đầu tập thể dục ngay bây giờ</string>
+    <string name="healthy_card_visiable">Các mục được hiển thị (nhấn và giữ bên phải và kéo lên xuống để điều chỉnh thứ tự)</string>
+    <string name="healthy_card_gone">vật phẩm ẩn</string>
+    <string name="healthy_card_need_gone">Kéo các mục bạn không muốn hiển thị vào đây</string>
+    <string name="healthy_day">ngày</string>
+    <string name="healthy_week">tuần</string>
+    <string name="healthy_month">mặt trăng</string>
+    <string name="healthy_sun">Chủ nhật</string>
+    <string name="healthy_sta">Thứ bảy</string>
+    <string name="healthy_survey">Tổng quan hôm nay</string>
+    <string name="healthy_week_survey">tổng quan hàng tuần</string>
+    <string name="healthy_month_survey">tổng quan hàng tháng</string>
+    <string name="healthy_all_step">tổng số bước</string>
+    <string name="healthy_all_calorie">tổng mức tiêu thụ</string>
+    <string name="healthy_all_distance">tổng khoảng cách</string>
+    <string name="healthy_plan">mục tiêu hôm nay</string>
+    <string name="healthy_day_step">Số bước trung bình hàng ngày</string>
+    <string name="healthy_day_calorie">Mức tiêu thụ trung bình hàng ngày</string>
+    <string name="healthy_day_distance">Khoảng cách trung bình hàng ngày</string>
+    <string name="healthy_radio">tỷ lệ đạt được mục tiêu</string>
+    <string name="healthy_sleep_info">phân phối giấc ngủ</string>
+    <string name="healthy_sleep_deep">thời gian ngủ sâu</string>
+    <string name="healthy_sleep_light">thời gian ngủ nhẹ</string>
+    <string name="healthy_sleep_average_sleep">thời lượng ngủ trung bình</string>
+    <string name="healthy_sleep_average_deep">Thời gian ngủ sâu trung bình</string>
+    <string name="healthy_sleep_average_light">Thời lượng ngủ nhẹ trung bình</string>
+    <string name="healthy_sleep_bed">thời gian để đi vào giấc ngủ</string>
+    <string name="healthy_sleep_wake">giờ thức dậy</string>
+    <string name="healthy_heart_average">nhịp tim trung bình</string>
+    <string name="healthy_heart_max">nhịp tim tối đa</string>
+    <string name="healthy_heart_min">nhịp tim tối thiểu</string>
+    <string name="healthy_heart_level">Phân phối nhịp tim</string>
+    <string name="healthy_heart1">giới hạn(≥161)</string>
+    <string name="healthy_heart2">Kỵ khí(149~160)</string>
+    <string name="healthy_heart3">Thể dục nhịp điệu(131~138)</string>
+    <string name="healthy_heart4">đốt cháy chất béo(112~130)</string>
+    <string name="healthy_heart5">ấm lên(90~111)</string>
+    <string name="healthy_heart6">Thư giãn(≤89)</string>
+    <string name="healthy_spo_average">oxy trong máu có nghĩa là</string>
+    <string name="healthy_spo_max">mức oxy trong máu tối đa</string>
+    <string name="healthy_spo_min">mức oxy trong máu tối thiểu</string>
+    <string name="healthy_spo_measure_list">Hồ sơ đo lường</string>
+    <string name="healthy_spo_measure_info">Chi tiết hồ sơ đo lường</string>
+    <string name="healthy_spo_abnormal">Xuất hiện tình trạng thiếu oxy</string>
+    <string name="healthy_temp_abnormal">Sốt xuất hiện</string>
+    <string name="healthy_temp_average">nhiệt độ cơ thể trung bình</string>
+    <string name="healthy_temp_max">nhiệt độ cơ thể tối đa</string>
+    <string name="healthy_temp_min">nhiệt độ cơ thể tối thiểu</string>
+    <string name="healthy_sbp_average">huyết áp tâm thu có nghĩa là</string>
+    <string name="healthy_dbp_average">huyết áp tâm trương có nghĩa là</string>
+    <string name="healthy_bp_abnormal">huyết áp bất thường</string>
+    <string name="healthy_unit">%d lần</string>
+
+    <string name="healthy_tomorrow">Không thể chọn ngày trong tương lai</string>
+    <string name="healthy_not_data">Ngày đã chọn không có dữ liệu</string>
+
+    <string name="login_name">login module</string>
+    <string name="login_location">diện tích</string>
+    <string name="login_chose_location">vui lòng chọn khu vực</string>
+    <string name="login_login_account">đăng nhập tài khoản</string>
+    <string name="login_login">Đăng nhập</string>
+    <string name="login_account">tài khoản</string>
+    <string name="login_input_account">Nhập tài khoản của bạn</string>
+    <string name="login_right_email">Vui lòng nhập địa chỉ email chính xác</string>
+    <string name="login_psw">mật khẩu mở khóa</string>
+    <string name="login_input_psw">nhập mật khẩu của bạn</string>
+    <string name="login_forget_psw">Quên mật khẩu?</string>
+    <string name="login_register">Không tài khoản? đăng ký</string>
+    <string name="login_privacy">đồng ý《<u>Thỏa thuận người dùng và Chính sách quyền riêng tư</u>》</string>
+    <string name="login_checkPrivacy">đã không đồng ý《Thỏa thuận người dùng và Chính sách quyền riêng tư》</string>
+
+
+    <string name="login_register_account">đăng ký tài khoản</string>
+    <string name="login_register_account_tip">Với tài khoản cá nhân, dữ liệu thể dục của bạn, tùy chọn thiết bị có thể được lưu trữ vĩnh viễn một cách an toàn</string>
+    <string name="login_next">Bước tiếp theo</string>
+    <string name="login_verification">mã xác nhận</string>
+    <string name="login_input_verification">Nhập mã xác minh của bạn</string>
+    <string name="login_send">gửi</string>
+
+    <string name="login_set_password">đặt mật khẩu</string>
+    <string name="login_inconsistent">Mật khẩu không nhất quán đã nhập hai lần</string>
+    <string name="login_confirm_password">Xác nhận mật khẩu</string>
+    <string name="login_finish">Kết thúc</string>
+    <string name="login_find_password">lấy lại mật khẩu</string>
+    <string name="login_reset_Success">Đặt lại mật khẩu thành công</string>
+
+    <string name="login_change_password">đổi mật khẩu</string>
+    <string name="login_old_password">Mật khẩu cũ</string>
+    <string name="login_new_password">mật khẩu mới</string>
+    <string name="login_confirm_new_password">Xác nhận mật khẩu mới</string>
+    <string name="login_change_success">Đã sửa đổi thành công</string>
+
+    <string name="sport_sport_last">bài tập gần đây</string>
+    <string name="sport_sport_time">thời gian tập thể dục</string>
+    <string name="sport_sport_calorie">tiêu thụ tập thể dục</string>
+    <string name="sport_sport_distance">Khoảng cách di chuyển</string>
+    <string name="sport_steps">Số bước</string>
+    <string name="sport_speed_hour">tốc độ trung bình</string>
+    <string name="sport_stride">Tần số bước</string>
+    <string name="sport_heart">nhịp tim trung bình</string>
+    <string name="sport_height">leo độ cao</string>
+    <string name="sport_sport_info">Chi tiết thể thao</string>
+    <string name="sport_heart_level">Phân phối nhịp tim</string>
+    <string name="sport_heart1">giới hạn(≥161)</string>
+    <string name="sport_heart2">Kỵ khí(149~160)</string>
+    <string name="sport_heart3">Thể dục nhịp điệu(131~138)</string>
+    <string name="sport_heart4">đốt cháy chất béo(112~130)</string>
+    <string name="sport_heart5">ấm lên(90~111)</string>
+    <string name="sport_speed">tốc độ</string>
+    <string name="sport_running">trong chuyển động</string>
+    <string name="sport_run_pause">Phong trào bị tạm dừng</string>
+    <string name="sport_gps_low">Tín hiệu GPS yếu và độ chính xác của dữ liệu thấp</string>
+    <string name="sport_gps_middle">Tín hiệu GPS mạnh và độ chính xác dữ liệu cao</string>
+    <string name="sport_gps_high">Tín hiệu GPS mạnh và độ chính xác dữ liệu cao</string>
+    <string name="sport_no_sport">Chưa có hồ sơ tập thể dục nào, hãy bắt đầu tập thể dục ngay bây giờ</string>
+    <string name="sport_destroy">Nhấp lại để thoát khỏi chiến dịch này</string>
+    <string name="sport_time_short">Thời lượng và khoảng cách bài tập quá ngắn để tạo báo cáo bài tập hợp lệ</string>
+    <string name="sport_finish_sport">Bạn có chắc chắn muốn kết thúc bài tập không?</string>
+    <string name="sport_start_sport">Hãy bắt đầu tập thể dục trước</string>
+
+    <string name="user_plan">Mục tiêu của tôi</string>
+    <string name="user_edit_plan">Chỉnh sửa mục tiêu</string>
+    <string name="user_step">mục tiêu bước</string>
+    <string name="user_sleep">mục tiêu giấc ngủ</string>
+    <string name="user_calorie">mục tiêu tiêu dùng</string>
+
+    <string name="user_connect">kết nối</string>
+    <string name="user_disconnect">không kết nối</string>
+    <string name="user_connecting">Đang kết nối...</string>
+
+    <string name="user_dial">mặt đồng hồ của tôi</string>
+    <string name="user_dial_tip">Nhiều mặt số hơn, thay đổi theo ý muốn></string>
+    <string name="user_device_config">Quản lý thiết bị</string>
+    <string name="user_find_watch">Tìm một chiếc đồng hồ</string>
+    <string name="user_ble_call">Gọi qua Bluetooth</string>
+    <string name="user_ble_camera">Máy ảnh Bluetooth</string>
+    <string name="user_unit">hệ thống đơn vị</string>
+    <string name="user_notification">thông báo</string>
+    <string name="user_about">Về thiết bị</string>
+    <string name="user_schedule">thời gian biểu của tôi</string>
+    <string name="user_auto">Giám sát tự động</string>
+    <string name="user_add_device">Thêm thiết bị</string>
+
+    <string name="user_measureUnit">Đơn vị đo lường</string>
+    <string name="user_tempUnit">đơn vị nhiệt độ</string>
+    <string name="user_metric">Hệ mét</string>
+    <string name="user_british">thành nội</string>
+    <string name="user_save">tiết kiệm</string>
+    <string name="user_saved">Lưu thành công</string>
+
+    <string name="user_notify">thông báo</string>
+    <string name="user_notify_tip">Để nhận tin nhắn thông báo từ ứng dụng trên thiết bị, bạn cần bật khóa chuyển tin nhắn</string>
+    <string name="user_notify_title">Bật thông báo</string>
+    <string name="user_notify_msg">Ứng dụng này cần chuyển tiếp thông báo ứng dụng đến các thiết bị thông minh từ xa. Nhấn \ "OK \" để vào trang thông báo để kích hoạt.</string>
+    <string name="user_cancel">Hủy bỏ</string>
+    <string name="user_confirm">Chắc chắn rồi</string>
+
+    <string name="user_account_safe">Tài khoản và Bảo mật</string>
+    <string name="user_version">Phiên bản APP hiện tại</string>
+    <string name="user_help">Giúp đỡ và phản hồi</string>
+    <string name="user_privacy">Thỏa thuận người dùng và Chính sách quyền riêng tư</string>
+    <string name="user_logout">đăng xuất</string>
+    <string name="user_unbind_tip">cởi trói</string>
+    <string name="user_unbind_message">Bạn có chắc chắn hủy liên kết thiết bị hiện tại không?</string>
+
+    <string name="user_info">Thông tin cá nhân</string>
+    <string name="user_set">thông tin tài khoản</string>
+    <string name="user_head">hình đại diện</string>
+    <string name="user_name">tên nick</string>
+    <string name="user_sex">giới tính</string>
+    <string name="user_birthday">ngày sinh</string>
+    <string name="user_height">Chiều cao</string>
+    <string name="user_weight">trọng lượng</string>
+    <string name="user_male">Nam giới</string>
+    <string name="user_female">Giống cái</string>
+    <string name="user_camera">ảnh chụp</string>
+    <string name="user_album">album ảnh</string>
+    <string name="user_enter_name">vui lòng nhập nickname của bạn</string>
+    <string name="user_name_long">Biệt hiệu không được vượt quá 12 ký tự</string>
+    <string name="user_permission_error_camera">Quyền không được thông qua, không thể bật chức năng máy ảnh</string>
+    <string name="user_crop_pic_failed">Không chụp được ảnh, vui lòng chọn ảnh định dạng jpg!</string>
+    <string name="user_account">Đăng nhập tài khoản</string>
+    <string name="user_change">đổi mật khẩu</string>
+    <string name="user_delete_account">Đăng xuất</string>
+    <string name="user_logout_tip">Bạn có chắc chắn bạn muốn thoát?</string>
+    <string name="user_upload_data">tải lên dữ liệu...</string>
+    <string name="user_upload_data_success">Tải lên dữ liệu thành công!</string>
+    <string name="user_faq">vấn đề thường gặp</string>
+    <string name="user_feedback_hint">phản hồi / câu hỏi của bạn</string>
+    <string name="user_send_feedback">Gửi phản hồi</string>
+    <string name="user_feedback_long">Văn bản bạn đã nhập quá dài</string>
+    <string name="user_feedback_empty">Nhận xét không được để trống</string>
+    <string name="user_feedback_success">phản hồi thành công</string>
+    <string name="user_guide">hướng dẫn kết nối</string>
+    <string name="user_service">giữ cho nó chạy trong nền</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">Oneplus</string>
+    <string name="user_samsun">SAMSUNG</string>
+    <string name="user_mi">Xiaomi</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Để cải thiện độ ổn định của kết nối đồng hồ, bạn nên thực hiện các cài đặt sau：</string>
+    <string name="user_saverBattery">Không bật (chế độ tiết kiệm điện)：</string>
+    <string name="user_batteryContent">Nếu chế độ tiết kiệm năng lượng được bật, nó có thể gây ra các vấn đề như kết nối Bluetooth không ổn định, quỹ đạo chuyển động bất thường và giảm khoảng cách nguồn. Nên tắt chế độ tiết kiệm điện trong quá trình sử dụng.</string>
+    <string name="user_protect">Cài đặt bảo vệ nền của các nhà sản xuất lớn：</string>
+
+
+    <string name="user_search">thiết bị tìm kiếm</string>
+    <string name="user_searching">Tìm kiếm thiết bị...</string>
+    <string name="user_bind">ràng buộc...</string>
+    <string name="user_no_device">Không tìm thấy thiết bị</string>
+    <string name="user_pair_success">ghép nối thành công</string>
+    <string name="user_pair_tip">Thông tin dữ liệu sức khỏe thể thao của bạn sẽ được đồng bộ hóa giữa đồng hồ và điện thoại di động thông qua APP.</string>
+    <string name="user_finish">Kết thúc</string>
+    <string name="user_understand">Tôi thấy</string>
+    <string name="user_wear_tip">tiền boa</string>
+    <string name="user_wear_tip_content">Để số liệu đo được chính xác và không ảnh hưởng đến việc sử dụng APP bình thường, vui lòng cố gắng đeo đồng hồ cách xương cổ tay 1cm</string>
+    <string name="user_search_tip">Tháo thiết bị, sạc để kích hoạt và để thiết bị gần điện thoại</string>
+    <string name="user_search_much">Vui lòng chọn đồng hồ của bạn theo địa chỉ mac</string>
+    <string name="user_search_again">tìm kiếm lại</string>
+    <string name="user_again_tip">Bạn có thể thử các cách sau và thử lại sau khi thiết lập：</string>
+    <string name="user_again_advice">·Mở lại bluetooth của điện thoại\n·Đảm bảo đồng hồ đang bật và gần điện thoại\n·Bấm vào thiết bị\"Bấm vào thiết bị\"</string>
+    <string name="user_stop_bind">Về sau đừng ràng buộc nhất thời</string>
+    <string name="user_bind_help"><u>Không thể tìm thấy thiết bị để thêm? Xem trợ giúp</u></string>
+
+    <string name="user_dial_market">thị trường quay số</string>
+    <string name="user_dial_now">Xem trước khuôn mặt</string>
+    <string name="user_dial_mine">mặt đồng hồ của tôi</string>
+    <string name="user_dial_diy">mặt đồng hồ tùy chỉnh</string>
+    <string name="user_background">tải lên nền</string>
+    <string name="user_crop_fail">Không chụp được ảnh, vui lòng chọn ảnh định dạng jpg!</string>
+    <string name="user_crop_small">Không chụp được ảnh, ảnh đã chụp quá nhỏ và không khớp với kích thước của mặt số!</string>
+    <string name="user_send_background">nền gửi...</string>
+    <string name="user_send_dial">Gửi mặt đồng hồ...</string>
+    <string name="user_send_success">Gửi thành công！</string>
+    <string name="user_send_fail">Gửi không thành công, vui lòng thử lại. </string>
+    <string name="user_no_background">Vui lòng tải lên nền trước</string>
+    <string name="user_no_clock">Vui lòng chọn một mặt đồng hồ trước tiên</string>
+
+    <string name="user_device_name">Mô hình phần mềm</string>
+    <string name="user_device_mac">Macđịa chỉ</string>
+    <string name="user_device_version">Phiên bản phần mềm</string>
+    <string name="user_check_update">Kiểm tra cập nhật</string>
+
+    <string name="user_camera_tip">Sau khi bật chức năng máy ảnh Bluetooth, đồng hồ có thể điều khiển ứng dụng máy ảnh trên điện thoại di động để chụp ảnh</string>
+    <string name="user_camera_permission_tip">Trong quá trình sử dụng, ứng dụng này yêu cầu quyền truy cập vào camera và quyền đọc ghi tệp. Để chụp ảnh từ xa và lưu trữ ảnh\n\nNếu bạn không đồng ý gọi các quyền trên, nó sẽ khiến camera Bluetooth không hoạt động bình thường và nó sẽ không ảnh hưởng đến việc bạn sử dụng các chức năng cơ bản của ứng dụng này. Bạn luôn có thể đi tới Cài đặt>"quyền quản lý". Chọn tắt lệnh gọi quyền ở trên để rút lại sự đồng ý của bạn</string>
+    <string name="user_camera_permission_error">Quyền không được thông qua, việc mở không thành công</string>
+
+    <string name="user_deleteTip">Cho dù xác nhận việc hủy tài khoản của bạn hay không, tài khoản sẽ được hủy thành công trong vòng ba ngày sau khi xác nhận, Sau khi đăng xuất thành công, dữ liệu tài khoản sẽ bị xóa hoàn toàn và không thể khôi phục lại được! Vui lòng tiến hành một cách thận trọng.</string>
+    <string name="user_deleteSuccess">Tài khoản ứng dụng đã được hủy thành công.</string>
+    <string name="user_deleteNow">Tài khoản hiện tại đang chờ giai đoạn đăng xuất.</string>
+
+    <string name="user_schedule_empty">Đồng hồ hiện tại không có lịch, vui lòng thêm lịch mới</string>
+    <string name="user_delete_schedule">xóa lịch trình</string>
+    <string name="user_save_schedule">lưu lịch trình</string>
+    <string name="user_schedule_info">Chi tiết lịch trình</string>
+    <string name="user_schedule_fall">Lịch trình có thể được thêm vào đồng hồ đã đạt đến giới hạn trên, vui lòng xóa lịch trình đó trước khi thêm</string>
+    <string name="user_schedule_add_fail">Không thêm được lịch biểu</string>
+    <string name="user_schedule_edit_fail">Không sửa đổi được lịch biểu</string>
+    <string name="user_schedule_delete_fail">Không xóa được lịch biểu</string>
+    <string name="user_schedule_past">Không thể đặt mốc thời gian trong quá khứ làm mốc thời gian trên lịch biểu</string>
+    <string name="user_schedule_same">Mốc thời gian hiện được chọn đã có chương trình làm việc và không thể đặt lặp lại</string>
+    <string name="user_schedule_msg">Vui lòng điền vào chi tiết lịch trình</string>
+    <string name="user_today">hôm nay</string>
+    <string name="user_time">thời gian</string>
+
+
+    <string name="user_auto_measure_tip">Sau khi chức năng giám sát tự động được bật, đồng hồ sẽ đo mọi tần số và thời gian trong khoảng thời gian hiệu quả.</string>
+    <string name="user_measure_frequency">Tần suất giám sát</string>
+    <string name="user_valid_time">Thời kỳ hữu hiệu</string>
+    <string name="user_start_time">Thời gian bắt đầu</string>
+    <string name="user_end_time">结束时间</string>
+    <string name="user_heart">nhịp tim</string>
+    <string name="user_blood_pressure">huyết áp</string>
+    <string name="user_blood_oxygen">oxy trong máu</string>
+    <string name="user_temperature">thân nhiệt</string>
+
+    <string name="loading">加载中...</string>
+    <string name="permission_tip">权限说明</string>
+    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
+    <string name="agree">同意</string>
+    <string name="disagree">拒绝</string>
+    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
+    <string name="outrun">户外跑</string>
+    <string name="walk">徒步</string>
+    <string name="treadmill">跑步机</string>
+    <string name="mountain">登山</string>
+    <string name="marathon">马拉松</string>
+    <string name="badminton">羽毛球</string>
+    <string name="basketball">篮球</string>
+    <string name="bicycle">骑行</string>
+    <string name="skiing">滑雪</string>
+    <string name="ping">乒乓球</string>
+    <string name="football">足球</string>
+    <string name="climb">攀岩</string>
+    <string name="watch_ring">手表正在响铃,请注意。</string>
+    <string name="stop_find">停止查找</string>
+
+    <string name="save_success">保存成功</string>
+    <string name="waiting">请等待...</string>
+    <string name="http_error">请求超时</string>
+    <string name="ble_error">蓝牙未连接，请连接后重试</string>
+    <string name="updating">数据正在同步...</string>
+
+    <string name="connected">已连接</string>
+    <string name="disConnect">未连接</string>
+
+    <string name="sun">日</string>
+    <string name="mon">一</string>
+    <string name="tues">二</string>
+    <string name="wed">三</string>
+    <string name="thus">四</string>
+    <string name="fri">五</string>
+    <string name="sta">六</string>
+</resources>

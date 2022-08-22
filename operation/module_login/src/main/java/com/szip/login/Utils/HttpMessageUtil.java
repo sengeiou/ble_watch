@@ -1,20 +1,27 @@
 package com.szip.login.Utils;
 
 
+import android.util.Log;
+
+import com.google.gson.Gson;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.db.DownloadDataUtil;
 import com.szip.login.HttpModel.CheckVerificationBean;
 import com.szip.login.HttpModel.DeviceConfigBean;
+import com.szip.login.HttpModel.ImageVerificationBean;
 import com.zhy.http.okhttp.BaseApi;
 import com.szip.login.HttpModel.LoginBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.builder.GetBuilder;
 import com.zhy.http.okhttp.builder.PostJsonBuilder;
+import com.zhy.http.okhttp.builder.PostJsonListBuider;
 import com.zhy.http.okhttp.callback.GenericsCallback;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import okhttp3.OkHttpClient;
 
@@ -83,6 +90,57 @@ public class HttpMessageUtil {
                 .addInterceptor(new TokenInterceptor());
 
         HttpClientUtils.newInstance().buildRequest(builder,"user/checkVerifyCode",callback);
+    }
+
+
+    /**
+     * 验证验证码接口
+     * @param type                  验证码类型1：手机 2：邮箱
+     * @param areaCode              区号
+     * @param phoneNumber           手机号码
+     * */
+    public void postCheckVerifyCode_v2(int type,String areaCode,String phoneNumber,String email,String captchaId,int captchaType,
+                                       String captchaInput, GenericsCallback<BaseApi> callback) {
+
+        String nonceStr = SignUtil.getRandomStr();
+        Map<String,Object> json = new HashMap<>();
+        json.put("type",type);
+        json.put("areaCode",areaCode);
+        json.put("phoneNumber",phoneNumber);
+        json.put("email",email);
+        json.put("captchaId",captchaId);
+        json.put("captchaType",captchaType);
+        json.put("captchaInput",captchaInput);
+        json.put("signType","MD5");
+        json.put("timestamp",System.currentTimeMillis());
+        json.put("nonceStr",nonceStr);
+
+        try {
+            String sign = SignUtil.generateSignature(json,nonceStr,"MD5");
+            Log.d("data******","md5 = "+sign);
+            json.put("sign",sign);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Gson gson = new Gson();
+        PostJsonListBuider builder = OkHttpUtils
+                .listpost()
+                .addParams("data",gson.toJson(json))
+                .addInterceptor(new TokenInterceptor());
+
+        HttpClientUtils.newInstance().buildRequest(builder,"v2/user/sendVerifyCode",callback);
+    }
+
+
+    /**
+     * 获取图片验证码
+     * */
+    public void getImageVerifyCode(GenericsCallback<ImageVerificationBean> callback) {
+        PostJsonBuilder builder = OkHttpUtils
+                .jpost()
+                .addInterceptor(new TokenInterceptor());
+
+        HttpClientUtils.newInstance().buildRequest(builder,"user/captcha",callback);
     }
 
     public void postChangePassword(String oldPsw,String newPsw,GenericsCallback<BaseApi> callback){

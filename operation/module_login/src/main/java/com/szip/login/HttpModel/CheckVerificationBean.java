@@ -9,6 +9,8 @@ import com.zhy.http.okhttp.BaseApi;
 public class CheckVerificationBean extends BaseApi {
     private Data data;
 
+
+
     public Data getData() {
         return data;
     }

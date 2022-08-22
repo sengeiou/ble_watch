@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">州</string>
+    <string name="sport">スポーツ</string>
+    <string name="consult">相談する</string>
+    <string name="mine">私の</string>
+    <string name="tip">思い出させる</string>
+    <string name="checkGPS">お使いの携帯電話の位置情報スイッチがオンになっていないことが検出されました。アプリが正しく動作することを確認するには、位置情報スイッチをオンにしてください。</string>
+    <string name="confirm">もちろん</string>
+    <string name="cancel">キャンセル</string>
+
+    <string name="touchAgain">もう一度押すと、プログラムを終了します</string>
+    <string name="privacy1">ユーザー同意書とプライバシーポリシー</string>
+    <string name="privacyTip">FitRingを信頼してご利用いただきありがとうございます。
+\n\n「ユーザープライバシー契約」に従って、お客様の個人情報および関連する権利をどのように収集、使用、保存するかを理解するのに役立ちます。。
+\n\nFitRing アプリを使用すると、デバイス情報、個人データ (アバター、ニックネーム、身長、体重、運動データ) およびその他の情報が収集されます。アプリのアバターをアップロードするには、カメラの許可、アルバムの許可を取得する必要があります。:
+\n\n屋外でのランニング、スポーツ情報のアップロード、共有、保存に FitRing アプリを使用する場合、ランニング トラックを記録するために位置情報の許可を取得する必要があります。。
+\n\n関連するページで、個人情報へのアクセス、変更、削除、または承認の管理を行うことができます。
+\n\n業界をリードするセキュリティ技術を使用して、お客様の個人情報を保護します。
+\n\n「OK」をクリックすると、本契約の条件に同意したことになります。</string>
+
+    <string name="healthy_my_state">私の状態</string>
+    <string name="healthy_sport">スポーツ</string>
+    <string name="healthy_all_sport">その他のスポーツ記録</string>
+    <string name="healthy_step">歩数</string>
+    <string name="healthy_sleep">寝る</string>
+    <string name="healthy_heart">心拍数</string>
+    <string name="healthy_blood_pressure">血圧</string>
+    <string name="healthy_blood_oxygen">血中酸素</string>
+    <string name="healthy_temp">体温</string>
+    <string name="healthy_edit_card">カードを編集</string>
+    <string name="healthy_last_sport">最近の運動</string>
+    <string name="healthy_sport_list">スポーツリスト</string>
+    <string name="healthy_sport_last">終わりました~</string>
+    <string name="healthy_no_sport">まだ運動記録がありません。今すぐ運動を始めましょう</string>
+    <string name="healthy_card_visiable">表示項目（右側を長押しして上下にドラッグして順番を調整）</string>
+    <string name="healthy_card_gone">隠しアイテム</string>
+    <string name="healthy_card_need_gone">ここに表示したくないアイテムをドラッグします</string>
+    <string name="healthy_day">日</string>
+    <string name="healthy_week">週</string>
+    <string name="healthy_month">月</string>
+    <string name="healthy_sun">日曜日</string>
+    <string name="healthy_sta">土曜日</string>
+    <string name="healthy_survey">今日の健康データ</string>
+    <string name="healthy_week_survey">今週の健康データ</string>
+    <string name="healthy_month_survey">今月の健康データ</string>
+    <string name="healthy_all_step">総歩数</string>
+    <string name="healthy_all_calorie">総消費量</string>
+    <string name="healthy_all_distance">総距離</string>
+    <string name="healthy_plan">今日の目標</string>
+    <string name="healthy_day_step">1日の平均歩数</string>
+    <string name="healthy_day_calorie">1 日の平均消費量</string>
+    <string name="healthy_day_distance">1 日の平均距離</string>
+    <string name="healthy_radio">目標達成率</string>
+    <string name="healthy_sleep_info">睡眠分布</string>
+    <string name="healthy_sleep_deep">深い睡眠時間</string>
+    <string name="healthy_sleep_light">浅い睡眠時間</string>
+    <string name="healthy_sleep_average_sleep">平均睡眠時間</string>
+    <string name="healthy_sleep_average_deep">平均深い睡眠時間</string>
+    <string name="healthy_sleep_average_light">平均浅い睡眠時間</string>
+    <string name="healthy_sleep_bed">眠りにつく時間</string>
+    <string name="healthy_sleep_wake">起床時間</string>
+    <string name="healthy_heart_average">平均心拍数</string>
+    <string name="healthy_heart_max">最大心拍数</string>
+    <string name="healthy_heart_min">最小心拍数</string>
+    <string name="healthy_heart_level">心拍数分布</string>
+    <string name="healthy_heart1">限界(≥161)</string>
+    <string name="healthy_heart2">嫌気性(149~160)</string>
+    <string name="healthy_heart3">好気性(131~138)</string>
+    <string name="healthy_heart4">脂肪燃焼(112~130)</string>
+    <string name="healthy_heart5">準備し始める(90~111)</string>
+    <string name="healthy_heart6">リラックス(≤89)</string>
+    <string name="healthy_spo_average">平均血中酸素</string>
+    <string name="healthy_spo_max">最大血中酸素濃度</string>
+    <string name="healthy_spo_min">最低血中酸素濃度</string>
+    <string name="healthy_spo_measure_list">測定記録</string>
+    <string name="healthy_spo_measure_info">測定記録詳細</string>
+    <string name="healthy_spo_abnormal">低酸素症の発生</string>
+    <string name="healthy_temp_abnormal">発熱する</string>
+    <string name="healthy_temp_average">平均體溫</string>
+    <string name="healthy_temp_max">最高体温</string>
+    <string name="healthy_temp_min">最低体温</string>
+    <string name="healthy_sbp_average">平均収縮期血圧</string>
+    <string name="healthy_dbp_average">平均拡張期血圧</string>
+    <string name="healthy_bp_abnormal">血圧異常</string>
+    <string name="healthy_unit">%d二流</string>
+
+    <string name="healthy_tomorrow">将来の日付を選択できません</string>
+    <string name="healthy_not_data">選択した日付にはデータがありません</string>
+
+    <string name="login_name">login module</string>
+    <string name="login_location">範囲</string>
+    <string name="login_chose_location">地域を選択してください</string>
+    <string name="login_login_account">ログインアカウント</string>
+    <string name="login_login">ログイン</string>
+    <string name="login_account">アカウント</string>
+    <string name="login_input_account">アカウントを入力してください</string>
+    <string name="login_right_email">正しいメールアドレスを入力してください</string>
+    <string name="login_psw">パスワード</string>
+    <string name="login_input_psw">パスワードを入力してください</string>
+    <string name="login_forget_psw">パスワードをお忘れですか?</string>
+    <string name="login_register">アカウントを持っていませんか? サインアップ</string>
+    <string name="login_privacy">同意《<u>ユーザー同意書とプライバシーポリシー</u>》</string>
+    <string name="login_checkPrivacy">ユーザー同意書とプライバシーポリシーに同意しなかった</string>
+
+
+    <string name="login_register_account">アカウント登録</string>
+    <string name="login_register_account_tip">個人アカウントを使用すると、フィットネス データやデバイスの設定を安全に永久に保存できます</string>
+    <string name="login_next">次のステップ</string>
+    <string name="login_verification">検証コード</string>
+    <string name="login_input_verification">確認コードを入力してください</string>
+    <string name="login_send">送信</string>
+
+    <string name="login_set_password">パスワードを設定してください</string>
+    <string name="login_inconsistent">矛盾したパスワードが 2 回入力されました</string>
+    <string name="login_confirm_password">パスワードを認証する</string>
+    <string name="login_finish">終了</string>
+    <string name="login_find_password">パスワードを取得する</string>
+    <string name="login_reset_Success">パスワードのリセットが成功しました</string>
+
+    <string name="login_change_password">パスワードを変更する</string>
+    <string name="login_old_password">以前のパスワード</string>
+    <string name="login_new_password">新しいパスワード</string>
+    <string name="login_confirm_new_password">新しいパスワードを確認する</string>
+    <string name="login_change_success">正常に変更されました</string>
+    <string name="sport_sport_last">最近の運動</string>
+    <string name="sport_sport_time">運動時間</string>
+    <string name="sport_sport_calorie">運動消費</string>
+    <string name="sport_sport_distance">移動距離</string>
+    <string name="sport_steps">歩数</string>
+    <string name="sport_speed_hour">平均速度</string>
+    <string name="sport_stride">ステップ周波数</string>
+    <string name="sport_heart">平均心拍数</string>
+    <string name="sport_height">高度を登る</string>
+    <string name="sport_sport_info">スポーツの詳細</string>
+    <string name="sport_heart_level">心拍数分布</string>
+    <string name="sport_heart1">限界(≥161)</string>
+    <string name="sport_heart2">嫌気性(149~160)</string>
+    <string name="sport_heart3">好気性(131~138)</string>
+    <string name="sport_heart4">脂肪燃焼(112~130)</string>
+    <string name="sport_heart5">準備し始める(90~111)</string>
+    <string name="sport_speed">ペース</string>
+    <string name="sport_running">動いている</string>
+    <string name="sport_run_pause">動きが一時停止しました</string>
+    <string name="sport_gps_low">GPS 信号が弱く、データ精度が低い</string>
+    <string name="sport_gps_middle">強力な GPS 信号と高いデータ精度</string>
+    <string name="sport_gps_high">強力な GPS 信号と高いデータ精度</string>
+    <string name="sport_no_sport">まだ運動記録がありません。今すぐ運動を始めましょう</string>
+    <string name="sport_destroy">もう一度クリックしてこの演習を終了します</string>
+    <string name="sport_time_short">エクササイズの継続時間と距離が短すぎるため、有効なエクササイズ レポートを生成できません</string>
+    <string name="sport_finish_sport">エクササイズを終了してもよろしいですか？？</string>
+    <string name="sport_start_sport">まずは運動を始めてください</string>
+
+    <string name="user_plan">私の目標</string>
+    <string name="user_edit_plan">ターゲットを編集</string>
+    <string name="user_step">ステップ目標</string>
+    <string name="user_sleep">睡眠目標</string>
+    <string name="user_calorie">消費目標</string>
+
+    <string name="user_connect">接続済み</string>
+    <string name="user_disconnect">接続されていません</string>
+    <string name="user_connecting">接続中...</string>
+
+    <string name="user_dial">私のウォッチフェイス</string>
+    <string name="user_dial_tip">より多くのダイヤル、自由に変更></string>
+    <string name="user_device_config">端末管理</string>
+    <string name="user_find_watch">時計を探す</string>
+    <string name="user_ble_call">Bluetooth 通話</string>
+    <string name="user_ble_camera">ブルートゥースカメラ</string>
+    <string name="user_unit">単位系</string>
+    <string name="user_notification">通知</string>
+    <string name="user_about">デバイスについて</string>
+    <string name="user_schedule">私のスケジュール</string>
+    <string name="user_auto">自動監視</string>
+    <string name="user_add_device">デバイスを追加</string>
+
+    <string name="user_measureUnit">測定単位</string>
+    <string name="user_tempUnit">温度単位</string>
+    <string name="user_metric">メトリック</string>
+    <string name="user_british">インペリアル</string>
+    <string name="user_save">保存</string>
+    <string name="user_saved">正常に保存されました</string>
+
+    <string name="user_notify">通知</string>
+    <string name="user_notify_tip">デバイスのアプリから通知メッセージを受信するには、メッセージ スイッチをオンにする必要があります</string>
+    <string name="user_notify_title">通知を有効にします</string>
+    <string name="user_notify_msg">このアプリケーションは、アプリケーション通知をリモート スマート デバイスに転送する必要があります。「OK」を押して通知ページに入り、開始します。</string>
+    <string name="user_cancel">キャンセル</string>
+    <string name="user_confirm">もちろん</string>
+
+    <string name="user_account_safe">アカウントとセキュリティ</string>
+    <string name="user_version">現在のアプリのバージョン</string>
+    <string name="user_help">ヘルプとフィードバック</string>
+    <string name="user_privacy">ユーザー同意書とプライバシーポリシー</string>
+    <string name="user_logout">サインアウト</string>
+    <string name="user_unbind_tip">解放する</string>
+    <string name="user_unbind_message">現在のデバイスのバインドを解除してもよろしいですか?？</string>
+
+    <string name="user_info">個人情報</string>
+    <string name="user_set">口座情報</string>
+    <string name="user_head">アバター</string>
+    <string name="user_name">ニックネーム</string>
+    <string name="user_sex">性別</string>
+    <string name="user_birthday">生年月日</string>
+    <string name="user_height">身長</string>
+    <string name="user_weight">重さ</string>
+    <string name="user_male">男</string>
+    <string name="user_female">女性</string>
+    <string name="user_camera">写真</string>
+    <string name="user_album">フォトアルバム</string>
+    <string name="user_enter_name">ニックネームを入力してください</string>
+    <string name="user_name_long">ニックネームは 12 文字を超えることはできません</string>
+    <string name="user_permission_error_camera">パーミッションが渡されず、カメラ機能をオンにできません</string>
+    <string name="user_crop_pic_failed">画像をキャプチャできませんでした。jpg 形式の画像を選択してください！</string>
+    <string name="user_account">ログインアカウント</string>
+    <string name="user_change">パスワードを変更する</string>
+    <string name="user_delete_account">アカウントをキャンセル</string>
+    <string name="user_logout_tip">ログアウトしてもよろしいですか？</string>
+    <string name="user_upload_data">データのアップロード...</string>
+    <string name="user_upload_data_success">データのアップロードが成功しました!</string>
+    <string name="user_faq">よくある問題</string>
+    <string name="user_feedback_hint">あなたのフィードバック/質問</string>
+    <string name="user_send_feedback">フィードバックを送信</string>
+    <string name="user_feedback_long">入力したテキストが長すぎます</string>
+    <string name="user_feedback_empty">コメントを空にすることはできません</string>
+    <string name="user_feedback_success">フィードバックの成功</string>
+    <string name="user_guide">接続ガイド</string>
+    <string name="user_service">バックグラウンドで実行し続ける</string>
+    <string name="user_huawei">ファーウェイ</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">レノボ</string>
+    <string name="user_oneplus">ワンプラス</string>
+    <string name="user_samsun">サムスン</string>
+    <string name="user_mi">ミレー</string>
+    <string name="user_meizu">メイズ</string>
+    <string name="user_serviceTip">時計の接続の安定性を向上させるために、次の設定を行うことをお勧めします。：</string>
+    <string name="user_saverBattery">電源を入れない（省電力モード）：</string>
+    <string name="user_batteryContent">省電力モードをオンにすると、Bluetooth接続が不安定になる、モーション軌跡が異常になる、給電距離が短くなるなどの不具合が発生する場合があります。 使用中は省電力モードをオフにすることをお勧めします。</string>
+    <string name="user_protect">主要メーカーの背景保護設定：</string>
+
+
+    <string name="user_search">検索装置</string>
+    <string name="user_searching">デバイスの検索...</string>
+    <string name="user_bind">バインディング...</string>
+    <string name="user_no_device">デバイスが見つかりません</string>
+    <string name="user_pair_success">正常にペアリングされました</string>
+    <string name="user_pair_tip">あなたのスポーツ健康データ情報は、アプリを介して時計と携帯電話の間で同期されます。</string>
+    <string name="user_finish">終了</string>
+    <string name="user_understand">そうですか</string>
+    <string name="user_wear_tip">着用のヒント</string>
+    <string name="user_wear_tip_content">データを正確に測定し、アプリの通常の使用に影響を与えないようにするために、手首の骨から 1cm の距離で時計を着用してみてください。</string>
+    <string name="user_search_tip">デバイスを取り外して充電を開始し、スマートフォンに近づけます</string>
+    <string name="user_search_much">MACアドレスに応じて時計を選択してください</string>
+    <string name="user_search_again">もう一度検索</string>
+    <string name="user_again_tip">次の方法を試して、設定後に再試行できます。</string>
+    <string name="user_again_advice">·電話のBluetoothを再度開きます\n·時計がオンになっており、スマートフォンの近くにあることを確認してください\n·デバイスをクリックします\"リセット\"</string>
+    <string name="user_stop_bind">あとは、とりあえず縛らないで</string>
+    <string name="user_bind_help"><u>追加するデバイスが見つかりませんか? ヘルプを見る</u></string>
+
+    <string name="user_dial_market">ダイヤル市場</string>
+    <string name="user_dial_now">ウォッチフェイスのプレビュー</string>
+    <string name="user_dial_mine">私のウォッチフェイス</string>
+    <string name="user_dial_diy">カスタムウォッチフェイス</string>
+    <string name="user_background">背景をアップロード</string>
+    <string name="user_crop_fail">画像をキャプチャできませんでした。jpg 形式の画像を選択してください!</string>
+    <string name="user_crop_small">画像のキャプチャに失敗しました。キャプチャされた画像が小さすぎて、文字盤のサイズと一致しません!</string>
+    <string name="user_send_background">背景の送信...</string>
+    <string name="user_send_dial">ウォッチフェイスを送信しています...</string>
+    <string name="user_send_success">正常に送信されました！</string>
+    <string name="user_send_fail">送信できませんでした。もう一度お試しください。</string>
+    <string name="user_no_background">最初に背景をアップロードしてください</string>
+    <string name="user_no_clock">最初にウォッチフェイスを選択してください</string>
+
+    <string name="user_device_name">ソフトウェア モデル</string>
+    <string name="user_device_mac">Macアドレス</string>
+    <string name="user_device_version">ソフトウェアバージョン</string>
+    <string name="user_check_update">アップデートを確認</string>
+
+    <string name="user_camera_tip">Bluetoothカメラ機能をオンにした後、時計は携帯電話のカメラアプリケーションを制御して写真を撮ることができます</string>
+    <string name="user_camera_permission_tip">使用中、このアプリケーションには、カメラへのアクセスと、リモートでの写真撮影と保存のためのファイルの読み取りと書き込みのアクセス許可が必要です。\n\n上記の許可の呼び出しに同意しない場合、Bluetooth カメラが正常に使用できなくなりますが、このアプリケーションの基本機能の使用には影響しません。 いつでも [設定] に移動できます>“権限管理」で、上記の権限呼び出しを閉じて、同意を撤回することを選択します</string>
+    <string name="user_camera_permission_error">パーミッションが渡されませんでした。開くことができませんでした</string>
+
+    <string name="user_deleteTip">アカウントのキャンセルを確認するかどうか、アカウントは確認後 3 日以内に正常にキャンセルされ、正常にキャンセルされた後、アカウント データは完全に削除され、回復不能になります。 注意して進めてください。</string>
+    <string name="user_deleteSuccess">アカウントの解約を申し込む。</string>
+    <string name="user_deleteNow">現在のアカウントはキャンセルの段階を待っています。</string>
+
+    <string name="user_schedule_empty">現在のウォッチにはスケジュールがありません。新しいスケジュールを追加してください</string>
+    <string name="user_delete_schedule">スケジュールを削除</string>
+    <string name="user_save_schedule">スケジュールを保存</string>
+    <string name="user_schedule_info">スケジュール詳細</string>
+    <string name="user_schedule_fall">時計に追加できるスケジュールが上限に達しました。クリアしてから追加してください</string>
+    <string name="user_schedule_add_fail">スケジュールを追加できませんでした</string>
+    <string name="user_schedule_edit_fail">スケジュールを変更できませんでした</string>
+    <string name="user_schedule_delete_fail">スケジュールを削除できませんでした</string>
+    <string name="user_schedule_past">過去の時点をスケジュール時点として設定できません</string>
+    <string name="user_schedule_same">現在選択されている時点にはすでにアジェンダがあり、繰り返し設定することはできません</string>
+    <string name="user_schedule_msg">スケジュールの詳細を入力してください</string>
+    <string name="user_today">今日</string>
+    <string name="user_time">時間</string>
+
+
+    <string name="user_auto_measure_tip">自動監視機能をオンにすると、時計は有効期間内のすべての周波数と時間を測定します。</string>
+    <string name="user_measure_frequency">モニタリング頻度</string>
+    <string name="user_valid_time">有効期間</string>
+    <string name="user_start_time">開始時間</string>
+    <string name="user_end_time">終了時間</string>
+    <string name="user_heart">心拍数</string>
+    <string name="user_blood_pressure">血圧</string>
+    <string name="user_blood_oxygen">血中酸素</string>
+    <string name="user_temperature">体温</string>
+
+    <string name="loading">加载中...</string>
+    <string name="permission_tip">权限说明</string>
+    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
+    <string name="agree">同意</string>
+    <string name="disagree">拒绝</string>
+    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
+    <string name="outrun">户外跑</string>
+    <string name="walk">徒步</string>
+    <string name="treadmill">跑步机</string>
+    <string name="mountain">登山</string>
+    <string name="marathon">马拉松</string>
+    <string name="badminton">羽毛球</string>
+    <string name="basketball">篮球</string>
+    <string name="bicycle">骑行</string>
+    <string name="skiing">滑雪</string>
+    <string name="ping">乒乓球</string>
+    <string name="football">足球</string>
+    <string name="climb">攀岩</string>
+    <string name="watch_ring">手表正在响铃,请注意。</string>
+    <string name="stop_find">停止查找</string>
+
+    <string name="save_success">保存成功</string>
+    <string name="waiting">请等待...</string>
+    <string name="http_error">请求超时</string>
+    <string name="ble_error">蓝牙未连接，请连接后重试</string>
+    <string name="updating">数据正在同步...</string>
+
+    <string name="connected">已连接</string>
+    <string name="disConnect">未连接</string>
+
+    <string name="sun">日</string>
+    <string name="mon">一</string>
+    <string name="tues">二</string>
+    <string name="wed">三</string>
+    <string name="thus">四</string>
+    <string name="fri">五</string>
+    <string name="sta">六</string>
+</resources>

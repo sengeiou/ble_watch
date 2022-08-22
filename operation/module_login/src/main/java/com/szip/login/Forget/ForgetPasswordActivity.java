@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.szip.blewatch.base.Util.MathUtil;
@@ -43,6 +44,10 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
     private String countryStr,codeStr;
     private SharedPreferences sharedPreferences;
     private boolean isPhone = false;
+
+    private ImageView imageIv;
+    private String imageId;
+    private EditText imageEt;
 
     private Handler handler = new Handler(){
         @Override
@@ -88,6 +93,8 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
         setTitle(getString(R.string.login_forget_psw));
         userEt = findViewById(R.id.userEt);
         countryTv = findViewById(R.id.countryTv);
+        imageIv = findViewById(R.id.imageIv);
+        imageEt = findViewById(R.id.imageEt);
         if (!countryStr.equals("")){
             countryTv.setText(countryStr);
             countryTv.setTextColor(Color.BLACK);
@@ -171,22 +178,11 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
     private void startTimer(){
 
         if (!MathUtil.newInstance().isNumeric(userEt.getText().toString()))
-            HttpMessageUtil.newInstance().getVerificationCode("2","","",
-                    userEt.getText().toString(),callback);
+            HttpMessageUtil.newInstance().postCheckVerifyCode_v2(2,"","",
+                    userEt.getText().toString().trim(),imageId,1,imageEt.getText().toString().trim(),callback);
         else
-            HttpMessageUtil.newInstance().getVerificationCode("1","0086",
-                    userEt.getText().toString(),"",callback);
-
-        sendTv.setEnabled(false);
-        time = 60;
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                handler.sendEmptyMessage(100);
-            }
-        };
-        timer = new Timer();
-        timer.schedule(timerTask,1000,1000);
+            HttpMessageUtil.newInstance().postCheckVerifyCode_v2(1,codeStr,
+                    userEt.getText().toString(),"",imageId,1,imageEt.getText().toString().trim(),callback);
     }
 
     private GenericsCallback<BaseApi> callback = new GenericsCallback<BaseApi>(new JsonGenericsSerializator()) {
@@ -200,6 +196,17 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
 
             if (response.getCode() != 200) {
                 showToast(response.getMessage());
+            }else {
+                sendTv.setEnabled(false);
+                time = 60;
+                TimerTask timerTask = new TimerTask() {
+                    @Override
+                    public void run() {
+                        handler.sendEmptyMessage(100);
+                    }
+                };
+                timer = new Timer();
+                timer.schedule(timerTask,1000,1000);
             }
         }
     };

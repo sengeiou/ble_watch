@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">stato</string>
+    <string name="sport">gli sport</string>
+    <string name="consult">consultare</string>
+    <string name="mine">il mio</string>
+    <string name="tip">ricordare</string>
+    <string name="checkGPS">È stato rilevato che l\'interruttore di posizione del telefono non è attivato. Per garantire che l\'app funzioni correttamente, attiva l\'interruttore di posizione.</string>
+    <string name="confirm">Sicuro</string>
+    <string name="cancel">Annulla</string>
+
+    <string name="touchAgain">Premere di nuovo per uscire dal programma</string>
+    <string name="privacy1">Accordo per l\'utente e Informativa sulla privacy</string>
+    <string name="privacyTip">Grazie per la fiducia e l\'utilizzo di FitRing.
+\n\nParliamo secondo l\'"Accordo sulla privacy dell\'utente" per aiutarti a comprendere la nostra raccolta, uso, archiviazione delle tue informazioni personali e i tuoi diritti correlati.
+\n\nQuando utilizzi l\'app FitRing, raccogliamo le informazioni sul tuo dispositivo, i dati personali (avatar, nickname, altezza, peso, dati sull\'esercizio) e altre informazioni, dobbiamo ottenere l\'autorizzazione della tua fotocamera, il permesso dell\'album per caricare l\'avatar dell\'app:
+\n\nQuando utilizzi l\'app FitRing per la corsa all\'aperto, carichi, condividi e memorizzi informazioni sportive, dobbiamo ottenere l\'autorizzazione alla tua posizione per registrare il tuo percorso di corsa.
+\n\nPuoi accedere, modificare, cancellare le tue informazioni personali o gestire la tua autorizzazione nelle pagine pertinenti.
+\n\nUtilizziamo la tecnologia di sicurezza leader del settore per proteggere le tue informazioni personali.
+\n\nQuando fai clic su "OK", accetti i termini di questo accordo.</string>
+
+    <string name="healthy_my_state">il mio stato</string>
+    <string name="healthy_sport">sport</string>
+    <string name="healthy_all_sport">più record di movimento</string>
+    <string name="healthy_step">conteggio dei passi</string>
+    <string name="healthy_sleep">sleep</string>
+    <string name="healthy_heart">frequenza cardiaca</string>
+    <string name="healthy_blood_pressure">pressione sanguigna</string>
+    <string name="healthy_blood_oxygen">ossigeno nel sangue</string>
+    <string name="healthy_temp">temperatura corporea</string>
+    <string name="healthy_edit_card">editing card</string>
+    <string name="healthy_last_sport">sport recenti</string>
+    <string name="healthy_sport_list">Sportlist</string>
+    <string name="healthy_sport_last">è già la fine~</string>
+    <string name="healthy_no_sport">Non ci sono ancora record di movimento, inizia ad allenarti </string>
+    <string name="healthy_card_visiable">Elementi visualizzati (tenere premuto il tasto destro per trascinare su e giù, ordine regolabile)</string>
+    <string name="healthy_card_gone">oggetti nascosti</string>
+    <string name="healthy_card_need_gone">Trascina elementi che non hanno bisogno di essere visualizzati qui</string>
+    <string name="healthy_day">giorno</string>
+    <string name="healthy_week">settimana</string>
+    <string name="healthy_month">mese</string>
+    <string name="healthy_sun">domenica</string>
+    <string name="healthy_sta">sabato</string>
+    <string name="healthy_survey">profilo di oggi</string>
+    <string name="healthy_week_survey">profilo settimanale</string>
+    <string name="healthy_month_survey">profilo mensile</string>
+    <string name="healthy_all_step">Passi totali</string>
+    <string name="healthy_all_calorie">Consumo totale</string>
+    <string name="healthy_all_distance">distanza totale</string>
+    <string name="healthy_plan">Target di oggi</string>
+    <string name="healthy_day_step">Passo medio giornaliero</string>
+    <string name="healthy_day_calorie">consumo medio giornaliero</string>
+    <string name="healthy_day_distance">distanza media giornaliera</string>
+    <string name="healthy_radio">Tasso di raggiungimento dell\'obiettivo</string>
+    <string name="healthy_sleep_info">distribuzione del sonno</string>
+    <string name="healthy_sleep_deep">Durata del sonno profondo</string>
+    <string name="healthy_sleep_light">durata del sonno poco profondo</string>
+    <string name="healthy_sleep_average_sleep">durata media del sonno</string>
+    <string name="healthy_sleep_average_deep">durata media del sonno profondo</string>
+    <string name="healthy_sleep_average_light">durata media del sonno leggero</string>
+    <string name="healthy_sleep_bed">ora di addormentarsi</string>
+    <string name="healthy_sleep_wake">ora di alzarsi</string>
+    <string name="healthy_heart_average">frequenza cardiaca media</string>
+    <string name="healthy_heart_max">frequenza cardiaca massima</string>
+    <string name="healthy_heart_min">frequenza cardiaca minima</string>
+    <string name="healthy_heart_level">distribuzione della frequenza cardiaca</string>
+    <string name="healthy_heart1">limite(≥161)</string>
+    <string name="healthy_heart2">anaerobico (149 ~ 160)</string>
+    <string name="healthy_heart3">aerobico (131 ~ 138)</string>
+    <string name="healthy_heart4">brucia grasso (112 ~ 130)</string>
+    <string name="healthy_heart5">warm-up (90 ~ 111)</string>
+    <string name="healthy_heart6">relax (≤89)</string>
+    <string name="healthy_spo_average"> valore medio di ossigeno nel sangue</string>
+    <string name="healthy_spo_max">valore massimo di ossigeno nel sangue</string>
+    <string name="healthy_spo_min">valore minimo di ossigeno nel sangue</string>
+    <string name="healthy_spo_measure_list">record di misurazione</string>
+    <string name="healthy_spo_measure_info">dettagli del record di misurazione</string>
+    <string name="healthy_spo_abnormal">numero di casi di ipossia</string>
+    <string name="healthy_temp_abnormal">numero di casi di ipossia</string>
+    <string name="healthy_temp_average">temperatura corporea media</string>
+    <string name="healthy_temp_max">temperatura corporea massima</string>
+    <string name="healthy_temp_min">temperatura corporea minima</string>
+    <string name="healthy_sbp_average">pressione sistolica media</string>
+    <string name="healthy_dbp_average">pressione diastolica media</string>
+    <string name="healthy_bp_abnormal">numero di anomalie della pressione sanguigna</string>
+    <string name="healthy_unit"> %d volte</string>
+
+    <string name="healthy_tomorrow">non è possibile scegliere date future</string>
+    <string name="healthy_not_data">La data selezionata non ha dati</string>
+
+    <string name="login_name">modulo di accesso</string>
+    <string name="login_location">regione</string>
+    <string name="login_chose_location">Seleziona una regione</string>
+    <string name="login_login_account">Account di accesso</string>
+    <string name="login_login">Accedi</string>
+    <string name="login_account">Account</string>
+    <string name="login_input_account">Inserisci il tuo account</string>
+    <string name="login_right_email">Inserisci un indirizzo email corretto</string>
+    <string name="login_psw">password</string>
+    <string name="login_input_psw">Inserisci la tua password</string>
+    <string name="login_forget_psw">Password dimenticata?</string>
+    <string name="login_register">Non hai un account? per registrarsi</string>
+    <string name="login_privacy">Accetta il <u>Accordo per l\'utente e l\'Informativa sulla privacy</u></string>
+    <string name="login_checkPrivacy">Non acconsento all\'Accordo per l\'utente e all\'Informativa sulla privacy</string>
+
+
+    <string name="login_register_account">registra l\'account</string>
+    <string name="login_register_account_tip">Una volta che hai un account personale, i tuoi dati di fitness e le preferenze del dispositivo possono essere salvati in modo sicuro e permanente</string>
+    <string name="login_next">Avanti</string>
+    <string name="login_verification">Codice di verifica</string>
+    <string name="login_input_verification">Inserisci il tuo codice di verifica</string>
+    <string name="login_send">Invia</string>
+
+    <string name="login_set_password">imposta password</string>
+    <string name="login_inconsistent">Password incoerenti inserite due volte</string>
+    <string name="login_confirm_password">Conferma password</string>
+    <string name="login_finish">fine</string>
+    <string name="login_find_password">trova password</string>
+    <string name="login_reset_Success">Reimpostazione password riuscita</string>
+
+    <string name="login_change_password">cambia password</string>
+    <string name="login_old_password">vecchia password</string>
+    <string name="login_new_password">nuova password</string>
+    <string name="login_confirm_new_password">Conferma nuova password</string>
+    <string name="login_change_success">Modificato con successo</string>
+
+    <string name="sport_sport_last">esercizio recente</string>
+    <string name="sport_sport_time">tempo di esercizio</string>
+    <string name="sport_sport_calorie">consumo di esercizio</string>
+    <string name="sport_sport_distance">Distanza di movimento</string>
+    <string name="sport_steps">Conteggio passi</string>
+    <string name="sport_speed_hour">velocità media</string>
+    <string name="sport_stride">cadenza</string>
+    <string name="sport_heart">frequenza cardiaca media</string>
+    <string name="sport_height">salire di quota</string>
+    <string name="sport_sport_info">Dettagli sportivi</string>
+    <string name="sport_heart_level">Distribuzione della frequenza cardiaca</string>
+    <string name="sport_heart1">Limite (≥161)</string>
+    <string name="sport_heart2">Anaerobico(149~160)</string>
+    <string name="sport_heart3">Aerobico(131~138)</string>
+    <string name="sport_heart4">bruciare i grassi(112~130)</string>
+    <string name="sport_heart5">riscaldamento(90~111)</string>
+    <string name="sport_speed">ritmo</string>
+    <string name="sport_running">in movimento</string>
+    <string name="sport_run_pause">Il movimento si è fermato</string>
+    <string name="sport_gps_low">Segnale GPS debole e bassa precisione dei dati</string>
+    <string name="sport_gps_middle">Segnale GPS potente e alta precisione dei dati</string>
+    <string name="sport_gps_high">Segnale GPS potente e alta precisione dei dati</string>
+    <string name="sport_no_sport">Nessun record di allenamento ancora, inizia ad allenarti ora</string>
+    <string name="sport_destroy">Fai di nuovo clic per uscire da questa campagna</string>
+    <string name="sport_time_short">La durata e la distanza dell\'esercizio sono troppo brevi per generare un rapporto di allenamento valido</string>
+    <string name="sport_finish_sport">Sei sicuro di voler terminare l\'esercizio?</string>
+    <string name="sport_start_sport">Per favore, inizia prima l\'esercizio</string>
+
+    <string name="user_plan">il mio obiettivo</string>
+    <string name="user_edit_plan">Modifica destinazione</string>
+    <string name="user_step">obiettivo del passo</string>
+    <string name="user_sleep">obiettivi di sonno</string>
+    <string name="user_calorie">obiettivo di consumo</string>
+
+    <string name="user_connect">collegato</string>
+    <string name="user_disconnect">non collegata</string>
+    <string name="user_connect_fail">Si sta cercando di rimettersi in piedi</string>
+    <string name="user_connecting">collegamento...</string>
+
+    <string name="user_dial">il mio quadrante</string>
+    <string name="user_dial_tip">Più quadranti, cambio a piacimento></string>
+    <string name="user_device_config">Gestione dei dispositivi</string>
+    <string name="user_find_watch">Trova un orologio</string>
+    <string name="user_ble_call">Chiamate Bluetooth</string>
+    <string name="user_ble_camera">Fotocamera Bluetooth</string>
+    <string name="user_unit">sistema unitario</string>
+    <string name="user_notification">notifica</string>
+    <string name="user_about">Informazioni sul dispositivo</string>
+    <string name="user_schedule">il mio programma</string>
+    <string name="user_auto">Monitoraggio automatico</string>
+    <string name="user_add_device">Aggiungi dispositivo</string>
+
+    <string name="user_measureUnit">Unità di misura</string>
+    <string name="user_tempUnit">unità di temperatura</string>
+    <string name="user_metric">metrico</string>
+    <string name="user_british">Imperiale</string>
+    <string name="user_save">Salva</string>
+    <string name="user_saved">Salvato con successo</string>
+
+    <string name="user_notify">notifica</string>
+    <string name="user_notify_tip">Per ricevere i messaggi di notifica dall\'app sul dispositivo, devi attivare l\'interruttore dei messaggi</string>
+    <string name="user_notify_title">Attivare le notifiche</string>
+    <string name="user_notify_msg">Questa applicazione deve inoltrare le notifiche dell\'applicazione a dispositivi intelligenti remoti. Premere \"OK\" per accedere alla pagina di notifica da attivare.</string>
+    <string name="user_cancel">Annulla</string>
+    <string name="user_confirm">Sicuro</string>
+
+    <string name="user_account_safe">Conto e sicurezza</string>
+    <string name="user_version">Versione attuale dell\'APP</string>
+    <string name="user_help">Aiuto e feedback</string>
+    <string name="user_privacy">Accordo per l\'utente e Informativa sulla privacy</string>
+    <string name="user_logout">disconnessione</string>
+    <string name="user_unbind_tip">sciogliere</string>
+    <string name="user_unbind_message">Sei sicuro di annullare l\'associazione del dispositivo corrente?</string>
+
+    <string name="user_info">Informazione personale</string>
+    <string name="user_set">Informazioni account</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">Soprannome</string>
+    <string name="user_sex">Genere</string>
+    <string name="user_birthday">data di nascita</string>
+    <string name="user_height">altezza</string>
+    <string name="user_weight">il peso</string>
+    <string name="user_male">maschio</string>
+    <string name="user_female">Femmina</string>
+    <string name="user_camera">Fotografia</string>
+    <string name="user_album">album di foto</string>
+    <string name="user_enter_name">Per favore inserisci il tuo soprannome</string>
+    <string name="user_name_long">Il nickname non può superare i 12 caratteri</string>
+    <string name="user_permission_error_camera">L\'autorizzazione non è stata approvata, la funzione della fotocamera non può essere attivata</string>
+    <string name="user_crop_pic_failed">Impossibile acquisire l\'immagine, seleziona l\'immagine in formato jpg!</string>
+    <string name="user_account">Account di accesso</string>
+    <string name="user_change">cambiare la password</string>
+    <string name="user_delete_account">Disconnettersi</string>
+    <string name="user_logout_tip">Sei sicuro di voler uscire?</string>
+    <string name="user_upload_data">Caricamento dati in corso...</string>
+    <string name="user_upload_data_success">Caricamento dati riuscito!</string>
+    <string name="user_faq">problema comune</string>
+    <string name="user_feedback_hint">il tuo feedback/domande</string>
+    <string name="user_send_feedback">Invia feedback</string>
+    <string name="user_feedback_long">Il testo che hai inserito è troppo lungo</string>
+    <string name="user_feedback_empty">I commenti non possono essere vuoti</string>
+    <string name="user_feedback_success">successo del feedback</string>
+    <string name="user_guide">guida alla connessione</string>
+    <string name="user_service">mantienilo in esecuzione in background</string>
+    <string name="user_huawei">Huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">uno in più</string>
+    <string name="user_samsun">SAMSUNG</string>
+    <string name="user_mi">Miglio</string>
+    <string name="user_meizu">Meizu</string>
+    <string name="user_serviceTip">Per migliorare la stabilità della connessione dell\'orologio, si consiglia di effettuare le seguenti impostazioni:</string>
+    <string name="user_saverBattery">Non si accende (modalità di risparmio energetico):</string>
+    <string name="user_batteryContent">Se la modalità di risparmio energetico è attivata, potrebbero verificarsi problemi quali connessione Bluetooth instabile, traiettoria di movimento anomala e distanza di alimentazione ridotta. Si consiglia di disattivare la modalità di risparmio energetico durante l\'uso.</string>
+    <string name="user_protect">Impostazioni di protezione in background dei principali produttori:</string>
+
+
+    <string name="user_search">dispositivo di ricerca</string>
+    <string name="user_searching">Ricerca di dispositivi...</string>
+    <string name="user_bind">Legame...</string>
+    <string name="user_no_device">Dispositivo non trovato</string>
+    <string name="user_pair_success">accoppiato con successo</string>
+    <string name="user_pair_tip">Le informazioni sui dati sulla salute dello sport verranno sincronizzate tra l\'orologio e il telefono cellulare tramite l\'APP.</string>
+    <string name="user_finish">Fine</string>
+    <string name="user_understand">Vedo</string>
+    <string name="user_wear_tip">indossare punte</string>
+    <string name="user_wear_tip_content">Per misurare accuratamente i dati e non pregiudicare il normale utilizzo dell\'APP, provare a indossare l\'orologio a una distanza di 1 cm dall\'osso del polso</string>
+    <string name="user_search_tip">Rimuovi il dispositivo, caricalo per attivarlo e tienilo vicino al telefono</string>
+    <string name="user_search_much">Seleziona il tuo orologio in base all\'indirizzo mac</string>
+    <string name="user_search_again">cerca ancora</string>
+    <string name="user_again_tip">Puoi provare i seguenti modi e riprovare dopo aver impostato:</string>
+    <string name="user_again_advice">·Riapri il Bluetooth del telefono\n·Assicurati che l\'orologio sia acceso e vicino al telefono\n·Fai clic sul dispositivo\"Ripristina le impostazioni di fabbrica\"</string>
+    <string name="user_stop_bind">Più tardi, non legare per il momento</string>
+    <string name="user_bind_help"><u>Non riesci a trovare il dispositivo da aggiungere? Visualizza la guida</u></string>
+
+    <string name="user_dial_market">mercato del quadrante</string>
+    <string name="user_dial_now">Guarda l\'anteprima del quadrante</string>
+    <string name="user_dial_mine">il mio quadrante</string>
+    <string name="user_dial_diy">quadrante personalizzato</string>
+    <string name="user_background">carica lo sfondo</string>
+    <string name="user_crop_fail">Impossibile acquisire l\'immagine, seleziona l\'immagine in formato jpg!</string>
+    <string name="user_crop_small">Impossibile acquisire l\'immagine, l\'immagine acquisita è troppo piccola e non corrisponde alle dimensioni del quadrante！</string>
+    <string name="user_send_background">Invio sfondo...</string>
+    <string name="user_send_dial">Invio quadrante...</string>
+    <string name="user_send_success">Inviato con successo!</string>
+    <string name="user_send_fail">Invio fallito, riprova.</string>
+    <string name="user_no_background">Si prega di caricare prima lo sfondo</string>
+    <string name="user_no_clock">Seleziona prima un quadrante</string>
+
+    <string name="user_device_name">Modello software</string>
+    <string name="user_device_mac">indirizzo MAC</string>
+    <string name="user_device_version">Versione software</string>
+    <string name="user_check_update">Controlla gli aggiornamenti</string>
+
+    <string name="user_camera_tip">Dopo aver attivato la funzione fotocamera Bluetooth, l\'orologio può controllare l\'applicazione fotocamera del telefono cellulare per scattare foto</string>
+    <string name="user_camera_permission_tip">Durante l\'uso, questa app richiede l\'accesso alla fotocamera e le autorizzazioni di lettura e scrittura dei file per la fotografia e l\'archiviazione in remoto.\n\nSe non accetti di invocare le autorizzazioni di cui sopra, la fotocamera Bluetooth non funzionerà correttamente
+
+, ma non pregiudica le funzioni di base dell\'utilizzo di questa applicazione. Puoi revocare il tuo consenso in qualsiasi momento andando su "Impostazioni" > "Gestione autorizzazioni" e scegliendo di disattivare le chiamate di autorizzazione di cui sopra</string>
+    <string name="user_camera_permission_error">Il permesso non è passato, l\'apertura non riesce</string>
+
+    <string name="user_deleteTip">Sia per confermare la cancellazione del tuo account, l\'account verrà cancellato con successo entro tre giorni dalla conferma e i dati dell\'account verranno completamente cancellati dopo l\'avvenuta cancellazione, irrecuperabili! Si prega di procedere con cautela.</string>
+    <string name="user_deleteSuccess">L\'account dell\'applicazione è stato cancellato con successo.</string>
+    <string name="user_deleteNow">Il conto corrente è in attesa della fase di logout.</string>
+
+    <string name="user_schedule_empty">L\'orologio corrente non ha una pianificazione, aggiungi una nuova pianificazione</string>
+    <string name="user_delete_schedule">elimina programma</string>
+    <string name="user_save_schedule">salva programma</string>
+    <string name="user_schedule_info">Dettagli programma</string>
+    <string name="user_schedule_fall">Il programma che può essere aggiunto all\'orologio ha raggiunto il limite superiore, cancellalo prima di aggiungerlo</string>
+    <string name="user_schedule_add_fail">Impossibile aggiungere la pianificazione</string>
+    <string name="user_schedule_edit_fail">Impossibile modificare la pianificazione</string>
+    <string name="user_schedule_delete_fail">Impossibile eliminare la pianificazione</string>
+    <string name="user_schedule_past">Impossibile impostare il punto temporale passato come orario programmato</string>
+    <string name="user_schedule_same">L\'orario attualmente selezionato ha già un\'agenda e non può essere impostato ripetutamente</string>
+    <string name="user_schedule_msg">Si prega di compilare i dettagli del programma</string>
+    <string name="user_today">oggi</string>
+    <string name="user_time">volta</string>
+
+
+    <string name="user_auto_measure_tip">Dopo l\'attivazione della funzione di monitoraggio automatico, l\'orologio misurerà ogni frequenza e ogni tempo entro il periodo effettivo.</string>
+    <string name="user_measure_frequency">Frequenza di monitoraggio</string>
+    <string name="user_valid_time">Periodo effettivo</string>
+    <string name="user_start_time">Tempo di partenza</string>
+    <string name="user_end_time">Tempo scaduto</string>
+    <string name="user_heart">frequenza del battito cardiaco</string>
+    <string name="user_blood_pressure">pressione sanguigna</string>
+    <string name="user_blood_oxygen">ossigeno nel sangue</string>
+    <string name="user_temperature">temperatura corporea</string>
+
+    <string name="loading">加载中...</string>
+    <string name="permission_tip">权限说明</string>
+    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
+    <string name="agree">同意</string>
+    <string name="disagree">拒绝</string>
+    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
+    <string name="outrun">户外跑</string>
+    <string name="walk">徒步</string>
+    <string name="treadmill">跑步机</string>
+    <string name="mountain">登山</string>
+    <string name="marathon">马拉松</string>
+    <string name="badminton">羽毛球</string>
+    <string name="basketball">篮球</string>
+    <string name="bicycle">骑行</string>
+    <string name="skiing">滑雪</string>
+    <string name="ping">乒乓球</string>
+    <string name="football">足球</string>
+    <string name="climb">攀岩</string>
+    <string name="watch_ring">手表正在响铃,请注意。</string>
+    <string name="stop_find">停止查找</string>
+
+    <string name="save_success">保存成功</string>
+    <string name="waiting">请等待...</string>
+    <string name="http_error">请求超时</string>
+    <string name="ble_error">蓝牙未连接，请连接后重试</string>
+    <string name="updating">数据正在同步...</string>
+
+    <string name="connected">已连接</string>
+    <string name="disConnect">未连接</string>
+
+    <string name="sun">日</string>
+    <string name="mon">一</string>
+    <string name="tues">二</string>
+    <string name="wed">三</string>
+    <string name="thus">四</string>
+    <string name="fri">五</string>
+    <string name="sta">六</string>
+</resources>

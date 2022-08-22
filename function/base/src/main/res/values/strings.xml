@@ -1,13 +1,327 @@
 <resources>
+
     <string name="app_name">FitRing</string>
+    <string name="home">state</string>
+    <string name="sport">sport</string>
+    <string name="consult">consult</string>
+    <string name="mine">mine</string>
+    <string name="tip">tip</string>
+    <string name="checkGPS">It has been detected that the position switch of your mobile phone is not turned on. To ensure the normal operation of the application, please turn on the position switch.</string>
+    <string name="confirm">confirm</string>
+    <string name="cancel">cancel</string>
+
+    <string name="touchAgain">Press Again To Exit The Program</string>
+
+    <string name="message">Message</string>
+    <string name="wechat">Wechat</string>
+
+    <string name="privacy1">User Agreement And Privacy Policy</string>
+    <string name="privacyTip">Thank you for trusting and using FitRing.
+\n\n We will help you to understand our collection, use and storage of your personal information and your relevant rights according to the User Privacy Agreement.
+\n\n When you use the FitRing app, we will collect your device information, personal information (avatar, nickname, height, weight, exercise data) and other information. We need to get your camera permissions, photo album permissions to upload your app avatar:
+\n\n When you use the FitRing application to run outdoors, upload, share and store exercise information, we need to obtain your location permissions and other purposes to record your running track.
+\n\n You can access, modify, delete your personal information or manage your authorization in the relevant pages.
+\n\n We use industry-leading security technology to protect your personal information.
+\n\n When you click "OK", you agree to the terms of this Agreement.</string>
+
+    <string name="healthy_name">healthy module</string>
+    <string name="healthy_my_state">State</string>
+    <string name="healthy_sport">sport</string>
+    <string name="healthy_all_sport">more sport</string>
+    <string name="healthy_step">step</string>
+    <string name="healthy_sleep">sleep</string>
+    <string name="healthy_heart">heart rate</string>
+    <string name="healthy_blood_pressure">blood pressure</string>
+    <string name="healthy_blood_oxygen">blood oxygen</string>
+    <string name="healthy_temp">body temperature</string>
+    <string name="healthy_edit_card">Edit card</string>
+    <string name="healthy_last_sport">Last Sport</string>
+    <string name="healthy_sport_list">Sport List</string>
+    <string name="healthy_sport_last">To the bottom~</string>
+    <string name="healthy_no_sport">No sport records yet, so start sporting</string>
+    <string name="healthy_card_visiable">Items displayed (hold down and drag on the right side to adjust the order)</string>
+    <string name="healthy_card_gone">Hidden items</string>
+    <string name="healthy_card_need_gone">Drag items that do not need to be displayed here</string>
+    <string name="healthy_day">Day</string>
+    <string name="healthy_week">Week</string>
+    <string name="healthy_month">Month</string>
+    <string name="healthy_sun">Sun.</string>
+    <string name="healthy_sta">STA.</string>
+    <string name="healthy_survey">Today\'s situation</string>
+    <string name="healthy_week_survey">Weekly situation</string>
+    <string name="healthy_month_survey">Monthly situation</string>
+    <string name="healthy_all_step">Steps</string>
+    <string name="healthy_all_calorie">Calorie</string>
+    <string name="healthy_all_distance">Distance</string>
+    <string name="healthy_plan">Today\'s goal</string>
+    <string name="healthy_day_step">Average Steps</string>
+    <string name="healthy_day_calorie">Average Calorie</string>
+    <string name="healthy_day_distance">Average Distance</string>
+    <string name="healthy_radio">Goal</string>
+    <string name="healthy_sleep_info">Sleep Information</string>
+    <string name="healthy_sleep_deep">Deep Sleep</string>
+    <string name="healthy_sleep_light">Light Sleep</string>
+    <string name="healthy_sleep_average_sleep">Average Sleep Time</string>
+    <string name="healthy_sleep_average_deep">Average Deep Sleep Time</string>
+    <string name="healthy_sleep_average_light">Average Light Sleep Time</string>
+    <string name="healthy_sleep_bed">Sleep time</string>
+    <string name="healthy_sleep_wake">Wake time</string>
+    <string name="healthy_heart_average">Average Heart Rate</string>
+    <string name="healthy_heart_max">Max Heart Rate</string>
+    <string name="healthy_heart_min">Min Heart Rate</string>
+    <string name="healthy_heart_level">Heart Rate Level</string>
+    <string name="healthy_heart1">Limit(≥161)</string>
+    <string name="healthy_heart2">Anaerobic(149~160)</string>
+    <string name="healthy_heart3">Aerobic(131~138)</string>
+    <string name="healthy_heart4">Fat Burn(112~130)</string>
+    <string name="healthy_heart5">Warm Up(90~111)</string>
+    <string name="healthy_heart6">Relax(≤89)</string>
+    <string name="healthy_spo_average">Average Data</string>
+    <string name="healthy_spo_max">Max Data</string>
+    <string name="healthy_spo_min">Min Data</string>
+    <string name="healthy_spo_measure_list">Measurement List</string>
+    <string name="healthy_spo_measure_info">Measurement Details</string>
+    <string name="healthy_spo_abnormal">Hypoxia Number</string>
+    <string name="healthy_temp_abnormal">Fever Number</string>
+    <string name="healthy_temp_average">Average Data</string>
+    <string name="healthy_temp_max">Max Data</string>
+    <string name="healthy_temp_min">Min Data</string>
+    <string name="healthy_sbp_average">Average Sbp Data</string>
+    <string name="healthy_dbp_average">Average Dbp Data</string>
+    <string name="healthy_bp_abnormal">Abnormal Number</string>
+    <string name="healthy_unit">%dtimes</string>
+
+    <string name="healthy_tomorrow">Available in the future</string>
+    <string name="healthy_not_data">There is no data for the selected date</string>
+
+    <string name="login_name">login module</string>
+    <string name="login_location">Region</string>
+    <string name="login_chose_location">Select your region</string>
+    <string name="login_login_account">Login Your Account</string>
+    <string name="login_login">Login</string>
+    <string name="login_account">Account</string>
+    <string name="login_input_account">enter your account</string>
+    <string name="login_right_email">Enter the correct email address</string>
+    <string name="login_psw">Password</string>
+    <string name="login_input_psw">enter your password</string>
+    <string name="login_forget_psw">Forget Password?</string>
+    <string name="login_register">No account? Go to register</string>
+    <string name="login_privacy">Agree<u>"User Agreement And Privacy Policy"</u></string>
+    <string name="login_checkPrivacy">Please Confirm You’ve Read The User Agreement And Privacy Policy</string>
+
+    <string name="login_register_account">Register Account</string>
+    <string name="login_register_account_tip">With a personal account, your fitness data and device preferences can be securely and permanently stored</string>
+    <string name="login_next">Next Step</string>
+    <string name="login_verification">Verification Code</string>
+    <string name="login_input_verification">enter your verification code</string>
+    <string name="login_send">send</string>
+
+    <string name="login_set_password">Set Password</string>
+    <string name="login_inconsistent">The two passwords are inconsistent</string>
+    <string name="login_confirm_password">Confirm Password</string>
+    <string name="login_finish">complete</string>
+    <string name="login_find_password">Retrieve password</string>
+    <string name="login_reset_Success">Password Reset Succeeded</string>
+
+    <string name="login_change_password">Change Password</string>
+    <string name="login_old_password">Old Password</string>
+    <string name="login_new_password">New Password</string>
+    <string name="login_confirm_new_password">Confirm New Password</string>
+    <string name="login_change_success">Change Success</string>
+
+    <string name="sport_name">sport module</string>
+    <string name="sport_sport_last">Recent Sport</string>
+    <string name="sport_sport_time">Time</string>
+    <string name="sport_sport_calorie">Calories</string>
+    <string name="sport_sport_distance">Distance</string>
+    <string name="sport_steps">Steps</string>
+    <string name="sport_speed_hour">Speed</string>
+    <string name="sport_stride">Stride</string>
+    <string name="sport_heart">Heart</string>
+    <string name="sport_height">Altitude</string>
+    <string name="sport_sport_info">Sport Info</string>
+    <string name="sport_heart_level">Heart Rate Level</string>
+    <string name="sport_heart1">Limit(≥161)</string>
+    <string name="sport_heart2">Anaerobic(149~160)</string>
+    <string name="sport_heart3">Aerobic(131~138)</string>
+    <string name="sport_heart4">Fat Burn(112~130)</string>
+    <string name="sport_heart5">Warm Up(90~111)</string>
+    <string name="sport_running">Running</string>
+    <string name="sport_run_pause">Running has been suspended</string>
+    <string name="sport_speed">Speed</string>
+    <string name="sport_gps_low">GPS signal is weak and data accuracy is low</string>
+    <string name="sport_gps_middle">GPS signal is strong and data accuracy is high</string>
+    <string name="sport_gps_high">Strong GPS signal and high data accuracy</string>
+    <string name="sport_no_sport">No sport records yet, so start sporting</string>
+    <string name="sport_destroy">Click again to exit this campaign</string>
+    <string name="sport_time_short">Exercise duration and distance are too short to generate effective exercise reports</string>
+    <string name="sport_finish_sport">Are you sure you want to stop exercising?</string>
+    <string name="sport_start_sport">Please start the exercise first</string>
+
+    <string name="user_app_name">user module</string>
+    <string name="user_plan">Target</string>
+    <string name="user_edit_plan">Edit Target</string>
+    <string name="user_step">Step</string>
+    <string name="user_sleep">Sleep</string>
+    <string name="user_calorie">calories</string>
+
+    <string name="user_connect">connected</string>
+    <string name="user_disconnect">disconnect</string>
+    <string name="user_connect_fail">Trying to reconnect</string>
+    <string name="user_connecting">connecting...</string>
+    <string name="user_dial">My Dial</string>
+    <string name="user_dial_tip">More dials, as you wish></string>
+    <string name="user_device_config">Device Management</string>
+    <string name="user_find_watch">Find Watch</string>
+    <string name="user_ble_call">Bluetooth Call</string>
+    <string name="user_ble_camera">Camera</string>
+    <string name="user_unit">Unit</string>
+    <string name="user_notification">Notification</string>
+    <string name="user_about">About Device</string>
+    <string name="user_schedule">My Schedule</string>
+    <string name="user_auto">Auto Measure</string>
+    <string name="user_add_device">Add Device</string>
+
+    <string name="user_measureUnit">Unit Of Measure</string>
+    <string name="user_tempUnit">Unit Of Temperature</string>
+    <string name="user_metric">Metric</string>
+    <string name="user_british">Imperial</string>
+    <string name="user_save">Save</string>
+    <string name="user_saved">Saved Successfully</string>
+
+    <string name="user_notify">Notification</string>
+    <string name="user_notify_tip">To receive application notification messages on the device, enable the message switch</string>
+    <string name="user_notify_title">Enable Notifications</string>
+    <string name="user_notify_msg">iSmarport Needs To Forward Application Notifications To Remote Smart Devices. Press\"Confirm\"Enter Notification Page To Activate.</string>
+    <string name="user_cancel">Cancel</string>
+    <string name="user_confirm">Confirm</string>
+    v
+    <string name="user_account_safe">Accounts and Security</string>
+    <string name="user_version">App Version</string>
+    <string name="user_help">Help&amp;Feedback</string>
+    <string name="user_privacy">User Agreement And Privacy Policy</string>
+    <string name="user_logout">Logout</string>
+    <string name="user_unbind_tip">unbind</string>
+    <string name="user_unbind_message">Are you sure to unbind the current device？</string>
+
+    <string name="user_info">User Information</string>
+    <string name="user_set">Account Setting</string>
+    <string name="user_head">Head</string>
+    <string name="user_name">Name</string>
+    <string name="user_sex">Gender</string>
+    <string name="user_birthday">Birthday</string>
+    <string name="user_height">Height</string>
+    <string name="user_weight">Weight</string>
+    <string name="user_male">Male</string>
+    <string name="user_female">Female</string>
+    <string name="user_camera">Camera</string>
+    <string name="user_album">Album</string>
+    <string name="user_enter_name">Please Enter Your Nickname</string>
+    <string name="user_name_long">Nicknames cannot exceed 12 characters</string>
+    <string name="user_permission_error_camera">Permission Failed, Can Not Turn On Camera Function</string>
+    <string name="user_permission_error_sms">Permission Failed, Can Not Turn On SMS Notify Function</string>
+    <string name="user_crop_pic_failed">Image capture failed, please select JPG image!</string>
+    <string name="user_account">Account</string>
+    <string name="user_change">Change Password</string>
+    <string name="user_delete_account">Destruction Account</string>
+    <string name="user_logout_tip">Are You Sure You Want To Log Out？</string>
+    <string name="user_upload_data">Data Uploading...</string>
+    <string name="user_upload_data_success">Data uploaded successfully!</string>
+    <string name="user_faq">FAQ</string>
+    <string name="user_feedback_hint">Your feedback/question</string>
+    <string name="user_send_feedback">Send</string>
+    <string name="user_feedback_long">Input is too long</string>
+    <string name="user_feedback_empty">Field cannot be empty</string>
+    <string name="user_feedback_success">Feedback Success</string>
+    <string name="user_guide">User Guide</string>
+    <string name="user_service">Keep app active</string>
+    <string name="user_huawei">HUAWEI</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">Lenovo</string>
+    <string name="user_oneplus">onePlus</string>
+    <string name="user_samsun">Samsun</string>
+    <string name="user_mi">MI</string>
+    <string name="user_meizu">MEIZU</string>
+    <string name="user_serviceTip">In order to improve the stability of the watch connection, it is recommended that you make the following Settings:</string>
+    <string name="user_saverBattery">Do not open (power saving mode) :</string>
+    <string name="user_batteryContent">If the power-saving mode is turned on, it may cause problems such as unstable Bluetooth connection, abnormal movement trajectory and reduced power distance. It is recommended to turn off the power-saving mode while in use.</string>
+    <string name="user_protect">Set the method of background protection::</string>
+
+    <string name="user_search">Search Device</string>
+    <string name="user_searching">Searching for device....</string>
+    <string name="user_bind">binding...</string>
+    <string name="user_no_device">No device found</string>
+    <string name="user_pair_success">Pair success</string>
+    <string name="user_pair_tip">Your exercise and health data will be synchronized between the watch and the phone through the APP.</string>
+    <string name="user_finish">Finish</string>
+    <string name="user_understand">Understand</string>
+    <string name="user_wear_tip">Wear Tip</string>
+    <string name="user_wear_tip_content">In order to accurately measure data and not affect the normal use of APP, please try to wear the watch 1cm away from the wrist bone</string>
+    <string name="user_search_tip">Remove the device, charge it to activate, and hold it close to the phone</string>
+    <string name="user_search_much">Please select your watch by MAC address</string>
+    <string name="user_search_again">Search Again</string>
+    <string name="user_again_tip">You can perform the following operations and try again:</string>
+    <string name="user_again_advice">· Turn on the bluetooth of the phone again \n· Make sure that the watch is turned on and close to the phone \ N · Click on the device \" Restore factory Settings \"</string>
+    <string name="user_stop_bind">Later, it is not bound</string>
+    <string name="user_bind_help">Can\'t find the device to add? See the help</string>
+
+    <string name="user_dial_market">Dial Store</string>
+    <string name="user_dial_now">Preview</string>
+    <string name="user_dial_mine">My Dial</string>
+    <string name="user_dial_diy">DIY</string>
+    <string name="user_background">Upload Pictures</string>
+    <string name="user_crop_fail">Image capture failed, please select JPG image!</string>
+    <string name="user_crop_small">Image capture failed, captured picture is too small and the size of the dial does not match!</string>
+    <string name="user_send_background">Sending Background...</string>
+    <string name="user_send_dial">Sending Dial...</string>
+    <string name="user_send_success">Update dial success!</string>
+    <string name="user_send_fail">Update dial fail,please try again!</string>
+    <string name="user_no_background">Please upload the background first</string>
+    <string name="user_no_clock">Please select the dial first</string>
+
+    <string name="user_device_name">Device Model</string>
+    <string name="user_device_mac">Mac Address</string>
+    <string name="user_device_version">Device Version</string>
+    <string name="user_check_update">Check Update</string>
+
+    <string name="user_camera_tip">With Bluetooth enabled, the watch controls the phone\'s camera app to take photos.</string>
+    <string name="user_camera_permission_tip">In the process of using, this application requires access to the camera and file read and write permissions, used for remote photography and storage photos. You can go to Settings at any time; Permission Management, choose to close the above permission call to revoke your consent.</string>
+    <string name="user_camera_permission_error">Permission failed to open</string>
+
+    <string name="user_deleteTip">Confirm to cancel your account, the account will be successfully cancelled within three days after the confirmation, the account data will be completely deleted and cannot be restored! Perform this operation with caution.</string>
+    <string name="user_deleteSuccess">The request is successful.</string>
+    <string name="user_deleteNow">The current account is awaiting destruction.</string>
+
+    <string name="user_schedule_empty">The current watch has no schedule, please add a new schedule</string>
+    <string name="user_delete_schedule">Delete</string>
+    <string name="user_save_schedule">Save</string>
+    <string name="user_schedule_info">Schedule Information</string>
+    <string name="user_schedule_fall">The number of schedules that can be added to the watch has reached the upper limit</string>
+    <string name="user_schedule_add_fail">Failed to add schedule</string>
+    <string name="user_schedule_edit_fail">Failed to modify schedule</string>
+    <string name="user_schedule_delete_fail">Failed to delete schedule</string>
+    <string name="user_schedule_past">A past time point cannot be set as a schedule point</string>
+    <string name="user_schedule_same">The selected time point has an existing schedule and cannot be set repeatedly</string>
+    <string name="user_schedule_msg">Fill in schedule Details</string>
+    <string name="user_today">Today</string>
+    <string name="user_time">Time</string>
+
+    <string name="user_auto_measure_tip">After the automatic monitoring function is enabled, the watch will be measured every other frequency time during the effective period</string>
+    <string name="user_measure_frequency">Measure Frequency</string>
+    <string name="user_valid_time">Effective Time</string>
+    <string name="user_start_time">Start Time</string>
+    <string name="user_end_time">End Time</string>
+    <string name="user_heart">Heart Rate</string>
+    <string name="user_blood_pressure">Blood Pressure</string>
+    <string name="user_blood_oxygen">Blood Oxygen</string>
+    <string name="user_temperature">Temperature</string>
+
     <string name="loading">Loading...</string>
     <string name="permission_tip">Permission Tip</string>
     <string name="sport_permission">During use, the application requires access to location permissions to record and calibrate motion tracks and distances</string>
     <string name="agree">Agree</string>
     <string name="disagree">Disagree</string>
-    <string name="tip">Tip</string>
-    <string name="confirm">Confirm</string>
-    <string name="cancel">Cancel</string>
     <string name="login_tip">You need to log in to proceed with the next operation. Do you want to log in now?</string>
     <string name="outrun">Run</string>
     <string name="walk">Walk</string>
@@ -27,7 +341,6 @@
     <string name="save_success">Save Success</string>
     <string name="waiting">Waiting...</string>
     <string name="http_error">Request Timeout</string>
-    <string name="user_upload_data">Data Uploading...</string>
     <string name="ble_error">Bluetooth is not connected. Please connect and try again.</string>
     <string name="updating">Data is being updated...</string>
 

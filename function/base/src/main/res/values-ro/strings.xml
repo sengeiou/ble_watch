@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="name">FitRing</string>
+    <string name="home">stat</string>
+    <string name="sport">sport</string>
+    <string name="consult">consulta</string>
+    <string name="mine">A mea</string>
+    <string name="tip">reaminti</string>
+    <string name="checkGPS">S-a detectat că comutatorul de locație al telefonului dvs. nu este activat. Pentru a vă asigura că aplicația funcționează corect, activați comutatorul de locație.</string>
+    <string name="confirm">Sigur</string>
+    <string name="cancel">Anulare</string>
+
+    <string name="touchAgain">Apăsați din nou pentru a ieși din program</string>
+    <string name="privacy1">Acordul utilizatorului și Politica de confidențialitate</string>
+    <string name="privacyTip">Vă mulțumim pentru încredere și pentru utilizarea FitRing.
+\n\nNe bazăm pe „Acordul privind confidențialitatea utilizatorului” pentru a vă ajuta să înțelegeți cum colectăm, folosim, stocăm informațiile dumneavoastră personale și drepturile aferente.
+\n\nCând utilizați aplicația FitRing, vom colecta informații despre dispozitiv, date personale (avatar, porecla, înălțime, greutate, date despre exerciții) și alte informații, trebuie să obținem permisiunile camerei dvs., permisiunile pentru album pentru încărcarea avatarului aplicației dvs. :
+\n\nCând utilizați aplicația FitRing pentru alergarea în aer liber, încărcarea, partajarea și stocarea informațiilor sportive, trebuie să obținem permisiunea de locație pentru a vă înregistra traseul de alergare.
+\n\nPuteți accesa, modifica, șterge informațiile personale sau puteți gestiona autorizarea în paginile relevante.
+\n\nFolosim tehnologie de securitate de vârf pentru a vă proteja informațiile personale.
+\n\nCând dați clic pe „OK”, sunteți de acord cu termenii acestui acord.</string>
+
+    <string name="healthy_my_state">Statutul meu</string>
+    <string name="healthy_sport">sport</string>
+    <string name="healthy_all_sport">Mai multe recorduri sportive</string>
+    <string name="healthy_step">Număr de pași</string>
+    <string name="healthy_sleep">dormi</string>
+    <string name="healthy_heart">ritm cardiac</string>
+    <string name="healthy_blood_pressure">tensiune arteriala</string>
+    <string name="healthy_blood_oxygen">oxigen din sânge</string>
+    <string name="healthy_temp">temperatura corpului</string>
+    <string name="healthy_edit_card">Editați cardul</string>
+    <string name="healthy_last_sport">exercițiu recent</string>
+    <string name="healthy_sport_list">lista de sporturi</string>
+    <string name="healthy_sport_last">S-a terminat~</string>
+    <string name="healthy_no_sport">Încă nu există nicio înregistrare de exerciții, începeți să faceți exerciții acum</string>
+    <string name="healthy_card_visiable">Elemente afișate (apăsați lung pe partea dreaptă și trageți în sus și în jos pentru a ajusta ordinea)</string>
+    <string name="healthy_card_gone">element ascuns</string>
+    <string name="healthy_card_need_gone">Trageți elementele pe care nu doriți să le afișați aici</string>
+    <string name="healthy_day">zi</string>
+    <string name="healthy_week">săptămână</string>
+    <string name="healthy_month">lună</string>
+    <string name="healthy_sun">duminică</string>
+    <string name="healthy_sta">sâmbătă</string>
+    <string name="healthy_survey">Datele de azi</string>
+    <string name="healthy_week_survey">date săptămânale</string>
+    <string name="healthy_month_survey">date lunare</string>
+    <string name="healthy_all_step">pași totali</string>
+    <string name="healthy_all_calorie">consumul total</string>
+    <string name="healthy_all_distance">distanta totala</string>
+    <string name="healthy_plan">obiectivul de azi</string>
+    <string name="healthy_day_step">Număr mediu zilnic de pași</string>
+    <string name="healthy_day_calorie">Consumul zilnic mediu</string>
+    <string name="healthy_day_distance">Distanța medie zilnică</string>
+    <string name="healthy_radio">rata de realizare a obiectivului</string>
+    <string name="healthy_sleep_info">distribuția somnului</string>
+    <string name="healthy_sleep_deep">timp de somn profund</string>
+    <string name="healthy_sleep_light">durata somnului usor</string>
+    <string name="healthy_sleep_average_sleep">durata medie de somn</string>
+    <string name="healthy_sleep_average_deep">Durata medie a somnului profund</string>
+    <string name="healthy_sleep_average_light">Durata medie a somnului ușor</string>
+    <string name="healthy_sleep_bed">timpul să adormi</string>
+    <string name="healthy_sleep_wake">timpul de trezire</string>
+    <string name="healthy_heart_average">ritmul cardiac mediu</string>
+    <string name="healthy_heart_max">ritm cardiac maxim</string>
+    <string name="healthy_heart_min">ritm cardiac minim</string>
+    <string name="healthy_heart_level">Distribuția ritmului cardiac</string>
+    <string name="healthy_heart1">limită(≥161)</string>
+    <string name="healthy_heart2">Anaerob(149~160)</string>
+    <string name="healthy_heart3">Aerobic(131~138)</string>
+    <string name="healthy_heart4">arderea grasimii(112~130)</string>
+    <string name="healthy_heart5">încălzire(90~111)</string>
+    <string name="healthy_heart6">Relaxa(≤89)</string>
+    <string name="healthy_spo_average">înseamnă oxigen din sânge</string>
+    <string name="healthy_spo_max">nivelul maxim de oxigen din sânge</string>
+    <string name="healthy_spo_min">nivelul minim de oxigen din sânge</string>
+    <string name="healthy_spo_measure_list">Înregistrarea măsurătorilor</string>
+    <string name="healthy_spo_measure_info">Detalii înregistrarea măsurătorilor</string>
+    <string name="healthy_spo_abnormal">Apariția hipoxiei</string>
+    <string name="healthy_temp_abnormal">Apare febra</string>
+    <string name="healthy_temp_average">temperatura medie a corpului</string>
+    <string name="healthy_temp_max">temperatura maximă a corpului</string>
+    <string name="healthy_temp_min">temperatura minima a corpului</string>
+    <string name="healthy_sbp_average">tensiune arterială sistolica medie</string>
+    <string name="healthy_dbp_average">medie a tensiunii arteriale diastolice</string>
+    <string name="healthy_bp_abnormal">tensiune arterială anormală</string>
+    <string name="healthy_unit">%dfrecvență</string>
+
+    <string name="healthy_tomorrow">Nu se poate selecta data viitoare</string>
+    <string name="healthy_not_data">Data selectată nu are date</string>
+
+    <string name="login_name">login module</string>
+    <string name="login_location">zonă</string>
+    <string name="login_chose_location">vă rugăm să selectați regiunea</string>
+    <string name="login_login_account">cont de autentificare</string>
+    <string name="login_login">Autentificare</string>
+    <string name="login_account">cont</string>
+    <string name="login_input_account">Introduceți contul dvs</string>
+    <string name="login_right_email">Vă rugăm să introduceți adresa de e-mail corectă</string>
+    <string name="login_psw">parola</string>
+    <string name="login_input_psw">introduceți parola</string>
+    <string name="login_forget_psw">Aţi uitat parola?</string>
+    <string name="login_register">Fără cont? a înregistra</string>
+    <string name="login_privacy">Sunteți de acord cu <u>Acordul de utilizare și Politica de confidențialitate</u></string>
+    <string name="login_checkPrivacy">nu a fost de acord《Acordul utilizatorului și Politica de confidențialitate》</string>
+
+
+    <string name="login_register_account">Înregistrare Cont</string>
+    <string name="login_register_account_tip">Cu un cont personal, datele tale de fitness, preferințele dispozitivului pot fi stocate permanent în siguranță</string>
+    <string name="login_next">Urmatorul pas</string>
+    <string name="login_verification">Cod de verificare</string>
+    <string name="login_input_verification">Introdu codul de verificare</string>
+    <string name="login_send">trimite</string>
+
+    <string name="login_set_password">Seteaza parola</string>
+    <string name="login_inconsistent">Parola neconsecventă a fost introdusă de două ori</string>
+    <string name="login_confirm_password">Confirmă parola</string>
+    <string name="login_finish">finalizarea</string>
+    <string name="login_find_password">Recuperează Parola</string>
+    <string name="login_reset_Success">Resetarea parolei cu succes</string>
+
+    <string name="login_change_password">schimbaţi parola</string>
+    <string name="login_old_password">Parola veche</string>
+    <string name="login_new_password">Parolă Nouă</string>
+    <string name="login_confirm_new_password">Confirmați noua parolă</string>
+    <string name="login_change_success">Modificat cu succes</string>
+
+    <string name="sport_sport_last">exercițiu recent</string>
+    <string name="sport_sport_time">durata exercițiului</string>
+    <string name="sport_sport_calorie">consumul de exerciții fizice</string>
+    <string name="sport_sport_distance">Distanța de mișcare</string>
+    <string name="sport_steps">Număr de pași</string>
+    <string name="sport_speed_hour">viteza medie</string>
+    <string name="sport_stride">Frecvența pasului</string>
+    <string name="sport_heart">ritmul cardiac mediu</string>
+    <string name="sport_height">urca altitudine</string>
+    <string name="sport_sport_info">Detalii sportive</string>
+    <string name="sport_heart_level">Distribuția ritmului cardiac</string>
+    <string name="sport_heart1">limită(≥161)</string>
+    <string name="sport_heart2">Anaerob(149~160)</string>
+    <string name="sport_heart3">Aerobic(131~138)</string>
+    <string name="sport_heart4">arderea grasimii(112~130)</string>
+    <string name="sport_heart5">încălzire(90~111)</string>
+    <string name="sport_speed">viteză</string>
+    <string name="sport_running">in miscare</string>
+    <string name="sport_run_pause">Mișcarea întreruptă</string>
+    <string name="sport_gps_low">Semnal GPS slab și acuratețe scăzută a datelor</string>
+    <string name="sport_gps_middle">Semnal GPS puternic și precizie ridicată a datelor</string>
+    <string name="sport_gps_high">Semnal GPS puternic și precizie ridicată a datelor</string>
+    <string name="sport_no_sport">Încă nu există nicio înregistrare de exerciții, începeți să faceți exerciții acum</string>
+    <string name="sport_destroy">Faceți clic din nou pentru a părăsi această campanie</string>
+    <string name="sport_time_short">Durata și distanța exercițiului sunt prea scurte pentru a genera un raport de exercițiu valid</string>
+    <string name="sport_finish_sport">Ești sigur că vrei să închei exercițiul?</string>
+    <string name="sport_start_sport">Vă rugăm să începeți mai întâi exercițiul</string>
+
+    <string name="user_plan">scopul meu</string>
+    <string name="user_edit_plan">Editați ținta</string>
+    <string name="user_step">ținta pasului</string>
+    <string name="user_sleep">obiectivele somnului</string>
+    <string name="user_calorie">ținta de consum</string>
+
+    <string name="user_connect">conectat</string>
+    <string name="user_disconnect">nu este conectat</string>
+    <string name="user_connecting">conectarea...</string>
+
+    <string name="user_dial">cadranul meu de ceas</string>
+    <string name="user_dial_tip">Mai multe cadrane, schimbați după bunul plac></string>
+    <string name="user_device_config">Gestionarea dispozitivelor</string>
+    <string name="user_find_watch">Găsiți un ceas</string>
+    <string name="user_ble_call">Apel Bluetooth</string>
+    <string name="user_ble_camera">Cameră Bluetooth</string>
+    <string name="user_unit">sistem unitar</string>
+    <string name="user_notification">notificare</string>
+    <string name="user_about">Despre dispozitiv</string>
+    <string name="user_schedule">programul meu</string>
+    <string name="user_auto">Monitorizare automată</string>
+    <string name="user_add_device">Adăugați dispozitivul</string>
+
+    <string name="user_measureUnit">Unitate de măsură</string>
+    <string name="user_tempUnit">unitate de temperatură</string>
+    <string name="user_metric">Metric</string>
+    <string name="user_british">Imperial</string>
+    <string name="user_save">Salvați</string>
+    <string name="user_saved">Salvat cu succes</string>
+
+    <string name="user_notify">notificare</string>
+    <string name="user_notify_tip">Pentru a primi mesaje de notificare de la aplicație pe dispozitiv, trebuie să activați comutatorul de mesaje</string>
+    <string name="user_notify_title">Activați notificările</string>
+    <string name="user_notify_msg">Această aplicație trebuie să redirecționeze notificările aplicației către dispozitivele inteligente de la distanță. Apăsați „OK” pentru a intra în pagina de notificare pentru activare.</string>
+    <string name="user_cancel">Anulare</string>
+    <string name="user_confirm">Sigur</string>
+
+    <string name="user_account_safe">Cont și securitate</string>
+    <string name="user_version">Versiunea actuală a aplicației</string>
+    <string name="user_help">Ajutor și feedback</string>
+    <string name="user_privacy">Acordul utilizatorului și Politica de confidențialitate</string>
+    <string name="user_logout">sign out</string>
+    <string name="user_unbind_tip">desface</string>
+    <string name="user_unbind_message">Sigur deconectați dispozitivul actual?</string>
+
+    <string name="user_info">Informatii personale</string>
+    <string name="user_set">informatii despre cont</string>
+    <string name="user_head">avatar</string>
+    <string name="user_name">Poreclă</string>
+    <string name="user_sex">gen</string>
+    <string name="user_birthday">Data de nastere</string>
+    <string name="user_height">înălţime</string>
+    <string name="user_weight">greutate</string>
+    <string name="user_male">masculin</string>
+    <string name="user_female">Femeie</string>
+    <string name="user_camera">Fotografie</string>
+    <string name="user_album">album foto</string>
+    <string name="user_enter_name">Vă rugăm să introduceți porecla</string>
+    <string name="user_name_long">Porecla nu poate depăși 12 caractere</string>
+    <string name="user_permission_error_camera">Permisiunea nu este transmisă, funcția camerei nu poate fi activată</string>
+    <string name="user_crop_pic_failed">Nu s-a putut capta imaginea, vă rugăm să selectați imaginea în format jpg!</string>
+    <string name="user_account">Autentificare cont</string>
+    <string name="user_change">schimbaţi parola</string>
+    <string name="user_delete_account">Deconectare</string>
+    <string name="user_logout_tip">Sunteți sigur că doriți să vă deconectați?</string>
+    <string name="user_upload_data">încărcarea datelor...</string>
+    <string name="user_upload_data_success">Încărcarea datelor cu succes!</string>
+    <string name="user_faq">常见问题</string>
+    <string name="user_feedback_hint">feedback-ul/întrebările dvs</string>
+    <string name="user_send_feedback">Trimite parerea ta</string>
+    <string name="user_feedback_long">Textul introdus este prea lung</string>
+    <string name="user_feedback_empty">Comentariile nu pot fi goale</string>
+    <string name="user_feedback_success">succesul feedback-ului</string>
+    <string name="user_guide">ghid de conectare</string>
+    <string name="user_service">ține-l să ruleze în fundal</string>
+    <string name="user_huawei">huawei</string>
+    <string name="user_oppo">oppo</string>
+    <string name="user_vivo">vivo</string>
+    <string name="user_lenovo">lenovo</string>
+    <string name="user_oneplus">oneplus</string>
+    <string name="user_samsun">samsung</string>
+    <string name="user_mi">mi</string>
+    <string name="user_meizu">meizu</string>
+    <string name="user_serviceTip">Pentru a îmbunătăți stabilitatea conexiunii ceasului, se recomandă să efectuați următoarele setări:</string>
+    <string name="user_saverBattery">Nu porniți (modul de economisire a energiei):</string>
+    <string name="user_batteryContent">Dacă modul de economisire a energiei este activat, poate cauza probleme precum conexiune Bluetooth instabilă, traiectorie anormală a mișcării și distanță redusă de putere. Se recomandă oprirea modului de economisire a energiei în timpul utilizării.</string>
+    <string name="user_protect">Setări de protecție de fundal ale producătorilor majori:</string>
+
+
+    <string name="user_search">dispozitiv de căutare</string>
+    <string name="user_searching">Căutarea dispozitivelor...</string>
+    <string name="user_bind">legare...</string>
+    <string name="user_no_device">Dispozitivul nu a fost găsit</string>
+    <string name="user_pair_success">împerecheat cu succes</string>
+    <string name="user_pair_tip">Informațiile dvs. de sănătate din sport vor fi sincronizate între ceas și telefonul mobil prin APP.</string>
+    <string name="user_finish">finalizarea</string>
+    <string name="user_understand">Înțeleg</string>
+    <string name="user_wear_tip">purtand sfaturi</string>
+    <string name="user_wear_tip_content">Pentru a măsura datele cu precizie și pentru a nu afecta utilizarea normală a aplicației, vă rugăm să încercați să purtați ceasul la o distanță de 1 cm de osul încheieturii mâinii.</string>
+    <string name="user_search_tip">Scoateți dispozitivul, încărcați-l pentru activare și țineți-l aproape de telefon</string>
+    <string name="user_search_much">Vă rugăm să vă selectați ceasul în funcție de adresa mac</string>
+    <string name="user_search_again">caută din nou</string>
+    <string name="user_again_tip">Puteți încerca următoarele moduri și puteți încerca din nou după setare:</string>
+    <string name="user_again_advice">·Porniți din nou Bluetooth-ul telefonului\n·Asigurați-vă că ceasul este pornit și aproape de telefon\n·Dați clic pe dispozitiv \"restabiliți la setările din fabrică\""</string>
+    <string name="user_stop_bind">Mai târziu, nu legați deocamdată</string>
+    <string name="user_bind_help"><u>Nu găsiți dispozitivul de adăugat? Vizualizați ajutor</u></string>
+
+    <string name="user_dial_market">piata de dial</string>
+    <string name="user_dial_now">Previzualizarea feței de vizionare</string>
+    <string name="user_dial_mine">cadranul meu de ceas</string>
+    <string name="user_dial_diy">cadran personalizat de ceas</string>
+    <string name="user_background">încărcați fundal</string>
+    <string name="user_crop_fail">Nu s-a putut capta imaginea, vă rugăm să selectați imaginea în format jpg!</string>
+    <string name="user_crop_small">Nu s-a putut capta imaginea, imaginea capturată este prea mică și nu se potrivește cu dimensiunea cadranului!</string>
+    <string name="user_send_background">trimiterea fundalului...</string>
+    <string name="user_send_dial">Se trimite cadranul ceasului...</string>
+    <string name="user_send_success">Trimis cu succes!</string>
+    <string name="user_send_fail">Trimiterea a eșuat, vă rugăm să încercați din nou.</string>
+    <string name="user_no_background">Vă rugăm să încărcați mai întâi fundalul</string>
+    <string name="user_no_clock">Vă rugăm să selectați mai întâi un cadran de ceas</string>
+
+    <string name="user_device_name">Model software</string>
+    <string name="user_device_mac">Mac abordare</string>
+    <string name="user_device_version">Versiune software</string>
+    <string name="user_check_update">Verifică pentru actualizări</string>
+
+    <string name="user_camera_tip">După activarea funcției de cameră Bluetooth, ceasul poate controla aplicația de cameră a telefonului mobil pentru a face fotografii</string>
+    <string name="user_camera_permission_tip">În timpul utilizării, această aplicație necesită acces la cameră și permisiuni de citire și scriere a fișierelor pentru a face fotografii de la distanță și a stoca fotografii\n\nDacă nu sunteți de acord să invocați permisiunile de mai sus, va avea ca rezultat
+Camera Bluetooth nu poate fi utilizată în mod normal și nu afectează funcțiile de bază ale utilizării acestei aplicații. Vă puteți retrage oricând consimțământul accesând „Setări” > „Gestionarea permisiunilor” și alegând să dezactivați apelurile de permisiune de mai sus</string>
+    <string name="user_camera_permission_error">Permisiunea nu este dată, deschiderea eșuează</string>
+
+    <string name="user_deleteTip">Fie că trebuie să confirmați anularea contului dvs., contul va fi anulat cu succes în termen de trei zile de la confirmare, iar datele contului vor fi șterse complet după anularea cu succes, irecuperabile! Vă rugăm să continuați cu prudență.</string>
+    <string name="user_deleteSuccess">Contul aplicației a fost anulat cu succes.</string>
+    <string name="user_deleteNow">Contul curent așteaptă etapa de deconectare.</string>
+
+    <string name="user_schedule_empty">Ceasul actual nu are program, vă rugăm să adăugați un nou program</string>
+    <string name="user_delete_schedule">șterge programul</string>
+    <string name="user_save_schedule">salvează programul</string>
+    <string name="user_schedule_info">Detalii program</string>
+    <string name="user_schedule_fall">Programul care poate fi adăugat la ceas a atins limita superioară, vă rugăm să o ștergeți înainte de a o adăuga</string>
+    <string name="user_schedule_add_fail">Nu s-a putut adăuga programul</string>
+    <string name="user_schedule_edit_fail">Nu s-a putut modifica programul</string>
+    <string name="user_schedule_delete_fail">Nu s-a șters programul</string>
+    <string name="user_schedule_past">Imposibil de setat punctul de timp trecut ca punct de timp programat</string>
+    <string name="user_schedule_same">Punctul de timp selectat în prezent are deja o agendă și nu poate fi setat în mod repetat</string>
+    <string name="user_schedule_msg">Vă rugăm să completați detaliile programului</string>
+    <string name="user_today">astăzi</string>
+    <string name="user_time">timp</string>
+
+
+    <string name="user_auto_measure_tip">După ce funcția de monitorizare automată este activată, ceasul va măsura fiecare frecvență și timp în perioada efectivă.</string>
+    <string name="user_measure_frequency">Frecvența monitorizării</string>
+    <string name="user_valid_time">Perioada efectivă</string>
+    <string name="user_start_time">Timpul de începere</string>
+    <string name="user_end_time">Sfârșitul timpului</string>
+    <string name="user_heart">ritm cardiac</string>
+    <string name="user_blood_pressure">tensiune arteriala</string>
+    <string name="user_blood_oxygen">oxigen din sânge</string>
+    <string name="user_temperature">temperatura corpului</string>
+
+    <string name="loading">加载中...</string>
+    <string name="permission_tip">权限说明</string>
+    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
+    <string name="agree">同意</string>
+    <string name="disagree">拒绝</string>
+    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
+    <string name="outrun">户外跑</string>
+    <string name="walk">徒步</string>
+    <string name="treadmill">跑步机</string>
+    <string name="mountain">登山</string>
+    <string name="marathon">马拉松</string>
+    <string name="badminton">羽毛球</string>
+    <string name="basketball">篮球</string>
+    <string name="bicycle">骑行</string>
+    <string name="skiing">滑雪</string>
+    <string name="ping">乒乓球</string>
+    <string name="football">足球</string>
+    <string name="climb">攀岩</string>
+    <string name="watch_ring">手表正在响铃,请注意。</string>
+    <string name="stop_find">停止查找</string>
+
+    <string name="save_success">保存成功</string>
+    <string name="waiting">请等待...</string>
+    <string name="http_error">请求超时</string>
+    <string name="ble_error">蓝牙未连接，请连接后重试</string>
+    <string name="updating">数据正在同步...</string>
+
+    <string name="connected">已连接</string>
+    <string name="disConnect">未连接</string>
+
+    <string name="sun">日</string>
+    <string name="mon">一</string>
+    <string name="tues">二</string>
+    <string name="wed">三</string>
+    <string name="thus">四</string>
+    <string name="fri">五</string>
+    <string name="sta">六</string>
+</resources>

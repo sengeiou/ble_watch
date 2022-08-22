@@ -9,6 +9,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -16,8 +17,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.bumptech.glide.Glide;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.View.BaseActivity;
+import com.szip.login.HttpModel.ImageVerificationBean;
 import com.szip.login.R;
 import com.szip.login.HttpModel.CheckVerificationBean;
 import com.zaaach.citypicker.CityPicker;
@@ -48,6 +51,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private String countryStr,codeStr;
     private SharedPreferences sharedPreferences;
     private boolean isPhone = false;
+
+    private ImageView imageIv;
+    private String imageId;
+    private EditText imageEt;
+
 
     private Handler handler = new Handler(){
         @Override
@@ -82,18 +90,28 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         initEvent();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //获取图片验证码
+        updateImageVerification();
+    }
+
     private void initEvent() {
         sendTv.setOnClickListener(this);
         nextTv.setOnClickListener(this);
         findViewById(R.id.countryRl).setOnClickListener(this);
         findViewById(R.id.privacyTv).setOnClickListener(this);
         findViewById(R.id.backIv).setOnClickListener(this);
+        findViewById(R.id.imageIv).setOnClickListener(this);
     }
 
     private void initView() {
         setTitle(getString(R.string.login_register_account));
         userEt = findViewById(R.id.userEt);
         countryTv = findViewById(R.id.countryTv);
+        imageIv = findViewById(R.id.imageIv);
+        imageEt = findViewById(R.id.imageEt);
         if (!countryStr.equals("")){
             countryTv.setText(countryStr);
             countryTv.setTextColor(Color.BLACK);
@@ -112,6 +130,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 showToast(getString(R.string.login_input_account));
             }else if (countryStr.equals("")){
                 showToast(getString(R.string.login_chose_location));
+            }else if (imageEt.equals("")){
+                showToast(getString(R.string.login_input_verification));
             }else {
                 if (!MathUtil.newInstance().isNumeric(userEt.getText().toString())){
                     if (!MathUtil.newInstance().isEmail(userEt.getText().toString()))
@@ -173,7 +193,27 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }else if (id == R.id.backIv){
             ARouter.getInstance().build(PATH_ACTIVITY_LOGIN).navigation();
             finish();
+        }else if (id == R.id.imageIv){
+            updateImageVerification();
         }
+    }
+
+
+    private void updateImageVerification(){
+        HttpMessageUtil.newInstance().getImageVerifyCode(new GenericsCallback<ImageVerificationBean>(new JsonGenericsSerializator()) {
+            @Override
+            public void onError(Call call, Exception e, int id) {
+
+            }
+
+            @Override
+            public void onResponse(ImageVerificationBean response, int id) {
+                imageId = response.getData().getId();
+                Glide.with(RegisterActivity.this)
+                        .load(response.getData().getInputImage())
+                        .into(imageIv);
+            }
+        });
     }
 
     /**
@@ -182,22 +222,12 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private void startTimer(){
 
         if (!MathUtil.newInstance().isNumeric(userEt.getText().toString()))
-            HttpMessageUtil.newInstance().getVerificationCode("2","","",
-                    userEt.getText().toString(),callback);
+            HttpMessageUtil.newInstance().postCheckVerifyCode_v2(2,"","",
+                    userEt.getText().toString().trim(),imageId,1,imageEt.getText().toString().trim(),callback);
         else
-            HttpMessageUtil.newInstance().getVerificationCode("1","0086",
-                    userEt.getText().toString(),"",callback);
+            HttpMessageUtil.newInstance().postCheckVerifyCode_v2(1,codeStr,
+                    userEt.getText().toString(),"",imageId,1,imageEt.getText().toString().trim(),callback);
 
-        sendTv.setEnabled(false);
-        time = 60;
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                handler.sendEmptyMessage(100);
-            }
-        };
-        timer = new Timer();
-        timer.schedule(timerTask,1000,1000);
     }
 
     private GenericsCallback<BaseApi> callback = new GenericsCallback<BaseApi>(new JsonGenericsSerializator()) {
@@ -211,6 +241,17 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
             if (response.getCode() != 200) {
                 showToast(response.getMessage());
+            }else {
+                sendTv.setEnabled(false);
+                time = 60;
+                TimerTask timerTask = new TimerTask() {
+                    @Override
+                    public void run() {
+                        handler.sendEmptyMessage(100);
+                    }
+                };
+                timer = new Timer();
+                timer.schedule(timerTask,1000,1000);
             }
         }
     };
