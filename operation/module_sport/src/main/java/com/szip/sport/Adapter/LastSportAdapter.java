@@ -73,7 +73,7 @@ public class LastSportAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             return;
         sportHolder.sportIv.setImageResource(sportTypeModel.getType());
         sportHolder.sportTv.setText(sportTypeModel.getSportStr());
-        sportHolder.timeTv.setText(String.format("%02d:%02d:%02d",sportData.sportTime/3600,
+        sportHolder.timeTv.setText(String.format(Locale.ENGLISH,"%02d:%02d:%02d",sportData.sportTime/3600,
                 sportData.sportTime%3600/60,sportData.sportTime%3600%60));
         sportHolder.calorieTv.setText(String.format(Locale.ENGLISH,"%.1fkcal",((sportData.calorie+55)/100)/10f));
         if (TextUtils.isEmpty(sportData.latArray))

@@ -10,6 +10,7 @@ import com.szip.blewatch.base.db.dbModel.BloodPressureData;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class BloodOxygenInfoPresenterImpl implements IReportInfoPresenter{
 
@@ -49,7 +50,7 @@ public class BloodOxygenInfoPresenterImpl implements IReportInfoPresenter{
                 childList.add(reportInfoData);
                 oldTime = time;
             }
-            reportInfoData = new ReportInfoData(String.format("%d%%",bloodOxygenData.bloodOxygenData), bloodOxygenData.time);
+            reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%d%%",bloodOxygenData.bloodOxygenData), bloodOxygenData.time);
             childList.add(reportInfoData);
         }
         if (iReportInfoView!=null)
@@ -73,7 +74,7 @@ public class BloodOxygenInfoPresenterImpl implements IReportInfoPresenter{
                 childList.add(reportInfoData);
                 oldTime = time;
             }
-            reportInfoData = new ReportInfoData(String.format("%d%%",bloodOxygenData.bloodOxygenData), bloodOxygenData.time);
+            reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%d%%",bloodOxygenData.bloodOxygenData), bloodOxygenData.time);
             childList.add(reportInfoData);
         }
         if (iReportInfoView!=null)

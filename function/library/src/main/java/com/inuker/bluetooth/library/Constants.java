@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -99,7 +100,7 @@ public class Constants {
             case Constants.STATUS_DEVICE_DISCONNECTING: return "Disconnecting";
             case Constants.STATUS_DEVICE_DISCONNECTED: return "Disconnected";
             case Constants.STATUS_DEVICE_SERVICE_READY: return "Service Ready";
-            default: return String.format("Unknown %d", status);
+            default: return String.format(Locale.ENGLISH,"Unknown %d", status);
         }
     }
 

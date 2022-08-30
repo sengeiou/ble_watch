@@ -24,6 +24,7 @@ import com.inuker.bluetooth.library.utils.proxy.ProxyUtils;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -303,7 +304,7 @@ public abstract class Channel implements IChannel, ProxyInterceptor {
 	private void onSendCallback(final int code) {
 		assertRuntime(false);
 
-		BluetoothLog.v(String.format("%s: code = %d", getLogTag(), code));
+		BluetoothLog.v(String.format(Locale.ENGLISH,"%s: code = %d", getLogTag(), code));
 
 		if (mChannelCallback != null) {
 			mChannelCallback.onCallback(code);

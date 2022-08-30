@@ -192,14 +192,6 @@ public class BleService extends Service implements MyHandle {
         if (mac!=null&& BluetoothAdapter.getDefaultAdapter().isEnabled()){
             connectFromMac = false;
             ble.startScan(bleScanCallback);
-//            final SearchRequest request = new SearchRequest.Builder()
-//                    .searchBluetoothLeDevice(10000, 1).build();
-//            new Handler().postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    ClientManager.getClient().search(request, mSearchResponseDevice);
-//                }
-//            },1000);
         }
     }
 
@@ -223,17 +215,12 @@ public class BleService extends Service implements MyHandle {
         }
     };
 
-
-    private long subTime = 0;
-
-
     //搜索设备
     private BleScanCallback<BleRssiDevice> bleScanCallback = new BleScanCallback<BleRssiDevice>() {
         @Override
         public void onStart() {
             super.onStart();
             LogUtil.getInstance().logd("data******","开始搜索");
-            subTime = Calendar.getInstance().getTimeInMillis();
             bluetoothState = 4;
             Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
             intent.putExtra("state",bluetoothState);
@@ -244,9 +231,7 @@ public class BleService extends Service implements MyHandle {
         public void onStop() {
             super.onStop();
             LogUtil.getInstance().logd("data******","搜索结束");
-            if (Calendar.getInstance().getTimeInMillis()-subTime<2500)
-                connectFromSearch();
-            else if(bluetoothState==4){
+            if(bluetoothState==4){
                 bluetoothState = 5;
                 Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
                 intent.putExtra("state",bluetoothState);
@@ -456,7 +441,7 @@ public class BleService extends Service implements MyHandle {
             case BroadcastConst.SEND_BLE_DATA:{
                 String command = intent.getStringExtra("command");
                 if (bluetoothState != 3){
-                    if (command!=null&&!command.equals("setWeather")){
+                    if (command!=null&&(!command.equals("setWeather")||!command.equals("sendNotify"))){
                         ProgressHudModel.newInstance().diss();
                         new Handler(getMainLooper()).post(new Runnable() {
                             @Override

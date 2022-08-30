@@ -93,7 +93,7 @@ public class ScheduleEditActivity extends BaseActivity implements View.OnClickLi
             deleteTv.setVisibility(View.VISIBLE);
             timeTv.setText(DateUtil.getStringDateFromSecond(scheduleData.getTime(),"HH:mm"));
             msgEt.setText(scheduleData.getMsg());
-            lengthTv.setText(String.format("%d/30",scheduleData.getMsg().length()));
+            lengthTv.setText(String.format(Locale.ENGLISH,"%d/30",scheduleData.getMsg().length()));
         }else {
             timeTv.setText(DateUtil.getStringDateFromSecond(Calendar.getInstance().getTimeInMillis()/1000,"HH:mm"));
             lengthTv.setText("0/30");

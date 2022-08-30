@@ -260,7 +260,7 @@ public class HealthyFragment extends BaseFragment implements MyHandle,IHealthyVi
         int step = stepData.steps;
         int calorie = stepData.calorie;
         int distance = stepData.distance;
-        String stepStr = String.format("<big>%d</big> steps",step);
+        String stepStr = String.format(Locale.ENGLISH,"<big>%d</big> steps",step);
         String calorieStr = String.format(Locale.ENGLISH,"<big>%.1f</big> kcal",((calorie+55)/100)/10f);
         String distanceStr = "";
         if (userModel.unit == 0){

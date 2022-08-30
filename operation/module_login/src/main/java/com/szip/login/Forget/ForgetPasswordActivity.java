@@ -14,10 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.View.BaseActivity;
+import com.szip.login.HttpModel.ImageVerificationBean;
 import com.szip.login.R;
 import com.szip.login.HttpModel.CheckVerificationBean;
+import com.szip.login.Register.RegisterActivity;
 import com.szip.login.Register.SetPasswordFragment;
 import com.szip.login.Utils.HttpMessageUtil;
 import com.zaaach.citypicker.CityPicker;
@@ -82,11 +85,19 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
         initEvent();
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateImageVerification();
+    }
+
     private void initEvent() {
         sendTv.setOnClickListener(this);
         nextTv.setOnClickListener(this);
         findViewById(R.id.countryRl).setOnClickListener(this);
         findViewById(R.id.backIv).setOnClickListener(this);
+        findViewById(R.id.imageIv).setOnClickListener(this);
     }
 
     private void initView() {
@@ -169,6 +180,8 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
 
         }else if (id == R.id.backIv){
             finish();
+        }else if (id == R.id.imageIv){
+            updateImageVerification();
         }
     }
 
@@ -238,5 +251,22 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
             }
         }
     };
+
+    private void updateImageVerification(){
+        HttpMessageUtil.newInstance().getImageVerifyCode(new GenericsCallback<ImageVerificationBean>(new JsonGenericsSerializator()) {
+            @Override
+            public void onError(Call call, Exception e, int id) {
+
+            }
+
+            @Override
+            public void onResponse(ImageVerificationBean response, int id) {
+                imageId = response.getData().getId();
+                Glide.with(ForgetPasswordActivity.this)
+                        .load(response.getData().getInputImage())
+                        .into(imageIv);
+            }
+        });
+    }
 
 }

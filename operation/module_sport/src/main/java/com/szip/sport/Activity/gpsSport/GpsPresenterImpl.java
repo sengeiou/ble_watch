@@ -21,6 +21,7 @@ import com.szip.blewatch.base.db.LoadDataUtil;
 import com.szip.blewatch.base.db.dbModel.SportData;
 import com.szip.blewatch.base.db.dbModel.UserModel;
 
+import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -147,7 +148,7 @@ public class GpsPresenterImpl implements IGpsPresenter {
                  * 每30秒采集一次平均速度的数据
                  * */
                 if (time!=0&&time%30==0){
-                    speedPerHour.append(String.format(",%d",(int)((distance-preDistance)/30f*3.6f*10)));
+                    speedPerHour.append(String.format(Locale.ENGLISH,",%d",(int)((distance-preDistance)/30f*3.6f*10)));
                     strideStr.append(String.format(",%d",getStride(distance-preDistance)));
                     preDistance = distance;
                 }

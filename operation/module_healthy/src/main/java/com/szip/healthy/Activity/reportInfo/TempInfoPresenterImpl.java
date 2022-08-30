@@ -13,6 +13,7 @@ import com.szip.blewatch.base.db.dbModel.UserModel;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class TempInfoPresenterImpl implements IReportInfoPresenter{
 
@@ -55,9 +56,9 @@ public class TempInfoPresenterImpl implements IReportInfoPresenter{
                 oldTime = time;
             }
             if (userModel.tempUnit==0){
-                reportInfoData = new ReportInfoData(String.format("%.1f ℃",animalHeatData.tempData/10f), animalHeatData.time);
+                reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%.1f ℃",animalHeatData.tempData/10f), animalHeatData.time);
             }else {
-                reportInfoData = new ReportInfoData(String.format("%.1f ℉",MathUtil.newInstance().c2f(animalHeatData.tempData/10f)),  animalHeatData.time);
+                reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%.1f ℉",MathUtil.newInstance().c2f(animalHeatData.tempData/10f)),  animalHeatData.time);
             }
             childList.add(reportInfoData);
         }
@@ -86,9 +87,9 @@ public class TempInfoPresenterImpl implements IReportInfoPresenter{
                 oldTime = time;
             }
             if (userModel.tempUnit==0){
-                reportInfoData = new ReportInfoData(String.format("%.1f ℃",animalHeatData.tempData/10f), animalHeatData.time);
+                reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%.1f ℃",animalHeatData.tempData/10f), animalHeatData.time);
             }else {
-                reportInfoData = new ReportInfoData(String.format("%.1f ℉",MathUtil.newInstance().c2f(animalHeatData.tempData/10f)),  animalHeatData.time);
+                reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%.1f ℉",MathUtil.newInstance().c2f(animalHeatData.tempData/10f)),  animalHeatData.time);
             }
             childList.add(reportInfoData);
         }

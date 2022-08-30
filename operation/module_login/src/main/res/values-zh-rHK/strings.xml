@@ -6,7 +6,7 @@
     <string name="login_login_account">登錄賬戶</string>
     <string name="login_login">登錄</string>
     <string name="login_account">賬戶</string>
-    <string name="login_input_account">輸入您的賬戶</string>
+    <string name="login_input_account">輸入您的电话/邮箱</string>
     <string name="login_right_email">請輸入正確的郵箱地址</string>
     <string name="login_psw">密碼</string>
     <string name="login_input_psw">輸入您的密碼</string>

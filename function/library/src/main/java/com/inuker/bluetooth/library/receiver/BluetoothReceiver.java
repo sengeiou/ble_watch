@@ -20,6 +20,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -90,7 +91,7 @@ public class BluetoothReceiver extends BroadcastReceiver implements IBluetoothRe
             return;
         }
 
-        BluetoothLog.v(String.format("BluetoothReceiver onReceive: %s", action));
+        BluetoothLog.v(String.format(Locale.ENGLISH,"BluetoothReceiver onReceive: %s", action));
 
         for (AbsBluetoothReceiver receiver : RECEIVERS) {
             if (!receiver.containsAction(action)) {

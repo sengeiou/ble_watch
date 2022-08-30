@@ -13,6 +13,7 @@ import com.szip.blewatch.base.db.dbModel.UserModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class BloodPressureInfoPresenterImpl implements IReportInfoPresenter{
 
@@ -52,7 +53,7 @@ public class BloodPressureInfoPresenterImpl implements IReportInfoPresenter{
                 childList.add(reportInfoData);
                 oldTime = time;
             }
-            reportInfoData = new ReportInfoData(String.format("%d/%d mmhg",bloodPressureData.sbpDate,bloodPressureData.dbpDate), bloodPressureData.time);
+            reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%d/%d mmhg",bloodPressureData.sbpDate,bloodPressureData.dbpDate), bloodPressureData.time);
             childList.add(reportInfoData);
         }
         if (iReportInfoView!=null)
@@ -76,7 +77,7 @@ public class BloodPressureInfoPresenterImpl implements IReportInfoPresenter{
                 childList.add(reportInfoData);
                 oldTime = time;
             }
-            reportInfoData = new ReportInfoData(String.format("%d/%d mmhg",bloodPressureData.sbpDate,bloodPressureData.dbpDate), bloodPressureData.time);
+            reportInfoData = new ReportInfoData(String.format(Locale.ENGLISH,"%d/%d mmhg",bloodPressureData.sbpDate,bloodPressureData.dbpDate), bloodPressureData.time);
             childList.add(reportInfoData);
         }
         if (iReportInfoView!=null)

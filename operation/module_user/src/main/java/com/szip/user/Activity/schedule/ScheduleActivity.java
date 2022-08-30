@@ -16,6 +16,7 @@ import com.szip.blewatch.base.Broadcast.MyHandle;
 import com.szip.blewatch.base.Broadcast.ToActivityBroadcast;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.View.BaseActivity;
+import com.szip.blewatch.base.View.ProgressHudModel;
 import com.szip.blewatch.base.db.LoadDataUtil;
 import com.szip.blewatch.base.db.dbModel.ScheduleData;
 import com.szip.user.Adapter.ScheduleAdapter;
@@ -49,6 +50,7 @@ public class ScheduleActivity extends BaseActivity {
 
         initView();
         initEvent();
+        ProgressHudModel.newInstance().show(this,getString(R.string.loading));
         Intent intent = new Intent(BroadcastConst.SEND_BLE_DATA);
         intent.putExtra("command","getSchedule");
         sendBroadcast(intent);
@@ -158,6 +160,7 @@ public class ScheduleActivity extends BaseActivity {
     private MyHandle myHandle = intent -> {
         String action = intent.getAction();
         if (action.equals(BroadcastConst.UPDATE_UI_VIEW)){
+            ProgressHudModel.newInstance().diss();
             initData();
         }
     };

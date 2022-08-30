@@ -61,9 +61,9 @@ public class SleepWeekPresenterImpl implements ISleepReportPresenter{
         if (iSleepReportView!=null){
             iSleepReportView.updateTableView(reportDataList,max,0);
             if (sum!=0){
-                String allTime = String.format("%02dh%02dmin",allSleep/sum/60,allSleep/sum%60);
-                String deepTime = String.format("%02dh%02dmin",allDeep/sum/60,allDeep/sum%60);
-                String lightTime = String.format("%02dh%02dmin",allLight/sum/60,allLight/sum%60);
+                String allTime = String.format(Locale.ENGLISH,"%02dh%02dmin",allSleep/sum/60,allSleep/sum%60);
+                String deepTime = String.format(Locale.ENGLISH,"%02dh%02dmin",allDeep/sum/60,allDeep/sum%60);
+                String lightTime = String.format(Locale.ENGLISH,"%02dh%02dmin",allLight/sum/60,allLight/sum%60);
                 String planStr = String.format(Locale.ENGLISH,"%.1f%%",plan/7f*100);
                 iSleepReportView.updateView(allTime,deepTime,lightTime,planStr);
             }

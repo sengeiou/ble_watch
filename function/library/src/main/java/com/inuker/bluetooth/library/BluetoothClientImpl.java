@@ -44,6 +44,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 
@@ -353,7 +354,7 @@ public class BluetoothClientImpl implements IBluetoothClient, ProxyInterceptor, 
     }
 
     private String generateCharacterKey(UUID service, UUID character) {
-        return String.format("%s_%s", service, character);
+        return String.format(Locale.ENGLISH,"%s_%s", service, character);
     }
 
     @Override

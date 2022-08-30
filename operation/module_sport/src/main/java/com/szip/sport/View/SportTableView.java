@@ -174,7 +174,7 @@ public class SportTableView extends View {
                 canvas.drawRoundRect(x-40*dpValue,10*dpValue,x+40*dpValue,mHeight/3-15*dpValue,10*dpValue,
                         10*dpValue,squareBackPaint);
                 String dataStr = "",timeStr = "";
-                dataStr = String.format("%d", data[index]);
+                dataStr = String.format(Locale.ENGLISH,"%d", data[index]);
                 timeStr = DateUtil.getStringDateFromSecond(time+index*10,"MM-dd HH:mm");
                 float touchDataTextWidth = touchDataTextPaint.measureText(dataStr);
                 float timeTextWidth = timeTextPaint.measureText(timeStr);
