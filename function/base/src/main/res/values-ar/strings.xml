@@ -96,7 +96,7 @@
     <string name="login_login_account">تسجيل الدخول</string>
     <string name="login_login">تسجيل الدخول</string>
     <string name="login_account">الحساب</string>
-    <string name="login_input_account">أدخل حسابك</string>
+    <string name="login_input_account">يرجى إدخال هاتفك/صندوق البريد الخاص بك</string>
     <string name="login_right_email">الرجاء إدخال عنوان البريد الإلكتروني الصحيح</string>
     <string name="login_psw">كلمه السر</string>
     <string name="login_input_psw">ادخل رقمك السري</string>
@@ -314,41 +314,49 @@
     <string name="user_blood_oxygen">الأكسجين في الدم</string>
     <string name="user_temperature">درجة حرارة الجسم</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">جار التحميل...</string>
+    <string name="permission_tip">وصف الإذن</string>
+    <string name="sport_permission">أثناء الاستخدام ، يتطلب هذا التطبيق الوصول إلى أذونات تحديد المواقع لتسجيل ومعايرة مسارات الحركة والمسافات \ n \ n إذا كنت لا توافق على استدعاء الأذونات المذكورة أعلاه ، فسيؤدي ذلك إلى فشل الوظيفة في العمل بشكل طبيعي ، ولن تؤثر على أساسياتك استخدام هذا التطبيق وظيفة. يمكنك سحب موافقتك في أي وقت من خلال الانتقال إلى "الإعدادات"> "إدارة الأذونات" واختيار إيقاف تشغيل مكالمات الأذونات أعلاه</string>
+    <string name="agree">يوافق على</string>
+    <string name="disagree">رفض</string>
+    <string name="login_tip">تحتاج إلى تسجيل الدخول للمتابعة إلى الخطوة التالية. هل تريد تسجيل الدخول الآن؟</string>
+    <string name="outrun">الجري في الهواء الطلق</string>
+    <string name="walk">سيرا على الاقدام</string>
+    <string name="treadmill">جهاز السير المتحرك</string>
+    <string name="mountain">تسلق الجبال</string>
+    <string name="marathon">ماراثون</string>
+    <string name="badminton">تنس الريشة</string>
+    <string name="basketball">كرة سلة</string>
+    <string name="bicycle">اركب</string>
+    <string name="skiing">تزلج</string>
+    <string name="ping">بينج بونج</string>
+    <string name="football">كرة القدم</string>
+    <string name="climb">تسلق الصخور</string>
+    <string name="watch_ring">الساعة ترن ، يرجى الانتباه</string>
+    <string name="stop_find">توقف عن النظر</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">تم الحفظ بنجاح</string>
+    <string name="waiting">أرجو الإنتظار...</string>
+    <string name="http_error">الطلب منتهي المدة</string>
+    <string name="ble_error">البلوتوث غير متصل ، يُرجى الاتصال والمحاولة مرة أخرى</string>
+    <string name="updating">تتم مزامنة البيانات ...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">متصل</string>
+    <string name="disConnect">غير متصل</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">يوم</string>
+    <string name="mon">واحد</string>
+    <string name="tues">اثنين</string>
+    <string name="wed">ثلاثة</string>
+    <string name="thus">أربعة</string>
+    <string name="fri">خمسة</string>
+    <string name="sta">ستة</string>
+
+    <string name="graphic_verification_code">رمز التحقق البياني</string>
+    <string name="enter_numbers_letters">الرجاء إدخال أرقام أو أحرف من الصورة</string>
+    <string name="enter_verification_code">الرجاء إدخال رمز التحقق من الصورة أولاً</string>
+
+    <string name="crop">تحرير الصور</string>
+    <string name="unlock">انزلق القفل</string>
 </resources>
+

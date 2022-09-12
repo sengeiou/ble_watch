@@ -96,7 +96,7 @@
     <string name="login_login_account">đăng nhập tài khoản</string>
     <string name="login_login">Đăng nhập</string>
     <string name="login_account">tài khoản</string>
-    <string name="login_input_account">Nhập tài khoản của bạn</string>
+    <string name="login_input_account">Vui lòng nhập số/email của bạn</string>
     <string name="login_right_email">Vui lòng nhập địa chỉ email chính xác</string>
     <string name="login_psw">mật khẩu mở khóa</string>
     <string name="login_input_psw">nhập mật khẩu của bạn</string>
@@ -307,47 +307,57 @@
     <string name="user_measure_frequency">Tần suất giám sát</string>
     <string name="user_valid_time">Thời kỳ hữu hiệu</string>
     <string name="user_start_time">Thời gian bắt đầu</string>
-    <string name="user_end_time">结束时间</string>
+    <string name="user_end_time">Thời gian kết thúc</string>
     <string name="user_heart">nhịp tim</string>
     <string name="user_blood_pressure">huyết áp</string>
     <string name="user_blood_oxygen">oxy trong máu</string>
     <string name="user_temperature">thân nhiệt</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Đang tải...</string>
+    <string name="permission_tip">Mô tả quyền</string>
+    <string name="sport_permission">Trong quá trình sử dụng, ứng dụng này yêu cầu quyền truy cập vào quyền định vị để ghi và hiệu chỉnh quỹ đạo chuyển động và khoảng cách\n\nNếu bạn không đồng ý gọi các quyền trên, chức năng này sẽ không được sử dụng bình thường và nó sẽ không ảnh hưởng đến việc bạn sử dụng các chức năng cơ bản của ứng dụng này. Bạn có thể rút lại sự đồng ý của mình bất kỳ lúc nào bằng cách đi tới "Cài đặt"> "Quản lý quyền" và chọn tắt các lệnh gọi quyền ở trên</string>
+    <string name="agree">đồng ý</string>
+    <string name="disagree">Từ chối</string>
+    <string name="login_tip">Bạn cần đăng nhập để sang bước tiếp theo. Bạn có muốn đăng nhập ngay bây giờ không?</string>
+    <string name="outrun">chạy ngoài trời</string>
+    <string name="walk">bằng chân</string>
+    <string name="treadmill">Máy chạy bộ</string>
+    <string name="mountain">leo núi</string>
+    <string name="marathon">marathon</string>
+    <string name="badminton">cầu lông</string>
+    <string name="basketball">bóng rổ</string>
+    <string name="bicycle">dap xe</string>
+    <string name="skiing">trượt tuyết</string>
+    <string name="ping">bóng bàn</string>
+    <string name="football">bóng đá</string>
+    <string name="climb">leo núi</string>
+    <string name="watch_ring">Đồng hồ đang đổ chuông, hãy chú ý.</string>
+    <string name="stop_find">Đừng nhìn nữa</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Lưu thành công</string>
+    <string name="waiting">Vui lòng chờ...</string>
+    <string name="http_error">Yêu cầu đã hết thời gian chờ</string>
+    <string name="ble_error">Bluetooth chưa được kết nối, vui lòng kết nối và thử lại</string>
+    <string name="updating">dữ liệu đang đồng bộ hóa...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">kết nối</string>
+    <string name="disConnect">không kết nối</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">ngày</string>
+    <string name="mon">một</string>
+    <string name="tues">hai</string>
+    <string name="wed">số ba</string>
+    <string name="thus">Bốn</string>
+    <string name="fri">năm</string>
+    <string name="sta">sáu</string>
+
+
+    <string name="graphic_verification_code">Mã xác minh đồ họa</string>
+    <string name="enter_numbers_letters">Vui lòng nhập số hoặc chữ cái từ hình ảnh</string>
+    <string name="enter_verification_code">Vui lòng nhập mã xác minh hình ảnh trước</string>
+
+    <string name="crop">Chỉnh sửa hình ảnh</string>
+    <string name="unlock">Trượt mở khóa</string>
+
 </resources>
+

@@ -96,7 +96,7 @@
     <string name="login_login_account">Giriş hesabı</string>
     <string name="login_login">Giriş</string>
     <string name="login_account">Hesap</string>
-    <string name="login_input_account">Hesabınızı girin</string>
+    <string name="login_input_account">Lütfen telefon numaranızı/e-posta adresinizi girin</string>
     <string name="login_right_email">Lütfen doğru bir e-posta adresi girin</string>
     <string name="login_psw">şifre</string>
     <string name="login_input_psw">Şifrenizi girin</string>
@@ -315,41 +315,50 @@
     <string name="user_blood_oxygen">kan oksijeni</string>
     <string name="user_temperature">vücut ısısı</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="permission_tip">İzin açıklaması</string>
+    <string name="sport_permission">Kullanım sırasında, bu uygulama hareket yörüngelerini ve mesafeleri kaydetmek ve kalibre etmek için konumlandırma izinlerine erişim gerektirir\n\nYukarıdaki izinleri çağırmayı kabul etmezseniz, işlev normal şekilde kullanılmayacak ve bu uygulamanın temel işlevlerini kullanımınızı etkilemeyecektir. "Ayarlar" > "İzin Yönetimi"ne giderek ve yukarıdaki izin çağrılarını kapatmayı seçerek onayınızı istediğiniz zaman geri çekebilirsiniz.</string>
+    <string name="agree">Katılıyorum</string>
+    <string name="disagree">reddetmek</string>
+    <string name="login_tip">Bir sonraki adıma geçmek için oturum açmanız gerekiyor. Şimdi oturum açmak istiyor musunuz?</string>
+    <string name="outrun">açık havada koşu</string>
+    <string name="walk">yürüyerek</string>
+    <string name="treadmill">koşu bandı</string>
+    <string name="mountain">dağcılık</string>
+    <string name="marathon">maraton</string>
+    <string name="badminton">badminton</string>
+    <string name="basketball">Basketbol</string>
+    <string name="bicycle">sürmek</string>
+    <string name="skiing">kayak</string>
+    <string name="ping">masa Tenisi</string>
+    <string name="football">Futbol</string>
+    <string name="climb">kayalıklara tırmanma</string>
+    <string name="watch_ring">Saat çalıyor, lütfen dikkat edin.</string>
+    <string name="stop_find">bakmayı bırak</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Başarıyla kaydedildi</string>
+    <string name="waiting">Lütfen bekle...</string>
+    <string name="http_error">İstek zaman aşımına uğradı</string>
+    <string name="ble_error">Bluetooth bağlı değil, lütfen bağlanın ve tekrar deneyin</string>
+    <string name="updating">veriler senkronize ediliyor...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">bağlı</string>
+    <string name="disConnect">bağlı değil</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">gün</string>
+    <string name="mon">bir</string>
+    <string name="tues">iki</string>
+    <string name="wed">üç</string>
+    <string name="thus">dört</string>
+    <string name="fri">beş</string>
+    <string name="sta">altı</string>
+
+    <string name="graphic_verification_code">Grafik doğrulama kodu</string>
+    <string name="enter_numbers_letters">Lütfen resimdeki sayıları veya harfleri girin</string>
+    <string name="enter_verification_code">Lütfen önce resim doğrulama kodunu girin</string>
+
+    <string name="crop">Resmi düzenleme</string>
+    <string name="unlock">Kilidi açmak için kaydırın</string>
+
 </resources>
+

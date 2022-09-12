@@ -43,7 +43,7 @@
             android:layout_marginEnd="15dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="°C"
                 android:textColor="@android:color/black"
@@ -73,7 +73,7 @@
             android:layout_marginEnd="15dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="°F"
                 android:textColor="@android:color/black"
@@ -117,7 +117,7 @@
             android:layout_marginEnd="15dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_metric"
                 android:textColor="@android:color/black"
@@ -148,7 +148,7 @@
             android:layout_marginEnd="15dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_british"
                 android:textColor="@android:color/black"

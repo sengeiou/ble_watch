@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/user_name"
-                android:layout_toRightOf="@id/iconIv"
+                android:layout_toEndOf="@id/iconIv"
                 android:layout_marginStart="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"/>
@@ -348,7 +348,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_toRightOf="@+id/watchIv"
+                        android:layout_toEndOf="@+id/watchIv"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp">
 
@@ -371,7 +371,7 @@
                         android:layout_height="wrap_content"
                         android:src="@mipmap/my_device_del"
                         android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@+id/updateIv"
+                        android:layout_toStartOf="@+id/updateIv"
                         android:layout_marginEnd="15dp"/>
 
                     <ImageView

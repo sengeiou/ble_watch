@@ -73,8 +73,12 @@ android {
                     outputFileName = fileName
                 }
             }
+            variant.getPackageApplication().outputDirectory = new File("F:\\aab\\release")
         }
     }
+
+
+
 }
 
 dependencies {

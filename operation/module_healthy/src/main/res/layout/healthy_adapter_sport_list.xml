@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/typeIv">
+                android:layout_toEndOf="@+id/typeIv">
 
                 <TextView
                     android:id="@+id/typeTv"
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/timeTv"
+                android:layout_toStartOf="@+id/timeTv"
                 android:layout_marginRight="10dp"
                 android:src="@mipmap/icon_sportlist_gps"/>
 
@@ -61,7 +61,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="15dp"
                 android:textColor="@android:color/black"
-                android:layout_toLeftOf="@+id/rightIv"
+                android:layout_toStartOf="@+id/rightIv"
                 android:text="xxx"/>
 
             <ImageView
@@ -91,7 +91,7 @@
             android:layout_height="0.5dp"
             android:background="@android:color/black"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/text"/>
+            android:layout_toStartOf="@+id/text"/>
 
         <TextView
             android:id="@+id/text"
@@ -107,7 +107,7 @@
             android:layout_height="0.5dp"
             android:background="@android:color/black"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/text"/>
+            android:layout_toEndOf="@+id/text"/>
 
     </RelativeLayout>
 

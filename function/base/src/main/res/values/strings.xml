@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">FitRing</string>
+    <string name="name">FitRing</string>
     <string name="home">state</string>
     <string name="sport">sport</string>
     <string name="consult">consult</string>
@@ -100,7 +100,7 @@
     <string name="login_login_account">Login Your Account</string>
     <string name="login_login">Login</string>
     <string name="login_account">Account</string>
-    <string name="login_input_account">enter your account</string>
+    <string name="login_input_account">enter your phone number or e-mail</string>
     <string name="login_right_email">Enter the correct email address</string>
     <string name="login_psw">Password</string>
     <string name="login_input_psw">enter your password</string>
@@ -354,4 +354,12 @@
     <string name="thus">Thu</string>
     <string name="fri">Fri</string>
     <string name="sta">Sat</string>
+
+    <string name="graphic_verification_code">Graphic Verification Code</string>
+    <string name="enter_numbers_letters">Please enter the numbers or letters in the picture.</string>
+    <string name="enter_verification_code">Please input the graphic verification code first.</string>
+
+    <string name="crop">Edit Photo</string>
+    <string name="unlock">Slide to unlock</string>
+
 </resources>

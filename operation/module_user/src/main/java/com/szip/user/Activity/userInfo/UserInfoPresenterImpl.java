@@ -3,6 +3,7 @@ package com.szip.user.Activity.userInfo;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
@@ -309,9 +310,10 @@ public class UserInfoPresenterImpl implements IUserInfoPresenter{
             file.getParentFile().mkdirs();
             Uri target = Uri.fromFile(file);
             UCrop.Options options = new UCrop.Options();
-            options.setToolbarColor(context.getResources().getColor(R.color.rayblue));
-            options.setStatusBarColor(context.getResources().getColor(R.color.rayblue));
-            options.setActiveWidgetColor(context.getResources().getColor(R.color.rayblue));
+            options.setToolbarColor(Color.BLACK);
+            options.setToolbarTitle(context.getString(R.string.crop));
+            options.setStatusBarColor(Color.BLACK);
+            options.setActiveWidgetColor(Color.BLACK);
             UCrop uCrop = UCrop.of(path, target)
                     .withAspectRatio(1f, 1f)
                     .withMaxResultSize(200, 200)

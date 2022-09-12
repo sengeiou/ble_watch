@@ -9,10 +9,12 @@
             android:theme="@style/DefaultCityPickerTheme"></activity>
         <activity
             android:name=".Register.RegisterActivity"
-            android:theme="@style/DefaultCityPickerTheme" />
+            android:theme="@style/DefaultCityPickerTheme"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Forget.ForgetPasswordActivity"
-            android:theme="@style/DefaultCityPickerTheme" />
+            android:theme="@style/DefaultCityPickerTheme"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

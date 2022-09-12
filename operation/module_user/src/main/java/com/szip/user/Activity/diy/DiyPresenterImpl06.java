@@ -117,6 +117,7 @@ public class DiyPresenterImpl06 implements IDiyPresenter{
             Uri target = Uri.fromFile(file);
             UCrop.Options options = new UCrop.Options();
             options.setToolbarColor(Color.BLACK);
+            options.setToolbarTitle(context.getString(R.string.crop));
             options.setStatusBarColor(Color.BLACK);
             options.setActiveWidgetColor(Color.BLACK);
             options.setCompressionQuality(80);

@@ -358,4 +358,13 @@
     <string name="fri">五</string>
     <string name="sta">六</string>
 
+
+    <string name="graphic_verification_code">图文验证码</string>
+    <string name="enter_numbers_letters">请输入图片中的数字或字母</string>
+    <string name="enter_verification_code">请先输入图文验证码</string>
+
+    <string name="crop">编辑图片</string>
+    <string name="unlock">滑动图片</string>
+
 </resources>
+

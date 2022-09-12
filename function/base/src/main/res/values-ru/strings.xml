@@ -96,7 +96,7 @@
     <string name="login_login_account">вход в учетную запись</string>
     <string name="login_login">Авторизоваться</string>
     <string name="login_account">учетная запись</string>
-    <string name="login_input_account">Войдите в свою учетную запись</string>
+    <string name="login_input_account">Пожалуйста, введите ваш телефон/почтовый ящик</string>
     <string name="login_right_email">Пожалуйста, введите правильный адрес электронной почты</string>
     <string name="login_psw">пароль</string>
     <string name="login_input_psw">введите свой пароль</string>
@@ -314,41 +314,52 @@
     <string name="user_blood_oxygen">кислород крови</string>
     <string name="user_temperature">температура тела</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Загрузка...</string>
+    <string name="permission_tip">Описание разрешения</string>
+    <string name="sport_permission">Во время использования этому приложению требуется доступ к разрешениям на позиционирование для записи и калибровки траекторий движения и расстояний.\n\nЕсли вы не согласны вызывать вышеуказанные разрешения, функция не будет использоваться в обычном режиме и не повлияет на использование вами основных функций этого приложения. Вы можете отозвать свое согласие в любое время, перейдя в «Настройки» > «Управление разрешениями» и отключив вышеуказанные вызовы разрешений.</string>
+    <string name="agree">соглашаться</string>
+    <string name="disagree">отклонять</string>
+    <string name="login_tip">Вам необходимо войти в систему, чтобы перейти к следующему шагу. Вы хотите войти сейчас?</string>
+    <string name="outrun">открытый бег</string>
+    <string name="walk">пешком</string>
+    <string name="treadmill">Беговая дорожка</string>
+    <string name="mountain">альпинизм</string>
+    <string name="marathon">марафон</string>
+    <string name="badminton">бадминтон</string>
+    <string name="basketball">баскетбол</string>
+    <string name="bicycle">поездка</string>
+    <string name="skiing">лыжи</string>
+    <string name="ping">пинг-понг</string>
+    <string name="football">футбол</string>
+    <string name="climb">скалолазание</string>
+    <string name="watch_ring">Часы звонят, пожалуйста, обратите внимание.</string>
+    <string name="stop_find">перестать смотреть</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Успешно сохранено</string>
+    <string name="waiting">Пожалуйста подождите...</string>
+    <string name="http_error">Истекло время запроса</string>
+    <string name="ble_error">Bluetooth не подключен, подключитесь и повторите попытку</string>
+    <string name="updating">Данные синхронизируются...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">связано</string>
+    <string name="disConnect">Не подключен</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">день</string>
+    <string name="mon">один</string>
+    <string name="tues">два</string>
+    <string name="wed">три</string>
+    <string name="thus">Четыре</string>
+    <string name="fri">пять</string>
+    <string name="sta">шесть</string>
+
+
+    <string name="graphic_verification_code">Сначала введите код подтверждения изображения</string>
+    <string name="enter_numbers_letters">Пожалуйста, введите цифры или буквы с картинки</string>
+    <string name="enter_verification_code">Сначала введите код подтверждения изображения</string>
+
+    <string name="crop">редактор</string>
+    <string name="unlock">Разблокировка скольжением</string>
+
+
 </resources>
+

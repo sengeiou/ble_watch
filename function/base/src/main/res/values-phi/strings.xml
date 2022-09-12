@@ -96,7 +96,7 @@
     <string name="login_login_account">Login account</string>
     <string name="login_login">Mag log in</string>
     <string name="login_account">Account</string>
-    <string name="login_input_account">Ipasok ang iyong account</string>
+    <string name="login_input_account">Ipasok ang numero ng telepono mo/email address</string>
     <string name="login_right_email">Pakilagay ang tamang email address</string>
     <string name="login_psw">Password</string>
     <string name="login_input_psw">Ilagay ang iyong password</string>
@@ -313,41 +313,51 @@
     <string name="user_blood_oxygen">Oxygen ng dugo</string>
     <string name="user_temperature">Temperatura ng katawan</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Naglo-load...</string>
+    <string name="permission_tip">Paglalarawan ng pahintulot</string>
+    <string name="sport_permission">Sa panahon ng paggamit, ang app na ito ay nangangailangan ng access sa mga pahintulot sa pagpoposisyon para sa pagre-record at pag-calibrate ng mga motion trajectory at distansya\n\nKung hindi ka sumasang-ayon na tawagan ang mga pahintulot sa itaas, ang function ay hindi gagamitin nang normal, at hindi ito makakaapekto sa iyong paggamit ng mga pangunahing function ng application na ito. Maaari mong bawiin ang iyong pahintulot anumang oras sa pamamagitan ng pagpunta sa "Mga Setting" > "Pamamahala ng Pahintulot" at pagpili na i-off ang mga tawag sa pahintulot sa itaas</string>
+    <string name="agree">sumang-ayon</string>
+    <string name="disagree">tanggihan</string>
+    <string name="login_tip">Kailangan mong mag-log in upang magpatuloy sa susunod na hakbang. Gusto mo bang mag-log in ngayon?</string>
+    <string name="outrun">pagtakbo sa labas</string>
+    <string name="walk">sa paa</string>
+    <string name="treadmill">Gilingang pinepedalan</string>
+    <string name="mountain">pamumundok</string>
+    <string name="marathon">marathon</string>
+    <string name="badminton">badminton</string>
+    <string name="basketball">basketball</string>
+    <string name="bicycle">sumakay</string>
+    <string name="skiing">ski</string>
+    <string name="ping">Ping pong</string>
+    <string name="football">football</string>
+    <string name="climb">pag-akyat ng bato</string>
+    <string name="watch_ring">Ang relo ay tumutunog, mangyaring bigyang-pansin.</string>
+    <string name="stop_find">huminto sa paghahanap</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Matagumpay na na-save</string>
+    <string name="waiting">Mangyaring maghintay...</string>
+    <string name="http_error">Nag-time out ang kahilingan</string>
+    <string name="ble_error">Hindi nakakonekta ang Bluetooth, mangyaring kumonekta at subukang muli</string>
+    <string name="updating">Nagsi-sync ang data...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">konektado</string>
+    <string name="disConnect">hindi konektado</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">araw</string>
+    <string name="mon">isa</string>
+    <string name="tues">dalawa</string>
+    <string name="wed">tatlo</string>
+    <string name="thus">Apat</string>
+    <string name="fri">lima</string>
+    <string name="sta">anim</string>
+
+    <string name="graphic_verification_code">Graphic na verification code</string>
+    <string name="enter_numbers_letters">Mangyaring maglagay ng mga numero o titik mula sa larawan</string>
+    <string name="enter_verification_code">Mangyaring ilagay muna ang code sa pag-verify ng larawan</string>
+
+    <string name="crop">I-edit ang larawan</string>
+    <string name="unlock">Mag-swipe para i-unlock</string>
+
 </resources>
+
+

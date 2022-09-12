@@ -2,7 +2,7 @@
 <resources>
 
     <string name="name">FitRing</string>
-    <string name="home">状态</string>
+    <string name="home">Etat</string>
     <string name="sport">sport</string>
     <string name="consult">consulter</string>
     <string name="mine">mine</string>
@@ -96,7 +96,7 @@
     <string name="login_login_account">compte de connexion</string>
     <string name="login_login">Connexion</string>
     <string name="login_account">Compte</string>
-    <string name="login_input_account">Entrez votre compte</string>
+    <string name="login_input_account">Veuillez entrer votre téléphone/email</string>
     <string name="login_right_email">Veuillez saisir la bonne adresse e-mail</string>
     <string name="login_psw">le mot de passe</string>
     <string name="login_input_psw">tapez votre mot de passe</string>
@@ -313,41 +313,50 @@
     <string name="user_blood_oxygen">oxygène du sang</string>
     <string name="user_temperature">température corporelle</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Chargement...</string>
+    <string name="permission_tip">Description de l\'autorisation</string>
+    <string name="sport_permission">Pendant l\'utilisation, cette application nécessite l\'accès aux autorisations de positionnement pour enregistrer et calibrer les trajectoires de mouvement et les distances\n\nSi vous n\'acceptez pas d\'appeler les autorisations ci-dessus, la fonction ne sera pas utilisée normalement et cela n\'affectera pas votre utilisation des fonctions de base de cette application. Vous pouvez retirer votre consentement à tout moment en allant dans "Paramètres" > "Gestion des autorisations" et en choisissant de désactiver les appels d\'autorisation ci-dessus</string>
+    <string name="agree">Je suis d\'accord</string>
+    <string name="disagree">rejeter</string>
+    <string name="login_tip">Vous devez vous connecter pour passer à l\'étape suivante. Voulez-vous vous connecter maintenant ?</string>
+    <string name="outrun">course à pied en plein air</string>
+    <string name="walk">à pied</string>
+    <string name="treadmill">Tapis roulant</string>
+    <string name="mountain">alpinisme</string>
+    <string name="marathon">marathon</string>
+    <string name="badminton">badminton</string>
+    <string name="basketball">basket</string>
+    <string name="bicycle">balade</string>
+    <string name="skiing">ski</string>
+    <string name="ping">ping pong</string>
+    <string name="football">Football</string>
+    <string name="climb">escalade</string>
+    <string name="watch_ring">La montre sonne, veuillez faire attention.</string>
+    <string name="stop_find">arrête de regarder</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Enregistré avec succès</string>
+    <string name="waiting">S\'il vous plaît, attendez...</string>
+    <string name="http_error">La demande a expiré</string>
+    <string name="ble_error">Bluetooth n\'est pas connecté, veuillez vous connecter et réessayer</string>
+    <string name="updating">Les données sont en cours de synchronisation...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">lié</string>
+    <string name="disConnect">pas connecté</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">journée</string>
+    <string name="mon">une</string>
+    <string name="tues">deux</string>
+    <string name="wed">Trois</string>
+    <string name="thus">Quatre</string>
+    <string name="fri">cinq</string>
+    <string name="sta">six</string>
+
+
+    <string name="graphic_verification_code">Code de vérification graphique</string>
+    <string name="enter_numbers_letters">Veuillez entrer des chiffres ou des lettres de l\'image</string>
+    <string name="enter_verification_code">Veuillez d\'abord entrer le code de vérification de l\'image</string>
+
+    <string name="crop">Éditer une photo</string>
+    <string name="unlock">Glisser pour déverrouiller</string>
 </resources>
+

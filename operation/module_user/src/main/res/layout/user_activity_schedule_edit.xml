@@ -40,7 +40,9 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="15dp"
                 android:paddingStart="15dp"
-                android:hint="@string/user_schedule_msg"/>
+                android:ellipsize="end"
+                android:hint="@string/user_schedule_msg"
+                android:textColorHint="@color/gray"/>
 
             <TextView
                 android:id="@+id/lengthTv"

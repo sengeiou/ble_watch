@@ -19,6 +19,8 @@ import com.zhy.http.okhttp.BaseApi;
 import com.zhy.http.okhttp.callback.GenericsCallback;
 import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 
+import java.util.Locale;
+
 import okhttp3.Call;
 
 public class HelpActivity extends BaseActivity {
@@ -86,7 +88,7 @@ public class HelpActivity extends BaseActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 int len = s.toString().length();
-                lengthTv.setText(String.format("%d/300",len));
+                lengthTv.setText(String.format(Locale.ENGLISH,"%d/300",len));
                 if (len>300)
                     lengthTv.setTextColor(Color.RED);
                 else

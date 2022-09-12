@@ -96,7 +96,7 @@
     <string name="login_login_account">登錄賬戶</string>
     <string name="login_login">登錄</string>
     <string name="login_account">賬戶</string>
-    <string name="login_input_account">輸入您的电话/邮箱</string>
+    <string name="login_input_account">請輸入您的電話/郵箱</string>
     <string name="login_right_email">請輸入正確的郵箱地址</string>
     <string name="login_psw">密碼</string>
     <string name="login_input_psw">輸入您的密碼</string>
@@ -314,35 +314,35 @@
     <string name="user_blood_oxygen">血氧</string>
     <string name="user_temperature">體溫</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
+     <string name="loading">加載中...</string>
+    <string name="permission_tip">權限說明</string>
+    <string name="sport_permission">在使用過程中，本應用需要訪問定位權限，用於記錄和校準運動軌跡與距離\n\n如果您不同意調用以上權限，將導致該功能無法正常使用，擔不影響您使用本應用的基本功能。您可隨時前往“設置”>“權限管理”，選擇關閉以上權限調用以撤回您的同意</string>
     <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
+    <string name="disagree">拒絕</string>
+    <string name="login_tip">需要登錄才可以進行下一步操作，請問是否現在登錄？</string>
+    <string name="outrun">戶外跑</string>
     <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
+    <string name="treadmill">跑步機</string>
     <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
+    <string name="marathon">馬拉松</string>
     <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
+    <string name="basketball">籃球</string>
+    <string name="bicycle">騎行</string>
     <string name="skiing">滑雪</string>
     <string name="ping">乒乓球</string>
     <string name="football">足球</string>
     <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
+    <string name="watch_ring">手錶正在響鈴,請注意。</string>
     <string name="stop_find">停止查找</string>
 
     <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="waiting">請等待...</string>
+    <string name="http_error">請求超時</string>
+    <string name="ble_error">藍牙未連接，請連接後重試</string>
+    <string name="updating">數據正在同步...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">已連接</string>
+    <string name="disConnect">未連接</string>
 
     <string name="sun">日</string>
     <string name="mon">一</string>
@@ -351,4 +351,13 @@
     <string name="thus">四</string>
     <string name="fri">五</string>
     <string name="sta">六</string>
+
+    <string name="graphic_verification_code">圖文驗證碼</string>
+    <string name="enter_numbers_letters">請輸入圖片中的數字或字母</string>
+    <string name="enter_verification_code">請先輸入圖文驗證碼</string>
+
+    <string name="crop">編輯圖片</string>
+    <string name="unlock">滑動解鎖</string>
 </resources>
+
+

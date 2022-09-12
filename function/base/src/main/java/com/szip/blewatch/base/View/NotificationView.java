@@ -48,7 +48,7 @@ public class NotificationView {
         notificationManager= (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         //        获取Notification实例
         Notification notification=new NotificationCompat.Builder(context,"0103")
-                .setContentTitle(context.getResources().getString(R.string.app_name))
+                .setContentTitle(context.getResources().getString(R.string.name))
                 .setContentText(state?context.getResources().getString(R.string.connected):context.getResources().getString(R.string.disConnect))
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(false) //点击通知栏后是否消失

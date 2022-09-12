@@ -31,7 +31,6 @@
         android:icon="@mipmap/icon"
         android:label="@string/name"
         android:roundIcon="@mipmap/icon"
-        android:debuggable="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.PrivacyActivity"></activity>
@@ -58,7 +57,7 @@
 
         <service
             android:name=".base.Notification.MyNotificationReceiver"
-            android:label="@string/app_name"
+            android:label="@string/name"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />

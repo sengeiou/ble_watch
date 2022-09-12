@@ -96,7 +96,7 @@
     <string name="login_login_account">লগইন অ্যাকাউন্ট</string>
     <string name="login_login">প্রবেশ করুন</string>
     <string name="login_account">অ্যাকাউন্ট</string>
-    <string name="login_input_account">আপনার অ্যাকাউন্ট লিখুন</string>
+    <string name="login_input_account">অনুগ্রহ করে আপনার ফোন নম্বর/ইমেল ঠিকানা লিখুন</string>
     <string name="login_right_email">সঠিক ইমেল ঠিকানা ইনপুট করুন</string>
     <string name="login_psw">পাসওয়ার্ড</string>
     <string name="login_input_psw">আপনার পাসওয়ার্ড লিখুন</string>
@@ -313,41 +313,52 @@
     <string name="user_blood_oxygen">রক্তের অক্সিজেন</string>
     <string name="user_temperature">শরীরের তাপমাত্রা</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">লোড হচ্ছে...</string>
+    <string name="permission_tip">অনুমতি বিবরণ</string>
+    <string name="sport_permission">ব্যবহারের সময়, এই অ্যাপটির গতি ট্র্যাজেক্টোরি এবং দূরত্ব রেকর্ডিং এবং ক্যালিব্রেট করার জন্য পজিশনিং অনুমতিগুলির অ্যাক্সেসের প্রয়োজন\n\nআপনি যদি উপরের অনুমতিগুলি নিতে সম্মত না হন তবে এটি ফাংশনটি স্বাভাবিকভাবে কাজ করতে ব্যর্থ হবে এবং এটি আপনার মৌলিক প্রভাবিত করবে না এই অ্যাপ্লিকেশন ব্যবহার. ফাংশন. আপনি "সেটিংস" > "পারমিশন ম্যানেজমেন্ট"-এ গিয়ে যে কোনো সময় আপনার সম্মতি প্রত্যাহার করতে পারেন এবং উপরের অনুমতি কলগুলি বন্ধ করতে বেছে নিতে পারেন</string>
+    <string name="agree">একমত</string>
+    <string name="disagree">প্রত্যাখ্যান</string>
+    <string name="login_tip">পরবর্তী ধাপে যেতে আপনাকে লগ ইন করতে হবে। আপনি কি এখন লগ ইন করতে চান?</string>
+    <string name="outrun">আউটডোর দৌড়</string>
+    <string name="walk">হেঁটে</string>
+    <string name="treadmill">ট্রেডমিল</string>
+    <string name="mountain">পর্বতারোহণ</string>
+    <string name="marathon">ম্যারাথন</string>
+    <string name="badminton">ব্যাডমিন্টন</string>
+    <string name="basketball">বাস্কেটবল</string>
+    <string name="bicycle">অশ্বারোহণ</string>
+    <string name="skiing">স্কি</string>
+    <string name="ping">পিং পং</string>
+    <string name="football">ফুটবল</string>
+    <string name="climb">রক ক্লাইম্বিং</string>
+    <string name="watch_ring">ঘড়ি বাজছে, দয়া করে মনোযোগ দিন।</string>
+    <string name="stop_find">তাকানো বন্ধ</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">সফলভাবে সংরক্ষিত</string>
+    <string name="waiting">অনুগ্রহপূর্বক অপেক্ষা করুন...</string>
+    <string name="http_error">অনুরোধ সময় শেষ হয়েছে</string>
+    <string name="ble_error">ব্লুটুথ সংযুক্ত নেই, অনুগ্রহ করে সংযোগ করুন এবং আবার চেষ্টা করুন</string>
+    <string name="updating">ডেটা সিঙ্ক হচ্ছে...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">সংযুক্ত</string>
+    <string name="disConnect">সংযোগ বিচ্ছিন্ন</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">দিন</string>
+    <string name="mon">এক</string>
+    <string name="tues">দুই</string>
+    <string name="wed">তিন</string>
+    <string name="thus">চার</string>
+    <string name="fri">পাঁচ</string>
+    <string name="sta">ছয়</string>
+
+    <string name="graphic_verification_code">গ্রাফিক যাচাইকরণ কোড</string>
+    <string name="enter_numbers_letters">ছবি থেকে সংখ্যা বা অক্ষর লিখুন</string>
+    <string name="enter_verification_code">প্রথমে ইমেজ যাচাইকরণ কোড লিখুন</string>
+
+    <string name="crop">সম্পাদনা</string>
+    <string name="unlock">আনলক করতে সোয়াইপ করুন</string>
+
 </resources>
+
+
+

@@ -94,7 +94,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     protected void onResume() {
         super.onResume();
         //获取图片验证码
-        updateImageVerification();
+
     }
 
     private void initEvent() {
@@ -120,6 +120,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         sendTv = findViewById(R.id.sendTv);
         nextTv = findViewById(R.id.nextTv);
         checkBox = findViewById(R.id.checkbox);
+
+        updateImageVerification();
     }
 
     @Override
@@ -240,6 +242,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         public void onResponse(BaseApi response, int id) {
 
             if (response.getCode() != 200) {
+                updateImageVerification();
                 showToast(response.getMessage());
             }else {
                 sendTv.setEnabled(false);
@@ -279,6 +282,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     setPasswordFragment.show(ft, "register");
                 }
             }else {
+                updateImageVerification();
                 MathUtil.newInstance().showToast(getApplicationContext(),response.getMessage());
             }
         }

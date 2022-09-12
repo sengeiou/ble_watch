@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cp_search_hint_text">ค้นหา</string>
+    <string name="cp_no_result">ไม่พบ</string>
+    <string name="country">ประเทศ/พื้น ที่</string>
+
+</resources>
+
+

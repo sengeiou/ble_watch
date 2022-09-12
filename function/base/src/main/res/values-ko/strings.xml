@@ -28,7 +28,7 @@
     <string name="healthy_sleep">잠</string>
     <string name="healthy_heart">심박수</string>
     <string name="healthy_blood_pressure">혈압</string>
-    <string name="healthy_blood_oxygen">血氧</string>
+    <string name="healthy_blood_oxygen">혈액 산소</string>
     <string name="healthy_temp">체온</string>
     <string name="healthy_edit_card">카드 수정</string>
     <string name="healthy_last_sport">최근 운동</string>
@@ -41,7 +41,7 @@
     <string name="healthy_day">낮</string>
     <string name="healthy_week">주</string>
     <string name="healthy_month">달</string>
-    <string name="healthy_sun">週日</string>
+    <string name="healthy_sun">일요일</string>
     <string name="healthy_sta">토요일</string>
     <string name="healthy_survey">오늘날의 건강 데이터</string>
     <string name="healthy_week_survey">이번 주 건강 데이터</string>
@@ -72,7 +72,7 @@
     <string name="healthy_heart4">지방 연소(112~130)</string>
     <string name="healthy_heart5">워밍업(90~111)</string>
     <string name="healthy_heart6">안심하다(≤89)</string>
-    <string name="healthy_spo_average">平均血氧值</string>
+    <string name="healthy_spo_average">혈액 산소를 의미</string>
     <string name="healthy_spo_max">최대 혈중 산소 농도</string>
     <string name="healthy_spo_min">최소 혈중 산소 농도</string>
     <string name="healthy_spo_measure_list">측정 기록</string>
@@ -96,7 +96,7 @@
     <string name="login_login_account">로그인 계정</string>
     <string name="login_login">로그인</string>
     <string name="login_account">계정</string>
-    <string name="login_input_account">계정을 입력하세요</string>
+    <string name="login_input_account">전화번호/우편함을 입력하십시오</string>
     <string name="login_right_email">정확한 이메일 주소를 입력해주세요</string>
     <string name="login_psw">비밀번호</string>
     <string name="login_input_psw">비밀번호를 입력하세요</string>
@@ -133,7 +133,7 @@
     <string name="sport_steps">걸음 수</string>
     <string name="sport_speed_hour">평균 속도</string>
     <string name="sport_stride">단계 빈도</string>
-    <string name="sport_heart">和平之心</string>
+    <string name="sport_heart">평균 심박수</string>
     <string name="sport_height">고도를 오르다</string>
     <string name="sport_sport_info">스포츠 세부 정보</string>
     <string name="sport_heart_level">심박수 분포</string>
@@ -313,41 +313,50 @@
     <string name="user_blood_oxygen">혈액 산소</string>
     <string name="user_temperature">체온</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">로드 중...</string>
+    <string name="permission_tip">권한 설명</string>
+    <string name="sport_permission">사용하는 동안 이 앱은 움직임 궤적 및 거리를 기록하고 보정하기 위해 위치 지정 권한에 액세스해야 합니다.\n\n위 권한 호출에 동의하지 않으시면 해당 기능이 정상적으로 사용되지 않으며, 본 어플리케이션의 기본 기능 사용에 영향을 미치지 않습니다. 귀하는 "설정" > "권한 관리"로 이동하고 위의 권한 호출을 끄도록 선택하여 언제든지 동의를 철회할 수 있습니다.</string>
+    <string name="agree">동의하다</string>
+    <string name="disagree">거부하다</string>
+    <string name="login_tip">다음 단계로 진행하려면 로그인해야 합니다. 지금 로그인하시겠습니까?</string>
+    <string name="outrun">야외 달리기</string>
+    <string name="walk">도보로</string>
+    <string name="treadmill">밟아 돌리는 바퀴</string>
+    <string name="mountain">등산</string>
+    <string name="marathon">마라톤</string>
+    <string name="badminton">배드민턴</string>
+    <string name="basketball">농구</string>
+    <string name="bicycle">타다</string>
+    <string name="skiing">스키</string>
+    <string name="ping">탁구</string>
+    <string name="football">축구</string>
+    <string name="climb">암벽 등반</string>
+    <string name="watch_ring">시계가 울리고 있으니 주의하십시오.</string>
+    <string name="stop_find">그만 찾아</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">성공적으로 저장됨</string>
+    <string name="waiting">기다리세요...</string>
+    <string name="http_error">요청 시간이 초과되었습니다</string>
+    <string name="ble_error">블루투스가 연결되지 않았습니다. 연결하고 다시 시도하세요.</string>
+    <string name="updating">데이터 동기화 중...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">연결된</string>
+    <string name="disConnect">연결되지 않음</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">낮</string>
+    <string name="mon">하나</string>
+    <string name="tues">둘</string>
+    <string name="wed">삼</string>
+    <string name="thus">넷</string>
+    <string name="fri">다섯</string>
+    <string name="sta">여섯</string>
+
+    <string name="graphic_verification_code">먼저 이미지 인증 코드를 입력하세요.</string>
+    <string name="enter_numbers_letters">사진 속 숫자나 문자를 입력해주세요.</string>
+    <string name="enter_verification_code">먼저 이미지 인증 코드를 입력하세요.</string>
+
+    <string name="crop">그림 편집</string>
+    <string name="unlock">슬라이더 잠금 풀기</string>
+
 </resources>
+

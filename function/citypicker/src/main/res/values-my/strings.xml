@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cp_search_hint_text">ရှာဖွေခြင်း</string>
+    <string name="cp_no_result">ရှာမတွေ့ပါ</string>
+    <string name="country">နိုင်ငံ/ဒေသ</string>
+
+</resources>
+

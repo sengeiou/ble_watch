@@ -317,7 +317,7 @@ public class DateUtil {
     public static String getStringDateFromSecond(long milSecond,String formatStyle) {
         long time = milSecond * 1000;
         Date date = new Date(time);
-        SimpleDateFormat format = new SimpleDateFormat(formatStyle);
+        SimpleDateFormat format = new SimpleDateFormat(formatStyle,Locale.ENGLISH);
         return format.format(date);
     }
 
@@ -330,7 +330,7 @@ public class DateUtil {
     public static String getStringDateFromSecondCn(long milSecond, String formatStyle) {
         long time = milSecond * 1000;
         Date date = new Date(time);
-        SimpleDateFormat format = new SimpleDateFormat(formatStyle);
+        SimpleDateFormat format = new SimpleDateFormat(formatStyle,Locale.ENGLISH);
         return format.format(date);
     }
 

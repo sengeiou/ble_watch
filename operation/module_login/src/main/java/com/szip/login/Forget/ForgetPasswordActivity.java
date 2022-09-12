@@ -89,7 +89,7 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
     @Override
     protected void onResume() {
         super.onResume();
-        updateImageVerification();
+
     }
 
     private void initEvent() {
@@ -114,6 +114,7 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
         verifyCodeEt = findViewById(R.id.verifyCodeEt);
         sendTv = findViewById(R.id.sendTv);
         nextTv = findViewById(R.id.nextTv);
+        updateImageVerification();
     }
 
     @Override
@@ -208,6 +209,7 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
         public void onResponse(BaseApi response, int id) {
 
             if (response.getCode() != 200) {
+                updateImageVerification();
                 showToast(response.getMessage());
             }else {
                 sendTv.setEnabled(false);
@@ -247,6 +249,7 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
                     setPasswordFragment.show(ft, "forget");
                 }
             }else {
+                updateImageVerification();
                 MathUtil.newInstance().showToast(getApplicationContext(),response.getMessage());
             }
         }

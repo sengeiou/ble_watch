@@ -850,11 +850,24 @@ public class MathUtil {
         editor.commit();
     }
 
+    public void saveBooleanData(Context context,String dataKey,boolean data){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(dataKey,data);
+        editor.commit();
+    }
+
     public void saveIntData(Context context,String dataKey,long data){
         SharedPreferences sharedPreferences = context.getSharedPreferences(FILE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putLong(dataKey,data);
         editor.commit();
+    }
+
+
+    public boolean getBooleanData(Context context,String key){
+        SharedPreferences sharedPreferences = context.getSharedPreferences(FILE,MODE_PRIVATE);
+        return sharedPreferences.getBoolean(key,true);
     }
 
     public String getToken(Context context){
@@ -864,7 +877,7 @@ public class MathUtil {
 
     public String getString(Context context,String key){
         SharedPreferences sharedPreferences = context.getSharedPreferences(FILE,MODE_PRIVATE);
-        return sharedPreferences.getString("key",null);
+        return sharedPreferences.getString(key,null);
     }
 
     public long getUserId(Context context){

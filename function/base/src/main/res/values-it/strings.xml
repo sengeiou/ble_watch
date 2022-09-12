@@ -96,7 +96,7 @@
     <string name="login_login_account">Account di accesso</string>
     <string name="login_login">Accedi</string>
     <string name="login_account">Account</string>
-    <string name="login_input_account">Inserisci il tuo account</string>
+    <string name="login_input_account">Per abbonarsi, digitare il numero di telefono/mailbox</string>
     <string name="login_right_email">Inserisci un indirizzo email corretto</string>
     <string name="login_psw">password</string>
     <string name="login_input_psw">Inserisci la tua password</string>
@@ -316,41 +316,50 @@
     <string name="user_blood_oxygen">ossigeno nel sangue</string>
     <string name="user_temperature">temperatura corporea</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Caricamento in corso...</string>
+    <string name="permission_tip">Descrizione dell\'autorizzazione</string>
+    <string name="sport_permission">Durante l\'uso, questa app richiede l\'accesso ai permessi di posizionamento per la registrazione e la calibrazione di traiettorie e distanze di movimento\n\nSe non accetti di chiamare le autorizzazioni di cui sopra, la funzione non verrà utilizzata normalmente e non influirà sull\'utilizzo delle funzioni di base di questa applicazione. Puoi revocare il tuo consenso in qualsiasi momento andando su "Impostazioni" > "Gestione autorizzazioni" e scegliendo di disattivare le chiamate di autorizzazione di cui sopra</string>
+    <string name="agree">essere d\'accordo</string>
+    <string name="disagree">rifiutare</string>
+    <string name="login_tip">Devi effettuare il login per procedere al passaggio successivo Vuoi accedere ora?</string>
+    <string name="outrun">corsa all\'aperto</string>
+    <string name="walk">a piedi</string>
+    <string name="treadmill">Tapis roulant</string>
+    <string name="mountain">alpinismo</string>
+    <string name="marathon">maratona</string>
+    <string name="badminton">badminton</string>
+    <string name="basketball">pallacanestro</string>
+    <string name="bicycle">giro</string>
+    <string name="skiing">sciare</string>
+    <string name="ping">ping-pong</string>
+    <string name="football">calcio</string>
+    <string name="climb">arrampicata</string>
+    <string name="watch_ring">L\'orologio sta squillando, si prega di prestare attenzione.</string>
+    <string name="stop_find">basta guardare</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Salvato con successo</string>
+    <string name="waiting">Attendere prego...</string>
+    <string name="http_error">Tempo scaduto per la richiesta</string>
+    <string name="ble_error">Il Bluetooth non è connesso, connettiti e riprova</string>
+    <string name="updating">I dati sono sincronizzati...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">collegato</string>
+    <string name="disConnect">non collegata</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">giorno</string>
+    <string name="mon">uno</string>
+    <string name="tues">Due</string>
+    <string name="wed">tre</string>
+    <string name="thus">quattro</string>
+    <string name="fri">cinque</string>
+    <string name="sta">sei</string>
+
+    <string name="graphic_verification_code">Codice di verifica grafico</string>
+    <string name="enter_numbers_letters">Si prega di inserire numeri o lettere dall\'immagine</string>
+    <string name="enter_verification_code">Inserisci prima il codice di verifica dell\'immagine</string>
+
+    <string name="crop">Immagine modificata</string>
+    <string name="unlock">Sbloccaggio scorrevole</string>
 </resources>
+
+

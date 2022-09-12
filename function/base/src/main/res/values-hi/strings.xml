@@ -90,13 +90,13 @@
     <string name="healthy_tomorrow">भविष्य की तारीख का चयन नहीं कर सकते</string>
     <string name="healthy_not_data">चयनित तिथि में कोई डेटा नहीं है</string>
 
-    <string name="login_name">login module</string>
+    <string name="login_name">लॉगिन मॉड्यूल</string>
     <string name="login_location">क्षेत्र</string>
     <string name="login_chose_location">कृपया क्षेत्र का चयन करें</string>
     <string name="login_login_account">लॉगिन खाता</string>
     <string name="login_login">लॉग इन करें</string>
     <string name="login_account">खाता</string>
-    <string name="login_input_account">अपना खाता दर्ज करें</string>
+    <string name="login_input_account">कृपया अपना फ़ोन नंबर / ईमेल पता दर्ज करें</string>
     <string name="login_right_email">कृपया सही ईमेल पता दर्ज करें</string>
     <string name="login_psw">पासवर्ड</string>
     <string name="login_input_psw">अपना पासवर्ड डालें</string>
@@ -313,41 +313,49 @@
     <string name="user_blood_oxygen">रक्त ऑक्सीजन</string>
     <string name="user_temperature">शरीर का तापमान</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">लोड हो रहा है...</string>
+    <string name="permission_tip">अनुमति विवरण</string>
+    <string name="sport_permission">उपयोग के दौरान, इस ऐप को गति प्रक्षेपवक्र और दूरियों को रिकॉर्ड करने और कैलिब्रेट करने के लिए पोजिशनिंग अनुमतियों तक पहुंच की आवश्यकता होती है\n\nयदि आप उपरोक्त अनुमतियों को कॉल करने के लिए सहमत नहीं हैं, तो फ़ंक्शन का सामान्य रूप से उपयोग नहीं किया जाएगा, और यह इस एप्लिकेशन के मूल कार्यों के आपके उपयोग को प्रभावित नहीं करेगा। आप किसी भी समय "सेटिंग"> "अनुमति प्रबंधन" पर जाकर और उपरोक्त अनुमति कॉल को बंद करने का विकल्प चुनकर अपनी सहमति वापस ले सकते हैं।</string>
+    <string name="agree">सहमत होना</string>
+    <string name="disagree">अस्वीकार</string>
+    <string name="login_tip">अगले चरण पर जाने के लिए आपको लॉग इन करना होगा। क्या आप अभी लॉग इन करना चाहते हैं?</string>
+    <string name="outrun">बाहरी दौड़</string>
+    <string name="walk">पैरों पर</string>
+    <string name="treadmill">TREADMILL</string>
+    <string name="mountain">पर्वतारोहण</string>
+    <string name="marathon">मैराथन</string>
+    <string name="badminton">बैडमिंटन</string>
+    <string name="basketball">बास्केटबाल</string>
+    <string name="bicycle">सवारी</string>
+    <string name="skiing">स्की</string>
+    <string name="ping">पिंग पांग</string>
+    <string name="football">फ़ुटबॉल</string>
+    <string name="climb">रॉक क्लिंबिंग</string>
+    <string name="watch_ring">घड़ी बज रही है, कृपया ध्यान दें।</string>
+    <string name="stop_find">देखना बंद करो</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">सफलतापूर्वक संचित कर लिया गया है</string>
+    <string name="waiting">कृपया प्रतीक्षा करें...</string>
+    <string name="http_error">अनुरोध का समय समाप्त</string>
+    <string name="ble_error">ब्लूटूथ कनेक्ट नहीं है, कृपया कनेक्ट करें और पुनः प्रयास करें</string>
+    <string name="updating">डेटा सिंक हो रहा है...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">जुड़े हुए</string>
+    <string name="disConnect">जुड़े नहीं हैं</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">दिन</string>
+    <string name="mon">एक</string>
+    <string name="tues">दो</string>
+    <string name="wed">तीन</string>
+    <string name="thus">चार</string>
+    <string name="fri">पांच</string>
+    <string name="sta">छह</string>
+
+
+    <string name="graphic_verification_code">ग्राफिक सत्यापन कोड</string>
+    <string name="enter_numbers_letters">कृपया चित्र से संख्या या अक्षर दर्ज करें</string>
+    <string name="enter_verification_code">कृपया पहले छवि सत्यापन कोड दर्ज करें</string>
+
+    <string name="crop">चित्र संपादित करें</string>
+    <string name="unlock">अनलॉक करने के लिए स्वाइप करें</string>
 </resources>

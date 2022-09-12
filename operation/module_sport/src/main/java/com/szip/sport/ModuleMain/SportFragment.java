@@ -55,6 +55,8 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
     private ILastSportPresenter iLastSportPresenter;
     private List<SportData> sportDataList = new ArrayList<>();
 
+    private boolean needCheck = true;
+
 
     @Override
     protected int getLayoutId() {
@@ -64,10 +66,10 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
     @Override
     protected void afterOnCreated(Bundle savedInstanceState) {
         LogUtil.getInstance().logd("data******","afterOnCreated");
-        checkPermission();
         initView();
         initEvent();
         iLastSportPresenter = new LastSportImpl(this,getActivity());
+        needCheck = MathUtil.newInstance().getBooleanData(getContext().getApplicationContext(),"needCheck");
     }
 
     @Override
@@ -93,7 +95,9 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
     /**
      * 获取权限
      * */
-    private void checkPermission(){
+    private boolean checkPermission(){
+        if (!needCheck)
+            return false;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P){
                 if (getActivity().checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_DENIED
@@ -106,9 +110,14 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
                                         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                                                         Manifest.permission.ACTIVITY_RECOGNITION},
                                                 102);
+                                    }else {
+                                        needCheck = false;
+                                        MathUtil.newInstance().saveBooleanData(getContext().getApplicationContext(),
+                                                "needCheck",false);
                                     }
                                 }
                             }, getActivity());
+                    return false;
                 }
             }else {
 
@@ -120,13 +129,19 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
                                     if (flag){
                                         requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                                                 101);
+                                    }else {
+                                        needCheck = false;
+                                        MathUtil.newInstance().saveBooleanData(getContext().getApplicationContext(),
+                                                "needCheck",false);
                                     }
                                 }
                             }, getActivity());
+                    return false;
                 }
             }
 
         }
+        return true;
     }
 
     private void initEvent() {
@@ -187,9 +202,14 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
             getView().findViewById(R.id.gpsLl).setVisibility(View.GONE);
         } else if (id == R.id.startIv) {
             if (!MathUtil.newInstance().needLogin(getActivity())){
-                Intent intent = new Intent(getActivity(), GpsActivity.class);
-                intent.putExtra("sportType", sportType);
-                startActivity(intent);
+
+                if (checkPermission()){
+                    Intent intent = new Intent(getActivity(), GpsActivity.class);
+                    intent.putExtra("sportType", sportType);
+                    startActivity(intent);
+                }else {
+                    showToast(getString(R.string.user_camera_permission_error));
+                }
             }
         }
     }

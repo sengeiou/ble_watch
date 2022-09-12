@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cp_search_hint_text">البحث</string>
+    <string name="cp_no_result">لا شيء</string>
+    <string name="country">البلد/المنطقة</string>
+</resources>
+

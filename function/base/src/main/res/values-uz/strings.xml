@@ -96,7 +96,7 @@
     <string name="login_login_account">kirish hisobi</string>
     <string name="login_login">Kirish</string>
     <string name="login_account">hisob</string>
-    <string name="login_input_account">Hisobingizni kiriting</string>
+    <string name="login_input_account">Iltimos telefon raqamingizni /elektron pochta manzilingizni kiriting</string>
     <string name="login_right_email">Iltimos, to\'g\'ri elektron pochta manzilini kiriting</string>
     <string name="login_psw">parol</string>
     <string name="login_input_psw">parolingizni kiriting</string>
@@ -108,7 +108,7 @@
 
     <string name="login_register_account">hisob qaydnomasini ro\'yxatdan o\'tkazish</string>
     <string name="login_register_account_tip">Shaxsiy hisob qaydnomangiz bilan fitnes maʼlumotlaringiz, qurilma afzalliklaringiz doimiy ravishda xavfsiz saqlanishi mumkin</string>
-    <string name="login_next">下一步</string>
+    <string name="login_next">Keyingi qadam</string>
     <string name="login_verification">tasdiq kodi</string>
     <string name="login_input_verification">Tasdiqlash kodingizni kiriting</string>
     <string name="login_send">yuborish</string>
@@ -312,41 +312,52 @@
     <string name="user_blood_oxygen">qon kislorodi</string>
     <string name="user_temperature">tana harorati</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">Yuklanmoqda...</string>
+    <string name="permission_tip">Ruxsat tavsifi</string>
+    <string name="sport_permission">Foydalanish vaqtida ushbu ilova harakat traektoriyalari va masofalarini yozib olish va kalibrlash uchun joylashishni aniqlash ruxsatiga kirishni talab qiladi.\n\nAgar siz yuqoridagi ruxsatlarni chaqirishga rozi bo\'lmasangiz, funksiya odatdagidek ishlatilmaydi va bu ilovaning asosiy funksiyalaridan foydalanishingizga ta\'sir qilmaydi. Istalgan vaqtda “Sozlamalar” > “Ruxsatlarni boshqarish” boʻlimiga oʻtib, yuqoridagi ruxsatnoma chaqiruvlarini oʻchirib qoʻyish orqali roziligingizni qaytarib olishingiz mumkin.</string>
+    <string name="agree">rozi</string>
+    <string name="disagree">rad qilish</string>
+    <string name="login_tip">Keyingi bosqichga o‘tish uchun tizimga kirishingiz kerak. Hozir tizimga kirmoqchimisiz?</string>
+    <string name="outrun">ochiq havoda yugurish</string>
+    <string name="walk">oyoqda</string>
+    <string name="treadmill">Yugurish yo‘lakchasi</string>
+    <string name="mountain">alpinizm</string>
+    <string name="marathon">marafon</string>
+    <string name="badminton">badminton</string>
+    <string name="basketball">basketbol</string>
+    <string name="bicycle">minish</string>
+    <string name="skiing">chang\'i</string>
+    <string name="ping">stol tennisi</string>
+    <string name="football">futbol</string>
+    <string name="climb">qoyalarga chiqish sporti</string>
+    <string name="watch_ring">Soat jiringlayapti, diqqat qiling.</string>
+    <string name="stop_find">qarashni to\'xtat</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">Muvaffaqiyatli saqlandi</string>
+    <string name="waiting">Iltimos kuting...</string>
+    <string name="http_error">So‘rov muddati tugadi</string>
+    <string name="ble_error">Bluetooth ulanmagan, ulaning va qaytadan urining</string>
+    <string name="updating">ma\'lumotlar sinxronlanmoqda...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">ulangan</string>
+    <string name="disConnect">ulanmagan</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">kun</string>
+    <string name="mon">bitta</string>
+    <string name="tues">ikki</string>
+    <string name="wed">uch</string>
+    <string name="thus">To\'rt</string>
+    <string name="fri">besh</string>
+    <string name="sta">olti</string>
+
+    <string name="graphic_verification_code">Grafik tasdiqlash kodi</string>
+    <string name="enter_numbers_letters">Rasmdagi raqamlar yoki harflarni kiriting</string>
+    <string name="enter_verification_code">Iltimos, avval rasmni tasdiqlash kodini kiriting</string>
+
+
+    <string name="crop">Rasmni tahrirlash</string>
+    <string name="unlock">Qulfni ochish uchun oʻtish</string>
+
 </resources>
+
+

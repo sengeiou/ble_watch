@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 import com.szip.blewatch.base.Util.MathUtil;
@@ -45,6 +46,12 @@ public class SetPasswordFragment extends DialogFragment implements View.OnClickL
         this.countryCode = countryCode;
         this.user = user;
         this.verifyCode = verifyCode;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -196,6 +196,8 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
         }
         switch (requestCode) {
             case IMAGE_CAPTURE: {// 相机
+                if (data == null || data.getData() == null)
+                    return;
                 File file = new File(getExternalFilesDir(null).getPath() + "/camera");
                 if (file.exists()) {
                     Uri uri;
@@ -209,6 +211,8 @@ public class UserInfoActivity extends BaseActivity implements View.OnClickListen
             }
             break;
             case IMAGE_MEDIA: {
+                if (data == null || data.getData() == null)
+                    return;
                 if (data != null)
                     FileUtil.getInstance().writeUriSdcardFile(data.getData());
                 File file = new File(getExternalFilesDir(null).getPath() + "/camera");

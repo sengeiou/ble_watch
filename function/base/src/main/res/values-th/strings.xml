@@ -96,7 +96,7 @@
     <string name="login_login_account">เข้าสู่ระบบบัญชี</string>
     <string name="login_login">เข้าสู่ระบบ</string>
     <string name="login_account">บัญชีผู้ใช้</string>
-    <string name="login_input_account">ใส่บัญชีของคุณ</string>
+    <string name="login_input_account">โปรดป้อนโทรศัพท์/กล่องจดหมายของคุณ</string>
     <string name="login_right_email">กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง</string>
     <string name="login_psw">รหัสผ่าน</string>
     <string name="login_input_psw">ใส่รหัสผ่านของคุณ</string>
@@ -314,41 +314,53 @@
     <string name="user_blood_oxygen">ออกซิเจนในเลือด</string>
     <string name="user_temperature">อุณหภูมิในร่างกาย</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">กำลังโหลด...</string>
+    <string name="permission_tip">คำอธิบายการอนุญาต</string>
+    <string name="sport_permission">ระหว่างการใช้งาน แอพนี้ต้องการสิทธิ์เข้าถึงตำแหน่งเพื่อบันทึกและปรับเทียบวิถีการเคลื่อนที่และระยะทาง\n\nหากคุณไม่ตกลงที่จะเรียกใช้การอนุญาตข้างต้น ฟังก์ชันนี้จะไม่ถูกใช้งานตามปกติ และจะไม่ส่งผลต่อการใช้งานฟังก์ชันพื้นฐานของแอปพลิเคชันนี้ คุณสามารถเพิกถอนความยินยอมได้ทุกเมื่อโดยไปที่ "การตั้งค่า" > "การจัดการสิทธิ์" และเลือกปิดการเรียกสิทธิ์ด้านบน</string>
+    <string name="agree">เห็นด้วย</string>
+    <string name="disagree">ปฏิเสธ</string>
+    <string name="login_tip">คุณต้องเข้าสู่ระบบเพื่อไปยังขั้นตอนต่อไป คุณต้องการเข้าสู่ระบบตอนนี้หรือไม่?</string>
+    <string name="outrun">วิ่งกลางแจ้ง</string>
+    <string name="walk">ด้วยเท้า</string>
+    <string name="treadmill">ลู่วิ่ง</string>
+    <string name="mountain">ปีนเขา</string>
+    <string name="marathon">มาราธอน</string>
+    <string name="badminton">แบดมินตัน</string>
+    <string name="basketball">บาสเกตบอล</string>
+    <string name="bicycle">ขี่</string>
+    <string name="skiing">สกี</string>
+    <string name="ping">ปิงปอง</string>
+    <string name="football">ฟุตบอล</string>
+    <string name="climb">ปีนเขา</string>
+    <string name="watch_ring">นาฬิกากำลังดัง โปรดระวัง</string>
+    <string name="stop_find">หยุดมอง</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">บันทึกสำเร็จแล้ว</string>
+    <string name="waiting">โปรดรอ...</string>
+    <string name="http_error">คำขอหมดเวลา</string>
+    <string name="ble_error">ไม่ได้เชื่อมต่อบลูทูธ โปรดเชื่อมต่อแล้วลองอีกครั้ง</string>
+    <string name="updating">กำลังซิงค์ข้อมูล...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">เชื่อมต่อ</string>
+    <string name="disConnect">ไม่ได้เชื่อมต่อ</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">วัน</string>
+    <string name="mon">หนึ่ง</string>
+    <string name="tues">สอง</string>
+    <string name="wed">สาม</string>
+    <string name="thus">โฟร์</string>
+    <string name="fri">ห้า</string>
+    <string name="sta">หก</string>
+
+    <string name="graphic_verification_code">รหัสยืนยันกราฟิก</string>
+    <string name="enter_numbers_letters">กรุณากรอกตัวเลขหรือตัวอักษรจากภาพ</string>
+    <string name="enter_verification_code">กรุณาใส่รหัสยืนยันภาพก่อน</string>
+
+
+    <string name="crop">แก้ไขรูปภาพ</string>
+    <string name="unlock">เลื่อนปลดล็อค</string>
+
+
 </resources>
+
+

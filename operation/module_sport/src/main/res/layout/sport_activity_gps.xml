@@ -357,7 +357,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:text="滑动解锁"
+                android:text="@string/unlock"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"/>
 
@@ -460,7 +460,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="配速"
+                    android:text="@string/sport_speed"
                     android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:textSize="15sp"/>
@@ -488,7 +488,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="运动里程"
+                    android:text="@string/sport_sport_distance"
                     android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:textSize="15sp"/>
@@ -516,7 +516,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="运动消耗"
+                    android:text="@string/sport_sport_calorie"
                     android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:textSize="15sp"/>

@@ -97,7 +97,7 @@ rwayhkyaal htarr sany raathcwaltwin  day tar mashipar .</string>
     <string name="login_login_account">အကောင့်ဝင်ပါ။</string>
     <string name="login_login">လော့ဂ်အင်</string>
     <string name="login_account">အကောင့်</string>
-    <string name="login_input_account">သင့်အကောင့်ကိုထည့်ပါ။</string>
+    <string name="login_input_account">ကျေးဇူးပြု၍ ဖုန်းနံပါတ်/အီးမေးလ် လိပ်စာကို ဝင်ကြည့်ပါ</string>
     <string name="login_right_email">ကျေးဇူးပြု၍ မှန်ကန်သော အီးမေးလ်လိပ်စာကို ထည့်သွင်းပါ။</string>
     <string name="login_psw">စကားဝှက်</string>
     <string name="login_input_psw">သင်၏စကားဝှက်ကိုထည့်ပါ။</string>
@@ -315,41 +315,50 @@ rwayhkyaal htarr sany raathcwaltwin  day tar mashipar .</string>
     <string name="user_blood_oxygen">သွေးအောက်ဆီဂျင်</string>
     <string name="user_temperature">ခန္ဓာကိုယ်အပူချိန်</string>
 
-    <string name="loading">加载中...</string>
-    <string name="permission_tip">权限说明</string>
-    <string name="sport_permission">在使用过程中，本应用需要访问定位权限，用于记录和校准运动轨迹与距离\n\n如果您不同意调用以上权限，将导致该功能无法正常使用，担不影响您使用本应用的基本功能。您可随时前往“设置”>“权限管理”，选择关闭以上权限调用以撤回您的同意</string>
-    <string name="agree">同意</string>
-    <string name="disagree">拒绝</string>
-    <string name="login_tip">需要登录才可以进行下一步操作，请问是否现在登录？</string>
-    <string name="outrun">户外跑</string>
-    <string name="walk">徒步</string>
-    <string name="treadmill">跑步机</string>
-    <string name="mountain">登山</string>
-    <string name="marathon">马拉松</string>
-    <string name="badminton">羽毛球</string>
-    <string name="basketball">篮球</string>
-    <string name="bicycle">骑行</string>
-    <string name="skiing">滑雪</string>
-    <string name="ping">乒乓球</string>
-    <string name="football">足球</string>
-    <string name="climb">攀岩</string>
-    <string name="watch_ring">手表正在响铃,请注意。</string>
-    <string name="stop_find">停止查找</string>
+    <string name="loading">ဖွင့်နေသည်...</string>
+    <string name="permission_tip">ခွင့်ပြုချက်ဖော်ပြချက်</string>
+    <string name="sport_permission">အသုံးပြုနေစဉ်တွင်၊ ဤအက်ပ်သည် မှတ်တမ်းတင်ခြင်းနှင့် ရွေ့လျားမှုလမ်းကြောင်းများနှင့် အကွာအဝေးများကို ချိန်ညှိခြင်းအတွက် နေရာချထားခြင်းဆိုင်ရာ ခွင့်ပြုချက်များကို အသုံးပြုခွင့် လိုအပ်သည်\n\nအထက်ဖော်ပြပါ ခွင့်ပြုချက်များကို ခေါ်ဆိုရန် သင်သဘောမတူပါက၊ လုပ်ဆောင်ချက်ကို ပုံမှန်အတိုင်း အသုံးပြုမည်မဟုတ်ပါ၊ နှင့် ဤအပလီကေးရှင်း၏ အခြေခံလုပ်ဆောင်ချက်များကို သင့်အသုံးပြုမှုကို ထိခိုက်မည်မဟုတ်ပါ။ "ဆက်တင်များ" > "ခွင့်ပြုချက်စီမံခန့်ခွဲမှု" သို့သွားကာ အထက်ခွင့်ပြုချက်ခေါ်ဆိုမှုများကို ပိတ်ရန် ရွေးချယ်ခြင်းဖြင့် သင်၏ခွင့်ပြုချက်ကို အချိန်မရွေး ရုပ်သိမ်းနိုင်သည်။</string>
+    <string name="agree">သဘောတူသည်။</string>
+    <string name="disagree">ငြင်းပယ်</string>
+    <string name="login_tip">နောက်တစ်ဆင့်သို့ ဆက်လက်သွားရန် သင်သည် လော့ဂ်အင်ဝင်ရန် လိုအပ်ပါသည်။ ယခု သင်ဝင်ရောက်လိုပါသလား။</string>
+    <string name="outrun">အပြင်မှာ ပြေးတယ်။</string>
+    <string name="walk">ခြေလျင်</string>
+    <string name="treadmill">ပြေးစက်</string>
+    <string name="mountain">တောင်တက်ခြင်း။</string>
+    <string name="marathon">မာရသွန်</string>
+    <string name="badminton">ကြက်တောင်ရိုက်</string>
+    <string name="basketball">ဘတ်စကက်ဘော</string>
+    <string name="bicycle">စီး</string>
+    <string name="skiing">နှင်းလျှောစီးခြင်း။</string>
+    <string name="ping">ပင်းပေါင်</string>
+    <string name="football">ဘောလုံး</string>
+    <string name="climb">ကျောက်တောင်တက်ခြင်း</string>
+    <string name="watch_ring">နာရီက မြည်နေတယ်၊ ​​ကျေးဇူးပြုပြီး သတိထားပါ။</string>
+    <string name="stop_find">ရပ်လိုက်ပါ။</string>
 
-    <string name="save_success">保存成功</string>
-    <string name="waiting">请等待...</string>
-    <string name="http_error">请求超时</string>
-    <string name="ble_error">蓝牙未连接，请连接后重试</string>
-    <string name="updating">数据正在同步...</string>
+    <string name="save_success">အောင်မြင်စွာ သိမ်းဆည်းခဲ့သည်။</string>
+    <string name="waiting">ကျေးဇူးပြုပြီးခဏစောင့်ပါ...</string>
+    <string name="http_error">တောင်းဆိုမှု အချိန်ကုန်သွားသည်။</string>
+    <string name="ble_error">ဘလူးတုသ်ကို မချိတ်ဆက်ထားပါ၊ ကျေးဇူးပြု၍ ချိတ်ဆက်ပြီး ထပ်စမ်းကြည့်ပါ။</string>
+    <string name="updating">ဒေတာကို စင့်ခ်လုပ်နေသည်...</string>
 
-    <string name="connected">已连接</string>
-    <string name="disConnect">未连接</string>
+    <string name="connected">ချိတ်ဆက်ထားသည်။</string>
+    <string name="disConnect">မချိတ်ဆက်ပါ။</string>
 
-    <string name="sun">日</string>
-    <string name="mon">一</string>
-    <string name="tues">二</string>
-    <string name="wed">三</string>
-    <string name="thus">四</string>
-    <string name="fri">五</string>
-    <string name="sta">六</string>
+    <string name="sun">နေ့</string>
+    <string name="mon">တစ်ခု</string>
+    <string name="tues">နှစ်ခု</string>
+    <string name="wed">သုံး</string>
+    <string name="thus">လေး</string>
+    <string name="fri">ငါး</string>
+    <string name="sta">ခြောက်</string>
+
+    <string name="graphic_verification_code">ဂရပ်ဖစ် အတည်ပြုကုဒ်</string>
+    <string name="enter_numbers_letters">ပုံမှ နံပါတ်များ သို့မဟုတ် စာလုံးများ ထည့်ပါ။</string>
+    <string name="enter_verification_code">ကျေးဇူးပြု၍ ရုပ်ပုံအတည်ပြုကုဒ်ကို ဦးစွာထည့်ပါ။</string>
+
+    <string name="crop">ရုပ်ပုံကို ထုတ်ဝေပါ</string>
+    <string name="unlock">ဖွင့်ပေးရန် ဆွစ်ပါ</string>
+
 </resources>
+
