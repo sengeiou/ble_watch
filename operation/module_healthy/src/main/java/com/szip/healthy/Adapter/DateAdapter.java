@@ -13,6 +13,7 @@ import com.szip.healthy.Model.DateBean;
 import com.szip.healthy.R;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import static com.szip.blewatch.base.Const.CalendarConst.TYPE_DATE_BLANK;
 import static com.szip.blewatch.base.Const.CalendarConst.TYPE_DATE_NORMAL;
@@ -61,7 +62,7 @@ public class DateAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (getItemViewType(position) == TYPE_DATE_NORMAL){
             DayHolder dayHolder = (DayHolder) holder;
 
-            dayHolder.dayTv.setText(String.format("%d",dateBeans.get(position).getDay()));
+            dayHolder.dayTv.setText(String.format(Locale.ENGLISH,"%d",dateBeans.get(position).getDay()));
             if (dateBeans.get(position).isChooseDay())
                 dayHolder.dayTv.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.healthy_calendar_choose));
             else if (dateBeans.get(position).isToday())

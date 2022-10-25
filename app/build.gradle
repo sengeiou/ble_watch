@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    configurations {
+        cleanedAnnotations
+        // implementation.exclude group: 'org.jetbrains' , module:'annotations'
+        implementation.exclude group: 'com.intellij' , module:'annotations'
+    }
+
     signingConfigs {
         szp {
             storeFile file('../keystore/szip.keystore')
@@ -82,7 +89,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
 
     implementation project(':function:base')
     implementation 'androidx.appcompat:appcompat:1.1.0'

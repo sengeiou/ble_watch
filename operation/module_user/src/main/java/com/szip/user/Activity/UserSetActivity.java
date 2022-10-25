@@ -10,7 +10,6 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Util.MathUtil;
-import com.szip.blewatch.base.Util.ble.ClientManager;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.View.BaseActivity;
 import com.szip.blewatch.base.View.CircularImageView;

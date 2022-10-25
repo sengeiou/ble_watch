@@ -249,7 +249,6 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
                     setPasswordFragment.show(ft, "forget");
                 }
             }else {
-                updateImageVerification();
                 MathUtil.newInstance().showToast(getApplicationContext(),response.getMessage());
             }
         }

@@ -3,6 +3,7 @@ package com.szip.blewatch.base.View;
 import android.content.Context;
 import android.graphics.Point;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -56,7 +57,7 @@ public class PulldownUpdateView extends LinearLayout{
                 if (releasedChild == mAutoComeBackView){
                     mDragHelper.settleCapturedViewAt(mAutoBackOriginPos.x,mAutoBackOriginPos.y);
                     invalidate();
-                    if (getWidth()-mAutoComeBackView.getRight()<10)
+                    if (getWidth()- (Math.abs(mAutoBackOriginPos.x-mAutoComeBackView.getLeft())+ mAutoComeBackView.getWidth())<10)
                         if (listener!=null){
                             listener.updateNow();
                         }

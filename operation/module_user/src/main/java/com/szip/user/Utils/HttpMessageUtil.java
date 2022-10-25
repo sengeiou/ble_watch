@@ -1,7 +1,6 @@
 package com.szip.user.Utils;
 
 
-import com.szip.blewatch.base.Util.ble.ClientManager;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.db.DownloadDataUtil;

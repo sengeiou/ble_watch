@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly fileTree(dir: 'libs', include: ['*.jar','*.aar'])
 
     // support库
     api rootProject.ext.supportLibs
@@ -49,6 +49,13 @@ dependencies {
     api project(path: ':function:citypicker')
     api project(path: ':function:ncalendar')
     api project(path: ':function:core')
+
+
+    //库内使用数据库, 所以需要依赖Room持久性库
+    implementation rootProject.ext.commonDeps["room-runtime"]
+    annotationProcessor rootProject.ext.commonDeps["room-compiler"]
+
+
     annotationProcessor rootProject.ext.otherDeps["arouter-compiler"]
     annotationProcessor rootProject.ext.otherDeps["dbflow-processor"]
 }

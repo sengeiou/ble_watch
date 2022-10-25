@@ -282,7 +282,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     setPasswordFragment.show(ft, "register");
                 }
             }else {
-                updateImageVerification();
                 MathUtil.newInstance().showToast(getApplicationContext(),response.getMessage());
             }
         }

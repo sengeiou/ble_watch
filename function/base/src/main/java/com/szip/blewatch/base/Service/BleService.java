@@ -37,8 +37,7 @@ import com.szip.blewatch.base.Util.FileUtil;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.Util.ble.BluetoothUtilCoreImpl;
-import com.szip.blewatch.base.Util.ble.BluetoothUtilImpl;
-import com.szip.blewatch.base.Util.ble.ClientManager;
+import com.szip.blewatch.base.Util.ble.BluetoothUtilJLImpl;
 import com.szip.blewatch.base.Util.ble.IBluetoothState;
 import com.szip.blewatch.base.Util.ble.IBluetoothUtil;
 import com.szip.blewatch.base.Broadcast.MyHandle;
@@ -98,7 +97,7 @@ public class BleService extends Service implements MyHandle {
         LogUtil.getInstance().logd("data******","service onCreate");
         mSevice = this;
         myHandler = new MyHandler(mSevice);
-        iBluetoothUtil = new BluetoothUtilCoreImpl(getApplicationContext());
+        iBluetoothUtil = new BluetoothUtilJLImpl(getApplicationContext());
         registerService();
     }
 
@@ -191,7 +190,7 @@ public class BleService extends Service implements MyHandle {
     private synchronized void connectFromSearch(){
         if (mac!=null&& BluetoothAdapter.getDefaultAdapter().isEnabled()){
             connectFromMac = false;
-            ble.startScan(bleScanCallback);
+//            ble.startScan(bleScanCallback);
         }
     }
 
@@ -209,9 +208,9 @@ public class BleService extends Service implements MyHandle {
             Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
             intent.putExtra("state",bluetoothState);
             sendBroadcast(intent);
-            if(bluetoothState==5&&connectFromMac){
-                connectFromSearch();
-            }
+//            if(bluetoothState==5&&connectFromMac){
+//                connectFromSearch();
+//            }
         }
     };
 
@@ -243,7 +242,7 @@ public class BleService extends Service implements MyHandle {
         public void onLeScan(BleRssiDevice device, int rssi, byte[] scanRecord) {
             if (mac!=null&&mac.equals(device.getBleAddress())){
                 iBluetoothUtil.connect(mac,iBluetoothState);
-                ble.stopScan();
+//                ble.stopScan();
             }
         }
     };

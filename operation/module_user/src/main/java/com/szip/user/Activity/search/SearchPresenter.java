@@ -1,22 +1,18 @@
 package com.szip.user.Activity.search;
 
+import android.annotation.SuppressLint;
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Handler;
 
-import com.inuker.bluetooth.library.search.SearchRequest;
-import com.inuker.bluetooth.library.search.SearchResult;
-import com.inuker.bluetooth.library.search.response.SearchResponse;
-import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Model.BleRssiDevice;
-import com.szip.blewatch.base.Util.ble.ClientManager;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.IBleScanCallback;
+import com.szip.blewatch.base.Util.ble.JLBluetoothClientManager;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 import cn.com.heaton.blelibrary.ble.Ble;
-import cn.com.heaton.blelibrary.ble.callback.BleScanCallback;
 
+@SuppressLint("MissingPermission")
 public class SearchPresenter {
     private Context context;
     private ArrayList<String> mDevices = new ArrayList<>();
@@ -37,43 +33,66 @@ public class SearchPresenter {
 
     public void stopSearch(){
         iUpdateSearch = null;
-        ble.stopScan();
+        JLBluetoothClientManager.getInstance().setiBleScanCallback(null);
+        JLBluetoothClientManager.getInstance().startBLEScan(false);
     }
 
-    private void searchDevice(){
-        ble.startScan(bleScanCallback);
+    private  void searchDevice(){
+        JLBluetoothClientManager.getInstance().setiBleScanCallback(iBleScanCallback);
+        JLBluetoothClientManager.getInstance().startBLEScan(true);
     }
 
 
-
-    private long subTime = 0;
-
-    //搜索列表
-    private BleScanCallback<BleRssiDevice> bleScanCallback = new BleScanCallback<BleRssiDevice>() {
+    private IBleScanCallback iBleScanCallback = new IBleScanCallback() {
         @Override
         public void onStart() {
-            super.onStart();
             mDevices = new ArrayList<>();
-            subTime = Calendar.getInstance().getTimeInMillis();
         }
 
+
         @Override
-        public void onLeScan(BleRssiDevice device, int rssi, byte[] scanRecord) {
+        public void onLeScan(BluetoothDevice bluetoothDevice) {
             if (mDevices==null)
                 return;
-            if (device.getBleName()!=null&&!mDevices.contains(device.getBleAddress())&&deviceName.equals(device.getBleName())) {
-                mDevices.add(device.getBleAddress());
+            if (bluetoothDevice.getName()!=null&&!mDevices.contains(bluetoothDevice.getAddress())&&deviceName.equals(bluetoothDevice.getName())) {
+                mDevices.add(bluetoothDevice.getAddress());
             }
         }
 
         @Override
         public void onStop() {
-            super.onStop();
             if (iUpdateSearch!=null){
                 iUpdateSearch.searchStop(mDevices);
             }
         }
     };
+
+    //搜索列表
+//    private BleScanCallback<BleRssiDevice> bleScanCallback = new BleScanCallback<BleRssiDevice>() {
+//        @Override
+//        public void onStart() {
+//            super.onStart();
+//            mDevices = new ArrayList<>();
+//
+//        }
+//
+//        @Override
+//        public void onLeScan(BleRssiDevice device, int rssi, byte[] scanRecord) {
+//            if (mDevices==null)
+//                return;
+//            if (device.getBleName()!=null&&!mDevices.contains(device.getBleAddress())&&deviceName.equals(device.getBleName())) {
+//                mDevices.add(device.getBleAddress());
+//            }
+//        }
+//
+//        @Override
+//        public void onStop() {
+//            super.onStop();
+//            if (iUpdateSearch!=null){
+//                iUpdateSearch.searchStop(mDevices);
+//            }
+//        }
+//    };
 //    private final SearchResponse mSearchResponse = new SearchResponse() {
 //        @Override
 //        public void onSearchStarted() {

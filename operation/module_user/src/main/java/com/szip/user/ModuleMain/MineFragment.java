@@ -46,6 +46,8 @@ import com.zhy.http.okhttp.BaseApi;
 import com.zhy.http.okhttp.callback.GenericsCallback;
 import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 
+import java.util.Locale;
+
 import okhttp3.Call;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -274,21 +276,21 @@ public class MineFragment extends BaseFragment implements View.OnClickListener, 
 
     @Override
     public void updateDeviceView(int step, int sleep, int calorie,int stepPlan,int sleepPlan,int caloriePlan, SportWatchAppFunctionConfigDTO device) {
-        stepTv.setText(String.format("%d",stepPlan));
-        sleepTv.setText(String.format("%.1f h",sleepPlan/60f));
-        calorieTv.setText(String.format("%d kcal",caloriePlan/1000));
+        stepTv.setText(String.format(Locale.ENGLISH,"%d",stepPlan));
+        sleepTv.setText(String.format(Locale.ENGLISH,"%.1f h",sleepPlan/60f));
+        calorieTv.setText(String.format(Locale.ENGLISH,"%d kcal",caloriePlan/1000));
 
         stepSb.setRatio(step>=stepPlan?1:step/(float)stepPlan);
         sleepSb.setRatio(sleep>=sleepPlan?1:sleep/(float)sleepPlan);
         calorieSb.setRatio(calorie>=caloriePlan?1:calorie/(float)caloriePlan);
 
-        stepDataTv.setText(String.format("%d",step));
-        sleepDataTv.setText(String.format("%dh%dmin",sleep/60,sleep%60));
-        calorieDataTv.setText(String.format("%.1fkcal",((calorie+55)/100)/10f));
+        stepDataTv.setText(String.format(Locale.ENGLISH,"%d",step));
+        sleepDataTv.setText(String.format(Locale.ENGLISH,"%dh%dmin",sleep/60,sleep%60));
+        calorieDataTv.setText(String.format(Locale.ENGLISH,"%.1fkcal",((calorie+55)/100)/10f));
 
-        stepRateTv.setText(String.format("%.1f%%",step>=stepPlan?100:step/(float)stepPlan*100));
-        sleepRateTv.setText(String.format("%.1f%%",sleep>=sleepPlan?100:sleep/(float)sleepPlan*100));
-        calorieRateTv.setText(String.format("%.1f%%",calorie>=caloriePlan?100:calorie/(float)caloriePlan*100));
+        stepRateTv.setText(String.format(Locale.ENGLISH,"%.1f%%",step>=stepPlan?100:step/(float)stepPlan*100));
+        sleepRateTv.setText(String.format(Locale.ENGLISH,"%.1f%%",sleep>=sleepPlan?100:sleep/(float)sleepPlan*100));
+        calorieRateTv.setText(String.format(Locale.ENGLISH,"%.1f%%",calorie>=caloriePlan?100:calorie/(float)caloriePlan*100));
 
         watchTv.setText(device.appName);
         Glide.with(getActivity()).load(device.dialImg).into(dialIv);

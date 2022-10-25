@@ -24,6 +24,7 @@ import com.szip.user.R;
 import com.szip.user.View.CharacterPickerWindow;
 
 import java.util.List;
+import java.util.Locale;
 
 public class AutoMeasureActivity extends BaseActivity {
 
@@ -75,31 +76,31 @@ public class AutoMeasureActivity extends BaseActivity {
         tempSw.setChecked(autoMeasureData.tempState==1);
 
         heartFrequencyTv = findViewById(R.id.heartFrequencyTv);
-        heartFrequencyTv.setText(String.format("%02dmin",autoMeasureData.heartFrequency));
+        heartFrequencyTv.setText(String.format(Locale.ENGLISH,"%02dmin",autoMeasureData.heartFrequency));
         bpFrequencyTv = findViewById(R.id.bpFrequencyTv);
-        bpFrequencyTv.setText(String.format("%02dmin",autoMeasureData.bpFrequency));
+        bpFrequencyTv.setText(String.format(Locale.ENGLISH,"%02dmin",autoMeasureData.bpFrequency));
         spoFrequencyTv = findViewById(R.id.spoFrequencyTv);
-        spoFrequencyTv.setText(String.format("%02dmin",autoMeasureData.spoFrequency));
+        spoFrequencyTv.setText(String.format(Locale.ENGLISH,"%02dmin",autoMeasureData.spoFrequency));
         tempFrequencyTv = findViewById(R.id.tempFrequencyTv);
-        tempFrequencyTv.setText(String.format("%02dmin",autoMeasureData.tempFrequency));
+        tempFrequencyTv.setText(String.format(Locale.ENGLISH,"%02dmin",autoMeasureData.tempFrequency));
 
         heartStartTv = findViewById(R.id.heartStartTv);
-        heartStartTv.setText(String.format("%02d:%02d",autoMeasureData.heartStartTime/60,autoMeasureData.heartStartTime%60));
+        heartStartTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.heartStartTime/60,autoMeasureData.heartStartTime%60));
         bpStartTv = findViewById(R.id.bpStartTv);
-        bpStartTv.setText(String.format("%02d:%02d",autoMeasureData.bpStartTime/60,autoMeasureData.bpStartTime%60));
+        bpStartTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.bpStartTime/60,autoMeasureData.bpStartTime%60));
         spoStartTv = findViewById(R.id.spoStartTv);
-        spoStartTv.setText(String.format("%02d:%02d",autoMeasureData.spoStartTime/60,autoMeasureData.spoStartTime%60));
+        spoStartTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.spoStartTime/60,autoMeasureData.spoStartTime%60));
         tempStartTv = findViewById(R.id.tempStartTv);
-        tempStartTv.setText(String.format("%02d:%02d",autoMeasureData.tempStartTime/60,autoMeasureData.tempStartTime%60));
+        tempStartTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.tempStartTime/60,autoMeasureData.tempStartTime%60));
 
         heartEndTv = findViewById(R.id.heartEndTv);
-        heartEndTv.setText(String.format("%02d:%02d",autoMeasureData.heartEndTime/60,autoMeasureData.heartEndTime%60));
+        heartEndTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.heartEndTime/60,autoMeasureData.heartEndTime%60));
         bpEndTv = findViewById(R.id.bpEndTv);
-        bpEndTv.setText(String.format("%02d:%02d",autoMeasureData.bpEndTime/60,autoMeasureData.bpEndTime%60));
+        bpEndTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.bpEndTime/60,autoMeasureData.bpEndTime%60));
         spoEndTv = findViewById(R.id.spoEndTv);
-        spoEndTv.setText(String.format("%02d:%02d",autoMeasureData.spoEndTime/60,autoMeasureData.spoEndTime%60));
+        spoEndTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.spoEndTime/60,autoMeasureData.spoEndTime%60));
         tempEndTv = findViewById(R.id.tempEndTv);
-        tempEndTv.setText(String.format("%02d:%02d",autoMeasureData.tempEndTime/60,autoMeasureData.tempEndTime%60));
+        tempEndTv.setText(String.format(Locale.ENGLISH,"%02d:%02d",autoMeasureData.tempEndTime/60,autoMeasureData.tempEndTime%60));
 
         bpLl = findViewById(R.id.bpLl);
         spoLl = findViewById(R.id.spoLl);

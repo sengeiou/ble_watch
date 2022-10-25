@@ -149,7 +149,7 @@ public class GpsPresenterImpl implements IGpsPresenter {
                  * */
                 if (time!=0&&time%30==0){
                     speedPerHour.append(String.format(Locale.ENGLISH,",%d",(int)((distance-preDistance)/30f*3.6f*10)));
-                    strideStr.append(String.format(",%d",getStride(distance-preDistance)));
+                    strideStr.append(String.format(Locale.ENGLISH,",%d",getStride(distance-preDistance)));
                     preDistance = distance;
                 }
             }

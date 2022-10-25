@@ -4,10 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattServer;
-import android.bluetooth.BluetoothGattService;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
@@ -21,10 +18,8 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.inuker.bluetooth.library.connect.options.BleConnectOptions;
-import com.inuker.bluetooth.library.model.BleGattCharacter;
-import com.inuker.bluetooth.library.model.BleGattProfile;
-import com.inuker.bluetooth.library.model.BleGattService;
+import com.jieli.bluetooth_connect.constant.BluetoothConstant;
+import com.jieli.bluetooth_connect.util.BluetoothUtil;
 import com.szip.blewatch.base.Broadcast.MyPhoneCallListener;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.RouterPathConst;
@@ -35,6 +30,8 @@ import com.szip.blewatch.base.Util.DateUtil;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.Util.MusicUtil;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.IBleConnectState;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.IBleNotifyAndReadData;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.View.ProgressHudModel;
@@ -59,35 +56,28 @@ import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 import java.util.Queue;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.SynchronousQueue;
 
 import cn.com.heaton.blelibrary.ble.Ble;
-import cn.com.heaton.blelibrary.ble.BleLog;
-import cn.com.heaton.blelibrary.ble.callback.BleConnectCallback;
-import cn.com.heaton.blelibrary.ble.callback.BleMtuCallback;
-import cn.com.heaton.blelibrary.ble.callback.BleNotifyCallback;
 import cn.com.heaton.blelibrary.ble.callback.BleReadCallback;
-import cn.com.heaton.blelibrary.ble.callback.BleWriteCallback;
 import cn.com.heaton.blelibrary.ble.model.BleDevice;
-import cn.com.heaton.blelibrary.ble.utils.ByteUtils;
 import okhttp3.Call;
 
 import static android.media.AudioManager.FLAG_PLAY_SOUND;
 import static android.media.AudioManager.STREAM_MUSIC;
 
 @SuppressLint("MissingPermission")
-public class BluetoothUtilCoreImpl implements IBluetoothUtil{
+public class BluetoothUtilJLImpl implements IBluetoothUtil {
     private IBluetoothState iBluetoothState;
     private UUID serviceUUID;
     private String mMac = null;
-    private BleDevice bleDevice;
+
+    private BluetoothDevice bleDevice;
 
     /**
      * 蓝牙连接状态 0:未连接 2：正在连接 3：已经连接 4:正在搜索 5：连接失败
@@ -124,9 +114,8 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
     private Queue<byte[]> sendDataQueue = new LinkedBlockingQueue<>();
 
-    private Ble<BleDevice> ble = Ble.getInstance();
 
-    public BluetoothUtilCoreImpl(Context context) {
+    public BluetoothUtilJLImpl(Context context) {
         this.context = context;
         DataParser.newInstance().setmIDataResponse(iDataResponse);
         myPhoneCallListener = new MyPhoneCallListener(context);
@@ -152,38 +141,31 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                     phaserRecvBuffer();
                 }else if (msg.what==ANALYSIS_HANDLER_SEND_DATA){
                     if (sendDataQueue!=null){
+                        if (bleDevice==null)
+                            return;
                         byte[] datas = sendDataQueue.peek();
                         if (datas==null){
-                            LogUtil.getInstance().logd("data******",
+                            LogUtil.getInstance().logd("ble******",
                                     "数据队列已经清空，数据发送完毕");
                             isSendData = false;
                             return;
                         }
-
-                        boolean sendSuccess = ble.writeByUuid(bleDevice, datas, serviceUUID,UUID.fromString(Config.char1),
-                                new BleWriteCallback<BleDevice>() {
-                            @Override
-                            public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
-
-                            }
-                        });
+                        Log.d("ble******","ble address = "+bleDevice.getAddress());
+                        boolean sendSuccess = JLBluetoothClientManager.getClient().sendDataToDevice(bleDevice, datas);
                         if (sendSuccess){
-                            Log.d("data******","蓝牙发送成功");
+                            Log.d("ble******","蓝牙发送成功");
                             //数据发送成功，把队列顶部的数据弹出,处理新的数据，如果发送没成功，则重新发送该队列
                             sendDataQueue.poll();
                         }
                         mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
                     }
                 }else if (msg.what==ANALYSIS_HANDLER_READ_DATA){
-                    BleDevice bleDevice = (BleDevice) msg.obj;
-                    boolean readSuccess = ble.readByUuid(bleDevice,serviceUUID,UUID.fromString(Config.char3),bleReadResponse);
+                    boolean readSuccess = JLBluetoothClientManager.getInstance().readBleData();
                     if (!readSuccess){//读取失败重新读，读到成功为止
                         Message message = new Message();
                         message.what = ANALYSIS_HANDLER_READ_DATA;
-                        message.obj = bleDevice;
                         mAnalysisHandler.sendMessage(message);
                     }
-
                 }
             }
         };
@@ -193,143 +175,97 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
     public void connect(String mac, IBluetoothState iBluetoothState) {
         this.iBluetoothState = iBluetoothState;
         this.mMac = mac;
-        if (connectState == 5){
-            LogUtil.getInstance().logd("data******","连接设备mac = "+mac);
-            connectState = 2;
-            ble.connect(mac,bleConnectCallback);
-            if (iBluetoothState!=null)
-                iBluetoothState.updateState(connectState);
+        this.bleDevice = BluetoothUtil.getRemoteDevice(mac);
+        //如果没有这个设备或者正在连接中，则直接返回
+        if (bleDevice==null||JLBluetoothClientManager.getClient().isConnecting())
+            return;
+        if (!JLBluetoothClientManager.getClient().isConnectedDevice(bleDevice)){
+            LogUtil.getInstance().logd("ble******","连接设备mac = "+mac);
+            JLBluetoothClientManager.getInstance().setiBleConnectState(iBleConnectState);
+            JLBluetoothClientManager.getClient().connectBLEDevice(bleDevice);
         }
     }
 
-    private BleConnectCallback<BleDevice> bleConnectCallback = new BleConnectCallback<BleDevice>() {
-
+    private IBleConnectState iBleConnectState = new IBleConnectState() {
         @Override
-        public void onConnectionChanged(BleDevice device) {
-            if (device.isDisconnected()){
-                LogUtil.getInstance().logd("data******","连接断开");
-                MusicUtil.getSingle().unRegisterNotify();
-                initPhoneStateListener(false);
-                connectState = 5;
-                isSync = false;
-                recvLength = 0;
-                recvState = 0;
-                pkg_dataLen = 0;
-                if (iBluetoothState!=null)
-                    iBluetoothState.updateState(connectState);
+        public void onConnectState(BluetoothDevice device, int status) {
+            switch (status){
+                case BluetoothConstant.CONNECT_STATE_CONNECTED:{
+                    LogUtil.getInstance().logd("ble******","连接成功");
+                    connectState = 3;
+                    openNotify();
+                    //连接成功，获取设备信息
+                    TimerTask timerTask= new TimerTask() {
+                        @Override
+                        public void run() {
+                            writeForSyncTime();
+                            writeForSyncTimeStyle();
+                            writeForSetUnit();
+                            writeForSetLanguage();
+                            writeForUpdateUserInfo();
+                            writeForSetAuto();
+                            initPhoneStateListener(true);
+                            writeForSetWeather();
+                            MusicUtil.getSingle().registerNotify();
+                        }
+                    };
+                    Timer timer = new Timer();
+                    timer.schedule(timerTask,300);
+                    if (iBluetoothState!=null)
+                        iBluetoothState.updateState(connectState);
+                }
+                    break;
+                case BluetoothConstant.CONNECT_STATE_CONNECTING:{
+                    LogUtil.getInstance().logd("ble******","连接中");
+                    connectState = 2;
+                    if (iBluetoothState!=null)
+                        iBluetoothState.updateState(connectState);
+                }
+                    break;
+                case BluetoothConstant.CONNECT_STATE_DISCONNECT:{
+                    LogUtil.getInstance().logd("ble******","连接断开");
+                    MusicUtil.getSingle().unRegisterNotify();
+                    initPhoneStateListener(false);
+                    connectState = 5;
+                    isSync = false;
+                    recvLength = 0;
+                    recvState = 0;
+                    pkg_dataLen = 0;
+                    if (iBluetoothState!=null)
+                        iBluetoothState.updateState(connectState);
+                }
+                    break;
             }
-        }
-
-
-        @Override
-        public void onServicesDiscovered(BleDevice device, final BluetoothGatt gatt) {
-            super.onServicesDiscovered(device, gatt);
-            boolean state = ble.setMTU(mMac, 200, new BleMtuCallback<BleDevice>() {
-                @Override
-                public void onMtuChanged(BleDevice device, int mtu, int status) {
-                    LogUtil.getInstance().logd("data******","mtu = "+mtu);
-                    setGattProfile(device,gatt);
-                    super.onMtuChanged(device, mtu, status);
-                }
-            });
-            LogUtil.getInstance().logd("data******","mtu = "+state);
-
-        }
-
-
-
-        @Override
-        public void onReady(BleDevice device) {
-            super.onReady(device);
-            //连接成功后，设置通知
-            LogUtil.getInstance().logd("data******","连接成功");
-            bleDevice = device;
-            connectState = 3;
-            //连接成功，获取设备信息
-            TimerTask timerTask= new TimerTask() {
-                @Override
-                public void run() {
-                    writeForSyncTime();
-                    writeForSyncTimeStyle();
-                    writeForSetUnit();
-                    writeForSetLanguage();
-                    writeForUpdateUserInfo();
-                    writeForSetAuto();
-                    initPhoneStateListener(true);
-                    writeForSetWeather();
-                    MusicUtil.getSingle().registerNotify();
-                }
-            };
-            Timer timer = new Timer();
-            timer.schedule(timerTask,300);
-            if (iBluetoothState!=null)
-                iBluetoothState.updateState(connectState);
-        }
-
-        @Override
-        public void onConnectFailed(BleDevice device, int errorCode) {
-            LogUtil.getInstance().logd("data******","连接失败");
-            super.onConnectFailed(device, errorCode);
-            MusicUtil.getSingle().unRegisterNotify();
-            initPhoneStateListener(false);
-            connectState = 5;
-            isSync = false;
-            recvLength = 0;
-            recvState = 0;
-            pkg_dataLen = 0;
-            if (iBluetoothState!=null)
-                iBluetoothState.updateState(connectState);
         }
     };
 
-    /**
-     * 配置特征值以及接受特征值的通知
-     * */
-    public void setGattProfile(BleDevice device,BluetoothGatt gatt) {
-        List<BluetoothGattService> services = gatt.getServices();
-        for (BluetoothGattService service : services) {
-            if(Config.char0.equalsIgnoreCase(service.getUuid().toString())){
-                serviceUUID = service.getUuid();
-                LogUtil.getInstance().logd("data******","连接service = "+serviceUUID.toString());
-                List<BluetoothGattCharacteristic> characters = service.getCharacteristics();
-                for(BluetoothGattCharacteristic character : characters){
-                    if( character.getUuid().toString().equalsIgnoreCase(Config.char2)){     // 主要用于回复等操作
-                        openid(device,serviceUUID,character.getUuid());
-                    }
-                }
-            }
-        }
+
+    public void openNotify() {
+        JLBluetoothClientManager.getInstance().setiBleHandleData(bleNotifyAndReadData);
     }
 
-    public void openid(BleDevice bleDevice,UUID serviceUUID, UUID characterUUID) {
-        ble.enableNotifyByUuid(bleDevice,true,serviceUUID,characterUUID,responseCallback);
-    }
 
-    private BleNotifyCallback<BleDevice> responseCallback = new BleNotifyCallback<BleDevice>() {
+    private IBleNotifyAndReadData bleNotifyAndReadData = new IBleNotifyAndReadData() {
+
         @Override
-        public void onChanged(final BleDevice device, BluetoothGattCharacteristic characteristic) {
-            byte[] value = characteristic.getValue();
-            LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
+        public void onNotify(byte[] value) {
+            LogUtil.getInstance().logd("ble******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
             if (value.length == 8) {
+                //去主动读数据
                 if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
                     Message message = new Message();
                     message.what = ANALYSIS_HANDLER_READ_DATA;
-                    message.obj = device;
                     mAnalysisHandler.sendMessage(message);
                 }
             }else {
                 DataParser.newInstance().parseNotifyData(value);
             }
         }
-    };
 
-    private BleReadCallback<BleDevice> bleReadResponse = new BleReadCallback<BleDevice>() {
         @Override
-        public void onReadSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
-            super.onReadSuccess(device, characteristic);
-            byte[] data = characteristic.getValue();
+        public void onRead(byte[] data) {
             if (data.length != 0){
-                LogUtil.getInstance().logd("DATA******","读取到的蓝牙通知信息:"+ DateUtil.byteToHexString(data));
+                LogUtil.getInstance().logd("ble******","读取到的蓝牙通知信息:"+ DateUtil.byteToHexString(data));
                 if (data.length==8&&(data[1] == 0x56||data[1] == 0x55)){
                     DataParser.newInstance().parseNotifyData(data);
                     return;
@@ -341,12 +277,6 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                     mAnalysisHandler.sendMessage(message);
                 }
             }
-        }
-
-        @Override
-        public void onReadFailed(BleDevice device, int failedCode) {
-            LogUtil.getInstance().logd("DATA******","读取数据失败:"+ failedCode);
-            super.onReadFailed(device, failedCode);
         }
     };
 
@@ -370,13 +300,8 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
     private synchronized void sendCommandBig(byte[] datas) {
         if (datas!=null){
-            boolean test = ble.writeByUuid(bleDevice, datas, UUID.fromString(Config.char5),UUID.fromString(Config.char4), new BleWriteCallback<BleDevice>() {
-                @Override
-                public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
-                }
-            });
-
-            Log.d("data******","发送数据 = "+test);
+            boolean test =  JLBluetoothClientManager.getClient().writeDataToBLEDevice(bleDevice,
+                    UUID.fromString(Config.char5),UUID.fromString(Config.char4), datas);
         }
 
     }
@@ -501,17 +426,16 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
     @Override
     public void onDestroy() {
         iBluetoothState = null;
-        ble.stopScan();
         if (bleDevice != null){
-            if (bleDevice.isConnecting()){
-                ble.cancelConnecting(bleDevice);
-            }else if (bleDevice.isConnected()){
-                Log.d("data******","断开连接");
-                ble.disconnectAll();
+            if (JLBluetoothClientManager.getClient().isConnecting()||
+                    JLBluetoothClientManager.getClient().isConnectedBLEDevice(bleDevice)){
+                Log.d("ble******","断开连接");
+                JLBluetoothClientManager.getClient().disconnectBLEDevice(bleDevice);
             }
         }
         isSendData = false;
-        ble.cancelCallback(bleConnectCallback);
+        bleDevice = null;
+        JLBluetoothClientManager.getInstance().onDestroy();
     }
 
     /**
@@ -547,13 +471,13 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                 }
                 recvLength -= 8;
             } else {
-                LogUtil.getInstance().logd("DATA******", "......");
+                LogUtil.getInstance().logd("ble******", "......");
                 return;
             }
         }
 
         if (recvState == 2) {
-            LogUtil.getInstance().logd("DATA******", "recvLenght=" + recvLength + " dataLength=" + pkg_dataLen+" time = "+pkg_timeStamp);
+            LogUtil.getInstance().logd("ble******", "recvLenght=" + recvLength + " dataLength=" + pkg_dataLen+" time = "+pkg_timeStamp);
             if (recvLength >= pkg_dataLen) {
                 byte[] pkg_data = new byte[pkg_dataLen];
                 System.arraycopy(recvBuffer, 0, pkg_data, 0, pkg_dataLen);
@@ -562,7 +486,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                 recvState = 0;
                 DataParser.newInstance().parseReadData(pkg_type,pkg_data,pkg_timeStamp,recvLength > 0?false:true);
             } else {
-                LogUtil.getInstance().logd("DATA******", "------");
+                LogUtil.getInstance().logd("ble******", "------");
                 return;
             }
         }
@@ -574,7 +498,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
             mAnalysisHandler.sendMessage(message);
         } else {
             //用于判断数据是否取完
-            LogUtil.getInstance().logd("DATA******", "//////");
+            LogUtil.getInstance().logd("ble******", "//////");
             recvLength = 0;
             recvState = 0;
             pkg_dataLen = 0;
@@ -588,7 +512,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
      * 依次去同步运动数据
      */
     private void syncSportDataByOrder() {
-        LogUtil.getInstance().logd("data******","indexData = "+indexData);
+        LogUtil.getInstance().logd("ble******","indexData = "+indexData);
         if (indexData==null||mSportIndex == indexData.size()) {
 
             //说明所有的运动都同步完了
@@ -632,152 +556,152 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
             switch (type) {
                 case 0x01:
                     //记步数据
-                    LogUtil.getInstance().logd("DATA******", "sync step");
+                    LogUtil.getInstance().logd("ble******", "sync step");
                     datas = CommandUtil.getCommandbyteArray(context,0x01, 8,
                             0, true);
                     break;
                 case 0x02:
                     //心率数据
-                    LogUtil.getInstance().logd("DATA******", "sync heart_rate");
+                    LogUtil.getInstance().logd("ble******", "sync heart_rate");
                     datas = CommandUtil.getCommandbyteArray(context,0x02, 8,
                             0, true);
                     break;
                 case 0x03:
                     //睡眠数据
-                    LogUtil.getInstance().logd("DATA******", "sync sleep");
+                    LogUtil.getInstance().logd("ble******", "sync sleep");
                     datas = CommandUtil.getCommandbyteArray(context,0x03, 8,
                             0, true);
                     break;
                 case 0x04:
                     //跑步数据
-                    LogUtil.getInstance().logd("DATA******", "sync run");
+                    LogUtil.getInstance().logd("ble******", "sync run");
                     datas = CommandUtil.getCommandbyteArray(context,0x04, 8,
                             0, true);
                     break;
                 case 0x05:
                     //徒步数据
-                    LogUtil.getInstance().logd("DATA******", "sync onfoot");
+                    LogUtil.getInstance().logd("ble******", "sync onfoot");
                     datas = CommandUtil.getCommandbyteArray(context,0x05, 8,
                             0, true);
                     break;
                 case 0x06:
                     //马拉松
-                    LogUtil.getInstance().logd("DATA******", "sync marathon");
+                    LogUtil.getInstance().logd("ble******", "sync marathon");
                     datas = CommandUtil.getCommandbyteArray(context,0x06, 8,
                             0, true);
                     break;
                 case 0x07:
                     //跳绳
-                    LogUtil.getInstance().logd("DATA******", "sync rope_shipping");
+                    LogUtil.getInstance().logd("ble******", "sync rope_shipping");
                     datas = CommandUtil.getCommandbyteArray(context,0x07, 8,
                             0, true);
                     break;
                 case 0x08:
                     //户外游泳
-                    LogUtil.getInstance().logd("DATA******", "sync swim");
+                    LogUtil.getInstance().logd("ble******", "sync swim");
                     datas = CommandUtil.getCommandbyteArray(context,0x08, 8,
                             0, true);
                     break;
                 case 0x09:
                     //攀岩
-                    LogUtil.getInstance().logd("DATA******", "sync rock_climbing");
+                    LogUtil.getInstance().logd("ble******", "sync rock_climbing");
                     datas = CommandUtil.getCommandbyteArray(context,0x09, 8,
                             0, true);
                     break;
                 case 0x0A:
                     //滑雪
-                    LogUtil.getInstance().logd("DATA******", "sync skking");
+                    LogUtil.getInstance().logd("ble******", "sync skking");
                     datas = CommandUtil.getCommandbyteArray(context,0x0A, 8,
                             0, true);
                     break;
                 case 0x0B:
                     //骑行
-                    LogUtil.getInstance().logd("DATA******", "sync riding");
+                    LogUtil.getInstance().logd("ble******", "sync riding");
                     datas = CommandUtil.getCommandbyteArray(context,0x0B, 8,
                             0, true);
                     break;
                 case 0x0C:
                     //划船
-                    LogUtil.getInstance().logd("DATA******", "sync rowing");
+                    LogUtil.getInstance().logd("ble******", "sync rowing");
                     datas = CommandUtil.getCommandbyteArray(context,0x0C, 8,
                             0, true);
                     break;
                 case 0x0D:
                     //蹦极
-                    LogUtil.getInstance().logd("DATA******", "sync bungee");
+                    LogUtil.getInstance().logd("ble******", "sync bungee");
                     datas = CommandUtil.getCommandbyteArray(context,0x0D, 8,
                             0, true);
                     break;
                 case 0x0E:
                     //登山
-                    LogUtil.getInstance().logd("DATA******", "sync mountaineer");
+                    LogUtil.getInstance().logd("ble******", "sync mountaineer");
                     datas = CommandUtil.getCommandbyteArray(context,0x0E, 8,
                             0, true);
                     break;
                 case 0x0F:
                     //跳伞
-                    LogUtil.getInstance().logd("DATA******", "sync parachute");
+                    LogUtil.getInstance().logd("ble******", "sync parachute");
                     datas = CommandUtil.getCommandbyteArray(context,0x0F, 8,
                             0, true);
                     break;
                 case 0x10:
                     //高尔夫
-                    LogUtil.getInstance().logd("DATA******", "sync golf");
+                    LogUtil.getInstance().logd("ble******", "sync golf");
                     datas = CommandUtil.getCommandbyteArray(context,0x10, 8,
                             0, true);
                     break;
 
                 case 0x11:
                     //冲浪
-                    LogUtil.getInstance().logd("DATA******", "sync surf");
+                    LogUtil.getInstance().logd("ble******", "sync surf");
                     datas = CommandUtil.getCommandbyteArray(context,0x11, 8,
                             0, true);
                     break;
                 case 0x14:
                     //跑步机
-                    LogUtil.getInstance().logd("DATA******", "sync treadmill");
+                    LogUtil.getInstance().logd("ble******", "sync treadmill");
                     datas = CommandUtil.getCommandbyteArray(context,0x14, 8,
                             0, true);
                     break;
                 case 0x19:
                     //总计步
-                    LogUtil.getInstance().logd("DATA******", "sync step on day");
+                    LogUtil.getInstance().logd("ble******", "sync step on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x19, 8,
                             0, true);
                     break;
                 case 0x21:
                     //羽毛球
-                    LogUtil.getInstance().logd("DATA******", "sync badnition on day");
+                    LogUtil.getInstance().logd("ble******", "sync badnition on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x21, 8,
                             0, true);
                     break;
                 case 0x22:
                     //篮球
-                    LogUtil.getInstance().logd("DATA******", "sync basket on day");
+                    LogUtil.getInstance().logd("ble******", "sync basket on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x22, 8,
                             0, true);
                     break;
                 case 0x23:
                     //足球
-                    LogUtil.getInstance().logd("DATA******", "sync foot on day");
+                    LogUtil.getInstance().logd("ble******", "sync foot on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x23, 8,
                             0, true);
                     break;
                 case 0x25:
                     //体温
-                    LogUtil.getInstance().logd("DATA******", "sync temp on day");
+                    LogUtil.getInstance().logd("ble******", "sync temp on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x25, 8,
                             0, true);
                     break;
                 case 0x26:
                     //血压
-                    LogUtil.getInstance().logd("DATA******", "sync blood pressure on day");
+                    LogUtil.getInstance().logd("ble******", "sync blood pressure on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x26, 8,
                             0, true);
                     break;
                 case 0x27:
                     //血氧
-                    LogUtil.getInstance().logd("DATA******", "sync blood oxygen on day");
+                    LogUtil.getInstance().logd("ble******", "sync blood oxygen on day");
                     datas = CommandUtil.getCommandbyteArray(context,0x27, 8,
                             0, true);
                     break;
@@ -802,7 +726,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                 }
                 stepData.add(new StepData(datas.get(i).getTime(),datas.get(i).getStep(),datas.get(i).getDistance()*10,
                         datas.get(i).getCalorie(),stepString.substring(1)));
-                LogUtil.getInstance().logd("DATA******","统计出来的计步数据  "+"time = "+datas.get(i).getTime()+" ;step = "+datas.get(i).getStep()+
+                LogUtil.getInstance().logd("ble******","统计出来的计步数据  "+"time = "+datas.get(i).getTime()+" ;step = "+datas.get(i).getStep()+
                         " ;distance = "+datas.get(i).getDistance()+" ;calorie = "+datas.get(i).getCalorie()+
                         " ;stepInfo = "+stepString.substring(1));
             }
@@ -858,12 +782,12 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
         @Override
         public void onCamera(int flag) {
-            LogUtil.getInstance().logd("data******","收到相机数据");
+            LogUtil.getInstance().logd("ble******","收到相机数据");
             SportWatchAppFunctionConfigDTO data =
                     LoadDataUtil.newInstance().getSportConfig(MathUtil.newInstance().getUserId(context));
             if (data==null)
                 return;
-            LogUtil.getInstance().logd("data******","cameraSwitch = "+data.cameraSwitch+" ;flag = "+flag);
+            LogUtil.getInstance().logd("ble******","cameraSwitch = "+data.cameraSwitch+" ;flag = "+flag);
             if (data.cameraSwitch&& !ProgressHudModel.newInstance().isShow())
                 if (flag == 1){//打开相机
                     ARouter.getInstance().build(RouterPathConst.PATH_ACTIVITY_USER_CAMERA)
@@ -885,7 +809,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         public void findPhone(int flag) {
             final AudioManager am = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
             if (flag == 1){
-                LogUtil.getInstance().logd("data******","响铃");
+                LogUtil.getInstance().logd("ble******","响铃");
                 MathUtil.newInstance().speaker(am);
                 starVibrate(new long[]{500,500,500});
                 volume  = am.getStreamVolume(STREAM_MUSIC);//保存手机原来的音量
@@ -905,7 +829,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                     });
                 }
             }else{
-                LogUtil.getInstance().logd("data******","关闭");
+                LogUtil.getInstance().logd("ble******","关闭");
                 if (mediaPlayer!=null){
                     mediaPlayer.stop();
                     stopVibrate();
@@ -1139,7 +1063,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
         @Override
         public void pairBluetooth(String mac) {
-            LogUtil.getInstance().logd("data******","mac = "+mac);
+            LogUtil.getInstance().logd("ble******","mac = "+mac);
             if (mac.equals("00:00:00:00:00:00"))
                 return;
             BluetoothAdapter btAdapt = BluetoothAdapter.getDefaultAdapter();
@@ -1151,12 +1075,12 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                         //利用反射方法调用BluetoothDevice.createBond(BluetoothDevice remoteDevice);
                         Method createBondMethod = BluetoothDevice.class
                                 .getMethod("createBond");
-                        Log.d("DATA******", "开始配对");
+                        Log.d("ble******", "开始配对");
                         returnValue = (Boolean) createBondMethod.invoke(btDev);
                     }
                 }
             }catch (IllegalArgumentException e){
-                Log.e("DATA******",e.getMessage());
+                Log.e("ble******",e.getMessage());
             }catch (Exception e) {
                 e.printStackTrace();
             }
@@ -1183,7 +1107,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                     tm.listen(myPhoneCallListener, PhoneStateListener.LISTEN_CALL_STATE);
                 } catch(Exception e) {
                     // 异常捕捉
-                    LogUtil.getInstance().logd("DATA******",e.getMessage());
+                    LogUtil.getInstance().logd("ble******",e.getMessage());
                 }
             }
         }else {

@@ -28,7 +28,7 @@ public class ClientManager {
     }
 
     public void init(Context context){
-        this.context = context;
+            this.context = context;
     }
 
     public static BluetoothClient getClient() {
