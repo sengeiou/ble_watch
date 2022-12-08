@@ -1,15 +1,11 @@
 package com.szip.blewatch.base.Service;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.le.ScanFilter;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Binder;
@@ -17,31 +13,31 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import com.inuker.bluetooth.library.search.SearchRequest;
 import com.inuker.bluetooth.library.search.SearchResult;
 import com.inuker.bluetooth.library.search.response.SearchResponse;
+import com.jieli.jl_bt_ota.constant.StateCode;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.SendFileConst;
-import com.szip.blewatch.base.Model.BleRssiDevice;
 import com.szip.blewatch.base.Notification.SmsService;
 import com.szip.blewatch.base.R;
 import com.szip.blewatch.base.Util.FileUtil;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
-import com.szip.blewatch.base.Util.ble.BluetoothUtilCoreImpl;
-import com.szip.blewatch.base.Util.ble.BluetoothUtilJLImpl;
+import com.szip.blewatch.base.Util.ble.BluetoothUtilImpl;
+import com.szip.blewatch.base.Util.ble.ClientManager;
 import com.szip.blewatch.base.Util.ble.IBluetoothState;
 import com.szip.blewatch.base.Util.ble.IBluetoothUtil;
 import com.szip.blewatch.base.Broadcast.MyHandle;
 import com.szip.blewatch.base.Broadcast.ToServiceBroadcast;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.OTAManager;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.FunctionManager;
 import com.szip.blewatch.base.View.NotificationView;
 import com.szip.blewatch.base.View.ProgressHudModel;
 import com.szip.blewatch.base.db.LoadDataUtil;
@@ -57,9 +53,6 @@ import java.lang.ref.WeakReference;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import cn.com.heaton.blelibrary.ble.Ble;
-import cn.com.heaton.blelibrary.ble.callback.BleScanCallback;
 
 @SuppressLint("MissingPermission")
 public class BleService extends Service implements MyHandle {
@@ -80,7 +73,6 @@ public class BleService extends Service implements MyHandle {
     private boolean connectFromMac = false;
 
     private MyHandler myHandler;
-    private Ble<BleRssiDevice> ble = Ble.getInstance();
 
     private static class MyHandler extends Handler{
         WeakReference<Service> serviceWeakReference;
@@ -97,7 +89,8 @@ public class BleService extends Service implements MyHandle {
         LogUtil.getInstance().logd("data******","service onCreate");
         mSevice = this;
         myHandler = new MyHandler(mSevice);
-        iBluetoothUtil = new BluetoothUtilJLImpl(getApplicationContext());
+        iBluetoothUtil = BluetoothUtilImpl.getInstance().init(getApplicationContext());
+
         registerService();
     }
 
@@ -190,7 +183,9 @@ public class BleService extends Service implements MyHandle {
     private synchronized void connectFromSearch(){
         if (mac!=null&& BluetoothAdapter.getDefaultAdapter().isEnabled()){
             connectFromMac = false;
-//            ble.startScan(bleScanCallback);
+            final SearchRequest request = new SearchRequest.Builder()
+                    .searchBluetoothLeDevice(10000, 1).build();
+            ClientManager.getClient().search(request, mSearchResponseDevice);
         }
     }
 
@@ -208,18 +203,19 @@ public class BleService extends Service implements MyHandle {
             Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
             intent.putExtra("state",bluetoothState);
             sendBroadcast(intent);
-//            if(bluetoothState==5&&connectFromMac){
-//                connectFromSearch();
-//            }
+            if(bluetoothState==5&&connectFromMac){
+                connectFromSearch();
+            }
         }
     };
 
-    //搜索设备
-    private BleScanCallback<BleRssiDevice> bleScanCallback = new BleScanCallback<BleRssiDevice>() {
+    private long subTime = 0;
+
+    private final SearchResponse mSearchResponseDevice = new SearchResponse() {
         @Override
-        public void onStart() {
-            super.onStart();
+        public void onSearchStarted() {
             LogUtil.getInstance().logd("data******","开始搜索");
+            subTime = Calendar.getInstance().getTimeInMillis();
             bluetoothState = 4;
             Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
             intent.putExtra("state",bluetoothState);
@@ -227,10 +223,20 @@ public class BleService extends Service implements MyHandle {
         }
 
         @Override
-        public void onStop() {
-            super.onStop();
+        public void onDeviceFounded(SearchResult device) {
+            if (mac!=null&&mac.equals(device.getAddress())){
+                iBluetoothUtil.connect(mac,iBluetoothState);
+                ClientManager.getClient().stopSearch();
+            }
+        }
+
+        @RequiresApi(api = Build.VERSION_CODES.M)
+        @Override
+        public void onSearchStopped() {
             LogUtil.getInstance().logd("data******","搜索结束");
-            if(bluetoothState==4){
+            if (Calendar.getInstance().getTimeInMillis()-subTime<2500)
+                connectFromSearch();
+            else if(bluetoothState==4){
                 bluetoothState = 5;
                 Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
                 intent.putExtra("state",bluetoothState);
@@ -239,51 +245,10 @@ public class BleService extends Service implements MyHandle {
         }
 
         @Override
-        public void onLeScan(BleRssiDevice device, int rssi, byte[] scanRecord) {
-            if (mac!=null&&mac.equals(device.getBleAddress())){
-                iBluetoothUtil.connect(mac,iBluetoothState);
-//                ble.stopScan();
-            }
+        public void onSearchCanceled() {
+
         }
     };
-//    private final SearchResponse mSearchResponseDevice = new SearchResponse() {
-//        @Override
-//        public void onSearchStarted() {
-//            LogUtil.getInstance().logd("data******","开始搜索");
-//            subTime = Calendar.getInstance().getTimeInMillis();
-//            bluetoothState = 4;
-//            Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
-//            intent.putExtra("state",bluetoothState);
-//            sendBroadcast(intent);
-//        }
-//
-//        @Override
-//        public void onDeviceFounded(SearchResult device) {
-//            if (mac!=null&&mac.equals(device.getAddress())){
-//                iBluetoothUtil.connect(mac,iBluetoothState);
-//                ClientManager.getClient().stopSearch();
-//            }
-//        }
-//
-//        @RequiresApi(api = Build.VERSION_CODES.M)
-//        @Override
-//        public void onSearchStopped() {
-//            LogUtil.getInstance().logd("data******","搜索结束");
-//            if (Calendar.getInstance().getTimeInMillis()-subTime<2500)
-//                connectFromSearch();
-//            else if(bluetoothState==4){
-//                bluetoothState = 5;
-//                Intent intent = new Intent(BroadcastConst.UPDATE_BLE_STATE);
-//                intent.putExtra("state",bluetoothState);
-//                sendBroadcast(intent);
-//            }
-//        }
-//
-//        @Override
-//        public void onSearchCanceled() {
-//
-//        }
-//    };
 
     /**
      * 下载文件,通过DownloadManager，下载url上面的文件，把下载状态通过广播返回给前台
@@ -291,12 +256,8 @@ public class BleService extends Service implements MyHandle {
     private DownloadManager downloadManager;
     private long mTaskId;
 
-    public void downloadFirmsoft(String dialUrl) {
+    public void downloadFirmsoft(String dialUrl,String fileName) {
         Log.i("data******","开始下载 dialUrl = "+dialUrl);
-
-        String[] fileNames = dialUrl.split("/");
-        String fileName = fileNames[fileNames.length-1];
-        Log.i("data******","fileName = "+fileName);
         File file = new File(getExternalFilesDir(null).getPath()+ "/" + fileName);
         if (file.exists()){
             Intent intent  = new Intent(BroadcastConst.UPDATE_DOWNLOAD_STATE);
@@ -544,7 +505,8 @@ public class BleService extends Service implements MyHandle {
                 break;
             case BroadcastConst.DOWNLOAD_FILE:{
                 String fileUrl = intent.getStringExtra("fileUrl");
-                downloadFirmsoft(fileUrl);
+                String fileName = intent.getStringExtra("fileName");
+                downloadFirmsoft(fileUrl,fileName);
             }
             break;
             case DownloadManager.ACTION_DOWNLOAD_COMPLETE:{
@@ -562,6 +524,9 @@ public class BleService extends Service implements MyHandle {
                     });
                     return;
                 }
+                boolean isJL = intent.getBooleanExtra("isJL",false);
+                if (isJL)
+                    return;
                 int command = intent.getIntExtra("command", SendFileConst.ERROR);
                 if (command == SendFileConst.PROGRESS){//收到进度加1的广播，再发送100包数据
                     LogUtil.getInstance().logd("data******","发送数据包 page = "+page);
@@ -694,6 +659,23 @@ public class BleService extends Service implements MyHandle {
                         e.printStackTrace();
                     }
                 }
+            }
+            break;
+            case BroadcastConst.SEND_JL_DIAL:{
+                String fileName = intent.getStringExtra("fileUrl");
+                FunctionManager.getInstance().sendDial(fileName);
+            }
+            break;
+            case BroadcastConst.START_JL_OTA:{
+//                String filePath = getExternalFilesDir(null).getPath()+"/upgrade_fake_1121.zip";
+//                String dirPath = filePath.substring(0, filePath.lastIndexOf("/"));
+//                try {
+//                    ZipUtil.unZipFolder(filePath, dirPath);
+////                    FileUtil.getInstance().deleteFile(dirPath + "/" + WatchConstant.RES_DIR_NAME);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+                OTAManager.getInstance(getApplicationContext()).setConnectState(StateCode.CONNECTION_OK);
             }
             break;
         }

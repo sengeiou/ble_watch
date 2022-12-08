@@ -1,13 +1,13 @@
 package com.szip.user.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.View.BaseActivity;
 import com.szip.blewatch.base.View.CircularImageView;
@@ -34,6 +34,7 @@ public class AboutActivity extends BaseActivity {
         if (data == null)
             return;
         initView();
+
     }
 
     private void initView() {
@@ -58,6 +59,14 @@ public class AboutActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        findViewById(R.id.updateTv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BroadcastConst.START_JL_OTA);
+                sendBroadcast(intent);
             }
         });
     }

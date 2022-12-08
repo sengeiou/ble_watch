@@ -43,6 +43,12 @@ public class DeviceManagementAdapter extends RecyclerView.Adapter<DeviceManageme
             nameList.add(R.string.user_auto);
             imageList.add(R.mipmap.my_device_autodetect);
         }
+        UserModel userModel = LoadDataUtil.newInstance().
+                getUserInfo(MathUtil.newInstance().getUserId(context));
+        if (userModel!=null&&MathUtil.newInstance().isJLWatch(userModel.product)){
+            nameList.add(R.string.user_contacts);
+            imageList.add(R.mipmap.my_device_autodetect);
+        }
         notifyDataSetChanged();
     }
 
@@ -52,7 +58,8 @@ public class DeviceManagementAdapter extends RecyclerView.Adapter<DeviceManageme
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_adapter_menu, null);
         final Holder holder = new Holder(view);
         //对加载的子项注册监听事件
-        holder.fruitView.setOnClickListener(view1 -> onItemClickListener.onItemClick(nameList.get(holder.getAdapterPosition())));
+        holder.fruitView.setOnClickListener(view1 -> onItemClickListener
+                .onItemClick(nameList.get(holder.getAdapterPosition())));
         return holder;
     }
 

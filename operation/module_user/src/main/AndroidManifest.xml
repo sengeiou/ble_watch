@@ -3,7 +3,9 @@
     package="com.szip.user">
 
     <application>
-        <activity android:name=".Activity.AutoMeasureActivity"></activity>
+        <activity android:name=".Activity.contact.ContactActivity"
+            android:theme="@style/DefaultCityPickerTheme"></activity>
+        <activity android:name=".Activity.AutoMeasureActivity" />
         <activity android:name=".Activity.schedule.ScheduleEditActivity" />
         <activity android:name=".Activity.schedule.ScheduleActivity" />
         <activity android:name=".Activity.camera.CameraActivity" />

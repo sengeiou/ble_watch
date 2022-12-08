@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -20,6 +19,7 @@ import com.szip.blewatch.base.View.BaseActivity;
 import com.szip.blewatch.base.View.ProgressHudModel;
 import com.szip.blewatch.base.db.LoadDataUtil;
 import com.szip.blewatch.base.db.dbModel.SportWatchAppFunctionConfigDTO;
+import com.szip.blewatch.base.db.dbModel.UserModel;
 import com.szip.user.Activity.diy.DIYActivity;
 import com.szip.user.HttpModel.DialBean;
 import com.szip.user.R;
@@ -37,6 +37,7 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
     private RecyclerView dialRv;
 
     private String pictureUrl;
+    private String fileName;
     private boolean isSendPic = false;
     private boolean isCircle = false;
     private SportWatchAppFunctionConfigDTO data;
@@ -45,6 +46,8 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
 
     private ToActivityBroadcast toActivityBroadcast;
 
+    private UserModel userModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +55,10 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.user_activity_dial_select);
         setAndroidNativeLightStatusBar(this,true);
+
+        userModel = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(getApplicationContext()));
+        if (userModel == null)
+            return;
         data = LoadDataUtil.newInstance().getSportConfig(MathUtil.newInstance().getUserId(getApplicationContext()));
         if (data==null)
             return;
@@ -117,13 +124,19 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
             showToast(getString(R.string.http_error));
 
         findViewById(R.id.rightTv).setVisibility(View.VISIBLE);
-        if (dialArrayList!=null&&dialArrayList.size()!=0){
-            if (isFileDial())
-                iSelectDialPresenter = new SelectDialPresenterWithFileImpl(getApplicationContext(),this);
-            else
-                iSelectDialPresenter = new SelectDialPresenterImpl06(getApplicationContext(),this);
+
+        if (MathUtil.newInstance().isJLWatch(userModel.product)){
+            iSelectDialPresenter = new SelectDialPresenterWithJLImpl(getApplicationContext(),this);
         }else {
-            iSelectDialPresenter = new SelectDialPresenterImpl06(getApplicationContext(),this);
+            if (dialArrayList!=null&&dialArrayList.size()!=0){
+                if (isFileDial())
+                    iSelectDialPresenter = new SelectDialPresenterWithFileImpl(getApplicationContext(),this);
+                else
+                    iSelectDialPresenter = new SelectDialPresenterImpl06(getApplicationContext(),this);
+            }else {
+                iSelectDialPresenter = new SelectDialPresenterImpl06(getApplicationContext(),this);
+            }
+
         }
 
         initView();
@@ -162,6 +175,7 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
                     ProgressHudModel.newInstance().show(DialSelectActivity.this,getString(R.string.loading),false);
                     Intent intent = new Intent(BroadcastConst.DOWNLOAD_FILE);
                     intent.putExtra("fileUrl",pictureUrl);
+                    intent.putExtra("fileName", fileName);
                     sendBroadcast(intent);
                 }
             }
@@ -169,14 +183,16 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
     }
 
     @Override
-    public void setView(String id, String pictureId) {
+    public void setView(String id, String pictureId,String fileName) {
+        this.fileName = fileName;
         this.pictureUrl = pictureId;
         data.dialImg = id;
         Glide.with(this).load(id).into(dialIv);
     }
 
     @Override
-    public void setDialView(String dialId, String pictureId) {
+    public void setDialView(String dialId, String pictureId,String fileName) {
+        this.fileName = fileName;
         this.pictureUrl = pictureId;
         data.dialImg = dialId;
         Glide.with(this).load(dialId).into(dialIv);
@@ -212,10 +228,14 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
                 int command = intent.getIntExtra("command",255);
                 if (command == SendFileConst.START_SEND){
                     int address = intent.getIntExtra("address",0);
-                    String fileNames[] = pictureUrl.split("/");
-                    iSelectDialPresenter.sendDial(fileNames[fileNames.length-1],address);
+                    iSelectDialPresenter.sendDial(fileName,address);
                 }else if (command == SendFileConst.PROGRESS){
-                    ProgressHudModel.newInstance().setProgress();
+                    float progress = intent.getFloatExtra("progress",-1);
+                    if (progress == -1) {
+                        ProgressHudModel.newInstance().setProgress();
+                    } else {
+                        ProgressHudModel.newInstance().setProgress((int)progress);
+                    }
                 }else if (command == SendFileConst.ERROR){
                     isSendPic = false;
                     ProgressHudModel.newInstance().diss();
@@ -241,8 +261,7 @@ public class DialSelectActivity extends BaseActivity implements IDialSelectView,
                     showToast(getString(R.string.user_send_fail));
                 }else if (command == SendFileConst.START_SEND){
                     ProgressHudModel.newInstance().diss();
-                    String fileNames[] = pictureUrl.split("/");
-                    iSelectDialPresenter.sendDial(fileNames[fileNames.length-1],0);
+                    iSelectDialPresenter.sendDial(fileName,0);
                 }
             }
             break;

@@ -17,6 +17,8 @@ public class BroadcastConst {
     public final static String UPDATE_DIAL_STATE = "update.dial.state";
     public final static String UPDATE_BACKGROUND_STATE = "update.background.state";
     public final static String SEND_BLE_FILE = "send.ble.file";
+    public final static String SEND_JL_DIAL = "send.jl.dial";
+    public final static String START_JL_OTA = "start.jl.ota";
     public final static String SEND_BLE_BACKGROUND = "send.ble.background";
 
     public final static String CHECK_BLE_STATE = "check.ble.state";
@@ -28,4 +30,6 @@ public class BroadcastConst {
     public final static String UPDATE_WEATHER = "update.weather";
 
     public final static String ALARM_EVENT = "com.example.senior.AlarmActivity.AlarmReceiver";
+
+    public final static String CONTACT_UPDATE = "contact.update";
 }

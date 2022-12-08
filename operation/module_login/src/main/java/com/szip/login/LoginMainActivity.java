@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -28,7 +27,7 @@ import com.szip.login.HttpModel.DeviceConfigBean;
 import com.szip.login.HttpModel.LoginBean;
 import com.szip.login.Register.RegisterActivity;
 import com.szip.login.Utils.HttpMessageUtil;
-import com.zaaach.citypicker.CityPicker;
+import com.zaaach.citypicker.Picker;
 import com.zaaach.citypicker.adapter.OnPickListener;
 import com.zaaach.citypicker.model.City;
 import com.zhy.http.okhttp.callback.GenericsCallback;
@@ -134,12 +133,10 @@ public class LoginMainActivity extends BaseActivity implements View.OnClickListe
                 }
             }
         }else if (id == R.id.countryRl){
-            CityPicker.getInstance()
+            Picker.getInstance()
                     .setFragmentManager(getSupportFragmentManager())
                     .enableAnimation(true)
                     .setAnimationStyle(R.style.CustomAnim)
-                    .setLocatedCity(null)
-                    .setHotCities(null)
                     .setOnPickListener(new OnPickListener() {
                         @Override
                         public void onPick(int position, City data) {

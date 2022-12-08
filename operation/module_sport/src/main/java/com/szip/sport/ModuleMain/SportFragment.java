@@ -9,7 +9,6 @@ import android.graphics.Color;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +17,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.bumptech.glide.Glide;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.SportConst;
 import com.szip.blewatch.base.Interfere.OnItemClickListener;
@@ -196,7 +194,7 @@ public class SportFragment extends BaseFragment implements View.OnClickListener,
             runIndoorTv.setTextColor(getView().getResources().getColor(R.color.sport_gray_text));
             getView().findViewById(R.id.gpsLl).setVisibility(View.VISIBLE);
         } else if (id == R.id.runIndoorTv) {
-            sportType = SportConst.RUN_INDOOR;
+            sportType = SportConst.TREADMILL;
             indoorIv.setImageResource(R.mipmap.sport_bg_treadmill);
             runTv.setTextColor(getView().getResources().getColor(R.color.sport_gray_text));
             walkTv.setTextColor(getView().getResources().getColor(R.color.sport_gray_text));

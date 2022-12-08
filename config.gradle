@@ -4,8 +4,8 @@ ext {
             buildToolsVersion: "30.0.2",
             minSdkVersion    : 21,
             targetSdkVersion : 30,
-            versionCode      : 25,
-            versionName      : "1.25",
+            versionCode      : 26,
+            versionName      : "1.26",
             dbflow_version : "4.2.4"
     ]
 
@@ -37,7 +37,9 @@ ext {
             "uCrop" :'com.github.Creky:uCrop:2.2.3',
             //蓝牙库使用的数据库
             "room-runtime" :"androidx.room:room-runtime:2.3.0",
-            "room-compiler" :"androidx.room:room-compiler:2.3.0"
+            "room-compiler" :"androidx.room:room-compiler:2.3.0",
+            "pinyin4j" : 'com.belerweb:pinyin4j:2.5.0',
+            "CymChad" : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     ]
 
     otherDeps = [

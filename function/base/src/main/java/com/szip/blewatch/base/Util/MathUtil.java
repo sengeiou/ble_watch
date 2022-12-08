@@ -1181,38 +1181,125 @@ public class MathUtil {
         SportTypeModel typeModel = null;
         if (type== SportConst.RUN){
             typeModel = new SportTypeModel(R.mipmap.sport_outrun,context.getString(R.string.outrun));
+        }else if (type == SportConst.WALK){
+            typeModel = new SportTypeModel(R.mipmap.sport_walk,context.getString(R.string.walk));
+        }else if (type == SportConst.MARATHON){
+            typeModel = new SportTypeModel(R.mipmap.sport_marathon,context.getString(R.string.marathon));
+        }else if (type == SportConst.SKIPPING){
+            typeModel = new SportTypeModel(R.mipmap.sport_marathon,"跳绳");
+        }else if (type == SportConst.SWIMMING){
+            typeModel = new SportTypeModel(R.mipmap.sport_skiing,"游泳");
+        }else if (type == SportConst.CLIMB){
+            typeModel = new SportTypeModel(R.mipmap.sport_rockclimbing,context.getString(R.string.climb));
+        }else if (type == SportConst.SKI){
+            typeModel = new SportTypeModel(R.mipmap.sport_skiing,context.getString(R.string.skiing));
+        }else if (type == SportConst.BICYCLE){
+            typeModel = new SportTypeModel(R.mipmap.sport_cycle,context.getString(R.string.bicycle));
+        }else if (type == SportConst.BOAT){
+            typeModel = new SportTypeModel(R.mipmap.sport_skiing,"划船");
+        }else if (type == SportConst.JUMPING){
+            typeModel = new SportTypeModel(R.mipmap.sport_skiing,"蹦极");
+        }else if (type == SportConst.MOUNTAIN){
+            typeModel = new SportTypeModel(R.mipmap.sport_mountaineering,context.getString(R.string.mountain));
+        }else if (type == SportConst.PARACHUTING){
+            typeModel = new SportTypeModel(R.mipmap.sport_mountaineering,"跳伞");
+        }else if (type == SportConst.GOLF){
+            typeModel = new SportTypeModel(R.mipmap.sport_mountaineering,"高尔夫");
+        }else if (type == SportConst.SURFING){
+            typeModel = new SportTypeModel(R.mipmap.sport_skiing,"冲浪");
+        }else if (type == SportConst.TREADMILL){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,context.getString(R.string.treadmill));
         }else if (type == SportConst.BADMINTON){
             typeModel = new SportTypeModel(R.mipmap.sport_badminton,context.getString(R.string.badminton));
         }else if (type == SportConst.BASKETBALL){
             typeModel = new SportTypeModel(R.mipmap.sport_basketball,context.getString(R.string.basketball));
-        }else if (type == SportConst.BICYCLE){
-            typeModel = new SportTypeModel(R.mipmap.sport_cycle,context.getString(R.string.bicycle));
-        }else if (type == SportConst.BOAT){
-
-        }else if (type == SportConst.CLIMB){
-            typeModel = new SportTypeModel(R.mipmap.sport_rockclimbing,context.getString(R.string.climb));
         }else if (type == SportConst.FOOTBALL){
             typeModel = new SportTypeModel(R.mipmap.sport_football,context.getString(R.string.football));
-        }else if (type == SportConst.MARATHON){
-            typeModel = new SportTypeModel(R.mipmap.sport_marathon,context.getString(R.string.marathon));
-        }else if (type == SportConst.MOUNTAIN){
-            typeModel = new SportTypeModel(R.mipmap.sport_mountaineering,context.getString(R.string.mountain));
-        }else if (type == SportConst.PING_PONG_BALL){
-            typeModel = new SportTypeModel(R.mipmap.sport_badminton,context.getString(R.string.ping));
         }else if (type == SportConst.RUN_INDOOR){
-            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,context.getString(R.string.treadmill));
-        }else if (type == SportConst.RUN_PLAN){
-            typeModel = new SportTypeModel(R.mipmap.sport_outrun,context.getString(R.string.outrun));
-        }else if (type == SportConst.SKI){
-            typeModel = new SportTypeModel(R.mipmap.sport_skiing,context.getString(R.string.skiing));
-        }else if (type == SportConst.SURFING){
-
-        }else if (type == SportConst.SWIMMING){
-
-        }else if (type == SportConst.WALK){
-            typeModel = new SportTypeModel(R.mipmap.sport_walk,context.getString(R.string.walk));
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"室内跑步");
+        }else if (type == SportConst.WALK_INDOOR){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"室内走路");
+        } else if (type == SportConst.YOGA){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"瑜伽");
+        } else if (type == SportConst.SIT_UP){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"仰卧起坐");
+        } else if (type == SportConst.GYMNASTICS){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"体操");
+        } else if (type == SportConst.STRENGTH){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"力量训练");
+        } else if (type == SportConst.BOXING){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"拳击");
+        } else if (type == SportConst.LUMBAR_ABDOMEN){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"腰腹训练");
+        } else if (type == SportConst.SETTING_UP){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"健身操");
+        } else if (type == SportConst.HIT){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"HIIT");
+        } else if (type == SportConst.PRESS_UP){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"俯卧撑");
+        } else if (type == SportConst.PULL_UP){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"引体向上");
+        } else if (type == SportConst.JUMP_JACK){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"开合跳");
+        } else if (type == SportConst.FREE){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"自由训练");
+        } else if (type == SportConst.RIDING){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"骑马");
+        } else if (type == SportConst.TECHNOGYM){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"椭圆机");
+        } else if (type == SportConst.ATHLETICS){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"田径");
+        } else if (type == SportConst.TOXOPHILY){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"射箭");
+        } else if (type == SportConst.HUNT){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"打猎");
+        } else if (type == SportConst.FISHING){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"钓鱼");
+        } else if (type == SportConst.FRISBEE){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"飞盘");
+        } else if (type == SportConst.SLOW_MEDITATION){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"舒缓冥想");
+        } else if (type == SportConst.ROLLER_SKATING){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"轮滑");
+        } else if (type == SportConst.HOOP){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"呼啦圈");
+        } else if (type == SportConst.SKATEBOARD){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"滑板");
+        } else if (type == SportConst.SEGWAY){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"平衡车");
+        } else if (type == SportConst.PARKOUR){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"跑酷");
+        } else if (type == SportConst.PING_PONG_BALL){
+            typeModel = new SportTypeModel(R.mipmap.sport_badminton,context.getString(R.string.ping));
+        } else if (type == SportConst.TENNIS){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"网球");
+        } else if (type == SportConst.BASEBALL){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"棒球");
+        } else if (type == SportConst.VOLLEYBALL){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"排球");
+        } else if (type == SportConst.SKATING){
+            typeModel = new SportTypeModel(R.mipmap.sport_treadmill,"滑冰");
         }
 
         return typeModel;
+    }
+
+    public boolean isJLWatch(String name){
+        if(name==null)
+            return false;
+        name = name.toLowerCase();
+        switch (name){
+            case "qt20":
+            case "qt18":
+            case "qt31":
+            case "qt22":
+            case "h9":
+            case "ultral8":
+            case "h8":
+            case "h6":
+                return true;
+        }
+
+        return false;
     }
 }

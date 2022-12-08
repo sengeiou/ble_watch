@@ -22,6 +22,7 @@ public class SelectDialPresenterImpl06 implements IDialSelectPresenter{
     private Context context;
     private IDialSelectView iDialSelectView;
     private int clock;
+    private String fileName;
 
     public SelectDialPresenterImpl06(Context context, IDialSelectView iDialSelectView) {
         this.context = context;
@@ -37,9 +38,10 @@ public class SelectDialPresenterImpl06 implements IDialSelectPresenter{
         dialRv.setNestedScrollingEnabled(false);
 
         if (iDialSelectView !=null&&dialArrayList.size()!=0){
-            iDialSelectView.setView(dialArrayList.get(0).getPreviewUrl(),
-                    dialArrayList.get(0).getPlateBgUrl());
+            fileName = "PICTURE"+dialArrayList.get(0).getPointerNumber();
             clock = dialArrayList.get(0).getPointerNumber();
+            iDialSelectView.setView(dialArrayList.get(0).getPreviewUrl(),
+                    dialArrayList.get(0).getPlateBgUrl(),fileName);
         }
 
 
@@ -47,9 +49,10 @@ public class SelectDialPresenterImpl06 implements IDialSelectPresenter{
             @Override
             public void onItemClick(int position) {
                 if (iDialSelectView !=null){
-                    iDialSelectView.setDialView(dialArrayList.get(position).getPreviewUrl(),
-                            dialArrayList.get(position).getPlateBgUrl());
                     clock = dialArrayList.get(position).getPointerNumber();
+                    fileName = "PICTURE"+dialArrayList.get(position).getPointerNumber();
+                    iDialSelectView.setDialView(dialArrayList.get(position).getPreviewUrl(),
+                            dialArrayList.get(position).getPlateBgUrl(),fileName);
                 }
             }
         });
@@ -64,9 +67,8 @@ public class SelectDialPresenterImpl06 implements IDialSelectPresenter{
 
     @Override
     public void sendDial(String pictureUrl, int address) {
-
         if (pictureUrl != null) {
-            pictureUrl = context.getExternalFilesDir(null).getPath()+"/"+pictureUrl;
+            pictureUrl = context.getExternalFilesDir(null).getPath()+"/"+fileName;
             final int PAGENUM = 200;//分包长度
             InputStream in = null;
             try {

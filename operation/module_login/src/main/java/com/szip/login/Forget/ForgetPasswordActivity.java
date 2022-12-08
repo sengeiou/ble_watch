@@ -20,10 +20,9 @@ import com.szip.blewatch.base.View.BaseActivity;
 import com.szip.login.HttpModel.ImageVerificationBean;
 import com.szip.login.R;
 import com.szip.login.HttpModel.CheckVerificationBean;
-import com.szip.login.Register.RegisterActivity;
 import com.szip.login.Register.SetPasswordFragment;
 import com.szip.login.Utils.HttpMessageUtil;
-import com.zaaach.citypicker.CityPicker;
+import com.zaaach.citypicker.Picker;
 import com.zaaach.citypicker.adapter.OnPickListener;
 import com.zaaach.citypicker.model.City;
 import com.zhy.http.okhttp.BaseApi;
@@ -135,12 +134,10 @@ public class ForgetPasswordActivity extends BaseActivity implements View.OnClick
                     startTimer();
             }
         }else if (id == R.id.countryRl){
-            CityPicker.getInstance()
+            Picker.getInstance()
                     .setFragmentManager(getSupportFragmentManager())
                     .enableAnimation(true)
                     .setAnimationStyle(R.style.CustomAnim)
-                    .setLocatedCity(null)
-                    .setHotCities(null)
                     .setOnPickListener(new OnPickListener() {
                         @Override
                         public void onPick(int position, City data) {

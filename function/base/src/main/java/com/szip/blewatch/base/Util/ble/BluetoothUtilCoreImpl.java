@@ -6,7 +6,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattServer;
 import android.bluetooth.BluetoothGattService;
 import android.content.Context;
 import android.content.Intent;
@@ -21,10 +20,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.inuker.bluetooth.library.connect.options.BleConnectOptions;
-import com.inuker.bluetooth.library.model.BleGattCharacter;
-import com.inuker.bluetooth.library.model.BleGattProfile;
-import com.inuker.bluetooth.library.model.BleGattService;
+import com.jieli.jl_rcsp.model.device.health.UserInfo;
 import com.szip.blewatch.base.Broadcast.MyPhoneCallListener;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.RouterPathConst;
@@ -35,6 +31,8 @@ import com.szip.blewatch.base.Util.DateUtil;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.Util.MusicUtil;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.ManagerInitCallback;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.WatchManager;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.View.ProgressHudModel;
@@ -66,23 +64,19 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.SynchronousQueue;
 
 import cn.com.heaton.blelibrary.ble.Ble;
-import cn.com.heaton.blelibrary.ble.BleLog;
 import cn.com.heaton.blelibrary.ble.callback.BleConnectCallback;
 import cn.com.heaton.blelibrary.ble.callback.BleMtuCallback;
 import cn.com.heaton.blelibrary.ble.callback.BleNotifyCallback;
 import cn.com.heaton.blelibrary.ble.callback.BleReadCallback;
 import cn.com.heaton.blelibrary.ble.callback.BleWriteCallback;
 import cn.com.heaton.blelibrary.ble.model.BleDevice;
-import cn.com.heaton.blelibrary.ble.utils.ByteUtils;
 import okhttp3.Call;
 
 import static android.media.AudioManager.FLAG_PLAY_SOUND;
 import static android.media.AudioManager.STREAM_MUSIC;
 
-@SuppressLint("MissingPermission")
 public class BluetoothUtilCoreImpl implements IBluetoothUtil{
     private IBluetoothState iBluetoothState;
     private UUID serviceUUID;
@@ -126,7 +120,20 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
     private Ble<BleDevice> ble = Ble.getInstance();
 
-    public BluetoothUtilCoreImpl(Context context) {
+    private static BluetoothUtilCoreImpl bluetoothUtilCore;
+
+    public static BluetoothUtilCoreImpl getInstance(){
+        if (null == bluetoothUtilCore) {
+            synchronized (BluetoothUtilCoreImpl.class) {
+                if (null == bluetoothUtilCore) {
+                    bluetoothUtilCore = new BluetoothUtilCoreImpl();
+                }
+            }
+        }
+        return bluetoothUtilCore;
+    }
+
+    public BluetoothUtilCoreImpl init(Context context){
         this.context = context;
         DataParser.newInstance().setmIDataResponse(iDataResponse);
         myPhoneCallListener = new MyPhoneCallListener(context);
@@ -162,11 +169,11 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
                         boolean sendSuccess = ble.writeByUuid(bleDevice, datas, serviceUUID,UUID.fromString(Config.char1),
                                 new BleWriteCallback<BleDevice>() {
-                            @Override
-                            public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
+                                    @Override
+                                    public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
 
-                            }
-                        });
+                                    }
+                                });
                         if (sendSuccess){
                             Log.d("data******","蓝牙发送成功");
                             //数据发送成功，把队列顶部的数据弹出,处理新的数据，如果发送没成功，则重新发送该队列
@@ -187,6 +194,12 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                 }
             }
         };
+
+        return bluetoothUtilCore;
+    }
+
+    private BluetoothUtilCoreImpl() {
+
     }
 
     @Override
@@ -228,7 +241,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
                 @Override
                 public void onMtuChanged(BleDevice device, int mtu, int status) {
                     LogUtil.getInstance().logd("data******","mtu = "+mtu);
-                    setGattProfile(device,gatt);
+                    openid(device,true);
                     super.onMtuChanged(device, mtu, status);
                 }
             });
@@ -242,28 +255,40 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         public void onReady(BleDevice device) {
             super.onReady(device);
             //连接成功后，设置通知
+
             LogUtil.getInstance().logd("data******","连接成功");
             bleDevice = device;
             connectState = 3;
-            //连接成功，获取设备信息
-            TimerTask timerTask= new TimerTask() {
-                @Override
-                public void run() {
-                    writeForSyncTime();
-                    writeForSyncTimeStyle();
-                    writeForSetUnit();
-                    writeForSetLanguage();
-                    writeForUpdateUserInfo();
-                    writeForSetAuto();
-                    initPhoneStateListener(true);
-                    writeForSetWeather();
-                    MusicUtil.getSingle().registerNotify();
-                }
-            };
-            Timer timer = new Timer();
-            timer.schedule(timerTask,300);
-            if (iBluetoothState!=null)
-                iBluetoothState.updateState(connectState);
+            //初始化杰里的库
+            BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(device.getBleAddress());
+            UserModel userInfo = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
+            if (userInfo==null||userInfo.product==null)
+                return;
+            if (MathUtil.newInstance().isJLWatch(userInfo.product)){
+                WatchManager.getInstance().init(blueDevice, context, new ManagerInitCallback() {
+                    @Override
+                    public void initSuccess(boolean success) {
+                        if (success){
+                            openid(bleDevice,false);
+                            getDeviceInfo();
+                        }else {
+                            //杰里sdk初始化失败，断开连接
+                            MusicUtil.getSingle().unRegisterNotify();
+                            WatchManager.getInstance().disconnect();
+                            initPhoneStateListener(false);
+                            connectState = 5;
+                            isSync = false;
+                            recvLength = 0;
+                            recvState = 0;
+                            pkg_dataLen = 0;
+                            if (iBluetoothState!=null)
+                                iBluetoothState.updateState(connectState);
+                        }
+                    }
+                });
+            }else {
+                getDeviceInfo();
+            }
         }
 
         @Override
@@ -271,6 +296,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
             LogUtil.getInstance().logd("data******","连接失败");
             super.onConnectFailed(device, errorCode);
             MusicUtil.getSingle().unRegisterNotify();
+            WatchManager.getInstance().disconnect();
             initPhoneStateListener(false);
             connectState = 5;
             isSync = false;
@@ -282,44 +308,80 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         }
     };
 
-    /**
-     * 配置特征值以及接受特征值的通知
-     * */
-    public void setGattProfile(BleDevice device,BluetoothGatt gatt) {
-        List<BluetoothGattService> services = gatt.getServices();
-        for (BluetoothGattService service : services) {
-            if(Config.char0.equalsIgnoreCase(service.getUuid().toString())){
-                serviceUUID = service.getUuid();
-                LogUtil.getInstance().logd("data******","连接service = "+serviceUUID.toString());
-                List<BluetoothGattCharacteristic> characters = service.getCharacteristics();
-                for(BluetoothGattCharacteristic character : characters){
-                    if( character.getUuid().toString().equalsIgnoreCase(Config.char2)){     // 主要用于回复等操作
-                        openid(device,serviceUUID,character.getUuid());
-                    }
-                }
+    private void getDeviceInfo(){
+        //连接成功，获取设备信息
+        TimerTask timerTask= new TimerTask() {
+            @Override
+            public void run() {
+                writeForSyncTime();
+                writeForSyncTimeStyle();
+                writeForSetUnit();
+                writeForSetLanguage();
+                writeForUpdateUserInfo();
+                writeForSetAuto();
+                initPhoneStateListener(true);
+                writeForSetWeather();
+                MusicUtil.getSingle().registerNotify();
             }
-        }
+        };
+        Timer timer = new Timer();
+        timer.schedule(timerTask,300);
+        if (iBluetoothState!=null)
+            iBluetoothState.updateState(connectState);
     }
 
-    public void openid(BleDevice bleDevice,UUID serviceUUID, UUID characterUUID) {
-        ble.enableNotifyByUuid(bleDevice,true,serviceUUID,characterUUID,responseCallback);
+    public void openid(BleDevice bleDevice,boolean isJLSdk) {
+        if (isJLSdk){
+            Log.d("jl******","打开杰里sdk通知");
+            ble.enableNotifyByUuid(bleDevice,true,UUID.fromString(Config.jlService),
+                    UUID.fromString(Config.jlCharNotify),responseCallback);
+        }else {
+            Log.d("jl******","打开原生SDK通知");
+            ble.enableNotifyByUuid(bleDevice,true,UUID.fromString(Config.char0),
+                    UUID.fromString(Config.char2),responseCallback);
+        }
+
     }
 
     private BleNotifyCallback<BleDevice> responseCallback = new BleNotifyCallback<BleDevice>() {
         @Override
         public void onChanged(final BleDevice device, BluetoothGattCharacteristic characteristic) {
             byte[] value = characteristic.getValue();
-            LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
-            if (value.length == 8) {
-                if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
-                    Message message = new Message();
-                    message.what = ANALYSIS_HANDLER_READ_DATA;
-                    message.obj = device;
-                    mAnalysisHandler.sendMessage(message);
-                }
+            if (characteristic.getUuid().toString().equals(Config.jlCharNotify)){
+                LogUtil.getInstance().logd("jl******","收到sdk通知信息:"+ DateUtil.byteToHexString(characteristic.getValue()));
+                WatchManager.getInstance().notifyData(value);
             }else {
-                DataParser.newInstance().parseNotifyData(value);
+                LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
+                if (value.length == 8) {
+                    if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
+                        Message message = new Message();
+                        message.what = ANALYSIS_HANDLER_READ_DATA;
+                        message.obj = device;
+                        mAnalysisHandler.sendMessage(message);
+                    }
+                }else {
+                    DataParser.newInstance().parseNotifyData(value);
+                }
             }
+
+        }
+
+        @Override
+        public void onNotifySuccess(BleDevice device) {
+            super.onNotifySuccess(device);
+            Log.d("jl******","notify ok");
+        }
+
+        @Override
+        public void onNotifyCanceled(BleDevice device) {
+            super.onNotifyCanceled(device);
+            Log.d("jl******","notify cancel");
+        }
+
+        @Override
+        public void onNotifyFailed(BleDevice device, int failedCode) {
+            super.onNotifyFailed(device, failedCode);
+            Log.d("jl******","notify failed code = "+failedCode);
         }
     };
 
@@ -353,6 +415,17 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
     @Override
     public void disconnect() {
 
+    }
+
+
+    public boolean sendCommandToSdk(byte[] datas){
+        return  ble.writeByUuid(bleDevice, datas, UUID.fromString(Config.jlService), UUID.fromString(Config.jlCharWrite),
+                new BleWriteCallback<BleDevice>() {
+                    @Override
+                    public void onWriteSuccess(BleDevice device, BluetoothGattCharacteristic characteristic) {
+
+                    }
+                });
     }
 
     @Override
@@ -512,6 +585,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         }
         isSendData = false;
         ble.cancelCallback(bleConnectCallback);
+        WatchManager.getInstance().destroy();
     }
 
     /**

@@ -26,6 +26,24 @@ public class DateUtil {
         return list;
     }
 
+    public static ArrayList<byte[]> cutBytes(byte []data){
+        ArrayList<byte[]> arrayList = new ArrayList<>();
+        if (data.length<=175){
+            arrayList.add(data);
+        }else {
+            int num = data.length/175;
+            num = data.length%175==0?num:num+1;
+            for (int i = 0;i<num;i++){
+                int length = data.length-i*175>175?175:data.length-i*175;
+                byte []cutData = new byte[length];
+                System.arraycopy(data,i*175,cutData,0,length);
+                arrayList.add(cutData);
+            }
+        }
+        return arrayList;
+
+    }
+
     public static ArrayList<String> getDayList(int year, int month) {
         int day = 0;
         ArrayList<String> list = new ArrayList<>();

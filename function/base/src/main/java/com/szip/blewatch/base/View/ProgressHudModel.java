@@ -133,6 +133,14 @@ public class ProgressHudModel {
 
     }
 
+    public void setProgress(int progress){
+        if (progressHUD!=null){
+            progressNew++;
+            progressHUD.setProgress(progress);
+        }
+
+    }
+
     public void setLabel(String label){
         if (progressHUD!=null)
             progressHUD.setLabel(label);

@@ -36,6 +36,10 @@ import com.szip.blewatch.base.Util.DateUtil;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.Util.MusicUtil;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.FunctionManager;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.ManagerInitCallback;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.OTAManager;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.WatchManager;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.base.View.ProgressHudModel;
@@ -63,9 +67,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Queue;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import okhttp3.Call;
 
@@ -97,7 +103,13 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     private HandlerThread mHandlerThread;
     private Handler mAnalysisHandler;
     private static final int ANALYSIS_HANDLER_FLAG = 0x100;
-
+    private static final int ANALYSIS_HANDLER_SEND_DATA = 0x101;
+    private static final int ANALYSIS_HANDLER_READ_DATA = 0x102;
+    private static final int ANALYSIS_HANDLER_SEND_JL_DATA = 0x103;
+    private boolean isSendData;//数据队列正在发送中
+    private boolean isSendJLData;//数据队列正在发送中
+    private Queue<byte[]> sendDataQueue = new LinkedBlockingQueue<>();
+    private Queue<byte[]> sendJLDataQueue = new LinkedBlockingQueue<>();
     private MediaPlayer mediaPlayer;
     private int volume = 0;
 
@@ -106,13 +118,29 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     TelephonyManager tm;
     MyPhoneCallListener myPhoneCallListener;
 
-    public BluetoothUtilImpl(Context context) {
+    private static BluetoothUtilImpl bluetoothUtil;
+
+    public static BluetoothUtilImpl getInstance(){
+        if (null == bluetoothUtil) {
+            synchronized (WatchManager.class) {
+                if (null == bluetoothUtil) {
+                    bluetoothUtil = new BluetoothUtilImpl();
+                }
+            }
+        }
+        return bluetoothUtil;
+    }
+
+    private BluetoothUtilImpl(){}
+
+    public BluetoothUtilImpl init(Context context) {
         this.context = context;
         DataParser.newInstance().setmIDataResponse(iDataResponse);
         myPhoneCallListener = new MyPhoneCallListener(context);
         mHandlerThread = new HandlerThread("analysis-thread");
         mHandlerThread.start();
         mAnalysisHandler = new Handler(mHandlerThread.getLooper()) {
+
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
@@ -130,9 +158,59 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
                         }
                     }
                     phaserRecvBuffer();
+                }else if (msg.what==ANALYSIS_HANDLER_SEND_DATA){
+                    if (sendDataQueue!=null){
+                        byte[] datas = sendDataQueue.peek();
+                        if (datas==null){
+                            LogUtil.getInstance().logd("data******",
+                                    "数据队列已经清空，数据发送完毕");
+                            isSendData = false;
+                            return;
+                        }
+
+                        ClientManager.getClient().write(mMac, UUID.fromString(Config.char0),
+                                UUID.fromString(Config.char1), datas, new BleWriteResponse() {
+                            @Override
+                            public void onResponse(int code) {
+                                if(code == 0){
+                                    //数据发送成功，把队列顶部的数据弹出,处理新的数据，如果发送没成功，则重新发送该队列
+                                    sendDataQueue.poll();
+                                }
+                                mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
+                            }
+                        });
+                    }
+                }else if (msg.what==ANALYSIS_HANDLER_SEND_JL_DATA){
+                    if (sendJLDataQueue!=null){
+                        byte[] datas = sendJLDataQueue.peek();
+                        if (datas==null){
+                            LogUtil.getInstance().logd("data******",
+                                    "杰里数据队列已经清空，数据发送完毕");
+                            isSendJLData = false;
+                            return;
+                        }
+
+                        ClientManager.getClient().write(mMac, UUID.fromString(Config.jlService),
+                                UUID.fromString(Config.jlCharWrite), datas, new BleWriteResponse() {
+                                    @Override
+                                    public void onResponse(int code) {
+                                        if(code == 0){
+                                            //数据发送成功，把队列顶部的数据弹出,处理新的数据，如果发送没成功，则重新发送该队列
+                                            sendJLDataQueue.poll();
+                                        }
+                                        mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_JL_DATA);
+                                    }
+                                });
+                    }
+                }else if (msg.what==ANALYSIS_HANDLER_READ_DATA){
+                    ClientManager.getClient().read(mMac,UUID.fromString(Config.char0)
+                            ,UUID.fromString(Config.char3),bleReadResponse);
                 }
             }
+
         };
+
+        return bluetoothUtil;
     }
 
     @Override
@@ -169,7 +247,7 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
         @Override
         public void onResponse(int code, BleGattProfile data) {
             if( code == 0 ){        // 0 成功
-                ClientManager.getClient().requestMtu(mMac, 512, new BleMtuResponse() {
+                ClientManager.getClient().requestMtu(mMac, 200, new BleMtuResponse() {
                     @Override
                     public void onResponse(int code, Integer data) {
                     }
@@ -191,12 +269,14 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     public void setGattProfile(BleGattProfile profile) {
         List<BleGattService> services = profile.getServices();
         for (com.inuker.bluetooth.library.model.BleGattService service : services) {
-            if(Config.char0.equalsIgnoreCase(service.getUUID().toString())){
+            if(Config.char0.equalsIgnoreCase(service.getUUID().toString())||
+            Config.jlService.equalsIgnoreCase(service.getUUID().toString())){
                 serviceUUID = service.getUUID();
                 LogUtil.getInstance().logd("data******","连接service = "+serviceUUID.toString());
                 List<BleGattCharacter> characters = service.getCharacters();
                 for(BleGattCharacter character : characters){
-                    if( character.getUuid().toString().equalsIgnoreCase(Config.char2)){     // 主要用于回复等操作
+                    if( character.getUuid().toString().equalsIgnoreCase(Config.char2)||
+                    character.getUuid().toString().equalsIgnoreCase(Config.jlCharNotify)){     // 主要用于回复等操作
                         openid(serviceUUID,character.getUuid());
                     }
                 }
@@ -215,35 +295,48 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
         @Override
         public void onConnectStatusChanged(String mac, int status) {
             if( status == 0x10){
-                connectState = 3;
-                //连接成功，获取设备信息
-                TimerTask timerTask= new TimerTask() {
-                    @Override
-                    public void run() {
-                        writeForSyncTime();
-                        writeForSyncTimeStyle();
-                        writeForSetUnit();
-                        writeForSetLanguage();
-                        writeForSetWeather();
-                        writeForUpdateUserInfo();
-                        writeForSetAuto();
-                        initPhoneStateListener(true);
-                        MusicUtil.getSingle().registerNotify();
-                    }
-                };
-                Timer timer = new Timer();
-                timer.schedule(timerTask,300);
+                BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mac);
+                UserModel userInfo = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
+                if (userInfo==null||userInfo.product==null)
+                    return;
+                if (MathUtil.newInstance().isJLWatch(userInfo.product)){
+                    WatchManager.getInstance().init(blueDevice, context, new ManagerInitCallback() {
+                        @Override
+                        public void initSuccess(boolean success) {
+                            if (success){
+                                OTAManager.getInstance(context).init(blueDevice);
+                                getDeviceInfo();
+                            }else {
+                                //杰里sdk初始化失败，断开连接
+                                MusicUtil.getSingle().unRegisterNotify();
+                                WatchManager.getInstance().disconnect();
+                                initPhoneStateListener(false);
+                                connectState = 5;
+                                isSync = false;
+                                recvLength = 0;
+                                recvState = 0;
+                                pkg_dataLen = 0;
+                                if (iBluetoothState!=null)
+                                    iBluetoothState.updateState(connectState);
+                            }
+                        }
+                    });
+                }else {
+                    getDeviceInfo();
+                }
+
             }else{
                 MusicUtil.getSingle().unRegisterNotify();
+                WatchManager.getInstance().disconnect();
                 initPhoneStateListener(false);
                 connectState = 5;
                 isSync = false;
                 recvLength = 0;
                 recvState = 0;
                 pkg_dataLen = 0;
+                if (iBluetoothState!=null)
+                    iBluetoothState.updateState(connectState);
             }
-            if (iBluetoothState!=null)
-                iBluetoothState.updateState(connectState);
         }
     };
 
@@ -253,14 +346,23 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     private BleNotifyResponse bleNotifyResponse = new BleNotifyResponse() {
         @Override
         public void onNotify(UUID service, UUID character, byte[] value) {
-            LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
-            if (value.length == 8) {
-                if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
-                    ClientManager.getClient().read(mMac,serviceUUID,UUID.fromString(Config.char3),bleReadResponse);
-                }
+            if (character.toString().equalsIgnoreCase(Config.jlCharNotify)){
+                LogUtil.getInstance().logd("data******","收到sdk通知信息:"+ DateUtil.byteToHexString(value));
+                WatchManager.getInstance().notifyData(value);
+                OTAManager.getInstance(context).notifyData(value);
             }else {
-                DataParser.newInstance().parseNotifyData(value);
+                LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
+                if (value.length == 8) {
+                    if ((value[4] == -16) && (value[5] == -16) && (value[6] == -16) && (value[7] == -16)) {
+                        Message message = new Message();
+                        message.what = ANALYSIS_HANDLER_READ_DATA;
+                        mAnalysisHandler.sendMessage(message);
+                    }
+                }else {
+                    DataParser.newInstance().parseNotifyData(value);
+                }
             }
+
         }
 
         @Override
@@ -268,6 +370,31 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
 
         }
     };
+
+
+    private void getDeviceInfo(){
+        connectState = 3;
+        //连接成功，获取设备信息
+        FunctionManager.getInstance().getDial();
+        TimerTask timerTask= new TimerTask() {
+            @Override
+            public void run() {
+                writeForSyncTime();
+                writeForSyncTimeStyle();
+                writeForSetUnit();
+                writeForSetLanguage();
+                writeForUpdateUserInfo();
+                writeForSetAuto();
+                initPhoneStateListener(true);
+                writeForSetWeather();
+                MusicUtil.getSingle().registerNotify();
+            }
+        };
+        Timer timer = new Timer();
+        timer.schedule(timerTask,300);
+        if (iBluetoothState!=null)
+            iBluetoothState.updateState(connectState);
+    }
 
 
     /**
@@ -575,10 +702,35 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     }
 
 
+    public boolean sendCommandToSdk(byte[] datas){
+        if (datas!=null){
+            if (sendJLDataQueue!=null)
+                sendJLDataQueue.add(datas);
+            if(!isSendJLData){//如果队列还没开始发送，则开始发送
+                isSendJLData = true;
+                mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_JL_DATA);
+            }
+        }
+        return  true;
+    }
+
     @Override
     public void sendCommand(byte[] datas) {
-        if (datas!=null)
-            ClientManager.getClient().write(mMac,serviceUUID,UUID.fromString(Config.char1),datas,bleWriteResponse);
+        if (datas!=null){
+            if (sendDataQueue!=null)
+                sendDataQueue.add(datas);
+            if(!isSendData){//如果队列还没开始发送，则开始发送
+                isSendData = true;
+                mAnalysisHandler.sendEmptyMessage(ANALYSIS_HANDLER_SEND_DATA);
+            }
+        }
+    }
+
+    private synchronized void sendCommandBig(byte[] datas) {
+        if (datas!=null){
+            ClientManager.getClient().write(mMac,UUID.fromString(Config.char0)
+                    ,UUID.fromString(Config.char1), datas,bleWriteResponse);
+        }
     }
 
     @Override
@@ -674,37 +826,28 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     @Override
     public void writeForSendDialFile(int type, byte clockId, int address, int num, byte[] data) {
         if (type == 3){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data));
         }else if (type == 4){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(data.length+7,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(data.length+7,type,clockId,address,num,data));
         }else if (type == 5){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data));
         }else if (type == 6){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data));
         }else if (type == 7){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(data.length+7,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(data.length+7,type,clockId,address,num,data));
         }else if (type == 8){
-            ClientManager.getClient().write(mMac,UUID.fromString(Config.char5),UUID.fromString(Config.char4),
-                    CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data),bleWriteResponse);
+            sendCommandBig(CommandUtil.getCommandbyteDialFile(2,type,clockId,address,num,data));
         }
     }
 
     @Override
     public void writeForSendDialBackground(int type,int clockType,int clockIndex,int num,byte[] datas) {
         if (type == 0){
-            ClientManager.getClient().write(mMac,serviceUUID,UUID.fromString(Config.char1),
-                    CommandUtil.getCommandbytePicture(13,5,type,clockType,clockType,num,datas),bleWriteResponse);
+            sendCommand(CommandUtil.getCommandbytePicture(13,5,type,clockType,clockType,num,datas));
         }else if (type == 1){
-            ClientManager.getClient().write(mMac,serviceUUID,UUID.fromString(Config.char1),
-                    CommandUtil.getCommandbytePicture(datas.length+11,datas.length+3,type,clockType,clockType,num,datas),bleWriteResponse);
+            sendCommand( CommandUtil.getCommandbytePicture(datas.length+11,datas.length+3,type,clockType,clockType,num,datas));
         }else {
-            ClientManager.getClient().write(mMac,serviceUUID,UUID.fromString(Config.char1),
-                    CommandUtil.getCommandbytePicture(10,2,type,clockType,clockType,num,datas),bleWriteResponse);
+            sendCommand(CommandUtil.getCommandbytePicture(10,2,type,clockType,clockType,num,datas));
         }
     }
 

@@ -23,7 +23,7 @@ import com.szip.blewatch.base.View.BaseActivity;
 import com.szip.login.HttpModel.ImageVerificationBean;
 import com.szip.login.R;
 import com.szip.login.HttpModel.CheckVerificationBean;
-import com.zaaach.citypicker.CityPicker;
+import com.zaaach.citypicker.Picker;
 import com.zaaach.citypicker.adapter.OnPickListener;
 import com.zaaach.citypicker.model.City;
 import com.zhy.http.okhttp.BaseApi;
@@ -144,12 +144,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     startTimer();
             }
         }else if (id == R.id.countryRl){
-            CityPicker.getInstance()
+            Picker.getInstance()
                     .setFragmentManager(getSupportFragmentManager())
                     .enableAnimation(true)
                     .setAnimationStyle(R.style.CustomAnim)
-                    .setLocatedCity(null)
-                    .setHotCities(null)
                     .setOnPickListener(new OnPickListener() {
                         @Override
                         public void onPick(int position, City data) {

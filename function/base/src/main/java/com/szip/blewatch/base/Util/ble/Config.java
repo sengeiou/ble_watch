@@ -17,4 +17,9 @@ public class Config {
     public static final String char4 = "00002AE3-0000-1000-8000-00805f9b34fb";
     //用于写大数据的server
     public static final String char5 = "000018E2-0000-1000-8000-00805f9b34fb";
+
+
+    public static final  String jlService = "0000ae00-0000-1000-8000-00805f9b34fb";
+    public static final  String jlCharWrite = "0000ae01-0000-1000-8000-00805f9b34fb";
+    public static final  String jlCharNotify = "0000ae02-0000-1000-8000-00805f9b34fb";
 }

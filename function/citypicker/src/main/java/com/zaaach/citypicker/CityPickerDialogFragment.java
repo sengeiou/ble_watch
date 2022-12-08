@@ -323,9 +323,6 @@ public class CityPickerDialogFragment extends AppCompatDialogFragment implements
         mAdapter.scrollToSection(index);
     }
 
-    public void locationChanged(LocatedCity location, int state){
-        mAdapter.updateLocateState(location, state);
-    }
 
     @Override
     public void dismiss(int position, City data) {

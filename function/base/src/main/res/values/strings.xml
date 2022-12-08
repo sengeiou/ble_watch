@@ -180,6 +180,7 @@
     <string name="user_about">About Device</string>
     <string name="user_schedule">My Schedule</string>
     <string name="user_auto">Auto Measure</string>
+    <string name="user_contacts">Contacts</string>
     <string name="user_add_device">Add Device</string>
 
     <string name="user_measureUnit">Unit Of Measure</string>

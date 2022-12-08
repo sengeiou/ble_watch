@@ -1,9 +1,11 @@
 package com.szip.user.ModuleMain;
 
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -33,6 +35,7 @@ import com.szip.user.Activity.NotificationActivity;
 import com.szip.user.Activity.TargetActivity;
 import com.szip.user.Activity.UserSetActivity;
 import com.szip.user.Activity.camera.CameraSetActivity;
+import com.szip.user.Activity.contact.ContactActivity;
 import com.szip.user.Activity.dial.DialSelectActivity;
 import com.szip.user.Activity.schedule.ScheduleActivity;
 import com.szip.user.Activity.userInfo.UserInfoActivity;
@@ -216,6 +219,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener, 
                 startActivity(new Intent(getActivity(), ScheduleActivity.class));
             }else if (position == R.string.user_auto) {
                 startActivity(new Intent(getActivity(), AutoMeasureActivity.class));
+            }else if (position == R.string.user_contacts) {
+                startActivity(new Intent(getActivity(), ContactActivity.class));
             }
         }
     };

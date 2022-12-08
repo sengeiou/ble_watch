@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.amap.api.maps.LocationSource;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
@@ -37,7 +36,6 @@ import com.szip.blewatch.base.db.dbModel.SportData;
 import com.szip.sport.Activity.sportResult.IMapUtil;
 import com.szip.sport.Activity.sportResult.MapUtilGaodeImp;
 import com.szip.sport.Activity.sportResult.MapUtilGoogleImp;
-import com.szip.sport.Activity.sportResult.SportResultActivity;
 import com.szip.sport.R;
 
 import java.util.Locale;
@@ -167,7 +165,7 @@ public class GpsActivity extends BaseActivity implements IGpsView, OnMapReadyCal
             }
         }
 
-        if (sportType == SportConst.RUN_INDOOR){
+        if (sportType == SportConst.TREADMILL){
             speedLl.setVisibility(View.GONE);
             runLl.setVisibility(View.GONE);
             indoorLl.setVisibility(View.VISIBLE);
@@ -294,7 +292,7 @@ public class GpsActivity extends BaseActivity implements IGpsView, OnMapReadyCal
     @Override
     public void startRun() {
         sportStateTv.setText(getString(R.string.sport_running));
-        if (sportType== SportConst.RUN_INDOOR){
+        if (sportType== SportConst.TREADMILL){
             runLl.setVisibility(View.GONE);
             indoorLl.setVisibility(View.VISIBLE);
         }else {

@@ -381,7 +381,8 @@ public class SaveDataUtil {
                                             stepString.append(String.format(Locale.ENGLISH,",%02d:%d",i,sql[i]+step[i]));
                                         }
                                     }
-                                    sqlData.dataForHour = stepString.toString().substring(1);
+                                    if (stepString.length()!=0)
+                                        sqlData.dataForHour = stepString.toString().substring(1);
                                     sqlData.steps += stepData.steps;
                                     sqlData.distance += stepData.distance;
                                     sqlData.calorie += stepData.calorie;

@@ -25,6 +25,7 @@ public class SelectDialPresenterWithFileImpl implements IDialSelectPresenter{
     private Context context;
     private IDialSelectView iDialSelectView;
     private int clock;
+    private String fileName;
 
     public SelectDialPresenterWithFileImpl(Context context, IDialSelectView iDialSelectView) {
         this.context = context;
@@ -41,18 +42,21 @@ public class SelectDialPresenterWithFileImpl implements IDialSelectPresenter{
         dialRv.setNestedScrollingEnabled(false);
 
         if (iDialSelectView !=null&&dialArrayList.size()!=0){
-            iDialSelectView.setView(dialArrayList.get(0).getPreviewUrl(),
-                    dialArrayList.get(0).getPlateBgUrl());
             clock = dialArrayList.get(0).getPointerNumber();
+            fileName = "watch"+dialArrayList.get(0).getPointerNumber();
+            iDialSelectView.setView(dialArrayList.get(0).getPreviewUrl(),
+                    dialArrayList.get(0).getPlateBgUrl(),fileName);
+
         }
 
         dialAdapter.setOnItemClickListener(new DialAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 if (iDialSelectView !=null){
-                    iDialSelectView.setDialView(dialArrayList.get(position).getPreviewUrl(),
-                            dialArrayList.get(position).getPlateBgUrl());
+                    fileName = "watch"+dialArrayList.get(position).getPointerNumber();
                     clock = dialArrayList.get(position).getPointerNumber();
+                    iDialSelectView.setDialView(dialArrayList.get(position).getPreviewUrl(),
+                            dialArrayList.get(position).getPlateBgUrl(),fileName);
                 }
             }
         });
@@ -68,7 +72,7 @@ public class SelectDialPresenterWithFileImpl implements IDialSelectPresenter{
 
     @Override
     public void sendDial(String fileUrl, int address) {
-        fileUrl = context.getExternalFilesDir(null).getPath()+"/"+fileUrl;
+        fileUrl = context.getExternalFilesDir(null).getPath()+"/"+fileName;
         InputStream in;
         try {
             in = new FileInputStream(fileUrl);
