@@ -71,6 +71,10 @@ public class WatchManager extends WatchOpImpl {
             mRcspAuth.stopAuth(device);
             boolean ret = mRcspAuth.startAuth(device);
             return;
+        }else {
+            Log.d("data******","device is Auth = "+device.getName());
+            registerOnWatchCallback(mOnWatchCallback);
+            notifyBtDeviceConnection(device, StateCode.CONNECTION_OK);
         }
     }
 
@@ -117,7 +121,7 @@ public class WatchManager extends WatchOpImpl {
 
         @Override
         public void onRcspInit(BluetoothDevice device, boolean isInit) {
-            Log.d("data******","onRcspInit = ");
+            Log.d("data******","onRcspInit = "+isInit);
         }
 
         @Override
@@ -138,7 +142,7 @@ public class WatchManager extends WatchOpImpl {
     };
 
     public void disconnect(){
-        notifyBtDeviceConnection(mTargetDevice, StateCode.CONNECTION_FAILED);
+
     }
 
     private void setDevAuth(BluetoothDevice device, boolean b) {
@@ -184,9 +188,13 @@ public class WatchManager extends WatchOpImpl {
     }
 
     public void destroy(){
-        mRcspAuth.removeListener(mRcspAuthListener);
-        mRcspAuth.destroy();
-        mAuthDeviceMap.clear();
+        Log.d("data******","jk watch destroy");
+        notifyBtDeviceConnection(mTargetDevice, StateCode.CONNECTION_DISCONNECT);
+        if (mRcspAuth!=null){
+            mRcspAuth.removeListener(mRcspAuthListener);
+            mRcspAuth.destroy();
+            mAuthDeviceMap.clear();
+        }
     }
 
 

@@ -28,15 +28,15 @@ public class DateUtil {
 
     public static ArrayList<byte[]> cutBytes(byte []data){
         ArrayList<byte[]> arrayList = new ArrayList<>();
-        if (data.length<=175){
+        if (data.length<=200){
             arrayList.add(data);
         }else {
-            int num = data.length/175;
-            num = data.length%175==0?num:num+1;
+            int num = data.length/200;
+            num = data.length%200==0?num:num+1;
             for (int i = 0;i<num;i++){
-                int length = data.length-i*175>175?175:data.length-i*175;
+                int length = data.length-i*200>200?200:data.length-i*200;
                 byte []cutData = new byte[length];
-                System.arraycopy(data,i*175,cutData,0,length);
+                System.arraycopy(data,i*200,cutData,0,length);
                 arrayList.add(cutData);
             }
         }

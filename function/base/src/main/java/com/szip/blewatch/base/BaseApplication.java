@@ -47,15 +47,9 @@ public class BaseApplication extends Application {
         initAuto();
         ClientManager.getInstance().init(this);
         FunctionManager.getInstance().init(this);
-        initLog();
 
 
 //        initBle();
-    }
-
-    private void initLog() {
-        JL_Log.setTagPrefix("health"); //设置log的标识
-        JL_Log.configureLog(this, true, true);
     }
 
     private void initBle() {

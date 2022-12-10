@@ -56,11 +56,11 @@ public class OTAManager extends BluetoothOTAManager {
                 .setBleIntervalMs(500) //默认是500毫秒
                 .setTimeoutMs(3000) //超时时间
                 .setUseReconnect(false)
-                .setMtu(514) //BLE底层通讯MTU值，会影响BLE传输数据的速率。建议用512。该MTU值会使OTA库在BLE连接时改变MTU，所以用户SDK需要对此处理。
                 .setNeedChangeMtu(false); //不需要调整MTU，建议客户连接时调整好BLE的MTU
         bluetoothOption.setFirmwareFilePath(mContext.getExternalFilesDir(null).getPath()+ "/update.ufw"); //设置本地存储OTA文件的路径
-//        bluetoothOption.setFirmwareFileData(firmwareData);//设置本地存储OTA文件的数据, 与setFirmwareFilePath，二者选其一
         configure(bluetoothOption); //设置OTA参数
+
+
         registerBluetoothCallback(new BtEventCallback() {
             @Override
             public void onConnection(BluetoothDevice device, int status) {
@@ -78,7 +78,7 @@ public class OTAManager extends BluetoothOTAManager {
 
                                 @Override
                                 public void onProgress(int i, String s, float v) {
-                                    Log.d("jl******","开始传输资源 onProgress= "+i);
+                                    Log.d("jl******","开始传输资源 onProgress= "+v);
                                 }
 
                                 @Override
@@ -87,6 +87,7 @@ public class OTAManager extends BluetoothOTAManager {
                                     if (s == null) {
                                        return;
                                     } else {
+                                        //资源传输完成，开始发送OTA文件
                                         getBluetoothOption().setFirmwareFilePath(s);
                                         startOTA(new IUpgradeCallback() {
                                             @Override
@@ -140,17 +141,19 @@ public class OTAManager extends BluetoothOTAManager {
         });
     }
 
-    //设置sdk使用到的device
+    //BLE收到的notify转发给OTA SDK
     public void notifyData(byte[] datas) {
         Log.d("jl******","收到OTA通知");
         onReceiveDeviceData(mTargetDevice, datas);
     }
 
+    //返回当前已经连接的device
     @Override
     public BluetoothDevice getConnectedDevice() {
         return mTargetDevice;
     }
 
+    //返回当前GATT
     @Override
     public BluetoothGatt getConnectedBluetoothGatt() {
 
@@ -164,33 +167,33 @@ public class OTAManager extends BluetoothOTAManager {
         return gatt;
     }
 
+    //设置BLE的状态到OTA SDK
     public void setConnectState(int state){
         onBtDeviceConnection(mTargetDevice, state);
     }
-
-
-
+    //执行回连设备的逻辑
     @Override
     public void connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
-        Log.d("jl******","重新连接 = "+bluetoothDevice.getAddress());
+        Log.d("jl******","ota升级成功，开始回连设备 = "+bluetoothDevice.getAddress());
         UserModel userModel = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
         if (userModel==null)
             return;
-        Log.d("jl******","重新连接原mac = "+userModel.deviceCode);
         userModel.deviceCode = bluetoothDevice.getAddress();
         userModel.update();
         Intent intent = new Intent(BroadcastConst.BIND_SERVICE);
         context.sendBroadcast(intent);
     }
-//74:3E:B5:20:4B:D3
+
+    //执行断开设备连接的逻辑
     @Override
     public void disconnectBluetoothDevice(BluetoothDevice bluetoothDevice) {
         BluetoothUtilImpl.getInstance().disconnect();
     }
 
+    //把OTA SDK返回的byte[]通过BLE发送给设备（需要分包）
     @Override
     public boolean sendDataToDevice(BluetoothDevice bluetoothDevice, byte[] bytes) {
-        //TODO: 客户重写实现功能
+        //数据分包
         ArrayList<byte[]> cutData = DateUtil.cutBytes(bytes);
         for (byte[] sendData:cutData){
             BluetoothUtilImpl.getInstance().sendCommandToSdk(sendData);

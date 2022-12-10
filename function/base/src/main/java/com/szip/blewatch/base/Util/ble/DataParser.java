@@ -416,7 +416,7 @@ public class DataParser {
                     handleClimbData(sportData,time,isEnd);
                     break;
                 case 0x0A:
-                    handleSurfingData(sportData,time,isEnd);
+                    handleSkiingData(sportData,time,isEnd);
                     break;
                 case 0x0B:
                     handleBikeData(sportData,time,isEnd);
@@ -435,7 +435,7 @@ public class DataParser {
                     handleGolfData(sportData,time,isEnd);
                     break;
                 case 0x11:
-                    handleSkiingData(sportData,time,isEnd);
+                    handleSurfingData(sportData,time,isEnd);
                     break;
                 case 0x14:
                     handleTreadmillData(sportData,time,isEnd);
@@ -454,6 +454,96 @@ public class DataParser {
                     break;
                 case 0x25:
                     handleNewSportData(sportData,time,isEnd,SportConst.WALK_INDOOR);
+                    break;
+                case 0x26:
+                    handleNewSportData(sportData,time,isEnd,SportConst.YOGA);
+                    break;
+                case 0x27:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SIT_UP);
+                    break;
+                case 0x28:
+                    handleNewSportData(sportData,time,isEnd,SportConst.GYMNASTICS);
+                    break;
+                case 0x29:
+                    handleNewSportData(sportData,time,isEnd,SportConst.STRENGTH);
+                    break;
+                case 0x2a:
+                    handleNewSportData(sportData,time,isEnd,SportConst.BOXING);
+                    break;
+                case 0x2b:
+                    handleNewSportData(sportData,time,isEnd,SportConst.LUMBAR_ABDOMEN);
+                    break;
+                case 0x2c:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SETTING_UP);
+                    break;
+                case 0x2d:
+                    handleNewSportData(sportData,time,isEnd,SportConst.HIT);
+                    break;
+                case 0x2e:
+                    handleNewSportData(sportData,time,isEnd,SportConst.PRESS_UP);
+                    break;
+                case 0x2f:
+                    handleNewSportData(sportData,time,isEnd,SportConst.PULL_UP);
+                    break;
+                case 0x30:
+                    handleNewSportData(sportData,time,isEnd,SportConst.JUMP_JACK);
+                    break;
+                case 0x31:
+                    handleNewSportData(sportData,time,isEnd,SportConst.FREE);
+                    break;
+                case 0x32:
+                    handleNewSportData(sportData,time,isEnd,SportConst.RIDING);
+                    break;
+                case 0x33:
+                    handleNewSportData(sportData,time,isEnd,SportConst.TECHNOGYM);
+                    break;
+                case 0x34:
+                    handleNewSportData(sportData,time,isEnd,SportConst.ATHLETICS);
+                    break;
+                case 0x35:
+                    handleNewSportData(sportData,time,isEnd,SportConst.TOXOPHILY);
+                    break;
+                case 0x36:
+                    handleNewSportData(sportData,time,isEnd,SportConst.HUNT);
+                    break;
+                case 0x37:
+                    handleNewSportData(sportData,time,isEnd,SportConst.FISHING);
+                    break;
+                case 0x38:
+                    handleNewSportData(sportData,time,isEnd,SportConst.FRISBEE);
+                    break;
+                case 0x39:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SLOW_MEDITATION);
+                    break;
+                case 0x3a:
+                    handleNewSportData(sportData,time,isEnd,SportConst.ROLLER_SKATING);
+                    break;
+                case 0x3b:
+                    handleNewSportData(sportData,time,isEnd,SportConst.HOOP);
+                    break;
+                case 0x3c:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SKATEBOARD);
+                    break;
+                case 0x3d:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SEGWAY);
+                    break;
+                case 0x3e:
+                    handleNewSportData(sportData,time,isEnd,SportConst.PARKOUR);
+                    break;
+                case 0x3f:
+                    handleNewSportData(sportData,time,isEnd,SportConst.PING_PONG_BALL);
+                    break;
+                case 0x40:
+                    handleNewSportData(sportData,time,isEnd,SportConst.TENNIS);
+                    break;
+                case 0x41:
+                    handleNewSportData(sportData,time,isEnd,SportConst.BASEBALL);
+                    break;
+                case 0x42:
+                    handleNewSportData(sportData,time,isEnd,SportConst.VOLLEYBALL);
+                    break;
+                case 0x43:
+                    handleNewSportData(sportData,time,isEnd,SportConst.SKATING);
                     break;
             }
         }else if (type==0x32){//数据标示
@@ -986,52 +1076,52 @@ public class DataParser {
         SportData sportData = new SportData();
         sportData.type = SportConst.SKI;
         sportData.time = time;
-        sportData.distance = (data[0] & 0xff) + ((data[1] & 0xFF) << 8);
-        sportData.height = (data[2] & 0xff) + ((data[3] & 0xFF) << 8);
-        sportData.sportTime = (data[4] & 0xff) + ((data[5] & 0xFF) << 8) + ((data[6] & 0xff) << 16) + ((data[7] & 0xFF) << 24);
-        int longLenght = (data[16] & 0xff) + ((data[17] & 0xFF) << 8);
-        int latLenght = (data[16+2+longLenght] & 0xff) + ((data[17+2+longLenght] & 0xFF) << 8);
-        int speedPerHourLenght = (data[16+4+longLenght+latLenght] & 0xff) + ((data[17+4+longLenght+latLenght] & 0xFF) << 8);
+        sportData.distance = (data[0] & 0xff) + ((data[1] & 0xFF) << 8)+ ((data[2] & 0xff) << 16) + ((data[3] & 0xFF) << 24);
+        sportData.height = (data[4] & 0xff) + ((data[5] & 0xFF) << 8)+ ((data[6] & 0xff) << 16) + ((data[7] & 0xFF) << 24);
+        sportData.sportTime = (data[8] & 0xff) + ((data[9] & 0xFF) << 8) + ((data[10] & 0xff) << 16) + ((data[11] & 0xFF) << 24);
+        int longLenght = (data[20] & 0xff) + ((data[21] & 0xFF) << 8);
+        int latLenght = (data[20+2+longLenght] & 0xff) + ((data[21+2+longLenght] & 0xFF) << 8);
+        int speedPerHourLenght = (data[20+4+longLenght+latLenght] & 0xff) + ((data[21+4+longLenght+latLenght] & 0xFF) << 8);
         byte[] speedHourDatas = new byte[speedPerHourLenght];
         if (speedPerHourLenght!=0)
-            System.arraycopy(data,16+6+longLenght+latLenght,speedHourDatas,0,speedPerHourLenght);
+            System.arraycopy(data,20+6+longLenght+latLenght,speedHourDatas,0,speedPerHourLenght);
         dataHash = CommandUtil.getAverage(speedHourDatas,1);
         for (int key:dataHash.keySet()){
             sportData.speedPerHour = key;
             sportData.speedPerHourArray = dataHash.get(key);
         }
 
-        int altitudeLenght = (data[16+6+longLenght+latLenght+speedPerHourLenght] & 0xff) + ((data[17+6+longLenght+latLenght+speedPerHourLenght] & 0xFF) << 8);
+        int altitudeLenght = (data[20+6+longLenght+latLenght+speedPerHourLenght] & 0xff) + ((data[21+6+longLenght+latLenght+speedPerHourLenght] & 0xFF) << 8);
         byte[] altitudeDatas = new byte[altitudeLenght*2];
         if (altitudeLenght!=0)
-            System.arraycopy(data,16+8+longLenght+latLenght+speedPerHourLenght,altitudeDatas,0,altitudeLenght*2);
+            System.arraycopy(data,20+8+longLenght+latLenght+speedPerHourLenght,altitudeDatas,0,altitudeLenght*2);
         dataHash = CommandUtil.getAverage(altitudeDatas,2);
         for (int key:dataHash.keySet()){
             sportData.altitude = key;
             sportData.altitudeArray = dataHash.get(key);
         }
 
-        int heartLenght = (data[16+8+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xff) +
-                ((data[17+8+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xFF) << 8);
+        int heartLenght = (data[20+8+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xff) +
+                ((data[21+8+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xFF) << 8);
         byte[] heartDatas = new byte[heartLenght];
         if (heartLenght!=0)
-            System.arraycopy(data,16+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2,
+            System.arraycopy(data,20+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2,
                     heartDatas,0,heartLenght);
         dataHash = CommandUtil.getAverage(heartDatas,1);
         for (int key:dataHash.keySet()){
             sportData.heart = key;
             sportData.heartArray = dataHash.get(key);
         }
-        sportData.calorie = (data[16+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xff) +
-                ((data[17+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF)<< 8) +
-                ((data[18+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 16) +
-                ((data[19+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 24);
+        sportData.calorie = (data[20+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xff) +
+                ((data[21+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF)<< 8) +
+                ((data[22+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 16) +
+                ((data[23+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 24);
 
-        int speedLenght = (data[16+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xff) +
-                ((data[17+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 8);
+        int speedLenght = (data[20+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xff) +
+                ((data[21+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF) << 8);
         byte[] speedDatas = new byte[speedLenght*2];
         if (speedLenght!=0)
-            System.arraycopy(data,16+16+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght,speedDatas,0,speedLenght*2);
+            System.arraycopy(data,20+16+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght,speedDatas,0,speedLenght*2);
         dataHash = CommandUtil.getAverage(speedDatas,2);
         for (int key:dataHash.keySet()){
             sportData.speed = key;
@@ -1059,10 +1149,11 @@ public class DataParser {
         SportData sportData = new SportData();
         sportData.type = SportConst.CLIMB;
         sportData.time = time;
-        sportData.sportTime = (data[2] & 0xff) + ((data[3] & 0xFF) << 8) + ((data[4] & 0xff) << 16) + ((data[5] & 0xFF) << 24);
-        sportData.height = (data[0] & 0xff) + ((data[1] & 0xFF) << 8);
 
-        int heartLenght = (data[6] & 0xff) + ((data[7] & 0xFF) << 8);
+        sportData.height = (data[0] & 0xff) + ((data[1] & 0xFF) << 8)+ ((data[2] & 0xff) << 16) + ((data[3] & 0xFF) << 24);
+        sportData.sportTime = (data[4] & 0xff) + ((data[5] & 0xFF) << 8) + ((data[6] & 0xff) << 16) + ((data[7] & 0xFF) << 24);
+
+        int heartLenght = (data[8] & 0xff) + ((data[9] & 0xFF) << 8);
         byte[] heartDatas = new byte[heartLenght];
         if (heartLenght!=0)
             System.arraycopy(data,8,
@@ -1073,15 +1164,15 @@ public class DataParser {
             sportData.heartArray = dataHash.get(key);
         }
 
-        sportData.calorie = (data[8+heartLenght] & 0xff) +
-                ((data[9+heartLenght] & 0xFF)<< 8) +
-                ((data[10+heartLenght] & 0xFF)<< 16) +
-                ((data[11+heartLenght] & 0xFF)<< 24);
+        sportData.calorie = (data[10+heartLenght] & 0xff) +
+                ((data[11+heartLenght] & 0xFF)<< 8) +
+                ((data[12+heartLenght] & 0xFF)<< 16) +
+                ((data[13+heartLenght] & 0xFF)<< 24);
 
-        int altitudeLenght = (data[12+heartLenght] & 0xff) + ((data[13+heartLenght] & 0xFF) << 8);
+        int altitudeLenght = (data[14+heartLenght] & 0xff) + ((data[15+heartLenght] & 0xFF) << 8);
         byte[] altitudeDatas = new byte[altitudeLenght*2];
         if (altitudeLenght!=0)
-            System.arraycopy(data,14+heartLenght,altitudeDatas,0,altitudeLenght*2);
+            System.arraycopy(data,16+heartLenght,altitudeDatas,0,altitudeLenght*2);
         dataHash = CommandUtil.getAverage(altitudeDatas,2);
         for (int key:dataHash.keySet()){
             sportData.altitude = key;
@@ -1109,24 +1200,24 @@ public class DataParser {
         SportData sportData = new SportData();
         sportData.type = SportConst.SWIMMING;
         sportData.time = time;
-        sportData.distance = (data[0] & 0xff) + ((data[1] & 0xFF) << 8);
-        sportData.sportTime = (data[4] & 0xff) + ((data[5] & 0xFF) << 8) + ((data[6] & 0xff) << 16) + ((data[7] & 0xFF) << 24);
-        int longLenght = (data[16] & 0xff) + ((data[17] & 0xFF) << 8);
-        int latLenght = (data[16+2+longLenght] & 0xff) + ((data[17+2+longLenght] & 0xFF) << 8);
-        int speedPerHourLenght = (data[16+4+longLenght+latLenght] & 0xff) + ((data[17+4+longLenght+latLenght] & 0xFF) << 8);
+        sportData.distance = (data[0] & 0xff) + ((data[1] & 0xFF) << 8) + ((data[2] & 0xff) << 16) + ((data[3] & 0xFF) << 24);
+        sportData.sportTime = (data[6] & 0xff) + ((data[7] & 0xFF) << 8) + ((data[5] & 0xff) << 16) + ((data[9] & 0xFF) << 24);
+        int longLenght = (data[18] & 0xff) + ((data[19] & 0xFF) << 8);
+        int latLenght = (data[18+2+longLenght] & 0xff) + ((data[19+2+longLenght] & 0xFF) << 8);
+        int speedPerHourLenght = (data[18+4+longLenght+latLenght] & 0xff) + ((data[19+4+longLenght+latLenght] & 0xFF) << 8);
         byte[] speedHourDatas = new byte[speedPerHourLenght];
         if (speedPerHourLenght!=0)
-            System.arraycopy(data,16+6+longLenght+latLenght,speedHourDatas,0,speedPerHourLenght);
+            System.arraycopy(data,18+6+longLenght+latLenght,speedHourDatas,0,speedPerHourLenght);
         dataHash = CommandUtil.getAverage(speedHourDatas,1);
         for (int key:dataHash.keySet()){
             sportData.speedPerHour = key;
             sportData.speedPerHourArray = dataHash.get(key);
         }
 
-        int heartLenght = (data[16+6+longLenght+latLenght+speedPerHourLenght] & 0xff) + ((data[17+6+longLenght+latLenght+speedPerHourLenght] & 0xFF) << 8);
+        int heartLenght = (data[18+6+longLenght+latLenght+speedPerHourLenght] & 0xff) + ((data[19+6+longLenght+latLenght+speedPerHourLenght] & 0xFF) << 8);
         byte[] heartDatas = new byte[heartLenght];
         if (heartLenght!=0)
-            System.arraycopy(data,16+8+longLenght+latLenght+speedPerHourLenght,
+            System.arraycopy(data,18+8+longLenght+latLenght+speedPerHourLenght,
                     heartDatas,0,heartLenght);
         dataHash = CommandUtil.getAverage(heartDatas,1);
         for (int key:dataHash.keySet()){
@@ -1134,21 +1225,30 @@ public class DataParser {
             sportData.heartArray = dataHash.get(key);
         }
 
-        int tempLenght = (data[16+8+longLenght+latLenght+speedPerHourLenght+heartLenght] & 0xff) +
-                ((data[17+8+longLenght+latLenght+speedPerHourLenght+heartLenght] & 0xFF) << 8);
-        int speedLenght = (data[16+10+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2] & 0xff) +
-                ((data[17+10+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2] & 0xFF) << 8);
+        int tempLenght = (data[18+8+longLenght+latLenght+speedPerHourLenght+heartLenght] & 0xff) +
+                ((data[19+8+longLenght+latLenght+speedPerHourLenght+heartLenght] & 0xFF) << 8);
+        int speedLenght = (data[18+10+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2] & 0xff) +
+                ((data[19+10+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2] & 0xFF) << 8);
+        byte[] speedDatas = new byte[speedLenght*2];
+        if (speedLenght!=0)
+            System.arraycopy(data,18+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2,
+                    speedDatas,0,speedLenght);;
+        dataHash = CommandUtil.getAverage(speedDatas,2);
+        for (int key:dataHash.keySet()){
+            sportData.speed = key;
+            sportData.speedArray = dataHash.get(key);
+        }
 
-        sportData.calorie = (data[16+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xff) +
-                ((data[17+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 8) +
-                ((data[18+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 16) +
-                ((data[19+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 24);
+        sportData.calorie = (data[18+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xff) +
+                ((data[19+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 8) +
+                ((data[20+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 16) +
+                ((data[21+12+longLenght+latLenght+speedPerHourLenght+heartLenght+tempLenght*2+speedLenght*2] & 0xFF)<< 24);
 
 
         sportDataArrayList.add(sportData);
         LogUtil.getInstance().logd("DATA******","解析到的游泳数据 : "+time+" ;运动时长 = "+sportData.sportTime+" ;里程"+sportData.distance+
                 " ;卡路里"+sportData.calorie+ " ;平均心率 = "+ sportData.heart+" ;心率数组 ="+ sportData.heartArray +" ;平均速度 = "+
-                sportData.speedPerHour+" ;配速数组 = "+ sportData.speedPerHourArray);
+                sportData.speedPerHour+" ;配速数组 = "+ sportData.speedArray);
 
         if (isEnd){
             if (mIDataResponse!=null)
@@ -1525,11 +1625,11 @@ public class DataParser {
             sportData.speedArray = dataHash.get(key);
         }
 
-        int heartLenght = (data[28+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xff) +
-                ((data[29+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2] & 0xFF) << 8);
+        int heartLenght = (data[28+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+speedLenght*2] & 0xff) +
+                ((data[29+10+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+speedLenght*2] & 0xFF) << 8);
         byte[] heartDatas = new byte[heartLenght];
         if (heartLenght!=0)
-            System.arraycopy(data,28+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2,
+            System.arraycopy(data,28+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+speedLenght*2,
                     heartDatas,0,heartLenght);
         dataHash = CommandUtil.getAverage(heartDatas,1);
         for (int key:dataHash.keySet()){
@@ -1537,11 +1637,11 @@ public class DataParser {
             sportData.heartArray = dataHash.get(key);
         }
 
-        int strideLenght = (data[28+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xff) +
-                ((data[29+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght] & 0xFF+heartLenght) << 8);
+        int strideLenght = (data[28+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght+speedLenght*2] & 0xff) +
+                ((data[29+12+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght+speedLenght*2] & 0xFF+heartLenght) << 8);
         byte[] strideArray = new byte[strideLenght*2];
         if (strideLenght!=0)
-            System.arraycopy(data,28+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght,
+            System.arraycopy(data,28+14+longLenght+latLenght+speedPerHourLenght+altitudeLenght*2+heartLenght+speedLenght*2,
                     strideArray,0,strideLenght*2);
         dataHash = CommandUtil.getAverage(strideArray,2);
         for (int key:dataHash.keySet()){

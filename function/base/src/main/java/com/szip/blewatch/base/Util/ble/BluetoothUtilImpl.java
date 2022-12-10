@@ -27,6 +27,7 @@ import com.inuker.bluetooth.library.connect.response.BleWriteResponse;
 import com.inuker.bluetooth.library.model.BleGattCharacter;
 import com.inuker.bluetooth.library.model.BleGattProfile;
 import com.inuker.bluetooth.library.model.BleGattService;
+import com.jieli.jl_rcsp.constant.StateCode;
 import com.szip.blewatch.base.Broadcast.MyPhoneCallListener;
 import com.szip.blewatch.base.Const.RouterPathConst;
 import com.szip.blewatch.base.Const.SendFileConst;
@@ -247,7 +248,7 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
         @Override
         public void onResponse(int code, BleGattProfile data) {
             if( code == 0 ){        // 0 成功
-                ClientManager.getClient().requestMtu(mMac, 200, new BleMtuResponse() {
+                ClientManager.getClient().requestMtu(mMac, 250, new BleMtuResponse() {
                     @Override
                     public void onResponse(int code, Integer data) {
                     }
@@ -294,9 +295,12 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     private BleConnectStatusListener connectStatusListener = new BleConnectStatusListener() {
         @Override
         public void onConnectStatusChanged(String mac, int status) {
+            LogUtil.getInstance().logd("data******","ble state = "+status);
             if( status == 0x10){
-                BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mac);
+                final BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mac);
                 UserModel userInfo = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
+                LogUtil.getInstance().logd("data******","userInfo "+userInfo+" ;userInfo = "+userInfo.product);
+                LogUtil.getInstance().logd("data******","blueDevice = "+blueDevice);
                 if (userInfo==null||userInfo.product==null)
                     return;
                 if (MathUtil.newInstance().isJLWatch(userInfo.product)){
@@ -327,7 +331,8 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
 
             }else{
                 MusicUtil.getSingle().unRegisterNotify();
-                WatchManager.getInstance().disconnect();
+                WatchManager.getInstance().destroy();
+                OTAManager.getInstance(context).setConnectState(StateCode.CONNECTION_DISCONNECT);
                 initPhoneStateListener(false);
                 connectState = 5;
                 isSync = false;
@@ -770,7 +775,9 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     @Override
     public void onDestroy() {
         iBluetoothState = null;
+        Log.d("data******","ble onDestroy");
         ClientManager.getClient().disconnect(mMac);
+        WatchManager.getInstance().destroy();
     }
 
     private void writeForSyncTime(){
