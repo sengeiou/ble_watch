@@ -48,8 +48,15 @@ public class BaseApplication extends Application {
         ClientManager.getInstance().init(this);
         FunctionManager.getInstance().init(this);
 
-
+//        initLog();
 //        initBle();
+    }
+
+    private void initLog() {
+        JL_Log.setTagPrefix("ota_log");
+        JL_Log.configureLog(this, true, true);
+        com.jieli.jl_bt_ota.util.JL_Log.setLog(true);
+        com.jieli.jl_bt_ota.util.JL_Log.setLogOutput(JL_Log::addLogOutput);
     }
 
     private void initBle() {

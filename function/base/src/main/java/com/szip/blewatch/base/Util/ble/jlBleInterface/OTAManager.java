@@ -54,6 +54,7 @@ public class OTAManager extends BluetoothOTAManager {
         bluetoothOption.setPriority(BluetoothOTAConfigure.PREFER_BLE) //请按照项目需要选择
                 .setUseAuthDevice(false) //具体根据固件的配置选择
                 .setBleIntervalMs(500) //默认是500毫秒
+                .setMtu(500)
                 .setTimeoutMs(3000) //超时时间
                 .setUseReconnect(false)
                 .setNeedChangeMtu(false); //不需要调整MTU，建议客户连接时调整好BLE的MTU
@@ -65,25 +66,25 @@ public class OTAManager extends BluetoothOTAManager {
             @Override
             public void onConnection(BluetoothDevice device, int status) {
                 //必须等待库回调连接成功才可以开始OTA库操作
-                Log.d("jl******","OTA连接 = "+status);
+
                 if (status == StateCode.CONNECTION_OK) {
-                    Log.d("jl******","OTA连接成功");
+                    Log.d("data******","OTA连接成功");
                     //1.更新资源
                     WatchManager.getInstance().updateWatchResource(mContext.getExternalFilesDir(null).getPath() + "/upgrade_fake_1121.zip",
                             new OnUpdateResourceCallback() {
                                 @Override
                                 public void onStart(String s, int i) {
-                                    Log.d("jl******","开始传输资源 = "+s);
+                                    Log.d("data******","开始传输资源 = "+s);
                                 }
 
                                 @Override
                                 public void onProgress(int i, String s, float v) {
-                                    Log.d("jl******","开始传输资源 onProgress= "+v);
+                                    Log.d("data******","开始传输资源 onProgress= "+v);
                                 }
 
                                 @Override
                                 public void onStop(String s) {
-                                    Log.d("jl******","开始传输资源 onStop path= "+s);
+                                    Log.d("data******","开始传输资源 onStop path= "+s);
                                     if (s == null) {
                                        return;
                                     } else {
@@ -93,12 +94,12 @@ public class OTAManager extends BluetoothOTAManager {
                                             @Override
                                             public void onStartOTA() {
                                                 //回调开始OTA
-                                                Log.d("jl******","开始OTA");
+                                                Log.d("data******","开始OTA");
                                             }
 
                                             @Override
                                             public void onNeedReconnect(String s, boolean b) {
-                                                Log.d("jl******","onNeedReconnect = "+s);
+                                                Log.d("data******","onNeedReconnect = "+s);
                                             }
 
 
@@ -106,25 +107,25 @@ public class OTAManager extends BluetoothOTAManager {
                                             public void onProgress(int type, float progress) {
                                                 //回调OTA进度
                                                 //type : 0 --- 下载uboot  1 --- 升级固件
-                                                Log.d("jl******","onProgress = "+progress);
+                                                Log.d("data******","onProgress = "+progress);
                                             }
 
                                             @Override
                                             public void onStopOTA() {
                                                 //回调OTA升级完成
-                                                Log.d("jl******","onStopOTA");
+                                                Log.d("data******","onStopOTA");
                                             }
 
                                             @Override
                                             public void onCancelOTA() {
                                                 //回调OTA升级被取消
-                                                Log.d("jl******","onCancelOTA");
+                                                Log.d("data******","onCancelOTA");
                                             }
 
                                             @Override
                                             public void onError(BaseError error) {
                                                 //回调OTA升级发生的错误事件
-                                                Log.d("jl******","onError = "+error);
+                                                Log.d("data******","onError = "+error);
                                             }
                                         });
                                     }
@@ -136,6 +137,9 @@ public class OTAManager extends BluetoothOTAManager {
                                 }
                             });
 
+                }else {
+                    Log.d("data******","OTA连接断开");
+                    mTargetDevice = null;
                 }
             }
         });
@@ -143,7 +147,7 @@ public class OTAManager extends BluetoothOTAManager {
 
     //BLE收到的notify转发给OTA SDK
     public void notifyData(byte[] datas) {
-        Log.d("jl******","收到OTA通知");
+        Log.d("data******","收到OTA通知");
         onReceiveDeviceData(mTargetDevice, datas);
     }
 
@@ -163,7 +167,7 @@ public class OTAManager extends BluetoothOTAManager {
                 super.onMtuChanged(gatt, mtu, status);
             }
         });
-        Log.d("jl******","gatt = "+gatt+" ; = "+gatt.getDevice().getAddress());
+        Log.d("data******","gatt = "+gatt+" ; = "+gatt.getDevice().getAddress());
         return gatt;
     }
 
@@ -174,14 +178,9 @@ public class OTAManager extends BluetoothOTAManager {
     //执行回连设备的逻辑
     @Override
     public void connectBluetoothDevice(BluetoothDevice bluetoothDevice) {
-        Log.d("jl******","ota升级成功，开始回连设备 = "+bluetoothDevice.getAddress());
-        UserModel userModel = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
-        if (userModel==null)
-            return;
-        userModel.deviceCode = bluetoothDevice.getAddress();
-        userModel.update();
-        Intent intent = new Intent(BroadcastConst.BIND_SERVICE);
-        context.sendBroadcast(intent);
+        Log.d("data******","ota升级成功，开始回连设备 = "+bluetoothDevice.getAddress());
+
+        BluetoothUtilImpl.getInstance().connect(bluetoothDevice.getAddress(),null);
     }
 
     //执行断开设备连接的逻辑
@@ -193,6 +192,7 @@ public class OTAManager extends BluetoothOTAManager {
     //把OTA SDK返回的byte[]通过BLE发送给设备（需要分包）
     @Override
     public boolean sendDataToDevice(BluetoothDevice bluetoothDevice, byte[] bytes) {
+        Log.d("data******","发送OTA数据 = "+bytes.length);
         //数据分包
         ArrayList<byte[]> cutData = DateUtil.cutBytes(bytes);
         for (byte[] sendData:cutData){

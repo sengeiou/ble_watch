@@ -41,4 +41,14 @@ public class HttpMessageUtil {
         HttpClientUtils.newInstance().buildRequest(getBuilder,"v2/user/getUserInfo",callback);
     }
 
+    /**
+     * 获取个人信息
+     * */
+    public void getFirmware(GenericsCallback<UserInfoBean> callback)throws IOException{
+        GetBuilder getBuilder = OkHttpUtils
+                .get()
+                .addInterceptor(new TokenInterceptor());
+        HttpClientUtils.newInstance().buildRequest(getBuilder,"v2/user/getUserInfo",callback);
+    }
+
 }

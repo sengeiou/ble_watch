@@ -190,6 +190,7 @@ public class WatchManager extends WatchOpImpl {
     public void destroy(){
         Log.d("data******","jk watch destroy");
         notifyBtDeviceConnection(mTargetDevice, StateCode.CONNECTION_DISCONNECT);
+        unregisterOnWatchCallback(mOnWatchCallback);
         if (mRcspAuth!=null){
             mRcspAuth.removeListener(mRcspAuthListener);
             mRcspAuth.destroy();

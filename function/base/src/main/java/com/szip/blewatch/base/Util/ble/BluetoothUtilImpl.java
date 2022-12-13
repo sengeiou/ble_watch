@@ -216,7 +216,8 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
 
     @Override
     public void connect(String mac, IBluetoothState iBluetoothState) {
-        this.iBluetoothState = iBluetoothState;
+        if (iBluetoothState!=null)
+            this.iBluetoothState = iBluetoothState;
         this.mMac = mac;
         if (connectState == 5){
             LogUtil.getInstance().logd("data******","连接设备mac = "+mac);
@@ -248,7 +249,7 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
         @Override
         public void onResponse(int code, BleGattProfile data) {
             if( code == 0 ){        // 0 成功
-                ClientManager.getClient().requestMtu(mMac, 250, new BleMtuResponse() {
+                ClientManager.getClient().requestMtu(mMac, 300, new BleMtuResponse() {
                     @Override
                     public void onResponse(int code, Integer data) {
                     }
@@ -299,16 +300,14 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
             if( status == 0x10){
                 final BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mac);
                 UserModel userInfo = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
-                LogUtil.getInstance().logd("data******","userInfo "+userInfo+" ;userInfo = "+userInfo.product);
-                LogUtil.getInstance().logd("data******","blueDevice = "+blueDevice);
                 if (userInfo==null||userInfo.product==null)
                     return;
                 if (MathUtil.newInstance().isJLWatch(userInfo.product)){
+                    OTAManager.getInstance(context).init(blueDevice);
                     WatchManager.getInstance().init(blueDevice, context, new ManagerInitCallback() {
                         @Override
                         public void initSuccess(boolean success) {
                             if (success){
-                                OTAManager.getInstance(context).init(blueDevice);
                                 getDeviceInfo();
                             }else {
                                 //杰里sdk初始化失败，断开连接

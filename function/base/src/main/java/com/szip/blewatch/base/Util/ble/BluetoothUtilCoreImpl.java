@@ -332,11 +332,11 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
 
     public void openid(BleDevice bleDevice,boolean isJLSdk) {
         if (isJLSdk){
-            Log.d("jl******","打开杰里sdk通知");
+            Log.d("data******","打开杰里sdk通知");
             ble.enableNotifyByUuid(bleDevice,true,UUID.fromString(Config.jlService),
                     UUID.fromString(Config.jlCharNotify),responseCallback);
         }else {
-            Log.d("jl******","打开原生SDK通知");
+            Log.d("data******","打开原生SDK通知");
             ble.enableNotifyByUuid(bleDevice,true,UUID.fromString(Config.char0),
                     UUID.fromString(Config.char2),responseCallback);
         }
@@ -348,7 +348,7 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         public void onChanged(final BleDevice device, BluetoothGattCharacteristic characteristic) {
             byte[] value = characteristic.getValue();
             if (characteristic.getUuid().toString().equals(Config.jlCharNotify)){
-                LogUtil.getInstance().logd("jl******","收到sdk通知信息:"+ DateUtil.byteToHexString(characteristic.getValue()));
+                LogUtil.getInstance().logd("data******","收到sdk通知信息:"+ DateUtil.byteToHexString(characteristic.getValue()));
                 WatchManager.getInstance().notifyData(value);
             }else {
                 LogUtil.getInstance().logd("DATA******","收到蓝牙通知信息:"+ DateUtil.byteToHexString(value));
@@ -369,19 +369,19 @@ public class BluetoothUtilCoreImpl implements IBluetoothUtil{
         @Override
         public void onNotifySuccess(BleDevice device) {
             super.onNotifySuccess(device);
-            Log.d("jl******","notify ok");
+            Log.d("data******","notify ok");
         }
 
         @Override
         public void onNotifyCanceled(BleDevice device) {
             super.onNotifyCanceled(device);
-            Log.d("jl******","notify cancel");
+            Log.d("data******","notify cancel");
         }
 
         @Override
         public void onNotifyFailed(BleDevice device, int failedCode) {
             super.onNotifyFailed(device, failedCode);
-            Log.d("jl******","notify failed code = "+failedCode);
+            Log.d("data******","notify failed code = "+failedCode);
         }
     };
 
