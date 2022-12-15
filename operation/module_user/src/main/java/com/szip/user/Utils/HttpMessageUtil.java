@@ -9,6 +9,7 @@ import com.szip.user.HttpModel.DeviceConfigBean;
 import com.szip.user.HttpModel.DialBean;
 import com.szip.user.HttpModel.FaqBean;
 import com.szip.user.HttpModel.FaqListBean;
+import com.szip.user.HttpModel.FirmwareBean;
 import com.zhy.http.okhttp.BaseApi;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.builder.GetBuilder;
@@ -204,6 +205,18 @@ public class HttpMessageUtil {
                 .addParams("size",size)
                 .addInterceptor(new TokenInterceptor());
         HttpClientUtils.newInstance().buildRequest(getBuilder,"data/get",new DownloadDataUtil(new JsonGenericsSerializator()));
+    }
+
+    /**
+     * 获取个人信息
+     * */
+    public void getFirmware(String configId,GenericsCallback<FirmwareBean> callback){
+        GetBuilder getBuilder = OkHttpUtils
+                .get()
+                .addParams("configId", configId)
+                .addParams("currentVersion","0")
+                .addInterceptor(new TokenInterceptor());
+        HttpClientUtils.newInstance().buildRequest(getBuilder,"device/getLatestFirmware",callback);
     }
 
 }

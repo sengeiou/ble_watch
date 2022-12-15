@@ -14,6 +14,8 @@ public class BroadcastConst {
     public final static String DOWNLOAD_FILE = "download.file";
     public final static String UPDATE_DOWNLOAD_STATE = "download.file.state";
 
+    public final static String UPDATE_RESOURCE_STATE = "update.resource.state";
+    public final static String UPDATE_OTA_STATE = "update.ota.state";
     public final static String UPDATE_DIAL_STATE = "update.dial.state";
     public final static String UPDATE_BACKGROUND_STATE = "update.background.state";
     public final static String SEND_BLE_FILE = "send.ble.file";

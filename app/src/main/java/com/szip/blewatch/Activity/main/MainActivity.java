@@ -17,19 +17,32 @@ import android.widget.Toast;
 import androidx.loader.content.CursorLoader;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.android.material.tabs.TabLayout;
+import com.szip.blewatch.HttpModel.FirmwareBean;
+import com.szip.blewatch.HttpModel.UserInfoBean;
 import com.szip.blewatch.R;
+import com.szip.blewatch.Utils.HttpMessageUtil;
 import com.szip.blewatch.View.HostTabView;
 import com.szip.blewatch.base.Broadcast.MyHandle;
 import com.szip.blewatch.base.Broadcast.ToActivityBroadcast;
 import com.szip.blewatch.base.Const.BroadcastConst;
+import com.szip.blewatch.base.Model.FirmwareModel;
 import com.szip.blewatch.base.Service.BleService;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.View.BaseActivity;
+import com.szip.blewatch.base.View.MyAlerDialog;
 import com.szip.blewatch.base.db.LoadDataUtil;
+import com.zhy.http.okhttp.callback.GenericsCallback;
+import com.zhy.http.okhttp.utils.JsonGenericsSerializator;
 
 import java.util.ArrayList;
+
+import okhttp3.Call;
+
+import static com.szip.blewatch.base.Const.RouterPathConst.PATH_ACTIVITY_ABOUT;
+import static com.szip.blewatch.base.Const.RouterPathConst.PATH_ACTIVITY_SPORT_RESULT;
 
 /**
  * @author ddnosh
@@ -82,6 +95,36 @@ public class MainActivity extends BaseActivity implements IMainView,MyHandle{
         intentFilter.addAction(BroadcastConst.BIND_SERVICE);
         intentFilter.addAction(BroadcastConst.UPDATE_WEATHER);
         toActivityBroadcast.registerReceive(this,this,intentFilter);
+
+//        if (MathUtil.newInstance().getToken(getApplicationContext())!=null){
+//            HttpMessageUtil.newInstance().getFirmware(LoadDataUtil.newInstance().getConfigId(MathUtil.newInstance().getUserId(getApplicationContext())),
+//                    new GenericsCallback<FirmwareBean>(new JsonGenericsSerializator()) {
+//                        @Override
+//                        public void onError(Call call, Exception e, int id) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onResponse(FirmwareBean response, int id) {
+//                            if(response.getCode()==200&&response.getData()!=null){
+//                                MyAlerDialog.getSingle().showAlerDialog("新的固件版本", "检测到新的固件版本，是否现在进行升级？",
+//                                        "是", "否", false, new MyAlerDialog.AlerDialogOnclickListener() {
+//                                            @Override
+//                                            public void onDialogTouch(boolean flag) {
+//                                                if (flag){
+//                                                    Bundle bundle = new Bundle();
+//                                                    bundle.putSerializable("firmware",response.getData());
+//                                                    ARouter.getInstance().build(PATH_ACTIVITY_ABOUT)
+//                                                            .withBundle("bundle",bundle)
+//                                                            .navigation();
+//                                                }
+//                                            }
+//                                        },MainActivity.this);
+//                            }
+//
+//                        }
+//                    });
+//        }
     }
 
     @Override

@@ -65,7 +65,7 @@ public class SportListActivity extends BaseActivity implements ISportListView {
             @Override
             public void onItemClick(int position) {
                 if (!groupList.contains(childList.get(position))){
-                                    Bundle bundle = new Bundle();
+                    Bundle bundle = new Bundle();
                     bundle.putSerializable("sportData",childList.get(position));
                     ARouter.getInstance().build(PATH_ACTIVITY_SPORT_RESULT)
                             .withBundle("bundle",bundle)

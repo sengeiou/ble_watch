@@ -296,14 +296,14 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
     private BleConnectStatusListener connectStatusListener = new BleConnectStatusListener() {
         @Override
         public void onConnectStatusChanged(String mac, int status) {
-            LogUtil.getInstance().logd("data******","ble state = "+status);
             if( status == 0x10){
                 final BluetoothDevice blueDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(mac);
                 UserModel userInfo = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(context));
                 if (userInfo==null||userInfo.product==null)
                     return;
+                Log.d("data******","product = "+userInfo.product);
                 if (MathUtil.newInstance().isJLWatch(userInfo.product)){
-                    OTAManager.getInstance(context).init(blueDevice);
+                    OTAManager.getInstance(context).setConnectState(StateCode.CONNECTION_OK,blueDevice);
                     WatchManager.getInstance().init(blueDevice, context, new ManagerInitCallback() {
                         @Override
                         public void initSuccess(boolean success) {
@@ -331,7 +331,7 @@ public class BluetoothUtilImpl implements IBluetoothUtil {
             }else{
                 MusicUtil.getSingle().unRegisterNotify();
                 WatchManager.getInstance().destroy();
-                OTAManager.getInstance(context).setConnectState(StateCode.CONNECTION_DISCONNECT);
+                OTAManager.getInstance(context).setConnectState(StateCode.CONNECTION_DISCONNECT,null);
                 initPhoneStateListener(false);
                 connectState = 5;
                 isSync = false;

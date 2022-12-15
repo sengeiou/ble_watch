@@ -1,9 +1,13 @@
 package com.szip.blewatch.Utils;
 
 
+import com.szip.blewatch.HttpModel.FirmwareBean;
+import com.szip.blewatch.base.Model.FirmwareModel;
+import com.szip.blewatch.base.Util.MathUtil;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.http.TokenInterceptor;
 import com.szip.blewatch.HttpModel.UserInfoBean;
+import com.szip.blewatch.base.db.LoadDataUtil;
 import com.zhy.http.okhttp.BaseApi;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.builder.GetBuilder;
@@ -44,11 +48,13 @@ public class HttpMessageUtil {
     /**
      * 获取个人信息
      * */
-    public void getFirmware(GenericsCallback<UserInfoBean> callback)throws IOException{
+    public void getFirmware(String configId,GenericsCallback<FirmwareBean> callback){
         GetBuilder getBuilder = OkHttpUtils
                 .get()
+                .addParams("configId", configId)
+                .addParams("currentVersion","0")
                 .addInterceptor(new TokenInterceptor());
-        HttpClientUtils.newInstance().buildRequest(getBuilder,"v2/user/getUserInfo",callback);
+        HttpClientUtils.newInstance().buildRequest(getBuilder,"device/getLatestFirmware",callback);
     }
 
 }

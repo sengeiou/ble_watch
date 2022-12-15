@@ -14,6 +14,7 @@ import com.szip.blewatch.base.Util.FileUtil;
 import com.szip.blewatch.base.Util.MusicUtil;
 import com.szip.blewatch.base.Util.ble.ClientManager;
 import com.szip.blewatch.base.Util.ble.jlBleInterface.FunctionManager;
+import com.szip.blewatch.base.Util.ble.jlBleInterface.OTAManager;
 import com.szip.blewatch.base.Util.http.HttpClientUtils;
 import com.szip.blewatch.base.Util.LogUtil;
 import com.szip.blewatch.base.View.NotificationView;
@@ -47,8 +48,8 @@ public class BaseApplication extends Application {
         initAuto();
         ClientManager.getInstance().init(this);
         FunctionManager.getInstance().init(this);
-
-//        initLog();
+        OTAManager.getInstance(this).init();
+        initLog();
 //        initBle();
     }
 

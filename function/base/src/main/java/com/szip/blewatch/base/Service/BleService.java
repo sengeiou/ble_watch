@@ -22,9 +22,9 @@ import androidx.annotation.RequiresApi;
 import com.inuker.bluetooth.library.search.SearchRequest;
 import com.inuker.bluetooth.library.search.SearchResult;
 import com.inuker.bluetooth.library.search.response.SearchResponse;
-import com.jieli.jl_bt_ota.constant.StateCode;
 import com.szip.blewatch.base.Const.BroadcastConst;
 import com.szip.blewatch.base.Const.SendFileConst;
+import com.szip.blewatch.base.Model.FirmwareModel;
 import com.szip.blewatch.base.Notification.SmsService;
 import com.szip.blewatch.base.R;
 import com.szip.blewatch.base.Util.FileUtil;
@@ -256,7 +256,7 @@ public class BleService extends Service implements MyHandle {
     private DownloadManager downloadManager;
     private long mTaskId;
 
-    public void downloadFirmsoft(String dialUrl,String fileName) {
+    public void downloadFile(String dialUrl, String fileName) {
         Log.i("data******","开始下载 dialUrl = "+dialUrl);
         File file = new File(getExternalFilesDir(null).getPath()+ "/" + fileName);
         if (file.exists()){
@@ -289,6 +289,7 @@ public class BleService extends Service implements MyHandle {
         Cursor c = downloadManager.query(query);
         if (c.moveToFirst()) {
             int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+            String title = c.getString(c.getColumnIndex(DownloadManager.COLUMN_TITLE));
             switch (status) {
                 case DownloadManager.STATUS_PAUSED:
                     //Log.d("DATA******",">>>下载暂停");
@@ -299,16 +300,28 @@ public class BleService extends Service implements MyHandle {
                     break;
                 case DownloadManager.STATUS_SUCCESSFUL:{
                     Log.d("data******",">>>下载完成");
-                    Intent intent  = new Intent(BroadcastConst.UPDATE_DOWNLOAD_STATE);
-                    intent.putExtra("state",true);
-                    sendBroadcast(intent);
+                    Log.d("data******","title = "+title);
+                    if (title.equalsIgnoreCase("ota_file.zip")){
+                        OTAManager.getInstance(getApplicationContext()).startResource();
+                    }else {
+                        Intent intent  = new Intent(BroadcastConst.UPDATE_DOWNLOAD_STATE);
+                        intent.putExtra("state",true);
+                        sendBroadcast(intent);
+                    }
+
                 }
                     break;
                 case DownloadManager.STATUS_FAILED:{
                     Log.d("data******",">>>下载失败");
-                    Intent intent  = new Intent(BroadcastConst.UPDATE_DOWNLOAD_STATE);
+                    Intent intent;
+                    if (title.equalsIgnoreCase("ota_file.zip")){
+                        intent = new Intent(BroadcastConst.UPDATE_OTA_STATE);
+                    }else {
+                        intent = new Intent(BroadcastConst.UPDATE_DOWNLOAD_STATE);
+                    }
                     intent.putExtra("state",false);
                     sendBroadcast(intent);
+
                 }
                     break;
             }
@@ -506,7 +519,7 @@ public class BleService extends Service implements MyHandle {
             case BroadcastConst.DOWNLOAD_FILE:{
                 String fileUrl = intent.getStringExtra("fileUrl");
                 String fileName = intent.getStringExtra("fileName");
-                downloadFirmsoft(fileUrl,fileName);
+                downloadFile(fileUrl,fileName);
             }
             break;
             case DownloadManager.ACTION_DOWNLOAD_COMPLETE:{
@@ -667,15 +680,10 @@ public class BleService extends Service implements MyHandle {
             }
             break;
             case BroadcastConst.START_JL_OTA:{
-//                String filePath = getExternalFilesDir(null).getPath()+"/upgrade_fake_1121.zip";
-//                String dirPath = filePath.substring(0, filePath.lastIndexOf("/"));
-//                try {
-//                    ZipUtil.unZipFolder(filePath, dirPath);
-////                    FileUtil.getInstance().deleteFile(dirPath + "/" + WatchConstant.RES_DIR_NAME);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-                OTAManager.getInstance(getApplicationContext()).setConnectState(StateCode.CONNECTION_OK);
+                Bundle bundle = intent.getBundleExtra("bundle");
+                FirmwareModel firmwareModel = (FirmwareModel) bundle.getSerializable("firmware");
+                Log.d("data******","serve = "+firmwareModel.getUrl());
+                downloadFile(firmwareModel.getUrl(),"ota_file.zip");
             }
             break;
         }

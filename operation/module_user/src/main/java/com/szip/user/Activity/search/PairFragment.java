@@ -204,6 +204,7 @@ public class PairFragment extends DialogFragment implements MyHandle {
                     UserModel userModel = LoadDataUtil.newInstance().getUserInfo(MathUtil.newInstance().getUserId(getActivity()));
                     if (userModel==null)
                         return;
+                    userModel.product = sportWatchAppFunctionConfigDTO.appName;
                     userModel.deviceCode = mac;
                     userModel.update();
                     Intent intent = new Intent(BroadcastConst.BIND_SERVICE);

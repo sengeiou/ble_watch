@@ -127,6 +127,28 @@ public class LoadDataUtil {
     /**
      * 判断是否支持运动
      * */
+    public String getConfigId(long userId){
+
+        UserModel userModel = SQLite.select()
+                .from(UserModel.class)
+                .where(UserModel_Table.id.is(userId))
+                .querySingle();
+
+        if (userModel!=null){
+            SportWatchAppFunctionConfigDTO sportWatchAppFunctionConfigDTO = SQLite.select()
+                    .from(SportWatchAppFunctionConfigDTO.class)
+                    .where(SportWatchAppFunctionConfigDTO_Table.mac.is(userModel.deviceCode))
+                    .querySingle();
+
+            return String.valueOf(sportWatchAppFunctionConfigDTO.id);
+        }else {
+            return "0";
+        }
+    }
+
+    /**
+     * 判断是否支持运动
+     * */
     public SportWatchAppFunctionConfigDTO getSportConfig(long userId){
 
         UserModel userModel = SQLite.select()

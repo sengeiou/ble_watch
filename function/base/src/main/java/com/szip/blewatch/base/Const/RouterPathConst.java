@@ -10,6 +10,7 @@ public class RouterPathConst {
     public static final String PATH_ACTIVITY_USER = "/user/main";
     public static final String PATH_ACTIVITY_USER_FAQ = "/user/faq";
     public static final String PATH_ACTIVITY_USER_CAMERA = "/user/camera";
+    public static final String PATH_ACTIVITY_ABOUT = "/user/about";
     public static final String PATH_ACTIVITY_PRIVACY = "/app/privacy";
     public static final String PATH_ACTIVITY_REPORT = "/healthy/report/";
     public static final String PATH_ACTIVITY_REPORT_HEART = "/healthy/report/1";
@@ -18,6 +19,7 @@ public class RouterPathConst {
     public static final String PATH_ACTIVITY_REPORT_SPO2 = "/healthy/report/5";
     public static final String PATH_ACTIVITY_REPORT_BP = "/healthy/report/6";
     public static final String PATH_ACTIVITY_REPORT_TEMP = "/healthy/report/7";
+
 
 
 

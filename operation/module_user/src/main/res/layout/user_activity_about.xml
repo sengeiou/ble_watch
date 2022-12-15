@@ -152,7 +152,16 @@
             android:layout_height="0.5dp"
             android:background="@color/gray"/>
 
+
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="升级前请确保电量大于50%"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
